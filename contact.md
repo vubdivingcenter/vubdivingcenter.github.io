@@ -1,11 +1,9 @@
 ---
 layout: page
 title: Contact
-subtitle: Onze gegevens
+subtitle: De maatschappelijke zetel van het VUB Diving Center vzw
 published: true
 ---
-
-Dit is de maatschappelijke zetel van het VUB Diving Center vzw.
 
 VUB Diving Center vzw  
 c/o Oudstudentenbond VUB (OSB)  
