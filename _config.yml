@@ -20,7 +20,7 @@ description: Welkom op de VDC webstek!
 
 # List of links in the navigation bar
 navbar-links:
-  Over Ons: "aboutus"
+  Over Ons: "aboutme"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
