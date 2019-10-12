@@ -11,5 +11,5 @@ Dan is dit jouw kans! Het VUB Diving Center (VDC) biedt een duikopleiding aan wa
 
 Gedurende vier maanden zullen jullie elke vrijdag van 20u00 tot 21u00 de basistechnieken van het duiken aangeleerd krijgen. Hierna zijn jullie klaar om de buitenwateren mee onveilig te maken. De inschrijvingsprijs bedraagt 150 euro en we voorzien verschillende instapmomenten doorheen het jaar.
 
-Interesse of meer info nodig? Stuur een mailtje naar vdc_rvb@googlegroups.be
+Interesse of meer info nodig? Stuur een mailtje naar <vdc_rvb@googlegroups.com>
 
