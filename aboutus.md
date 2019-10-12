@@ -13,25 +13,10 @@ Gedurende verschillende jaren heeft dan de “Groupe Belge de Recherche Scientif
 Wanneer eind jaren ’80 de VUB dan een eigen zwembad bouwt, vroegen zowel professor Stan Wartel als Professor Arno Libotton aan de rector of er geen eigen duikcentrum kon worden opgericht. De rector bracht beide partijen samen en in het voorjaar van 1989 is GBRS waarmee Stan al werkte in Etterbeek gestart met een afdeling in het spiksplinternieuwe VUB zwembad.
 Dat GBRS is trouwens een onderdeel van het wetenschappelijk comité van CMAS, door velen wel bekend als internationale duikfederatie.
 
-Bij de start van dat nieuwe academiejaar telde men 49 leden in wat toen nog heette “de afdeling VUB”.
-Bij de opstart stelde GBRS duikmateriaal ter beschikking en de sportdienst kocht 4 duikflessen en 4 ontspanners die we ook mochten gebruiken.
-Vanaf dat prille begin zijn ook een aantal GBRS leden vanuit Etterbeek meegekomen om les te geven.
-
 Vanaf 8 december 1991 spreken we van het “VUB Diving Center”.
 Vanaf dan is het een volledig onafhankelijk duikcentrum, want op die dag vindt de eerste algemene vergadering plaats, met de verkiezing van het bestuur, de goedkeuring van een intern reglement, een eigen verzekeringspolis, kortom alles om van een volwaardige vereniging te spreken.
 
-En vanaf toen is het alleen maar vooruit gegaan. Op alle vlakken.
-
-De eerste jaren is er door de leden door middel van onnoemelijk veel betaalde initiaties geld ingezameld om duikmateriaal te kunnen aankopen. De sportdienst heeft toen gezorgd dat er metalen kasten kwamen waar we het zo kostbare materiaal in konden opslaan. Maar elk jaar kochten we bij en iedere keer moesten we opnieuw aan Ben Vanroelen gaan vragen of we toch nog een extra schap mochten inpikken.
-Enkele jaren geleden hebben we met de verbouwingswerken voor het fitnesscentrum dan een hele mooie oplossing kunnen realiseren.
-De leden van het eerste uur zullen hun ogen niet geloven als ze onze huidige materiaalkasten zien die werkelijk volsteken met praktisch volledige duikuitrustingen.
-
-Maar al dat materiaal is ook nodig, want de cijfers liegen er niet om.
-Al vele jaren schommelt het aantal leden rond de 70, maar het aantal deelnemers aan de trainingen neemt gestaag toe.
-Op vrijdagen komt dat geregeld in de buurt van 20.
-En op woensdag gaan we wekelijks met ongeveer 40 in het zwembad, da’s ook niet niks.
-
-Administratief hebben we niet stilgezeten.
+Administratief hebben we sindsdien niet stilgezeten.
 Van een goed idee zijn we een feitelijke vereniging geworden en sinds enkele jaren zelfs een volwaardige VZW, met een Raad van Bestuur, Comité van Instructeurs en een Algemene Vergadering, maar omdat democratisch overleg het beste is voor een duikcentrum dat niet onder een federatie valt, hebben we al lang geleden gekozen om geen voorzitter te hebben.
 Want zoals het “Vrije” in Vrije Universiteit Brussel Diving Center geeft dat ook aan onze duikclub een meerwaarde.
 
