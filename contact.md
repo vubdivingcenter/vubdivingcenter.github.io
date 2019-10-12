@@ -5,9 +5,6 @@ subtitle: Onze gegevens
 published: true
 ---
 
-Het VUB Diving Center. Dé Nederlandstalige duikclub in Brussel.
-
-### Contact
 Dit is de maatschappelijke zetel van het VUB Diving Center vzw.
 
 VUB Diving Center vzw  
