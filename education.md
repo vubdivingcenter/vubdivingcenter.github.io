@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Opleiding
+title: Duikopleiding
 subtitle: Leren duiken? Dat Kan!
 published: true
 ---
