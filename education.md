@@ -15,9 +15,6 @@ De duiksport heeft spijtig genoeg een negatief imago. Het zou een gevaarlijke sp
 
 Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een middel om te genieten van de onderwaterflora en –fauna.
 
-### Is het VUB Diving Center iets voor mij?
-Het VUB Diving Center vzw bestaat voornamelijk, maar niet exclusief, uit VUB studenten, oud studenten en personeelsleden. Uiteraard ben je ook welkom als je geen link hebt met de VUB! De enige voorwaarden die gesteld worden zijn kunnen zwemmen en de Nederlandse taal machtig zijn.
-
 ### Wat heeft het VUB Diving Center te bieden?
 
 Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16 jaar (student of niet-student) welkom is. Deze lessen gaan door in het zwembad van de Vrije Universiteit Brussel, campus Etterbeek.
@@ -25,4 +22,3 @@ Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16
 Gedurende vier maanden zullen jullie elke vrijdag van 20u00 tot 21u00 de basistechnieken van het duiken aangeleerd krijgen. Hierna zijn jullie klaar om de buitenwateren mee onveilig te maken. De inschrijvingsprijs bedraagt 150 euro en we voorzien verschillende instapmomenten doorheen het jaar.
 
 Interesse of meer info nodig? Stuur een mailtje naar <vdc_rvb@googlegroups.com>
-
