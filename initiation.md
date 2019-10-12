@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Duikinitiaties
+title: Duikinitiatie
 subtitle: Een duikinitiatie? Dat kan!
 published: true
 ---
