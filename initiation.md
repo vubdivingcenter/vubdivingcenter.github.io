@@ -13,7 +13,7 @@ Het VUB Diving Center (VDC) geeft, naast onze opleiding voor sportduikers, ook i
 
 #### Initiatie 
 
-Gedurende een uur (tot maximum 2 uur) zullen we jullie onderdompelen in de wondere onderwaterwereld. Na een korte uitleg over het duikmateriaal en enkele basisoefeningen kan je zelf ervaren hoe het is om als een echte duiker met perslucht te zijn.
+Gedurende een uur (tot maximum 2 uur) zullen we jullie onderdompelen in de wondere onderwaterwereld. Na een korte uitleg over het duikmateriaal en enkele basisoefeningen kunnen jullie zelf ervaren hoe het is om als een echte duiker met perslucht onder water te zijn.
 
 #### Waar en wanneer
 
