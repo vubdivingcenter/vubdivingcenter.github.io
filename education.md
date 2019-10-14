@@ -23,15 +23,15 @@ Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16
 
 Gedurende vier maanden (afhankelijk van jullie ervaring en voortgang) zullen jullie de basistechnieken van het duiken aangeleerd krijgen.  Hierna zijn jullie klaar om de buitenwateren mee onveilig te maken.
 
-#### Locatie en tijdstip
+#### Waar en wanneer
 
-Deze lessen gaan door in het zwembad van de Vrije Universiteit Brussel, campus Etterbeek.
+De lessen gaan door in het zwembad van de Vrije Universiteit Brussel, campus Etterbeek.
 
 Pleinlaan 2  
 1050 Elsene  
 België
 
-Elke vrijdag van 19u45 tot 21u15.
+We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
