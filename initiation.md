@@ -5,4 +5,4 @@ subtitle: Een duikinitiatie? Dat kan!
 published: true
 ---
 
-Wil je een duikinitiatie? Dat kan.
+Het VUB Diving Center (VDC) geeft, naast onze opleiding voor sportduikers, ook initiaties voor jeugdbewegingen, andere sportclubs, bedrijfsevents,...
