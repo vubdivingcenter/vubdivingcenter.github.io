@@ -23,7 +23,7 @@ Pleinlaan 2
 1050 Elsene  
 België
 
-Deze zullen zijn tijdens onze reguliere trainingsuren op vrijdag van 19u45 tot 21u00. Mogelijks kan dit ook van 21u00 tot 22u00 indien overeenkomst met de sportdienst van de VUB.
+Deze zullen zijn tijdens onze trainingsuren op vrijdag van 19u45 tot 21u00. Mogelijks kan dit ook van 21u00 tot 22u00 indien overeenkomst met de sportdienst van de VUB.
 
 #### Benodigdheden
 
