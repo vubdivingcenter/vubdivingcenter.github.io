@@ -21,7 +21,9 @@ Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16
 
 #### Opleiding 
 
-Gedurende vier maanden (afhankelijk van jullie ervaring en voortgang) zullen jullie de basistechnieken van het duiken aangeleerd krijgen.  Hierna zijn jullie klaar om de buitenwateren mee onveilig te maken.
+Gedurende vier maanden (afhankelijk van jullie ervaring en voortgang) zullen jullie de basistechnieken van het duiken aangeleerd krijgen.  We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
+
+Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate*, *bachelor*, en uiteindelijk *instructor* certificaat.
 
 #### Waar en wanneer
 
