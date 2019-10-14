@@ -17,11 +17,11 @@ Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een mid
 
 ### Wat heeft het VUB Diving Center te bieden?
 
-Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16 jaar (student of niet-student) welkom is. 
+Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16 jaar (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar.
 
 #### Duikopleiding 
 
-Gedurende vier maanden (afhankelijk van jullie ervaring) zullen jullie de basistechnieken van het duiken aangeleerd krijgen. We voorzien verschillende instapmomenten doorheen het jaar. Hierna zijn jullie klaar om de buitenwateren mee onveilig te maken.
+Gedurende vier maanden (afhankelijk van jullie ervaring) zullen jullie de basistechnieken van het duiken aangeleerd krijgen.  Hierna zijn jullie klaar om de buitenwateren mee onveilig te maken.
 
 #### Locatie en tijdstip
 
@@ -37,6 +37,6 @@ Elke vrijdag van 19u45 tot 21u15.
 
 De inschrijvingsprijs bedraagt 150 euro. Dit bedrag omvat je opleiding, verzekering en toegang tot het zwembad.
 
-### Hoe inschrijven? Of nog niet overtuigd?
+### Interesse of meer info nodig?
 
-Interesse of meer info nodig? Stuur een mailtje naar <vdc_rvb@googlegroups.com>
+Stuur een mailtje naar <vdc_rvb@googlegroups.com>
