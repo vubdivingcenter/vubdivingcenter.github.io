@@ -8,4 +8,4 @@ published: true
 
 
 
--> [Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){: .btn} <-
+[Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){: .btn .center}
