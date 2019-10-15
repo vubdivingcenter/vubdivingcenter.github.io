@@ -37,7 +37,7 @@ Uit de **Statuten, Artikel 23**:
 
 Huidige bestuursleden:
 - Kristof Moonens (Secretaris)
-- Maxim De Buyck (Penningmeester)
+- Maxim Buyck (Penningmeester)
 - Pascal Blockx (Materiaalmeester)
 - Ellen Spinnael (Verantwoordelijke gevorderde training)
 - Geert Sempels (Verantwoordelijke basisopleiding)
