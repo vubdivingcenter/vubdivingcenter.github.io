@@ -17,4 +17,4 @@ Na het invullen van bovenstaand formulier zal je een mail ontvangen met daarin d
 
 ### Stap 3: Medische keuring
 
-Eenmaal wij de betaling ontvangen hebben, zal je je medisch attest ontvangen. Dit attest zal (jaarlijks) door je arts moeten ingevuld worden. Het is teven je inschrijvingsbewijs.
+Eenmaal wij de betaling ontvangen hebben, zal je je medisch attest ontvangen. Dit attest zal (jaarlijks) door je arts moeten ingevuld worden. Het is tevens je inschrijvingsbewijs.
