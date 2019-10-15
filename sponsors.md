@@ -6,4 +6,5 @@ published: true
 
 ### Gesubsidiëerd door:
 
-[![homepage](/img/vgc.png)](https://www.sportinbrussel.be/){: .main-center }
+[![homepage](/img/vgc.png)](https://www.sportinbrussel.be/)
+{: .main-center }
