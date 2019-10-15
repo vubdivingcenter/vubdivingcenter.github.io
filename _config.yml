@@ -24,7 +24,7 @@ navbar-links:
   Initiatie: "initiation"
   Over Ons: "aboutus"
   Links:
-    - Inschrijving: "https://vdc-app.azurewebsites.net/Registration/Create"
+    - Inschrijving: "registration"
     - Learn markdown: "http://www.markdowntutorial.com/"
   Contact: "contact"
 
