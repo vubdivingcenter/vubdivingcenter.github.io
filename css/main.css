@@ -787,8 +787,6 @@ pre {
   font-size: 16px;
 }
 
-/* DataCamp shiny case studies course promo */
-
 #course-initiation-section {
   text-align: center;
   background: #fafafa;
@@ -817,4 +815,8 @@ pre {
   #course-initiation-section .btn {
     font-size: 14px;
   }
+}
+
+#center {
+  text-align: center;
 }
