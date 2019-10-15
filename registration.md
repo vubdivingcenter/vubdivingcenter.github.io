@@ -7,4 +7,5 @@ published: true
 
 
 
-[Inschrijven](http://www.google.com){: .btn}
+
+-> [Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){: .btn} <-
