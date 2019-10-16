@@ -31,4 +31,4 @@ Enkel je zwemkledij. De rest van het materiaal zullen wij voorzien. Als je reeds
 
 ### Interesse of meer info nodig?
 
-Stuur een mailtje naar <vdc_rvb@googlegroups.com>
+Stuur een mailtje naar <info@vubdivingcenter.be>
