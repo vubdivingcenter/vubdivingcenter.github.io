@@ -41,4 +41,4 @@ De inschrijvingsprijs bedraagt 150 euro. Dit bedrag omvat je opleiding, examens,
 
 ### Interesse of meer info nodig?
 
-Stuur een mailtje naar <vdc_rvb@googlegroups.com>
+Stuur een mailtje naar <info@vubdivingcenter.be>
