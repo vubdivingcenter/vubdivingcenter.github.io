@@ -13,7 +13,7 @@ Inschrijven bij het VUB Diving Center begint bij het invullen van het online ins
 
 ### Stap 2: Betaling
 
-Na het invullen van bovenstaand formulier zal je een mail ontvangen met daarin de gegevens die je nodig hebt om de betaling te doen. Indien je geen mail ontvangt, gelieve contact op te nemen met <bpellens@gmail.com>.
+Na het invullen van bovenstaand formulier zal je een mail ontvangen met daarin de gegevens die je nodig hebt om de betaling te doen. Indien je geen mail ontvangt binnen de +/- 30 minuten, gelieve even je SPAM folder te checken. Nog steeds niets, neem dan contact op met <bpellens@gmail.com>.
 
 ### Stap 3: Medische keuring
 
