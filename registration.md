@@ -9,7 +9,7 @@ published: true
 
 Inschrijven bij het VUB Diving Center begint bij het invullen van het online inschrijvingsformulier.
 
-[Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){: .btn .btn-primary .btn-lg}
+[Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){: .btn .btn-primary .btn-lg target="_blank"}
 
 ### Stap 2: Betaling
 
