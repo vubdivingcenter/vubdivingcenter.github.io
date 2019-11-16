@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Duikinitiatie
+title: Groepsactiviteit
 subtitle: Een duikinitiatie? Dat kan!
 published: true
 ---
@@ -28,6 +28,10 @@ Deze zullen zijn tijdens onze trainingsuren op vrijdag van 19u45 tot 21u00. Moge
 #### Benodigdheden
 
 Enkel je zwemkledij. De rest van het materiaal zullen wij voorzien. Als je reeds enig duik- en/of snorkelmateriaal hebt, mag je die zeker meebrengen.
+
+#### Prijs
+
+Voor een duikinitatie in de vorm van een teambuilding/groepsactiviteit vragen we **150 Euro** + **10 Euro p.p.**
 
 ### Interesse of meer info nodig?
 
