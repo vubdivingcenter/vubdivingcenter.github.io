@@ -20,8 +20,8 @@ url: "https://www.vubdivingcenter.be"
 
 # List of links in the navigation bar
 navbar-links:
-  Opleiding: "education"
-  Initiatie: "initiation"
+  Duikopleiding: "education"
+  Groepsactiviteit: "activity"
   Over Ons: "aboutus"
   Links:
     - Inschrijving: "registration"
