@@ -37,7 +37,7 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-De inschrijvingsprijs bedraagt 150 euro. Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad.
+De inschrijvingsprijs bedraagt **150 euro**. Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad.
 
 ### Interesse of meer info nodig?
 
