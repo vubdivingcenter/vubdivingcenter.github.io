@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: VUB Diving Center
+title: "VUB Diving Center"
 
 # Short description of your site
 description: Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center
@@ -192,6 +192,7 @@ exclude:
   - CHANGELOG.md
   - CNAME
   - Dockerfile
+  - docker-compose.yml
   - Gemfile
   - Gemfile.lock
   - LICENSE
