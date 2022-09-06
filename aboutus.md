@@ -36,10 +36,10 @@ Uit de **Statuten, Artikel 23**:
 #### De Raad van Bestuur
 
 Huidige bestuursleden:
-- Kristof Moonens (Secretaris)
+- Kyan De Donder (Secretaris)
 - Maxim Buyck (Penningmeester)
 - Pascal Blockx (Materiaalmeester)
-- Ellen Spinnael (Verantwoordelijke gevorderde training)
+- Esther Geboes (Verantwoordelijke gevorderde training)
 - Geert Sempels (Verantwoordelijke basisopleiding)
 - Bram Pellens (Verantwoordelijke gevorderde opleiding)
 
