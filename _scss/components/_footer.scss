@@ -1,0 +1,53 @@
+footer {
+    clear: both;
+    margin-top: 120px;
+    width: 100vw;
+    height: 200px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #585858;
+    font-size: 0.8em;
+    font-weight: 300;
+    background-color: #f8f8f8;
+    position: relative;
+    bottom: 0;
+    display: block;
+
+    .footer-image {
+        top: -120px;
+        height: 150px;
+        width: 100vw;
+        position: relative;
+        background: url(/images/footer/floor.svg);
+        background-repeat: repeat-x;
+        background-size: contain;
+
+        @media (max-width: $on-small) {
+            background-size: cover;
+        }
+    }
+
+    ul {
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        text-align: center;
+        display: inline;
+        list-style-type: none;
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+            list-style: none;
+            float: left;
+
+            &:hover a {
+                color: rgb(51, 51, 51);
+            }
+        }
+
+        a {
+            color: black;
+        }
+    }
+}

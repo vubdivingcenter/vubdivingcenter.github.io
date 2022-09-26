@@ -1,0 +1,76 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    name: 'Build Website'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Load dependency cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('package.json') }}
+      - name: Load site cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/_site
+          key: ${{ runner.os }}-site-v1-${{ hashFiles('package.json') }}-${{ github.run_number }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Installing Dependencies
+        run: |
+          npm install
+      - name: Build site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PHOTOS_ALBUM: ${{ secrets.VDC_PHOTOS_ALBUM }}
+          CALENDAR: ${{ secrets.VDC_CALENDAR }}
+        run: |
+          npm run clean
+          npm run build
+
+  deploy_github:
+    needs:
+      - build
+    name: 'Deploy to Github Pages'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Load dependency cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('package.json') }}
+      - name: Load site cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/_site
+          key: ${{ runner.os }}-site-v1-${{ hashFiles('package.json') }}-${{ github.run_number }}
+      - name: Deploy site to GitHub
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+      - name: Status check
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: Github Pages preview
+          state: success
+          target_url: https://vubdivingcenter.be/

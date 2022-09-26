@@ -1,0 +1,104 @@
+---
+layout: main
+title: Kalender
+subtitle: 
+background: https://lh3.googleusercontent.com/WnOS8K4-loEnfWON7hw560NIZUkxurveC10MVXXHZjNygkSlqVLS1GbARwHsfSr0p8xGq7fXs47LKCwTMzU2TY3KM9w8Qj_6bo3sM9e5TrBAiMEWzjUPeV_gEZHzMq64MVlKMwKHrzw
+permalink: /calendar/index.html
+eleventyNavigation:
+    key: Kalender
+    parent: Leden
+    order: 3
+---
+<script src="/scripts/vendor/dhtmlxscheduler.js" ></script>
+<link rel="stylesheet" href="/css/vendor/dhtmlxscheduler_material.css" type="text/css">
+
+<p>
+	Deze kalender bevat belangrijke events voor het VDC zoals clubduiken, vakanties, duikweekends, vergaderingen en trainingen.
+</p>
+
+<div id="calendar" class="dhx_cal_container" style='width:100%; height:100vh;'>
+	<div class="dhx_cal_navline">
+		<div class="dhx_cal_prev_button">&nbsp;</div>
+		<div class="dhx_cal_next_button">&nbsp;</div>
+		<div class="dhx_cal_today_button"></div>
+		<div class="dhx_cal_date"></div>
+	</div>
+	<div class="dhx_cal_header"></div>
+	<div class="dhx_cal_data"></div>
+</div>
+
+<div id="calendar-mobile">
+	<div class="event-template">
+		<div class="event-block">
+			<div class="event-date"></div>
+			<div class="event-title"></div>
+			<div class="event-details"></div>
+		</div>
+	</div>
+</div>
+
+<script>
+	scheduler.plugins({recurring: true, quick_info: true, serialize: true, url: true});
+	scheduler.config.readonly = true;
+	scheduler.config.icons_select = [];
+	scheduler.config.responsive_lightbox = true;
+	scheduler
+		.i18n
+		.setLocale("nl");
+	scheduler.init('calendar', new Date(), "month");
+	scheduler.load("/calendar.json");
+
+	scheduler.attachEvent("onLoadEnd", function () {
+		const template = document.querySelector('#calendar-mobile .event-template');
+		const container = document.getElementById('calendar-mobile');
+		const data = JSON.parse(scheduler.toJSON());
+
+		data
+			.map(event => {
+				const end = new Date(event.end_date);
+				return {
+					...event,
+					start_date: new Date(event.start_date),
+					end_date: end.getHours() === 0 ? new Date(end.getTime() - 1) : end
+				};
+			})
+			.filter(a => a.end_date > new Date())
+			.sort((a, b) => a.start_date - b.start_date)
+			.forEach(event => {
+				const start = event.start_date;
+				const end = event.end_date;
+				if (event.rec_type) {
+					return;
+				}
+				const title = event.text;
+				const details = event.details;
+				const dateOptions = {
+					weekday: 'long',
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric'
+				};
+				const startStr = start.toLocaleString("nl-BE", dateOptions);
+				const endStr = end.toLocaleString("nl-BE", dateOptions);
+				let dateStr = "";
+				if (startStr !== endStr) {
+					dateStr = startStr + " - " + endStr;
+				} else if (start.getHours() == 0 && end.getHours() == 23) {
+					dateStr = startStr;
+				} else {
+					dateStr = `${startStr} van ${start.getHours().toString().padStart(2, '0')}:${start.getMinutes().toString().padStart(2, '0')} - ${end.getHours().toString().padStart(2, '0')}:${end.getMinutes().toString().padStart(2, '0')}`
+				}
+				const clone = template.cloneNode(true);
+				clone
+					.querySelector('.event-title')
+					.innerHTML = title;
+				clone
+					.querySelector('.event-date')
+					.innerHTML = dateStr;
+				clone
+					.querySelector('.event-details')
+					.innerHTML = details;
+				container.innerHTML = container.innerHTML + clone.innerHTML;
+			});
+	});
+</script>

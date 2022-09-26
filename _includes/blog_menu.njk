@@ -1,0 +1,12 @@
+<nav class="navigation">
+  {% for year, posts in collections.posts_year %}
+    <h3>{{ year }}</h3>
+    <ul>
+      {% for post in posts | reverse %}
+        <li {% if page.url == post.url %}class="selected"{% endif %}>
+          <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.date | readableDate }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</nav>

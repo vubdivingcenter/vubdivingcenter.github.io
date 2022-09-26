@@ -1,0 +1,41 @@
+@media (max-width: $on-small) {
+    #calendar {
+        display: none;
+    }
+}
+
+@media (min-width: $on-small) {
+    #calendar-mobile {
+        display: none;
+    }
+}
+
+#calendar-mobile {
+    .event-template {
+        display: none;
+    }
+
+    .event-block {
+        margin-bottom: 25px;
+    }
+
+    .event-date {
+        background-color: $primary_color;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .event-title {
+        padding-left: 15px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .event-details {
+        padding-left: 15px;
+        font-size: 1em;
+    }
+}

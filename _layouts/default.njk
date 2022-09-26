@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+  <!-- VUB Diving Center Theme - Copyright Maxim Van de Wynckel -->
+  {% include "head.njk" %}
+
+  <body>
+    {% include "header.njk" %}
+    {% include "sidebar.njk" %}
+
+    <section class="content" id="content">
+      {% if subtitle %}
+      <h2 class="subtitle">{{ subtitle }}</h2>
+      {% endif %}
+      {{ content | safe }}
+    </section>
+
+    {% include "footer.njk" %}
+  </body>
+</html>

@@ -1,0 +1,29 @@
+div.jumbotron {
+    width: 70%;
+    height: auto;
+    padding: 50px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 1.5em;
+    border: solid 1px #646464;
+
+    .btn-group {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: $on-small) {
+    div.jumbotron {
+        width: auto;
+        border-radius: 0;
+        margin-left: -40px;
+        margin-right: -40px;
+        border-left: none;
+        border-right: none;
+        font-size: 1.1em;
+    }
+}

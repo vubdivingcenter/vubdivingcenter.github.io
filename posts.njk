@@ -1,0 +1,18 @@
+---
+layout: default.njk
+permalink: /posts/
+title: 'Nieuws'
+eleventyNavigation:
+    key: Nieuws
+    parent: Leden
+    order: 1
+---
+
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-7 typography">
+        {% set postslist = collections.posts %}
+        {% include "postslist.njk" %}
+    </div>
+  </div>
+</div>

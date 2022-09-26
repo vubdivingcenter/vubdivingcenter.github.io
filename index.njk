@@ -1,0 +1,29 @@
+---
+layout: main
+title: 'VUB Diving Center'
+subtitle: 'Science, Water & Bubbles'
+background: default.jpg
+---
+
+<div class="jumbotron">
+    <strong>Duikopleiding of groepsactiviteit?</strong><br/>
+    Interesse of meer informatie nodig? Bezoek nu onze pagina's<br/>
+    <div class="btn-group">
+        <a class="btn btn-red" href="/education">
+            Duikopleiding
+        </a>
+        <a class="btn btn-green" href="/activity">
+            Groepsactiviteit
+        </a>
+    </div>
+</div>
+
+{% set maxPosts = collections.posts.length | min(3) %}
+<h3>Nieuws</h3>
+{% set postslist = collections.posts | head(-3) %}
+{% include "postslist.njk" %}
+
+<h3>Gesubsidiëerd door:</h3>
+<a href="https://www.sportinbrussel.be/">
+    <img class="sponsor-image" alt="sport in brussel logo" src="/images/misc/logo_sportinbrussel.svg"/>
+</a>
