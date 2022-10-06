@@ -1,0 +1,17 @@
+.typography {
+    img.left {
+        float: left;
+        margin: 15px;
+    }
+    
+    img.right {
+        float: right;
+        margin: 15px;
+    }
+
+    @media (max-width: $on-small) {
+        img.right {
+            margin: 0;
+        }
+    }
+}

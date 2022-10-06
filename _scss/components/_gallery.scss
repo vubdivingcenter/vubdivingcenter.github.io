@@ -5,14 +5,16 @@
     grid-gap: 15px;
     height: auto;
 
-    @media (max-width: $on-medium) {
+    @media (max-width: calc($on-medium / 2)) {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: initial;
+        grid-gap: 15px;
     }
 
-    @media (max-width: $on-small) {
+    @media (max-width: calc($on-small / 2)) {
         grid-template-columns: repeat(1, 1fr);
         grid-auto-rows: initial;
+        grid-gap: 15px;
     }
 }
 
@@ -31,7 +33,7 @@
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     }
 
-    @media (max-width: $on-small) {
+    @media (max-width: calc($on-small / 2)) {
         margin-left: -40px;
         margin-right: -40px;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);

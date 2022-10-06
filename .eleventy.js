@@ -15,7 +15,7 @@ const pluginFavicon = require("./_scripts/favicon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginHTMLValidate = require('eleventy-plugin-html-validate');
 const fetchPhotos = require('./_scripts/photos');
-const fetchEvents = require( './_scripts/calendar');
+const fetchEvents = require('./_scripts/calendar');
 
 const { DateTime } = require("luxon");
 const fs = require('fs');
@@ -56,9 +56,6 @@ module.exports = function (el) {
   md.use(markdownItAnchor);
   md.use(markdownItVideo, {
     youtube: { width: 640, height: 390 },
-    vimeo: { width: 500, height: 281 },
-    vine: { width: 600, height: 600, embed: 'simple' },
-    prezi: { width: 550, height: 400 }
   });
   md.use(html5Media);
   md.use(markdownItAttrs, {
@@ -71,7 +68,6 @@ module.exports = function (el) {
     tags: ['h2'],
     ul: true
   });
-
 
   /* Stylesheets */
   el.addPlugin(pluginSASS, [
@@ -170,9 +166,7 @@ module.exports = function (el) {
       "png",
       "pdf",
       'gif',
-      "mp4",
-      "webm",
-      "webp"
+      "mp4"
     ],
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
