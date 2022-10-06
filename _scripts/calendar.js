@@ -14,11 +14,15 @@ async function fetchEvents(el) {
             const data = events.map((event, idx) => {
                 id += 1;
                 if (event.rrule) {
+                    // Legacy calendar fix:
+                    if (!event.rrule.options.until && event.rrule.options.count) {
+                        event.rrule.options.until = new Date(event.rrule.options.dtstart.getTime() + (12096e5 * event.rrule.options.count));
+                    }
                     const event_pid = id;
                     const output = [{
                         id,
-                        start_date: formatDate(event.rrule.origOptions.dtstart),
-                        end_date: event.rrule.origOptions.until ? formatDate(event.rrule.origOptions.until) : new Date(9999, 1, 1),
+                        start_date: formatDate(event.rrule.options.dtstart),
+                        end_date: event.rrule.options.until ? formatDate(event.rrule.options.until) : new Date(9999, 1, 1),
                         text: event.summary,
                         details: `${event.description ? event.description + "\n" : ""}${event.location}`,
                         rec_type: `week_1___`,
