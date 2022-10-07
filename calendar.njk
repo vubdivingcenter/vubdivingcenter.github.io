@@ -36,7 +36,10 @@ eleventyNavigation:
 <div id="calendar-mobile">
 	<div class="event-template">
 		<div class="event-block">
-			<div class="event-date"></div>
+			<div class="event-date-block">
+				<span class="event-date"></span>
+				<span class="event-time"></span>
+			</div>
 			<div class="event-title"></div>
 			<div class="event-details"></div>
 		</div>
@@ -57,24 +60,17 @@ eleventyNavigation:
 	scheduler.attachEvent("onLoadEnd", function () {
 		const template = document.querySelector('#calendar-mobile .event-template');
 		const container = document.getElementById('calendar-mobile');
-		const data = JSON.parse(scheduler.toJSON());
+		const currentDate = new Date();
+		const data = scheduler.getEvents(currentDate, new Date(currentDate.getFullYear() + 1, 0, 0));
 
 		data
-			.map(event => {
-				const end = new Date(event.end_date);
-				return {
-					...event,
-					start_date: new Date(event.start_date),
-					end_date: end.getHours() === 0 ? new Date(end.getTime() - 1) : end
-				};
-			})
-			.filter(a => a.end_date > new Date())
-			.sort((a, b) => a.start_date - b.start_date)
+			.sort((a, b) => a.start_date > b.start_date ? 1 : -1)
 			.forEach(event => {
 				const start = event.start_date;
 				const end = event.end_date;
 				const title = event.text, details = event.details;
 				let dateStr = "";
+				let timeStr = "";
 				const dateOptions = {
 					weekday: 'long',
 					year: 'numeric',
@@ -82,22 +78,16 @@ eleventyNavigation:
 					day: 'numeric'
 				};
 
-				if (!event.rec_type) {
-					const startStr = start.toLocaleString("nl-BE", dateOptions);
-					const endStr = end.toLocaleString("nl-BE", dateOptions);
-					if (startStr !== endStr) {
-						dateStr = startStr + " - " + endStr;
-					} else if (start.getHours() == 0 && end.getHours() == 23) {
-						dateStr = startStr;
-					} else {
-						dateStr = `${startStr} van ${start.getHours().toString().padStart(2, '0')}:${start.getMinutes().toString().padStart(2, '0')} - ${end.getHours().toString().padStart(2, '0')}:${end.getMinutes().toString().padStart(2, '0')}`
-					}
+				const startStr = start.toLocaleString("nl-BE", dateOptions);
+				const endStr = end.toLocaleString("nl-BE", dateOptions);
+				if (startStr !== endStr) {
+					dateStr = startStr + " - " + endStr;
 				} else {
-
+					dateStr = startStr;
 				}
 
-				if (dateStr === '') {
-					return;
+				if (start.getHours() !== 0 && end.getHours() !== 23) {
+					timeStr = `${start.getHours().toString().padStart(2, '0')}:${start.getMinutes().toString().padStart(2, '0')} - ${end.getHours().toString().padStart(2, '0')}:${end.getMinutes().toString().padStart(2, '0')}`;
 				}
 		
 				const clone = template.cloneNode(true);
@@ -107,6 +97,9 @@ eleventyNavigation:
 				clone
 					.querySelector('.event-date')
 					.innerHTML = dateStr;
+				clone
+					.querySelector('.event-time')
+					.innerHTML = timeStr;
 				clone
 					.querySelector('.event-details')
 					.innerHTML = details;

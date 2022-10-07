@@ -8,7 +8,7 @@
     {% include "sidebar.njk" %}
 
     <section class="content" id="content">
-      {% if subtitle %}
+      {% if subtitle and not header_large %}
       <h2 class="subtitle">{{ subtitle }}</h2>
       {% endif %}
       {{ content | safe }}

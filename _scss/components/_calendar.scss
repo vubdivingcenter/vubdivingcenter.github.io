@@ -19,21 +19,27 @@
         margin-bottom: 25px;
     }
 
-    .event-date {
+    .event-date-block {
         background-color: $primary_color;
         color: white;
-        padding: 15px 15px;
+        padding: 5px 15px;
         text-align: center;
         font-size: 1.1em;
         font-weight: bold;
     }
     .event-title {
         padding-left: 15px;
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 5px;
         font-size: 1em;
         font-weight: bold;
     }
+
+    .event-time {
+        font-size: 0.85em;
+        display: block;
+    }
+
     .event-details {
         padding-left: 15px;
         font-size: 1em;

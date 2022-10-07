@@ -285,7 +285,7 @@ header {
         }
     }
 
-    h1 {
+    h1, h2 {
         position: absolute;
         color: white;
         text-transform: none;
@@ -298,6 +298,15 @@ header {
         @media (max-width: $on-small) {
             bottom: 0.6em;
             font-size: 35px;
+        }
+    }
+
+    h2.subtitle {
+        font-size: 30px;
+        color: white;
+
+        @media (max-width: $on-small) {
+            font-size: 20px;
         }
     }
 }
@@ -369,5 +378,23 @@ header.scroll {
             left: 15px;
             top: 15px;
         }
+    }
+}
+
+header.large {
+    height: calc($header_height + 150px);
+
+    .logo {
+        background-size: 170px 170px;
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        bottom: 2em;
+    }
+
+    h2 {
+        bottom: 2em;
     }
 }

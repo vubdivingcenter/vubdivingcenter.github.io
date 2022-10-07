@@ -1,4 +1,4 @@
-<header>
+<header{% if header_large %} class="large"{% endif %}>
   <div class="header-image">
     <picture>
       {% if background and 'https://lh3.googleusercontent.com' in background %}
@@ -61,5 +61,8 @@
     </div>
 
     <h1>{{ site_title if site_title else title }}</h1>
+    {% if header_large %}
+    <h2 class="subtitle">{{ subtitle }}</h2>
+    {% endif %}
   </nav>
 </header>

@@ -6,6 +6,9 @@ async function fetchEvents(el) {
     return new Promise((resolve, reject) => {
         axios.get(process.env.CALENDAR).then(response => {
             const data = response.data;
+            if (!fs.existsSync('_site')) {
+                fs.mkdirSync('_site');
+            }
             fs.writeFileSync('_site/calendar.ics', data, 'utf-8');
             return ics.parseICS(data);
         }).then(response => {

@@ -3,7 +3,7 @@ layout: main
 title: Over ons
 subtitle: Wat achtergrond over het VDC
 background: https://lh3.googleusercontent.com/TWVj09M8ShA0mEzgLTFXnDzVVXu27SLZwQe-590PeKDhPMjGeLiWnwFzwDIiI1g8Dt6Sq32HJMBu4HL-z_ypTwYh638bouD_M3RMbk1MEL0o6pT0bqVzPO9yT32Y5UW_QxEGLaeMudc
-redirect_from: /aboutus
+redirect_from: /aboutus     # VDC Site Update 2022
 eleventyNavigation:
     key: Over ons
     order: 3

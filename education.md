@@ -41,7 +41,7 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-De inschrijvingsprijs bedraagt **115 euro** per jaar **+ 85 euro** voor de opleiding van *initiate*. Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. Wanneer je het examen van initiate successvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen.
+Het lidgeld bedraagt **110 euro** per jaar **+ 85 euro** voor de opleiding van *initiate*. Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen.
 
 ### Interesse of meer info nodig?
 
