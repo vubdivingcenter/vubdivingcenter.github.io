@@ -35,9 +35,8 @@ jobs:
           npm install
       - name: Build site
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PHOTOS_ALBUM: ${{ secrets.VDC_PHOTOS_ALBUM }}
-          CALENDAR: ${{ secrets.VDC_CALENDAR }}
+          PHOTOS_ALBUM: ${{ secrets.PHOTOS_ALBUM }}
+          CALENDAR: ${{ secrets.CALENDAR }}
         run: |
           npm run clean
           npm run build
