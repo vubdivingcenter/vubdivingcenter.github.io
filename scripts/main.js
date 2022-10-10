@@ -3,9 +3,11 @@ window.onscroll = function () { scrollFunction() };
 const thresshold = 220;
 function scrollFunction() {
   const header = document.getElementsByTagName("header")[0];
-  if (document.body.scrollTop > thresshold || document.documentElement.scrollTop > thresshold) {
+  const scrolled = document.body.scrollTop > thresshold || document.documentElement.scrollTop > thresshold;
+  const scrollClass = header.classList.contains("scroll");
+  if (scrolled && !scrollClass) {
     header.classList.add("scroll");
-  } else {
+  } else if (!scrolled && scrollClass) {
     header.classList.remove("scroll");
   }
 }

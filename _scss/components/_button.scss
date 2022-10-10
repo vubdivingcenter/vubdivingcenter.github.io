@@ -66,4 +66,20 @@
     .btn-grey:hover {
         background-color: #393939;
     }
+
+    .btn-primary {
+        background-color: $primary_color;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: lighten($primary_color, 10%);
+    }
+
+    .btn-secondary {
+        background-color: $secondary_color;
+        color: white;
+    }
+    .btn-secondary:hover {
+        background-color: lighten($secondary_color, 10%);
+    }
 }

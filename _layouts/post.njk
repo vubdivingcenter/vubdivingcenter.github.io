@@ -13,7 +13,7 @@ site_title: 'Nieuws'
       {{ content | safe }}
 
       {% if images %}
-        <div class="gallery">
+        <div class="gallery post">
           {%- for photo in images -%}   
               <figure id="figure-{{ images.indexOf(photo) }}" class="gallery-item no-lightbox">
                 <img alt="{{ photo }}" referrerpolicy="no-referrer" src="{{ photo }}" class="gallery-img">

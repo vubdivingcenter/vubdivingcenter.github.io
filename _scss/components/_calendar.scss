@@ -21,13 +21,16 @@
 
     .event-date-block {
         background-color: $primary_color;
+        background: linear-gradient(45deg, $primary_color, darken($primary_color, 10%));
         color: white;
+        border-radius: 4px 4px 0 0;
         padding: 5px 15px;
         text-align: center;
         font-size: 1.1em;
         font-weight: bold;
     }
     .event-title {
+        background-color: rgb(245, 245, 245);
         padding-left: 15px;
         padding-top: 10px;
         padding-bottom: 5px;
@@ -41,7 +44,10 @@
     }
 
     .event-details {
+        background-color: rgb(245, 245, 245);
         padding-left: 15px;
         font-size: 1em;
+        min-height: 4px;
+        border-radius: 0 0 4px 4px;
     }
 }
