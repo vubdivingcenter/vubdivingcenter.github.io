@@ -8,14 +8,22 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     text-transform: uppercase;
     font-size: 20px;
+    font-family: "ITC Avant Garde Gothic Std Book", sans-serif;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
     @media (max-width: $on-small) {
         height: $header_height_mobile;
     }
-    
+
     .header-image {
         position: absolute;
         top: 0;
@@ -54,13 +62,13 @@ header {
             width: 100%;
             background: transparent;
             z-index: 5;
-    
+
             svg {
                 display: inline-block;
                 height: 100%;
                 width: 100%;
             }
-    
+
             @media (max-width: $on-small) {
                 height: 35px;
             }
@@ -75,7 +83,6 @@ header {
         height: 85%;
         background: rgb(0, 0, 0);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 35%, rgba(255, 255, 255, 0) 100%);
-
 
         .dropdown {
             display: inline-block;
@@ -118,6 +125,7 @@ header {
                     color: black;
                     padding: 5px;
                     padding-right: 20px;
+                    padding-left: 20px;
 
                     &:hover {
                         background-color: rgb(206, 206, 206);
@@ -193,7 +201,7 @@ header {
         }
 
         input ~ .logo {
-            background-image: url(/images/logo.svg);
+            background-image: url($base_url + "/images/logo.svg");
         }
 
         .page-link {
@@ -256,7 +264,7 @@ header {
 
     /* VDC Header Logo */
     .logo {
-        background-image: url(/images/logo_alpha.svg);
+        background-image: url($base_url + "/images/logo_alpha.svg");
         background-size: 150px 150px;
         background-repeat: no-repeat;
         background-position: center center;
@@ -271,7 +279,7 @@ header {
         filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
 
         &:hover {
-            background-image: url(/images/logo.svg);
+            background-image: url($base_url + "/images/logo.svg");
             transition: 0.1s;
             background-color: white;
         }
@@ -285,7 +293,8 @@ header {
         }
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         position: absolute;
         color: white;
         text-transform: none;
@@ -311,6 +320,34 @@ header {
     }
 }
 
+header.large {
+    height: calc($header_height + 100px);
+
+    @media (max-width: $on-small) {
+        height: calc($header_height_mobile + 100px);
+    }
+
+    .logo {
+        background-size: 170px 170px;
+        width: 180px;
+        height: 180px;
+
+        @media (max-width: $on-small) {
+            height: 130px;
+            width: 130px;
+            background-size: 120px 120px;
+        }
+    }
+
+    h1 {
+        bottom: 2em;
+    }
+
+    h2 {
+        bottom: 2em;
+    }
+}
+
 header.scroll {
     height: 110px;
     position: fixed;
@@ -327,7 +364,8 @@ header.scroll {
         margin-top: $header_height;
     }
 
-    h1 {
+    h1,
+    h2 {
         display: none;
     }
 
@@ -346,7 +384,7 @@ header.scroll {
         background-size: 100px 100px;
         left: 50px;
         top: 30px;
-        background-image: url(/images/logo.svg);
+        background-image: url($base_url + "/images/logo.svg");
         background-color: white;
 
         &:hover {
@@ -358,19 +396,19 @@ header.scroll {
 @media (max-width: $on-small) {
     header.scroll {
         height: 70px;
-    
+
         .header-image {
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
         }
-    
+
         nav {
             height: 100%;
         }
-    
+
         ~ .content {
             margin-top: $header_height_mobile;
         }
-    
+
         .logo {
             height: 80px;
             width: 80px;
@@ -378,23 +416,5 @@ header.scroll {
             left: 15px;
             top: 15px;
         }
-    }
-}
-
-header.large {
-    height: calc($header_height + 150px);
-
-    .logo {
-        background-size: 170px 170px;
-        width: 180px;
-        height: 180px;
-    }
-
-    h1 {
-        bottom: 2em;
-    }
-
-    h2 {
-        bottom: 2em;
     }
 }

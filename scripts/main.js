@@ -2,10 +2,11 @@ window.onscroll = function () { scrollFunction() };
 
 const thresshold = 220;
 function scrollFunction() {
+  const header = document.getElementsByTagName("header")[0];
   if (document.body.scrollTop > thresshold || document.documentElement.scrollTop > thresshold) {
-    document.getElementsByTagName("header")[0].className = "scroll";
+    header.classList.add("scroll");
   } else {
-    document.getElementsByTagName("header")[0].className = "";
+    header.classList.remove("scroll");
   }
 }
 

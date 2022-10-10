@@ -21,9 +21,11 @@ header_large: true
 </div>
 
 {% set maxPosts = collections.posts.length | min(3) %}
+{% set postslist = collections.posts | after() | head(-3) %}
+{% if postslist.length > 0 %}
 <h3>Nieuws</h3>
-{% set postslist = collections.posts | head(-3) %}
 {% include "postslist.njk" %}
+{% endif %}
 
 <h3>Gesubsidiëerd door:</h3>
 <a href="https://www.sportinbrussel.be/">

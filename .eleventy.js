@@ -16,6 +16,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginHTMLValidate = require('eleventy-plugin-html-validate');
 const fetchPhotos = require('./_scripts/photos');
 const fetchEvents = require('./_scripts/calendar');
+const { EleventyHtmlBasePlugin  } = require("@11ty/eleventy");
 
 const { DateTime } = require("luxon");
 const fs = require('fs');
@@ -41,12 +42,15 @@ module.exports = function (el) {
   el.addPlugin(pluginSEO, require("./_data/seo.json"));
   el.addPlugin(pluginSitemap, {
     sitemap: {
-      hostname: "https://vubdivingcenter.be",
+      hostname: 'https://vubdivingcenter.be',
     },
   });
   el.addPlugin(pluginFavicon);
   el.addPlugin(pluginRss);
   el.addPlugin(pluginHTMLValidate);
+  el.addPlugin(EleventyHtmlBasePlugin, {
+    baseHref: ''
+  });
 
   /* Navigation */
   el.addPlugin(pluginNavigation);
@@ -105,6 +109,7 @@ module.exports = function (el) {
   });
   el.setLibrary("njk", njkEnv);
 
+
   /* Collections */
   el.addCollection("posts_year", (collection) => {
     return _.chain(collection.getFilteredByTag("posts").sort((a, b) => a.date - b.date))
@@ -131,6 +136,13 @@ module.exports = function (el) {
       return array.slice(n);
     }
     return array.slice(0, n);
+  });
+
+  el.addFilter("after", (posts) => {
+    const filterDate = new Date(Date.now() - (3 * 31 * 24 * 60 * 60 * 1000));
+    return posts.filter(post => {
+      return post.date.getTime() > filterDate.getTime();
+    });
   });
 
   el.addFilter("min", (...numbers) => {

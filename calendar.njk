@@ -55,7 +55,7 @@ eleventyNavigation:
 		.i18n
 		.setLocale("nl");
 	scheduler.init('calendar', new Date(), "month");
-	scheduler.load("/calendar.json");
+	scheduler.load('{{ "/calendar.json" | htmlBaseUrl }}');
 
 	scheduler.attachEvent("onLoadEnd", function () {
 		const template = document.querySelector('#calendar-mobile .event-template');

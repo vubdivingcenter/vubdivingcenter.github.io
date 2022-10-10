@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   color: var(--color-text);
-  font-family: 'ITC Avant Garde Gothic Std Book', sans-serif;
+  font-family: 'Lato',Helvetica Neue,Arial,Sans-serif;
   font-size: 1.6rem;
 }
 
@@ -26,6 +26,7 @@ body p {
 }
 
 .typography h1, h2, h3 {
+    font-family: 'ITC Avant Garde Gothic Std Book', sans-serif;
     overflow-wrap: break-word;
 }
 
@@ -50,6 +51,10 @@ body p {
 .typography p {
     line-height: 1.5em;
     margin: 1em 0;
+    font-size: 1.15em;
+}
+
+.typography ul,ol {
     font-size: 1.15em;
 }
 

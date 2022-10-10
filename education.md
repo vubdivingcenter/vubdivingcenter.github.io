@@ -45,4 +45,4 @@ Het lidgeld bedraagt **110 euro** per jaar **+ 85 euro** voor de opleiding van *
 
 ### Interesse of meer info nodig?
 
-Stuur een mailtje naar <info@vubdivingcenter.be>
+Stuur een mailtje naar <info@vubdivingcenter.be>. Nieuwe leden worden verwacht om eerst contact met ons op te nemen alvorens ze kunnen starten aan de opleiding.

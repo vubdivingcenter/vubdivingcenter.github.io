@@ -12,7 +12,8 @@ async function fetchEvents(el) {
             fs.writeFileSync('_site/calendar.ics', data, 'utf-8');
             return ics.parseICS(data);
         }).then(response => {
-            const events = Object.values(response).filter(entry => entry.type == 'VEVENT');
+            // fs.writeFileSync('_site/calendar_raw.json', JSON.stringify(response, null, 2), 'utf-8');
+            const events = Object.values(response).filter(entry => entry.type === 'VEVENT');
             let id = 1;
             const data = events.map((event, idx) => {
                 id += 1;
@@ -43,6 +44,20 @@ async function fetchEvents(el) {
                                 details: `${event.description ? event.description + "\n" : ""}${event.location}`,
                                 rec_type: `none`,
                                 event_length: exdate.getTime() / 1000,
+                                event_pid
+                            };
+                        }));
+                    }
+                    if (event.recurrences) {
+                        output.push(...Object.values(event.recurrences).map(recurrence => {
+                            id += 1;
+                            return {
+                                id,
+                                start_date: formatDate(recurrence.start),
+                                end_date: formatDate(recurrence.end),
+                                text: recurrence.summary,
+                                details: `${recurrence.description ? recurrence.description + "\n" : ""}${recurrence.location}`,
+                                event_length: recurrence.start.getTime() / 1000,
                                 event_pid
                             };
                         }));

@@ -8,10 +8,13 @@ $primary_color: #001f75;
 $color_text: #333;
 $color_link: #007bff;
 
+$base_url: "";
+
 @import "includes/typography";
 @import "includes/normalize";
 @import "includes/grid";
 @import "includes/images";
+@import "includes/alert";
 
 @import "components/header";
 @import "components/posts";
@@ -58,7 +61,7 @@ h2.subtitle {
 }
 
 .sponsor-image {
-  width: 400px;
+  width: 450px;
 }
 
 p.note {
