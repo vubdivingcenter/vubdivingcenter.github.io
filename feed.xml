@@ -1,21 +1,89 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-        <link>{{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="nl-be">
+  <title>VUB Diving Center</title>
+  <subtitle>Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center</subtitle>
+  <link href="https://vubdivingcenter.be/feed.xml" rel="self"/>
+  <link href="https://vubdivingcenter.be/"/>
+  <updated>2022-09-25T00:00:00Z</updated>
+  <id>https://vubdivingcenter.be/</id>
+  <author>
+    <name></name>
+    <email></email>
+  </author>
+  
+  <entry>
+    <title>Septemberweekend 2022</title>
+    <link href="https://vubdivingcenter.be/posts/2022-09-25-duikweekend/"/>
+    <updated>2022-09-25T00:00:00Z</updated>
+    <id>https://vubdivingcenter.be/posts/2022-09-25-duikweekend/</id>
+    <content type="html">&lt;p&gt;Begin deze maand ging naar goede gewoonte ons jaarlijks september duikweekend door in Nederland. Het was een weekend met veel Sepia&#39;s en pijlinktvissen.&lt;/p&gt;
+&lt;p&gt;Bedankt aan de organisatie voor alweer een prachtig weekend!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Tweede instapmoment voor de opleiding!</title>
+    <link href="https://vubdivingcenter.be/posts/2019-11-10-new-course/"/>
+    <updated>2019-11-10T00:00:00Z</updated>
+    <id>https://vubdivingcenter.be/posts/2019-11-10-new-course/</id>
+    <content type="html">&lt;p&gt;Afgelopen vrijdag was het weer een vol zwembad! Maar liefst 8 nieuwe kandidaten kwamen opdagen voor een initiatie.&lt;/p&gt;
+&lt;p&gt;Meer informatie over onze &lt;a href=&quot;https://vubdivingcenter.be/education&quot;&gt;opleiding&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Nieuwe opleiding!</title>
+    <link href="https://vubdivingcenter.be/posts/2019-10-12-first-training-new-course/"/>
+    <updated>2019-10-12T00:00:00Z</updated>
+    <id>https://vubdivingcenter.be/posts/2019-10-12-first-training-new-course/</id>
+    <content type="html">&lt;p&gt;Gisteren, vrijdag 11 oktober, zijn we van start gegaan met onze vernieuwde opleiding. Er waren alvast 7 kandidaten aanwezig die zullen werken naar hun &lt;em&gt;initiate&lt;/em&gt; certificaat.&lt;/p&gt;
+&lt;p&gt;Meer informatie over onze &lt;a href=&quot;https://vubdivingcenter.be/education&quot;&gt;opleiding&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Opleiding duikarts</title>
+    <link href="https://vubdivingcenter.be/posts/2019-10-06-opleiding-duikarts/"/>
+    <updated>2019-10-06T00:00:00Z</updated>
+    <id>https://vubdivingcenter.be/posts/2019-10-06-opleiding-duikarts/</id>
+    <content type="html">&lt;p&gt;Volgende week beginnen we niet alleen met onze eigen opleiding maar zal er ook een nieuwe cursus Internationaal Duikarts van start gaan.&lt;/p&gt;
+&lt;p&gt;En jawel. Jouke de Regt (VDC Instructor) zal hier uitblinken als één van de lesgeefsters. 😀&lt;/p&gt;
+&lt;p&gt;Meer informatie:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.duikarts.be/&quot;&gt;https://www.duikarts.be/&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Clubduik 13 oktober!</title>
+    <link href="https://vubdivingcenter.be/posts/2019-10-03-clubduik/"/>
+    <updated>2019-10-03T00:00:00Z</updated>
+    <id>https://vubdivingcenter.be/posts/2019-10-03-clubduik/</id>
+    <content type="html">&lt;p&gt;De dagen worden korter, de nachten wat langer maar het water is nog steeds warm, dus organiseren we twee duiken op 13 Oktober.&lt;/p&gt;
+&lt;p&gt;Gelieve te bevestigen per mail
+Brevet &amp;amp; aantal duiken.&lt;/p&gt;
+&lt;p&gt;Duikplaats: Zeelandbrug&lt;br /&gt;
+Website: &lt;a href=&quot;https://www.duikersgids.nl/zeelandbrug&quot;&gt;https://www.duikersgids.nl/zeelandbrug&lt;/a&gt;&lt;br /&gt;
+Adres: Galgelaan, Zierikzee&lt;/p&gt;
+&lt;p&gt;Afspraak: 9.00 u op de parking voor de eerste duik&lt;br /&gt;
+Briefing: 9.05 u&lt;br /&gt;
+Te water 9.35 u&lt;/p&gt;
+&lt;p&gt;Na de eerste duik kan je iets eten in de brasserie Wendy aan de Zeelandbrug of je kan je eigen broodjes meebrengen.&lt;/p&gt;
+&lt;p&gt;Aan de Zeelandbrug is een vulstation.&lt;/p&gt;
+&lt;p&gt;Tweede duik aan de Zeelandbrug&lt;br /&gt;
+Afspraak: 13.55 u op de parking voor de tweede duik&lt;br /&gt;
+Briefing: 14.00 u&lt;br /&gt;
+Te water 14.30 u&lt;/p&gt;
+&lt;p&gt;Vergeet niet:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Volledige duikuitrusting&lt;/li&gt;
+&lt;li&gt;Gevulde duikfles !&lt;/li&gt;
+&lt;li&gt;OSB !&lt;/li&gt;
+&lt;li&gt;Drinkwater&lt;/li&gt;
+&lt;li&gt;Opgeladen lamp&lt;/li&gt;
+&lt;li&gt;Buddy-line&lt;/li&gt;
+&lt;li&gt;Goed humeur&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Debriefing: Café De Gekroonde Suikerbiet&lt;/p&gt;
+</content>
+  </entry>
+</feed>
