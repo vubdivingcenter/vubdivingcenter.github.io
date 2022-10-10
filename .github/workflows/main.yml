@@ -18,7 +18,7 @@ jobs:
       - name: Set timezone
         uses: szenius/set-timezone@v1.0
         with:
-          timezoneLinux: "Europe/Belgium"
+          timezoneLinux: "Europe/Berlin"
       - name: Load dependency cache
         uses: actions/cache@v2
         with:

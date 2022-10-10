@@ -4,6 +4,7 @@ const fs = require('fs');
 
 async function fetchEvents(el) {
     return new Promise((resolve, reject) => {
+        console.log(`Building calendar with time zone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`);
         axios.get(process.env.CALENDAR).then(response => {
             const data = response.data;
             if (!fs.existsSync('_site')) {
