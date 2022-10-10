@@ -76,7 +76,7 @@ async function fetchEvents(el) {
                     }];
                 }
             }).reduce((a, b) => a.concat(b));
-            fs.writeFileSync('_site/calendar.json', JSON.stringify(data, null, 2), 'utf-8');
+            fs.writeFileSync('_site/calendar.json', JSON.stringify(data), 'utf-8');
             resolve();
         }).catch(reject);
     });

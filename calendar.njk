@@ -16,9 +16,9 @@ eleventyNavigation:
 	Deze kalender bevat belangrijke events voor het VDC zoals clubduiken, vakanties, duikweekends, vergaderingen en trainingen.
 </p>
 
-{% set calendar = "webcals://www.vubdivingcenter.be/calendar.ics" %}
+{% set calendar = "webcal://www.vubdivingcenter.be/calendar.ics" %}
 <ul class="button-group">
-	<li><a href="https://www.google.com/calendar/render?cid={{ calendar }}">Google Calendar <small>(online)</small></a></li>
+	<li><a href="https://www.google.com/calendar/render?cid={{ calendar | urlencode }}">Google Calendar <small>(online)</small></a></li>
 	<li><a href="{{ calendar }}">Importeer Kalender</a></li>
 </ul>
 
