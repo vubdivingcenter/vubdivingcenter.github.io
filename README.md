@@ -1,7 +1,12 @@
-# VUB Diving Center Website
+<a href="https://www.vubdivingcenter.be" target="_blank" style="margin-left: auto; margin-right: auto;">
+    <img src="images/logo.svg" alt="vdc logo" style="width: 300px;">
+</a>
+<h1>VUB Diving Center Website</h1>
 
 ## Installatie
-`npm install`
+1. Installeer NodeJS 14 of hoger
+2. `npm install` om alle dependencies te installeren
+3. `npm run build` om de website te bouwen
 
 ## Nieuws
 Nieuws post kunnen aangemaakt worden in de directory `_posts`. 
@@ -34,7 +39,29 @@ images:
 Test
 ```
 
-
 ## Foto's
-Het VUB Diving Center heeft een gedeeld album waar fotos op kunnen worden toegevoegd. Elke week zal de website
-de nieuwe foto's downloaden en weergeven op de website.
+Het VUB Diving Center heeft een gedeeld *Google Photos* album waar fotos op kunnen worden toegevoegd. Elke dag zal de website
+de nieuwe foto's weergeven op de website. Foto's worden nooit gedownload van Google Photos.
+
+## Pagina's
+Een pagina is een markdown file met bovenaan metadata.
+```md 
+---
+layout: main
+title: Duikopleiding
+subtitle: Leren duiken? Dat kan!
+background: https://lh3.googleusercontent.com/vhJaAyeWCqiTWYAKEnoBBMCCnDQNNXQq_JKeR6dvAH6K4DpNd2uFkWGXPdbSTfnYOohQjD2swoqN7RhuAMe6b-mlwUhh22DBEpPB7kwHuqih2yMoEf9ptvqYGn5tjXI7CqESbsiKkyQ
+eleventyNavigation:
+    key: Duikopleiding
+    order: 1
+---
+Dit is een pagina
+```
+
+Standaard gebruikt een pagina de layout `main` en heeft het een titel en subtitle. De subtitle is niet noodzakelijk.
+De achtergrond is ofwel een relatieve URL naar een image in de repository of een foto van Google Photos.
+
+## Gesubsidiëerd door:
+<a href="https://www.sportinbrussel.be/" target="_blank">
+    <img src="images/misc/logo_sportinbrussel.svg" alt="vgc logo" style="width: 400px">
+</a>

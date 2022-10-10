@@ -42,7 +42,7 @@ module.exports = function (el) {
   el.addPlugin(pluginSEO, require("./_data/seo.json"));
   el.addPlugin(pluginSitemap, {
     sitemap: {
-      hostname: 'https://vubdivingcenter.be',
+      hostname: 'https://www.vubdivingcenter.be',
     },
   });
   el.addPlugin(pluginFavicon);
