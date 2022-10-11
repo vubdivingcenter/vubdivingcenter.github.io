@@ -38,13 +38,18 @@ body {
   margin: 0;
 }
 
+div.page-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
 .main {
   overflow-x: auto;
 }
 
 .content {
-  min-height: 40%;
-  position: relative;
+  flex: 1 auto;
 }
 
 h2.subtitle {

@@ -27,6 +27,7 @@ body p {
 
 .typography h1, h2, h3 {
     font-family: 'ITC Avant Garde Gothic Std Book', sans-serif;
+    overflow: hidden;
     overflow-wrap: break-word;
 }
 
@@ -113,5 +114,19 @@ p.abstract {
     
     .typography h3 {
         font-size: 28px;
+    }     
+}
+
+@media screen and (max-width: $on-small) {
+    .typography h1 {
+        font-size: 27px;
+    }
+    
+    .typography h2 {
+        font-size: 23px;
+    }
+    
+    .typography h3 {
+        font-size: 20px;
     }    
 }

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="nl-be">
-  <!-- VUB Diving Center Theme - Gemaakt door Maxim Van de Wynckel -->
+  <!-- 
+    VUB Diving Center Website
+    Thema gemaakt door Maxim Van de Wynckel
+
+    Zin om mee te werken aan deze website? 
+    Check de github: https://github.com/vubdivingcenter/vubdivingcenter.github.io
+  -->
   {% include "head.njk" %}
 
   <body>
-    {% include "header.njk" %}
-    {% include "sidebar.njk" %}
+    <div class="page-wrapper">
+      {% include "header.njk" %}
+      {% include "sidebar.njk" %}
 
-    <section class="content" id="content">
-      {% if subtitle and not header_large %}
-      <h2 class="subtitle">{{ subtitle }}</h2>
-      {% endif %}
-      {{ content | safe }}
-    </section>
+      <section class="content" id="content">
+        {% if subtitle and not header_large %}
+        <h2 class="subtitle">{{ subtitle }}</h2>
+        {% endif %}
+        {{ content | safe }}
+      </section>
 
-    {% include "footer.njk" %}
+      {% include "footer.njk" %}
+    </div>
   </body>
 </html>

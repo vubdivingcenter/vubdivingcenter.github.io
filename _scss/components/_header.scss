@@ -3,6 +3,7 @@ $header_height_mobile: 230px;
 
 header {
     height: $header_height;
+    flex: none;
     display: block;
     z-index: 500;
     position: relative;

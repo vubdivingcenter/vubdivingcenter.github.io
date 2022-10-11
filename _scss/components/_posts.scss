@@ -23,6 +23,10 @@
     display: inline-block;
     font-size: 130%;
     font-weight: bolder;
+    
+    @media (max-width: $on-small) {
+        font-size: 110%;
+    }
 }
 .postlist-item-active .postlist-link {
     font-weight: bold;
