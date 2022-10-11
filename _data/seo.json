@@ -1,13 +1,13 @@
 {
     "title": "VUB Diving Center",
     "url": "https://www.vubdivingcenter.be",
-    "description": "Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center",
+    "description": "Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center. Elke vrijdag duiktraining van 19u45 tot 21u in the zwembad van de Vrije Universiteit Brussel.",
     "author": "VUB Diving Center",
     "web_author": "Maxim Van de Wynckel",
     "reply-to": "info@vubdivingcenter.be",
     "image": "/images/social/summary-large.png",
     "options": {
-      "titleDivider": "|",
+      "titleDivider": "-",
       "imageWithBaseUrl": true,
       "twitterCardType": "summary_large_image"
     }

@@ -1,3 +1,8 @@
+.dhx_cal_event_clear {
+    white-space: pre-line !important;
+    height: auto !important;
+}
+
 @media (max-width: $on-small) {
     #calendar {
         display: none;

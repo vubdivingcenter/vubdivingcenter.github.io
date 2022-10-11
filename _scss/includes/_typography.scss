@@ -54,8 +54,13 @@ body p {
     font-size: 1.15em;
 }
 
-.typography ul,ol {
+.typography ul, ol {
     font-size: 1.15em;
+    line-height: 1.5em;
+}
+
+.typography ul ul {
+    font-size: 1em;
 }
 
 .typography a {
