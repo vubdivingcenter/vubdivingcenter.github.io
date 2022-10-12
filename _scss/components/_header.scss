@@ -33,6 +33,7 @@ header {
         width: 100%;
         height: 100%;
         z-index: -100;
+        background-color: $primary_color;
 
         picture {
             position: absolute;
@@ -395,6 +396,12 @@ header.scroll {
     }
 }
 
+header.scroll.large {
+    ~ .content {
+        margin-top: calc($header_height + 100px);
+    }
+}
+
 @media (max-width: $on-small) {
     header.scroll {
         height: 70px;
@@ -417,6 +424,12 @@ header.scroll {
             background-size: 70px 70px;
             left: 15px;
             top: 15px;
+        }
+    }
+
+    header.scroll.large {
+        ~ .content {
+            margin-top: calc($header_height_mobile + 100px);
         }
     }
 }

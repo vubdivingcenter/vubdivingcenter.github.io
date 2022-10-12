@@ -9,7 +9,7 @@ eleventyNavigation:
 ---
 
 ### Wat is duiken?
-![Zwembadtraining](https://lh3.googleusercontent.com/NkSF9vjsDMnRq_k8QUZpaHnGZf6OcNKTsy7_Gwe0iAZEmFPmo5f9ox3Vja3RZOQdRKsp_DBnZI2wWBeFjkoQLI7uMdMzzd69caVfRUcjU6jsxBusy-I0JYaRaJpoeLcZYI7Hc9aon8o){ .inline .right }
+![Zwembadtraining](https://lh3.googleusercontent.com/NkSF9vjsDMnRq_k8QUZpaHnGZf6OcNKTsy7_Gwe0iAZEmFPmo5f9ox3Vja3RZOQdRKsp_DBnZI2wWBeFjkoQLI7uMdMzzd69caVfRUcjU6jsxBusy-I0JYaRaJpoeLcZYI7Hc9aon8o){ .inline .right referrerpolicy="no-referrer" }
 Als je ooit gesnorkeld hebt dan heb je waarschijnlijk ver onder je de prachtige koralen gezien. Maar lijkt het bij de documentaires niet allemaal zoveel dichter bij? Als duiker kom je immers korter bij alles wat er leeft en beweegt. Uiteraard heb je als duiker ook respect voor de omgeving, je wil immers ook in de toekomst al het prachtigs kunnen bewonderen.
 
 Die koralen zijn in onze wateren spijtig genoeg ver weg. De meeste duiken die we doen zijn in Nederland (de Oosterschelde en het Grevelingenmeer) en in België (vijvers, stuwmeren en steengroeven). Maar ook al lijken de duikplaatsen boven water niet zo interessant, onder water zijn ze het zeker wel.
