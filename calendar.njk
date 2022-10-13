@@ -13,11 +13,11 @@ eleventyNavigation:
 <link rel="stylesheet" href="/css/vendor/dhtmlxscheduler_material.css" type="text/css">
 
 <p>
-	Deze kalender bevat belangrijke events voor het VDC zoals clubduiken, vakanties, duikweekends, vergaderingen en trainingen.
+	Deze kalender bevat belangrijke evenementen voor het VDC zoals clubduiken, vakanties, duikweekends, vergaderingen en trainingen.
 </p>
 
 {% set calendar = "webcal://www.vubdivingcenter.be/calendar.ics" %}
-<div class="btn-group">
+<div class="btn-group" style="margin-bottom: 1.5em">
 	<a class="btn btn-grey" target="_blank" href="https://www.google.com/calendar/render?cid={{ calendar | urlencode }}"><i class="fa fa-brands fa-google"></i> Google Calendar</a>
 	<a class="btn btn-grey" target="_blank"href="{{ calendar }}"><i class="fa fa-solid fa-calendar"></i>Importeer</a>
 </div>
