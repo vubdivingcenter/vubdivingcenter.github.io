@@ -9,7 +9,7 @@ body {
   margin: 0;
   color: var(--color-text);
   font-family: 'Lato',Helvetica Neue,Arial,Sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.15em;
 }
 
 body p {
@@ -52,16 +52,10 @@ body p {
 .typography p {
     line-height: 1.5em;
     margin: 1em 0;
-    font-size: 1.15em;
 }
 
 .typography ul, ol {
-    font-size: 1.15em;
     line-height: 1.5em;
-}
-
-.typography ul ul {
-    font-size: 1em;
 }
 
 .typography a {

@@ -214,6 +214,7 @@ header {
             padding: 5px 10px;
             border-radius: 0 0 6px 6px;
             margin-left: 20px;
+            margin-top: -1px;
 
             // Gaps between nav items, but not on the last one
             &:not(:last-child) {
@@ -288,8 +289,8 @@ header {
         }
 
         @media (max-width: $on-small) {
-            left: 25px;
-            top: 25px;
+            left: 15px;
+            top: 15px;
             height: 110px;
             width: 110px;
             background-size: 100px 100px;

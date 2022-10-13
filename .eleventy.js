@@ -122,7 +122,7 @@ module.exports = function (el) {
   el.addPlugin(fetchEvents);
 
   el.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("cccc, dd LLL yyyy");
+    return DateTime.fromJSDate(dateObj, { zone: 'utc', locale: 'nl' }).toFormat("cccc, dd LLL yyyy");
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
