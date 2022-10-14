@@ -29,7 +29,7 @@ header_large: true
 {% set maxPosts = collections.posts.length | min(3) %}
 {% set postslist = collections.posts | after() | head(-3) %}
 {% if postslist.length > 0 %}
-<h3>Nieuws</h3>
+<h2>Nieuws</h2>
 {% include "postslist.njk" %}
 {% endif %}
 

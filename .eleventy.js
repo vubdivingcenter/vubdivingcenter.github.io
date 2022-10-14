@@ -149,7 +149,10 @@ module.exports = function (el) {
     return Math.min.apply(null, numbers);
   });
 
-  el.addShortcode('excerpt', post => extractExcerpt(post));
+  el.addShortcode('excerpt', post => {
+    post.excerpt = extractExcerpt(post);
+    return post.excerpt; 
+  });
 
   el.setBrowserSyncConfig({
     callbacks: {

@@ -4,7 +4,7 @@ const crypto = require('crypto');
 const accessToken = process.env.META_APP_TOKEN;
 const appSecret = process.env.META_APP_SECRET;
 const appSecretProof = crypto.createHmac('sha256', appSecret).update(accessToken).digest('hex');
-const page = "vubrooster";
+const page = "vubdivingcenter";
 
 async function fetchPosts(el) {
     return new Promise((resolve, reject) => {

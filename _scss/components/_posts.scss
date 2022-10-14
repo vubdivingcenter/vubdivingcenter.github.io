@@ -39,6 +39,10 @@
     font-style: italic;
     font-size: 14px;
     display: block;
+    p {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 }
 .postlist-content {
     float: right;
