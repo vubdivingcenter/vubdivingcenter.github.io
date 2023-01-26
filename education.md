@@ -21,7 +21,7 @@ Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een mid
 
 ### Wat heeft het VUB Diving Center te bieden?
 
-Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen vanaf 16 jaar (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar.
+Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar.
 
 #### Opleiding 
 
