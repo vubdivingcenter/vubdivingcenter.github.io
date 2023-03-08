@@ -5,6 +5,10 @@
   
     &.main {
       padding: 30px 40px;
+
+      @media (max-width: $on-small) {
+        padding: 30px 20px;
+      }
     }
   }
   .row {
