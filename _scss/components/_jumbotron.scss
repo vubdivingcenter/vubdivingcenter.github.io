@@ -26,5 +26,10 @@ div.jumbotron {
         border-right: none;
         font-size: 1.1em;
         padding: 10px;
+
+        @media (max-width: $on-small) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
     }
 }
