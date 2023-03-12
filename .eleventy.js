@@ -17,6 +17,7 @@ const pluginHTMLValidate = require('eleventy-plugin-html-validate');
 const fetchPhotos = require('./_scripts/photos');
 const fetchEvents = require('./_scripts/calendar');
 const { EleventyHtmlBasePlugin  } = require("@11ty/eleventy");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 const { DateTime } = require("luxon");
 const fs = require('fs');
@@ -50,6 +51,9 @@ module.exports = function (el) {
   el.addPlugin(pluginHTMLValidate);
   el.addPlugin(EleventyHtmlBasePlugin, {
     baseHref: ''
+  });
+  el.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "nl", // Required, this site uses "en"
   });
 
   /* Navigation */
