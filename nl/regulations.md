@@ -20,7 +20,7 @@ in open water:\
     d. Duikers in het bezit van een *Bachelor Diver* certificaat, vergezeld van een duiker met *Graduate Diver* certificaat of hoger.\
     e. Duikers in het bezit van een *Instructor* certificaat, vergezeld van een duiker met minstens de kwalifcaties vermeld in a.
 2. Het V.U.B. Diving Center erkent volgende brevetten als zijnde evenwaardig met het certificaat van *Graduate Diver*:\
-    a. Open Water van PADI mits 10 duiken\
+    a. Advanced Open Water van PADI mits 10 duiken in de BeNeLux\
     b. CMAS 2-sters duiker; VVW 2-sters duiker
 3. Het V.U.B. Diving Center erkent volgende brevetten als zijnde evenwaardig met het certificaat van *Bachelor Diver*:\
     a. Rescue Diver van PADI mits 25 duiken waarvan minimaal 5 duiken als duikleider in gelijkwaardige omstandigheden als de duik die gaat plaatsvinden of na een positieve evaluatie door een VDC instructeur.\
@@ -28,6 +28,6 @@ in open water:\
 
 *Het uittreksel van het reglement op deze pagina is afkomstig van het huishoudelijk reglement van het V.U.B. Diving Center. Het volledige reglement is beschikbaar via volgende knop:*\
 <a class="btn btn-primary"
-    href="https://vdc-app.azurewebsites.net/downloads/huishoudelijk_reglement_03102011.pdf" target="_blank">
-    <i class="fa-solid fa-book"></i> Reglement
+    href="/downloads/huishoudelijk_reglement_12032020.pdf" target="_blank">
+    <i class="fa-solid fa-book"></i> Reglement (12-03-2020)
 </a>

@@ -15,7 +15,7 @@ This page is also available in <a href="/nl/regulations">Dutch</a>.
     d. Divers with a *Bachelor Diver* certificate accompanied by a diver with *Initiate Diver* certificate or higher.\
     e. Divers with an *Instructor* certificate accompanied by a diver with at least the qualifications mentioned under a.
 2. The V.U.B. Diving Center acknowledges the following certificates to be equal to the certificate of *Graduate Diver*:\
-    a. PADI Open Water with minimum 10 dives\
+    a. PADI Advanced Open Water with minimum 10 dives in the BeNeLux\
     b. CMAS 2-stars diver; VVW 2-stars diver
 3. The V.U.B. Diving Center acknowledges the following certificates to be equal to the certificate of *Bachelor Diver*:\
     a. PADI Rescue Diver with minimum 25 dives, 5 of which as dive guide in equal conditions as the dive at hand or after a positive evaluation by a VDC instructor.\
@@ -23,6 +23,6 @@ This page is also available in <a href="/nl/regulations">Dutch</a>.
 
 *The excerpt on this page has been extracted from the original regulations written in Dutch. These regulations can be downloaded via the following URL:*\
 <a class="btn btn-primary"
-    href="https://vdc-app.azurewebsites.net/downloads/huishoudelijk_reglement_03102011.pdf" target="_blank">
-    <i class="fa-solid fa-book"></i> Regulations (NL)
+    href="/downloads/huishoudelijk_reglement_12032020.pdf" target="_blank">
+    <i class="fa-solid fa-book"></i> Regulations NL (12-03-2020)
 </a>
