@@ -3,7 +3,8 @@ const _ = require("lodash");
 
 function fetchPhotos(el) {
     el.addCollection("photos_year", async () => {
-        return _.chain(await GooglePhotosAlbum.fetchImageUrls(process.env.PHOTOS_ALBUM))
+        const urls = await GooglePhotosAlbum.fetchImageUrls(process.env.PHOTOS_ALBUM);
+        const photos = _.chain(urls)
             .sort((a, b) => a.imageUpdateDate - b.imageUpdateDate)
             .map(photo => {
                 return {
@@ -15,6 +16,10 @@ function fetchPhotos(el) {
             .toPairs()
             .reverse()
             .value();
+        if (photos.length === 0) {
+            throw new Error(`Unable to fetch photos!`);
+        }
+        return photos;
     });
 }
 
