@@ -73,7 +73,7 @@ eleventyNavigation:
 			.forEach(event => {
 				const start = event.start_date;
 				const end = event.end_date;
-				const title = event.text, details = event.details ?? "";
+				const title = event.text, details = event.details || "";
 				let dateStr = "";
 				let timeStr = "";
 				const dateOptions = {
