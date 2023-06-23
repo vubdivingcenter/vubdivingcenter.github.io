@@ -4,12 +4,22 @@
   <subtitle>Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center</subtitle>
   <link href="https://www.vubdivingcenter.be/feed.xml" rel="self"/>
   <link href="https://www.vubdivingcenter.be/"/>
-  <updated>2023-05-01T00:00:00Z</updated>
+  <updated>2023-06-23T00:00:00Z</updated>
   <id>https://www.vubdivingcenter.be/</id>
   <author>
     <name>VUB Diving Center</name>
     <email>info@vubdivingcenter.be</email>
   </author>
+  
+  <entry>
+    <title>Duik kalender 2023</title>
+    <link href="https://www.vubdivingcenter.be/posts/2023-06-23-kalender/"/>
+    <updated>2023-06-23T00:00:00Z</updated>
+    <id>https://www.vubdivingcenter.be/posts/2023-06-23-kalender/</id>
+    <content type="html">&lt;p&gt;Vandaag vond zich de laatste training voor de zomer plaats, voor de beginners een goede start om even te testen hoe een OSB juist werkt. Anders dan tijdens het academiejaar is het zwembad is niet elke vrijdag open voor trainingen tijdens de zomer, kijk zeker
+naar de &lt;a href=&quot;https://www.vubdivingcenter.be/calendar/&quot;&gt;kalender&lt;/a&gt; om up-to-date te blijven over de geplande clubduiken en duiktrainingen.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Openingsduik 2023</title>
