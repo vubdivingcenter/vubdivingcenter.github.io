@@ -29,7 +29,7 @@ async function fetchEvents(el) {
                         start_date: formatDate(event.rrule.options.dtstart),
                         end_date: event.rrule.options.until ? formatDate(event.rrule.options.until) : new Date(9999, 1, 1),
                         text: event.summary,
-                        details: `${event.description ? event.description + "\n" : ""}${event.location}`,
+                        details: `${event.description ? event.description + "\n" : ""}${event.location ?? ""}`,
                         rec_type: `week_1___`,
                         event_length: (event.end.getTime() - event.start.getTime()) / 1000,
                         event_pid: 0
@@ -42,7 +42,7 @@ async function fetchEvents(el) {
                                 start_date: formatDate(exdate),
                                 end_date: formatDate(new Date(exdate.getTime() + (event.end.getTime() - event.start.getTime()))),
                                 text: event.summary,
-                                details: `${event.description ? event.description + "\n" : ""}${event.location}`,
+                                details: `${event.description ? event.description + "\n" : ""}${event.location ?? ""}`,
                                 rec_type: `none`,
                                 event_length: exdate.getTime() / 1000,
                                 event_pid
@@ -57,7 +57,7 @@ async function fetchEvents(el) {
                                 start_date: formatDate(recurrence.start),
                                 end_date: formatDate(recurrence.end),
                                 text: recurrence.summary,
-                                details: `${recurrence.description ? recurrence.description + "\n" : ""}${recurrence.location}`,
+                                details: `${recurrence.description ? recurrence.description + "\n" : ""}${recurrence.location ?? ""}`,
                                 event_length: recurrence.start.getTime() / 1000,
                                 event_pid
                             };
@@ -70,7 +70,7 @@ async function fetchEvents(el) {
                         start_date: formatDate(event.start),
                         end_date: formatDate(event.end),
                         text: event.summary,
-                        details: `${event.description ? event.description + "\n" : ""}${event.location}`,
+                        details: `${event.description ? event.description + "\n" : ""}${event.location ?? ""}`,
                         event_length: (event.end.getTime() - event.start.getTime()) / 1000,
                         event_pid: 0
                     }];

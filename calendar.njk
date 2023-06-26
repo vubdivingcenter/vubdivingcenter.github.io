@@ -74,7 +74,7 @@ eleventyNavigation:
 				const start = event.start_date;
 				const end = event.end_date;
 				// TODO: Ugly code
-				const title = event.text, details = event.details !== "undefined" ? event.details : "";
+				const title = event.text, details = event.details;
 				let dateStr = "";
 				let timeStr = "";
 				const dateOptions = {

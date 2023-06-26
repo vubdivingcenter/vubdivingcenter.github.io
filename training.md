@@ -1,3 +1,8 @@
+---
+layout: main
+title: Duiktrainingen
+permalink: training-work-in-progress
+---
 Na het behalen van je *Initiate* diploma kan je deelnemen aan de gevorderden trainingen.
 In deze training oefenen we zowel onze conditie en practische zwembadoefeningen voor je
 *Graduate* of zelfs *Bachelor* diploma. Er word verwacht dat gevorderden elkaar elke week
@@ -33,8 +38,7 @@ zijn, vraag dan aan een aanwezige instructeur of je flessen mag gebruiken. Dit i
 - "Stel een jacket met fles"
 - "Stel een backpack met fles op"
 
-Voorbereiding van materiaal is ook voor jezelf. Probeer al het materiaal dat je nodig hebt klaar te leggen aan de rand van het zwembad,
-zo hoef je niet in het midden van een oefening je post te verlaten.
+Voorbereiding van materiaal is ook voor jezelf. Probeer al het materiaal dat je nodig hebt klaar te leggen aan de rand van het zwembad, zo hoef je niet in het midden van een oefening je post te verlaten.
 
 ### Opwarming
 Elke les begint met een (korte) opwarming. Hier zijn enkele voorbeelden van een opwarming.
@@ -43,38 +47,38 @@ Elke les begint met een (korte) opwarming. Hier zijn enkele voorbeelden van een 
 - "2 lengtes sprinten" (als je al je tijd nodig hebt)
 **Tip:** Je mag zelf ook opwarmen, maar kijk eerst aan de oppervlakte mee of alles vlot verloopt.
 
-### Apneau oefeningen
-Apneau oefeningen zijn belangrijke oefeningen voor zowel graduate als bachelor. Het is daarom ook aangeraden
+### Apnea oefeningen
+Apnea oefeningen zijn belangrijke oefeningen voor zowel graduate als bachelor. Het is daarom ook aangeraden
 om deze regelmatig te oefenen. Algemeen moet je ervoor zorgen dat je apnea oefeningen niet direct worden uitgevoerd
 na een zware inspanning. Er zijn twee soorten apnea oefeningen: *dynamische apnea* en *statische apnea*. Voor de twee
 soorten is het belangrijk om dit langzaam op te warmen.
 
-#### Statische apneau
-Een statische apneau betekend dat je stilstaat onder water voor 30s, 45s, 60s of langer. We raden aan om dit soort
-oefeningen aan het einde van een les te geven.
+#### Statische Apnea
+Een statische Apnea betekend dat je stilstaat onder water voor een op voorhand bepaald aantal seconden. We raden aan om dit soort
+oefeningen aan het einde van een les te geven. Zorg dat je duidelijk aangeeft wanneer de duikers naar boven moeten komen.
 
 **Tips:**
 - Tel duidelijk af 15 seconden voor het begin van de oefening.
 - Geef kandidaten tussen de 30-60 seconden tijd om tot adem te komen.
 - Maak duidelijk dat het niet de bedoeling is om terug onder water te gaan wanneer iemand naar boven
-komt voor het einde van de apneau.
+komt voor het einde van de Apnea.
 - Laat kandidaten hun hand in de lucht houden en in stabiele zithouding zitten.
 - Je mag mee doen met de oefening, maar zorg dat iedereen elkaar goed kan zien.
-Weet ook dat je minder bent opgewarmd dan de rest en dat je ook moet aftellen vlak voor de apneau.
+Weet ook dat je minder bent opgewarmd dan de rest en dat je ook moet aftellen vlak voor de Apnea.
 Wat je ook kan doen is om iets later in het water te gaan.
 - Tel onder water af (bij 10 seconden) en eventueel duid je via een T met je handen aan dat je halverwegen bent.
 
-#### Dynamische apneau
-Een dynamische apneau betekend dat je een apneau oefening doet terwijl je een bepaalde handeling doet. Enkele simpele
+#### Dynamische Apnea
+Een dynamische Apnea betekend dat je een Apnea oefening doet terwijl je een bepaalde handeling doet. Enkele simpele
 voorbeelden:
-- "Ga in apneau voor een halve lengte en ga boven water verder op snorkel" (ook wel "achtje" genoemd)
-- "Een volledige lengte in apneau"
+- "Ga in Apnea voor een halve lengte en ga boven water verder op snorkel" (ook wel "achtje" genoemd)
+- "Een volledige lengte in Apnea"
 
 Ook hier is veiligheid belangrijk, vraag je kandidaten om elkaar in het oog te houden en de snelheid aan
-te passen zodat niemand te snel of te traag is. Wanneer je met zeer veel kandidaten een dynamische apneau doet is het
+te passen zodat niemand te snel of te traag is. Wanneer je met zeer veel kandidaten een dynamische Apnea doet is het
 aangeraden om vaste buddy paren te maken die op elkaar moeten letten.
 
-Een dynamische apneau kan echter ook iets interessanter zijn, zo kan je bijvoorbeeld een speels aspect toevoegen
+Een dynamische Apnea kan echter ook iets interessanter zijn, zo kan je bijvoorbeeld een speels aspect toevoegen
 zoals het zoeken van *ringen* of andere voorwerpen die in het water liggen.
 
 Je kan ook variaties maken waarbij men een brilletje moet blazen op het einde, of een lengte onder water moeten doen
@@ -86,7 +90,12 @@ mogen herhalen.
 
 
 ### Condiditie training
+Een training is geen training zonder ook wat aan je conditie te werken. Of het nu is om te training voor flessen te kunnen dragen of om iemand te kunnen redden in geval van nood, het kan geen kwaad om wat spieren te trainen.
 
+- Backpack: niet iedereen vind dit een leuke oefening, probeer dit enkel in te plannen wanneer 1 of meerdere leden dit dienen
+te oefenen voor hun graduate of bachelor diploma.
+- Redding en slepen: leer de kandidaten aan hoe ze iemand in het water kunnen slepen. Er zijn verschillende technieken, sommige
+worden door het VDC aangeleerd in functie van een examen, maar er bestaat verschillende andere soorten.
 
 ### Technische oefeningen
 
@@ -97,8 +106,7 @@ mogen herhalen.
 ### Afsluiters
 Moest je geen ideen meer hebben en je les is nog niet gedaan kan je enkele kleine afsluiters doen. Het soort oefening
 hangt af van hoe koud en uitgeput je kandidaten zijn:
-- Statische apneau
-- Suicide (blijf als lesgever aan de oppervlakte)
+- Statische Apnea
 - Watertrappelen
 - Wedstrijd (estafette, ...)
 - Sprinten
