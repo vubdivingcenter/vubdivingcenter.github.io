@@ -9,7 +9,9 @@ images:
     - https://lh3.googleusercontent.com/pw/AJFCJaV7SG0gH_V4vsgAsESNwKkgZj_Ohkp4LWvEA4IP3O76O18rsMFCmnJRkDEj1i07M1hH12LUIk170LJZy3TG6A-sZhFTiDf-bbGJ7yFk0uW44B6oUZgurMAAJhuohghC9lh30CQ8APb7MdqglohkSz_hvg
 ---
 Dit weekend vond ons jaarlijks Juli weekend plaats in Renesse. Het beloofde een weekend te worden met een 'beetje' wind, maar de dive masters van dienst hebben ons telkens
-naar een goede duikstek gebracht. Vrijdag vond de eerste duik plaats aan de Plompe Toren gevolgd door warme hot-dogs. Op Zaterdag zijn we de ochtendduik begonnen
+naar een goede duikstek gebracht. 
+
+Vrijdag vond de eerste duik plaats aan de Plompe Toren gevolgd door warme hot-dogs. Op Zaterdag zijn we de ochtendduik begonnen
 in het Grevelingenmeer (n.t.b. Dreischor) waar er zeer veel van slakjes gevonden werden. Na de namiddagduik in Zoetersbout hebben we dag zonnig afgesloten met een goede BBQ. Zondag
 vonden onze twee duiken plaats in het Grevelingenmeer waar alsook veel slakjes gevonden werden en bij sommige duikparen enkele Sepiolas. Het was zeker een weekend om niet te vergeten en we
 kijken al uit naar het Septemberweekend. Hou zeker je mailbox in de gaten tijdens de zomer voor de inschrijvingen van het volgende weekend!
