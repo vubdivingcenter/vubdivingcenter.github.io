@@ -21,11 +21,11 @@ Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een mid
 
 ### Wat heeft het VUB Diving Center te bieden?
 
-Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar.
+Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen.
 
 #### Opleiding 
 
-Gedurende vier maanden (afhankelijk van jullie ervaring en voortgang) zullen jullie de basistechnieken van het duiken aangeleerd krijgen.  We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
+Gedurende vier maanden (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
 
 Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate*, *bachelor*, en uiteindelijk *instructor* certificaat.
 
