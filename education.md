@@ -43,6 +43,11 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 Het lidgeld bedraagt **110 euro** per jaar **+ 85 euro** voor de opleiding van *initiate*. Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen.
 
+#### Materiaal
+
+Voor de zwembadtrainingen heb je een *duikbril*, *palmen*, *lood* en een *snorkel* nodig. Moest je dit nog niet hebben kan je
+dit de eerste drie weken gratis ontlenen van de club. Voor buitenduiken ga je meer materiaal nodig hebben zoals buitenpalmen, een duikpak, ontspanner, jacket en fles. Meer informatie over het duikmateriaal en de mogelijkheden om dit materiaal gedeeltelijk te ontlenen krijg je tijdens de opleiding.
+
 ### Interesse of meer info nodig?
 
 Stuur een mailtje naar <info@vubdivingcenter.be>. Nieuwe leden worden verwacht om eerst contact met ons op te nemen alvorens ze kunnen starten aan de opleiding.
