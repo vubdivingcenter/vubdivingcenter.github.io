@@ -5,7 +5,7 @@ background: https://lh3.googleusercontent.com/xM7z9iisvl1IZZEYB9l4P5EGcZpzRqTXWJ
 eleventyNavigation:
     key: Reglement
     parent: Leden
-    order: 999
+    order: 100
 ---
 
 Deze pagina is ook beschikbaar in het <a href="/en/regulations">Engels</a>.
