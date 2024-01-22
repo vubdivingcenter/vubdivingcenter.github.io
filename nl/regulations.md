@@ -28,6 +28,6 @@ in open water:\
 
 *Het uittreksel van het reglement op deze pagina is afkomstig van het huishoudelijk reglement van het V.U.B. Diving Center. Het volledige reglement is beschikbaar via volgende knop:*\
 <a class="btn btn-primary"
-    href="/downloads/huishoudelijk_reglement_12032020.pdf" target="_blank">
+    href="/downloads/huishoudelijk_reglement_12032020_v2.pdf" target="_blank">
     <i class="fa-solid fa-book"></i> Reglement (12-03-2020)
 </a>

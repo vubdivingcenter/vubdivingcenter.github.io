@@ -122,6 +122,10 @@ module.exports = function (el) {
       .reverse()
       .value();
   });
+  el.addCollection("documents", () => {
+    const data = fs.readFileSync('./documents/documents.json', 'utf8');
+    return JSON.parse(data);
+  });
   el.addPlugin(fetchPhotos);
   el.addPlugin(fetchEvents);
 

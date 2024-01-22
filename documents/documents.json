@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Huishoudelijk reglement",
+        "description": "Het huishoudelijk reglement van de vereniging.",
+        "files": [
+            {
+                "date": "2020-03-12",
+                "version": 2,
+                "url": "/downloads/huishoudelijk_reglement_12032020_v2.pdf"
+            },
+            {
+                "date": "2020-03-12",
+                "version": 1,
+                "url": "/downloads/huishoudelijk_reglement_12032020.pdf"
+            }
+        ]
+    },
+    {
+        "title": "Statuten",
+        "description": "De statuten van de vereniging.",
+        "files": [
+            {
+                "date": "2021-10-03",
+                "version": 1,
+                "url": "/downloads/statuten_03102011.pdf"
+            }
+        ]
+    }
+]

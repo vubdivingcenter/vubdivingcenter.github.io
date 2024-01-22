@@ -23,6 +23,6 @@ This page is also available in <a href="/nl/regulations">Dutch</a>.
 
 *The excerpt on this page has been extracted from the original regulations written in Dutch. These regulations can be downloaded via the following URL:*\
 <a class="btn btn-primary"
-    href="/downloads/huishoudelijk_reglement_12032020.pdf" target="_blank">
+    href="/downloads/huishoudelijk_reglement_12032020_v2.pdf" target="_blank">
     <i class="fa-solid fa-book"></i> Regulations NL (12-03-2020)
 </a>

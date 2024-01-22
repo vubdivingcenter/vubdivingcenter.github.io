@@ -61,6 +61,41 @@ Dit is een pagina
 Standaard gebruikt een pagina de layout `main` en heeft het een titel en subtitle. De subtitle is niet noodzakelijk.
 De achtergrond is ofwel een relatieve URL naar een image in de repository of een foto van Google Photos.
 
+## Documenten
+Documenten kan men toevoegen of aanpassen in het bestand "/documents/documents.json".
+
+```json
+[
+    {
+        "name": "Huishoudelijk reglement",
+        "description": "Het huishoudelijk reglement van de vereniging.",
+        "files": [
+            {
+                "date": "2020-03-12",
+                "version": 2,
+                "url": "/downloads/huishoudelijk_reglement_12032020_v2.pdf"
+            },
+            {
+                "date": "2020-03-12",
+                "version": 1,
+                "url": "/downloads/huishoudelijk_reglement_12032020.pdf"
+            }
+        ]
+    },
+    {
+        "name": "Statuten",
+        "description": "De statuten van de vereniging.",
+        "files": [
+            {
+                "date": "2021-10-03",
+                "version": 1,
+                "url": "/downloads/statuten_03102011.pdf"
+            }
+        ]
+    }
+]
+```
+
 ## Gesubsidiëerd door:
 <a href="https://www.sportinbrussel.be/" target="_blank">
     <img src="images/misc/logo_sportinbrussel.svg" alt="vgc logo" style="width: 400px">
