@@ -24,7 +24,7 @@ eleventyNavigation:
                 <td class="bold">{{ document.title }}</td>
                 <td class="optional">{{ document.description }}</td>
                 <td>{{ file.date }}</td>
-                <td><a target="#blank" href="{{ file.url }}" download>Download</a></td>
+                <td><a href="{{ file.url }}" target="#blank">Download</a></td>
             </tr>
         {% endfor %}
     </tbody>
