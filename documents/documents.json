@@ -1,6 +1,6 @@
 [
     {
-        "title": "Huishoudelijk reglement",
+        "title": "Huishoudelijk Reglement",
         "description": "Het huishoudelijk reglement van de vereniging.",
         "files": [
             {
@@ -23,6 +23,17 @@
                 "date": "2021-10-03",
                 "version": 1,
                 "url": "/downloads/statuten_03102011.pdf"
+            }
+        ]
+    },
+    {
+        "title": "Uitleenprocedure Materiaal",
+        "description": "De uitleenprocedure van (duik)materiaal.",
+        "files": [
+            {
+                "date": "2024-01-11",
+                "version": 1,
+                "url": "/downloads/uitleenprocedure_materiaal_2024.pdf"
             }
         ]
     },
