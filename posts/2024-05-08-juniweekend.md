@@ -12,12 +12,12 @@ Laat je meeslepen naar de diepe en donkere wateren van de Caraïbische Oostersch
 Het cartel heeft één huisje voorzien voor 16 personen.
 
 ## Wil je graag meegaan op duikweekend? 
-Stuur me dan een mailtje om in te schrijven met volgende info:
+Stuur dan een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be) om in te schrijven met volgende info:
 
-Echte naam en cartel naam
-Brevet
-Aantal duiken
-Omnivoor, carnivoor, herbivoor?
+Echte naam en cartel naam\
+Brevet\
+Aantal duiken\
+Omnivoor, carnivoor, herbivoor?\
 Wanneer je denkt aan te komen en vertrekken
 
 Het duikweekend staat open voor alle duikers, maar VDC leden hebben uiteraard voorrang en krijgen ook hun vullingen (lucht) terugbetaald. Vullingen met nitrox worden niet meer terugbetaald.
@@ -30,10 +30,10 @@ Op zaterdag plannen we twee duiken en sluiten we af met een mexicaanse BBQ (indi
 Ook op zondag plonsen we twee keer. We ronden af met chili con carne, en vertrekken daarna huiswaarts.
 
 ## Praktische info:
-**Waar**: De Witte Boulevard, Zeedistelweg 10 in Renesse
-**Wanneer**: vrijdagavond 21 juni tot en met zondag 23 juni
-**Prijs**: 160€
-**Betaling**: VDC rekening BE25 7330 3034 6882 met vermelding 'NAAM + duikweekend juni'
+**Waar**: De Witte Boulevard, Zeedistelweg 10 in Renesse\
+**Wanneer**: vrijdagavond 21 juni tot en met zondag 23 juni\
+**Prijs**: 160€\
+**Betaling**: VDC rekening BE25 7330 3034 6882 met vermelding 'NAAM + duikweekend juni' (gelieve steeds eerst een e-mail te sturen met je inschrijving)\
 **Dresscode**: Mexicaanse klederdracht
 
 Dit jaar maken we ons duikweekend extra speciaal met "Operatie Olas Ocultas"! 
