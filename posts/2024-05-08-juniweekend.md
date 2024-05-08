@@ -13,7 +13,7 @@ Het cartel heeft één huisje voorzien voor 16 personen.
 
 ## Wil je graag meegaan op duikweekend? 
 Stuur dan een mail naar de organisatie van dit duikweekend (zie mail VDC mailing lijst) om in te schrijven met volgende info:
-Indien je geen toegang hebt tot de VDC mailing lijst en wil inschrijving, stuur je een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be)
+Indien je geen toegang hebt tot de VDC mailing lijst en je je toch graag wil inschrijven, stuur dan een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be)
 met een duidelijke vermelding "[JUNIWEEKEND]" in het onderwerp van de e-mail. Wij zullen de e-mail doorsturen naar de organisatie en steeds een bevestiging sturen
 dat we de e-mail hebben doorgestuurd.
 
