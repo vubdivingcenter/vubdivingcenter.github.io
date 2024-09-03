@@ -21,11 +21,11 @@ Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een mid
 
 ### Wat heeft het VUB Diving Center te bieden?
 
-Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen.
+Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen. De opleiding en trainingen worden uitsluitend in het Nederlands gegeven. Na deze opleiding kan je terecht bij onze club voor wekelijkse trainingen, clubduiken en weekends of andere evenementen.
 
 #### Opleiding 
 
-Gedurende vier maanden (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
+Gedurende vier maanden (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen die gegeven worden door vrijwilligers. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
 
 Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate*, *bachelor*, en uiteindelijk *instructor* certificaat.
 
@@ -41,7 +41,7 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-Het lidgeld bedraagt **140 euro** per jaar **+ 85 euro** voor de opleiding van *initiate*. Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen.
+Het lidgeld bedraagt **140 euro** per jaar **+ 85 euro** voor de opleiding van *initiate* (laatst aangepast op 07/2024). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen.
 
 #### Materiaal
 

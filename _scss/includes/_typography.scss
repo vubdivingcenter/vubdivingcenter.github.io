@@ -9,7 +9,7 @@ body {
   margin: 0;
   color: var(--color-text);
   font-family: 'Lato',Helvetica Neue,Arial,Sans-serif;
-  font-size: 1.15em;
+  font-size: 1em;
 }
 
 body p {
@@ -20,7 +20,7 @@ body p {
     position: relative;
     left: -3px;
     font-weight: 300;
-    font-size: 4em;
+    font-size: 3em;
     color: #1b1b1b;
     margin: 0.5em 0 0.5em 0;
 }
@@ -35,7 +35,7 @@ body p {
     position: relative;
     left: -2px;
     font-weight: 300;
-    font-size: 3em;
+    font-size: 2em;
     color: #1b1b1b;
     margin: 1em 0 0.5em 0;
 }
@@ -44,7 +44,7 @@ body p {
     position: relative;
     left: -2px;
     font-weight: 300;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #1b1b1b;
     margin: 1em 0 0.5em 0;
 }
@@ -123,4 +123,10 @@ p.abstract {
     .typography h3 {
         font-size: 20px;
     }    
+}
+
+span.footnote {
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
 }

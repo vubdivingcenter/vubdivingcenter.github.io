@@ -40,6 +40,7 @@
     {
         "title": "Verzekeringspolis",
         "description": "De verzekeringspolis van de vereniging.",
+        "password": true,
         "files": [
             {
                 "date": "2005-01-01",
@@ -51,6 +52,7 @@
     {
         "title": "Initiate Standardisatie",
         "description": "Standardisatie van de opleiding tot Initiate.",
+        "password": true,
         "files": [
             {
                 "date": "N.v.t.",
@@ -62,6 +64,7 @@
     {
         "title": "Graduate Standaardisatie",
         "description": "Standaardisatie van de opleiding tot Graduate.",
+        "password": true,
         "files": [
             {
                 "date": "N.v.t.",
@@ -73,6 +76,7 @@
     {
         "title": "Bachelor Standaardisatie",
         "description": "Standaardisatie van de opleiding tot Bachelor.",
+        "password": true,
         "files": [
             {
                 "date": "N.v.t.",
@@ -84,6 +88,7 @@
     {
         "title": "Instructor Standaardisatie",
         "description": "Standaardisatie van de opleiding tot Instructor.",
+        "password": true,
         "files": [
             {
                 "date": "N.v.t.",

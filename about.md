@@ -31,6 +31,7 @@ Die visie dat er geen dogma’s mogen zijn – zo typisch voor de VUB - leeft du
 Onze leden zijn onze grootste troef. Het VDC staat open voor iedereen, maar toch zijn het doorgaans hoogopgeleide kritische geesten die geen blad voor hun mond nemen en die vaak experten zijn in hun vakgebied. Hierdoor is er een echte kruisbestuiving met het bestuur. En daar wordt het VUB Diving Center alleen maar beter door.
 
 ### Hoe zit het VDC in elkaar?
+Het VDC bestaat uit een raad van bestuur, een comité van instructeurs en werkende leden zelf. De raad van bestuur zorgt voor de goede werking van onze club en het comité van instructeurs overziet de inhoud van de opleiding, examens en certificaten. De volledige statuten zijn [hier](/downloads/statuten_03102011.pdf) terug te vinden.
 
 #### De Algemene Vergadering
 
