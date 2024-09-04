@@ -1,91 +1,93 @@
-.btn {
-    max-width: 220px;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-@media (max-width: $on-small) {
+.typography {
     .btn {
-        padding-left: 12px;
-        padding-right: 12px;
+        max-width: 220px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-decoration: none;
+        border-radius: 5px;
     }
-}
 
-.btn i {
-    margin-right: 8px;
-}
+    @media (max-width: $on-small) {
+        .btn {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
 
-.btn-icon i {
-    margin-left: 4px;
-    margin-right: 4px; 
-}
+    .btn i {
+        margin-right: 8px;
+    }
 
-.btn-red {
-    background-color: #9c0000;
-    color: white;
-}
-.btn-red:hover {
-    background-color: #c20404;
-}
+    .btn-icon i {
+        margin-left: 4px;
+        margin-right: 4px; 
+    }
 
-.btn-green {
-    background-color: #009c08;
-    color: white;
-}
-.btn-green:hover {
-    background-color: #04c20e;
-}
+    .btn-red {
+        background-color: #9c0000;
+        color: white;
+    }
+    .btn-red:hover {
+        background-color: #c20404;
+    }
 
-.btn-blue {
-    background-color: #00569c;
-    color: white;
-}
-.btn-blue:hover {
-    background-color: #044dc2;
-}
+    .btn-green {
+        background-color: #009c08;
+        color: white;
+    }
+    .btn-green:hover {
+        background-color: #04c20e;
+    }
 
-.btn-yellow {
-    background-color: #c5da08;
-    color: black;
-}
-.btn-yellow:hover {
-    background-color: #c2bf04;
-}
+    .btn-blue {
+        background-color: #00569c;
+        color: white;
+    }
+    .btn-blue:hover {
+        background-color: #044dc2;
+    }
 
-.btn-orange {
-    background-color: #c78813;
-    color: white;
-}
-.btn-orange:hover {
-    background-color: #e4a737;
-}
+    .btn-yellow {
+        background-color: #c5da08;
+        color: black;
+    }
+    .btn-yellow:hover {
+        background-color: #c2bf04;
+    }
 
-.btn-grey {
-    background-color: #2e2e2e;
-    color: white;
-}
-.btn-grey:hover {
-    background-color: #393939;
-}
+    .btn-orange {
+        background-color: #c78813;
+        color: white;
+    }
+    .btn-orange:hover {
+        background-color: #e4a737;
+    }
 
-.btn-primary {
-    background-color: $primary_color;
-    color: white;
-}
-.btn-primary:hover {
-    background-color: lighten($primary_color, 10%);
-}
+    .btn-grey {
+        background-color: #2e2e2e;
+        color: white;
+    }
+    .btn-grey:hover {
+        background-color: #393939;
+    }
 
-.btn-secondary {
-    background-color: $secondary_color;
-    color: white;
-}
-.btn-secondary:hover {
-    background-color: lighten($secondary_color, 10%);
+    .btn-primary {
+        background-color: $primary_color;
+        color: white;
+    }
+    .btn-primary:hover {
+        background-color: lighten($primary_color, 10%);
+    }
+
+    .btn-secondary {
+        background-color: $secondary_color;
+        color: white;
+    }
+    .btn-secondary:hover {
+        background-color: lighten($secondary_color, 10%);
+    }
 }

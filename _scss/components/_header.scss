@@ -295,11 +295,11 @@ header {
         }
 
         @media (max-width: $on-small) {
-            left: 15px;
-            top: 15px;
-            height: 110px;
-            width: 110px;
-            background-size: 100px 100px;
+            left: 10px;
+            top: 10px;
+            height: 100px;
+            width: 100px;
+            background-size: 90px 90px;
         }
     }
 
@@ -308,7 +308,7 @@ header {
         position: absolute;
         color: white;
         text-transform: none;
-        bottom: 1.5em;
+        bottom: 1.2em;
         width: 100%;
         font-size: 3em;
         text-align: center;
@@ -316,16 +316,16 @@ header {
 
         @media (max-width: $on-small) {
             bottom: 0.6em;
-            font-size: 35px;
+            font-size: 2em;
         }
     }
 
     h2.subtitle {
-        font-size: 1em;
+        font-size: 1.5em;
         color: white;
 
         @media (max-width: $on-small) {
-            font-size: 0.8em;
+            font-size: 1em;
         }
     }
 }
