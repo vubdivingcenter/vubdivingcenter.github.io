@@ -42,8 +42,8 @@ jobs:
           PHOTOS_ALBUM: ${{ secrets.PHOTOS_ALBUM }}
           CALENDAR: ${{ secrets.CALENDAR }}
         run: |
-          yarn workspaces run clean
-          yarn workspaces run build
+          yarn workspace @vubdivingcenter/website clean
+          yarn workspace @vubdivingcenter/website build
 
   deploy_github:
     needs:
