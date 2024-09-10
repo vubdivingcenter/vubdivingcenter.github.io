@@ -30,7 +30,7 @@ uitlenen. Uiteraard moet deze verwittiging op tijd gebeuren.
 ## Flessen
 Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek. Vullen dient op eigen kosten te gebeuren. De enige uitzondering op deze regel zijn instructeurs die een opleidingsduik maken en vullen in een erkende duikwinkel waar het VDC een vulkaart heeft. Alsook vrijwilligers die de flessen gaan vullen voor de zwembadtrainingen mogen dit op kosten van het VDC doen in een erkende duikwinkel.
 
-> Bij onverwittigd laattijdig terugbrengen van materiaal wordt er een boete van 5 euro aangerekend die elke week met 5 euro verhoogt.
+> <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt er een boete van 5 euro aangerekend die elke week met 5 euro verhoogt.
 
 Om te gaan duiken neem je bij voorkeur lege (<60 bar, rood etiket) of halflege flessen (<100 bar, oranje
 etiket) mee en zorg je ervoor dat je die volledig gevuld terugbrengt. Een fles die door omstandigheden
@@ -44,11 +44,11 @@ De kosten van het uitlenen worden aan het einde van het duikseizoen afgerekend. 
 tijde een mail over gestuurd. 
 
 ## Ontspanners, Jackets en Lood
-Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginners** die de 85 euro opleidingsgeld hebben betaald of die uitgezonderd van het betalen van dit opleidingsgeld in hun 2de jaar omwille van laattijdig inschrijven. Aan alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen. 
+Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginners** die de 85 euro opleidingsgeld hebben betaald of die uitgezonderd zijn van het betalen van dit opleidingsgeld in hun 2de jaar omwille van laattijdig inschrijven in hun eerste jaar. Voor alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen. 
 
-> Bij onverwittigd laattijdig terugbrengen van materiaal wordt een boete van 5 euro aangerekend. Deze boete stijgt per week met 5 euro. Eventuele boetes worden aan het einde van het duikseizoen afgerekend. Hier wordt ten gepaste tijde een mail over gestuurd. Het materiaal wordt niet uitgeleend voor duikreizen, uitgezonderd de duikweekends.
+> <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt een boete van 5 euro aangerekend. Deze boete stijgt per week met 5 euro. Eventuele boetes worden aan het einde van het duikseizoen afgerekend. Hier wordt ten gepaste tijde een mail over gestuurd. Het materiaal wordt niet uitgeleend voor duikreizen, uitgezonderd de duikweekends.
 
-Het materiaal dient gespoeld en droog binnengebracht te worden. Indien je twijfels hebt over hoe dit moet
+Het materiaal dient grondig gespoeld en droog binnengebracht te worden. Indien je twijfels hebt over hoe dit moet
 gebeuren, vraag dit dan aan de materiaalverantwoordelijke, een lesgever of instructeur.
 
 ## Materiaal Zwembad
