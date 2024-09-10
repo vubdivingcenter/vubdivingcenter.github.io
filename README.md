@@ -1,5 +1,5 @@
 <a href="https://www.vubdivingcenter.be" target="_blank" style="margin-left: auto; margin-right: auto;">
-    <img src="images/logo.svg" alt="vdc logo" style="width: 300px;">
+    <img src="website/images/logo.svg" alt="vdc logo" style="width: 300px;">
 </a>
 <h1>VUB Diving Center Website</h1>
 
@@ -106,5 +106,5 @@ Documenten kan men toevoegen of aanpassen in het bestand "/documents/documents.j
 
 ## Gesubsidiëerd door:
 <a href="https://www.sportinbrussel.be/" target="_blank">
-    <img src="images/misc/logo_sportinbrussel.svg" alt="vgc logo" style="width: 400px">
+    <img src="website/images/misc/logo_sportinbrussel.svg" alt="vgc logo" style="width: 400px">
 </a>
