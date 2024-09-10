@@ -18,7 +18,6 @@ const fetchPhotos = require('./_scripts/photos');
 const fetchEvents = require('./_scripts/calendar');
 const { EleventyHtmlBasePlugin  } = require("@11ty/eleventy");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
-const eleventyVue = require("@11ty/eleventy-plugin-vue");
 
 const { DateTime } = require("luxon");
 const fs = require('fs');
@@ -28,12 +27,6 @@ require('dotenv').config();
 const _ = require("lodash");
 
 module.exports = function (el) {
-  /* Vue */
-  el.addPlugin(eleventyVue, {
-    cacheDirectory: ".cache/vue/",
-    input: [],
-  });
-  
   /* Passthrough Copy */
   el.addPassthroughCopy("fonts");
   el.addPassthroughCopy("CNAME");
@@ -99,15 +92,10 @@ module.exports = function (el) {
         sourceMap: true
       }
     }, {
-      rev: true,
-      when: { ELEVENTY_ENV: "stage" }
-    }, {
       sass: {
         style: "compressed",
         sourceMap: false
       },
-      rev: true,
-      when: [{ ELEVENTY_ENV: "production" }, { ELEVENTY_ENV: false }]
     }
   ]);
 

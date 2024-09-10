@@ -1,5 +1,7 @@
-node_modules
-_site
-.env
-tmp*/
-.cache/
+# System specific files
+.DS_Store
+
+# Node files
+node_modules/
+npm-debug.log
+yarn-error.log

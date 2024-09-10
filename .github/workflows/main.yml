@@ -18,38 +18,39 @@ jobs:
       - name: Set timezone
         uses: szenius/set-timezone@v1.0
         with:
-          timezoneLinux: "Europe/Berlin"
+          timezoneLinux: "Europe/Brussels"
       - name: Load dependency cache
         uses: actions/cache@v2
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('package.json') }}
+          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('*/yarn.lock') }}
       - name: Load site cache
         uses: actions/cache@v2
         with:
           path: |
             **/_site
-          key: ${{ runner.os }}-site-v1-${{ hashFiles('package.json') }}-${{ github.run_number }}
+          key: ${{ runner.os }}-site-v1-${{ hashFiles('*/yarn.lock') }}-${{ github.run_number }}
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '18'
       - name: Installing Dependencies
         run: |
-          npm install
+          yarn install
       - name: Build site
         env:
           PHOTOS_ALBUM: ${{ secrets.PHOTOS_ALBUM }}
           CALENDAR: ${{ secrets.CALENDAR }}
         run: |
-          npm run clean
-          npm run build
+          yarn workspaces run clean
+          yarn workspaces run build
 
   deploy_github:
     needs:
       - build
     name: 'Deploy to Github Pages'
     runs-on: ubuntu-latest
+    working-directory: ./website
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
@@ -58,13 +59,13 @@ jobs:
         with:
           path: |
             **/node_modules
-          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('package.json') }}
+          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('*/yarn.lock') }}
       - name: Load site cache
         uses: actions/cache@v2
         with:
           path: |
             **/_site
-          key: ${{ runner.os }}-site-v1-${{ hashFiles('package.json') }}-${{ github.run_number }}
+          key: ${{ runner.os }}-site-v1-${{ hashFiles('*/yarn.lock') }}-${{ github.run_number }}
       - name: Deploy site to GitHub
         uses: peaceiris/actions-gh-pages@v3
         with:

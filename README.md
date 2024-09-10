@@ -8,6 +8,13 @@
 2. Installeer yarn via `npm install -g yarn`
 3. `yarn install` om alle dependencies te installeren
 4. `npm run build` om de website te bouwen
+5. Voeg een `.env` file toe aan de root van de server met de calendar en photos_album variabelen
+
+## Environment variables
+```text
+PHOTOS_ALBUM=https://photos.google.com/...
+CALENDAR=https://calendar.google.com/calendar/ical/...
+```
 
 ## Nieuws
 Nieuws post kunnen aangemaakt worden in de directory `_posts`. 
