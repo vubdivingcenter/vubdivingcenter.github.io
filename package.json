@@ -5,7 +5,7 @@
   "repository": "https://github.com/vubdivingcenter/vubdivingcenter.github.io",
   "author": {
     "name": "Maxim Van de Wynckel",
-    "email": "maxim.van.de.wynckel@vub.be"
+    "email": "maxim@mvdw-software.com"
   },
   "license": "Apache-2.0",
   "scripts": {
@@ -19,6 +19,7 @@
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-vue": "^0.8.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "@types/node": "^20.3.1",
     "axios": "^1.4.0",

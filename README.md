@@ -4,9 +4,10 @@
 <h1>VUB Diving Center Website</h1>
 
 ## Installatie
-1. Installeer NodeJS 14 of hoger
-2. `npm install` om alle dependencies te installeren
-3. `npm run build` om de website te bouwen
+1. Installeer NodeJS 20 of hoger
+2. Installeer yarn via `npm install -g yarn`
+3. `yarn install` om alle dependencies te installeren
+4. `npm run build` om de website te bouwen
 
 ## Nieuws
 Nieuws post kunnen aangemaakt worden in de directory `_posts`. 

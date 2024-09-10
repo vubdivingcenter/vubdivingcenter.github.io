@@ -44,9 +44,10 @@ Huidige bestuursleden:
 - Kyan De Donder (Secretaris)
 - Maxim Buyck (Penningmeester)
 - Pascal Blockx (Materiaalmeester)
-- Esther Geboes (Verantwoordelijke gevorderde training)
-- Geert Sempels (Verantwoordelijke basisopleiding)
+- *Comite van Instructeurs* (Verantwoordelijke basisopleiding)
 - Bram Pellens (Verantwoordelijke gevorderde opleiding)
+- Constant Katalagarianakis (Verantwoordelijke basistraining)
+- *Open positie* (Verantwoordelijke gevorderde training)
 
 #### Comité van Instructeurs
 

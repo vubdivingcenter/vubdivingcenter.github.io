@@ -13,6 +13,7 @@ async function fetchEvents(el) {
             fs.writeFileSync('_site/calendar.ics', data, 'utf-8');
             return ics.parseICS(data);
         }).then(response => {
+            console.log(`Found ${Object.values(response).length} events.`);
             // fs.writeFileSync('_site/calendar_raw.json', JSON.stringify(response, null, 2), 'utf-8');
             const events = Object.values(response).filter(entry => entry.type === 'VEVENT');
             let id = 1;
