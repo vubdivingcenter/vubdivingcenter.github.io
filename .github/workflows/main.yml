@@ -30,6 +30,7 @@ jobs:
         with:
           path: |
             **/_site
+            **/dist
           key: ${{ runner.os }}-site-v1-${{ hashFiles('yarn.lock') }}-${{ github.run_number }}
       - uses: actions/setup-node@v2
         with:
@@ -68,6 +69,7 @@ jobs:
         with:
           path: |
             **/_site
+            **/dist
           key: ${{ runner.os }}-site-v1-${{ hashFiles('yarn.lock') }}-${{ github.run_number }}
       - name: Deploy site to GitHub
         uses: peaceiris/actions-gh-pages@v3

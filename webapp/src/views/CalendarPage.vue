@@ -20,7 +20,7 @@ import {
 } from '@ionic/vue';
 import TrainingItemComponent from '../components/TrainingItemComponent.vue';
 import { Training } from '../models/Training';
-import { useCalendarStore } from '@/stores/calendar.store';
+import { useCalendarStore } from '../stores/calendar.store';
 
 @Component({
     components: {

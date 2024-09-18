@@ -48,8 +48,8 @@ import {
     IonInput,
     IonButton,
 } from '@ionic/vue';
-import { useUserStore } from '@/stores/user.store';
-import { Invite } from '@/models/Invite';
+import { useUserStore } from '../stores/user.store';
+import { Invite } from '../models/Invite';
 
 @Component({
     components: {
@@ -65,7 +65,7 @@ class RegisterPage extends Vue {
     userStore = useUserStore();
     // Invite key
     key: string = '';
-    invite: Invite;
+    invite: Invite|undefined;
     
     // User details
     email: string = '';
@@ -74,11 +74,11 @@ class RegisterPage extends Vue {
     password: string = '';
     password2: string = '';
 
-    error: string = undefined;
+    error: string = '';
     
     mounted() {
         // Get the invite key from the named param
-        this.key = this.$route.params.key;
+        this.key = this.$route.params.key as string;
         // Fetch the invite details
         this.userStore.findInviteByKey(this.key).then((invite) => {
             this.invite = invite;
