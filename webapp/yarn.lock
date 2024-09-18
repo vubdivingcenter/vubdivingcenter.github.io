@@ -3141,6 +3141,11 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
 
+dhtmlx-scheduler@^7:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/dhtmlx-scheduler/-/dhtmlx-scheduler-7.1.1.tgz#c3386313c2c1c89da8ad8205d9b2ff261f4dc068"
+  integrity sha512-35wG+kRMKB73D76GgmumryBRXVcw29YY7jEip8sM2a6cFp4ebQsVU5kuYGJnUY1/ykALp4fcVf2TYRXuyaS28Q==
+
 diff-sequences@^29.4.3:
   version "29.6.3"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.6.3.tgz#4deaf894d11407c51efc8418012f9e70b84ea921"

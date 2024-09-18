@@ -1,7 +1,7 @@
-const GooglePhotosAlbum = require('google-photos-album-image-url-fetch');
-const _ = require("lodash");
+import GooglePhotosAlbum from 'google-photos-album-image-url-fetch';
+import _ from 'lodash';
 
-function fetchPhotos(el) {
+export async function fetchPhotos(el) {
     el.addCollection("photos_year", async () => {
         const urls = await GooglePhotosAlbum.fetchImageUrls(process.env.PHOTOS_ALBUM);
         const photos = _.chain(urls)
@@ -22,5 +22,3 @@ function fetchPhotos(el) {
         return photos;
     });
 }
-
-module.exports = fetchPhotos;

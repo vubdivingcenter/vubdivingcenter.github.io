@@ -1,7 +1,8 @@
 import { Trainer } from "./Trainer";
 
 export interface Training {
-    date: Date;
-    subject: string;
-    trainer: Trainer;
+    startTime: Date;
+    endTime: Date;
+    subject?: string;
+    trainer?: Trainer;
 }

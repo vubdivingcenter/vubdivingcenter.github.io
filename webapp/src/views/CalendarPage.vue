@@ -20,6 +20,7 @@ import {
 } from '@ionic/vue';
 import TrainingItemComponent from '../components/TrainingItemComponent.vue';
 import { Training } from '../models/Training';
+import { useCalendarStore } from '@/stores/calendar.store';
 
 @Component({
     components: {
@@ -29,7 +30,16 @@ import { Training } from '../models/Training';
     }
 })
 class CalendarPage extends Vue {
+  calendarStore = useCalendarStore();
   events: Training[] = [];
+
+  mounted() {
+    this.calendarStore.fetchEvents().then((events) => {
+      this.events = events;
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
 }
 
 export default toNative(CalendarPage)

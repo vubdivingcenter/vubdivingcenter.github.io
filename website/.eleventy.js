@@ -1,38 +1,42 @@
 /* Markdown plugins */
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const markdownItVideo = require("markdown-it-video");
-const { html5Media } = require('markdown-it-html5-media');
-const markdownItAttrs = require('markdown-it-attrs');
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItVideo from "markdown-it-video";
+import { html5Media } from 'markdown-it-html5-media';
+import markdownItAttrs from 'markdown-it-attrs';
 
 /* Other plugins */
-const pluginTOC = require('eleventy-plugin-toc');
-const pluginSEO = require("eleventy-plugin-seo");
-const pluginSASS = require("eleventy-sass");
-const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
-const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginFavicon = require("./_scripts/favicon");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginHTMLValidate = require('eleventy-plugin-html-validate');
-const fetchPhotos = require('./_scripts/photos');
-const fetchEvents = require('./_scripts/calendar');
-const { EleventyHtmlBasePlugin  } = require("@11ty/eleventy");
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
+import pluginTOC from 'eleventy-plugin-toc';
+import pluginSEO from "eleventy-plugin-seo";
+import pluginSASS from "eleventy-sass";
+import pluginSitemap from "@quasibit/eleventy-plugin-sitemap";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import pluginFavicon from "./_scripts/favicon.js";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginHTMLValidate from 'eleventy-plugin-html-validate';
+import { fetchPhotos } from './_scripts/photos.js';
+import { fetchEvents } from './_scripts/calendar.js';
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import { EleventyI18nPlugin } from "@11ty/eleventy";
 
-const { DateTime } = require("luxon");
-const fs = require('fs');
-const nunjucks = require("nunjucks");
-const markdown = require('nunjucks-markdown');
-require('dotenv').config();
-const _ = require("lodash");
+import { DateTime } from "luxon";
+import fs from 'fs';
+import nunjucks from "nunjucks";
+import markdown from 'nunjucks-markdown';
+import dotenv from 'dotenv';
+import _ from "lodash";
 
-module.exports = function (el) {
+const seoConfig = JSON.parse(fs.readFileSync('./_data/seo.json', 'utf8'));
+
+dotenv.config();
+
+export default function (el) {
   /* Passthrough Copy */
   el.addPassthroughCopy("fonts");
   el.addPassthroughCopy("CNAME");
   el.addPassthroughCopy("scripts");
   el.addPassthroughCopy({
-    "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css": "./css/vendor/dhtmlxscheduler_material.css",
+    "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.css": "./css/vendor/dhtmlxscheduler.css",
     "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js": "./scripts/vendor/dhtmlxscheduler.js",
     "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js.map": "./scripts/vendor/dhtmlxscheduler.js.map"
   });
@@ -40,7 +44,7 @@ module.exports = function (el) {
   el.setDataDeepMerge(true);
 
   /* SEO */
-  el.addPlugin(pluginSEO, require("./_data/seo.json"));
+  el.addPlugin(pluginSEO, seoConfig);
   el.addPlugin(pluginSitemap, {
     sitemap: {
       hostname: 'https://www.vubdivingcenter.be',
@@ -171,6 +175,14 @@ module.exports = function (el) {
     ui: false,
     ghostMode: false
   });
+  
+  el.setServerOptions({
+    headers: {
+      "access-control-allow-origin": "*",
+      "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "access-control-allow-headers": "Origin, X-Requested-With, Content-Type, Accept",
+    },
+  });
 
   return {
     templateFormats: [
@@ -228,8 +240,8 @@ function extractExcerpt(doc) {
  * This should only be used when there is no excerpt marker in the content (e.g. no `<!--more-->`).
  *
  * @param {String} content The full text of a piece of content (e.g. a blog post)
- * @param {Number?} skipLength Amount of characters to skip before starting to look for a `</p>`
- * tag. This is used when calling this method recursively.
+ * @param {Number?} skipLength Amount of characters to skip before starting to look for a `</p>` tag.
+ * This is used when calling this method recursively.
  * @returns {Number} the end position of the excerpt
  */
 function findExcerptEnd(content, skipLength = 0) {

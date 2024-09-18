@@ -2,7 +2,13 @@
     <ion-card>
         <ion-grid>
             <ion-row>
-                <ion-col class="date" size="2">
+                <ion-col 
+                    :class="{ 
+                        date: true,
+                        unavailable: training?.trainer
+                    }"
+                    size="2"
+                >
                     <span class="weekday">{{ weekday }}</span>
                     <span class="day">{{ day }}</span>
                     <span class="month">{{ month }}</span>
@@ -11,19 +17,31 @@
                     <ion-card-content>
                         <ion-grid>
                             <ion-row>
-                                <ion-col size="2">
-                                    <b>Lesgever</b>
-                                </ion-col>
                                 <ion-col>
-                                    Bram Pellens
+                                    <ion-grid>
+                                        <ion-row>
+                                            <ion-col size="2">
+                                                <b>Lesgever</b>
+                                            </ion-col>
+                                            <ion-col>
+                                                {{ training?.trainer?.firstName }} {{ training?.trainer?.lastName }}
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col size="2">
+                                                <b>Onderwerp</b>
+                                            </ion-col>
+                                            <ion-col>
+                                                {{ training?.subject }}
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-grid>
                                 </ion-col>
-                            </ion-row>
-                            <ion-row>
-                                <ion-col size="2">
-                                    <b>Onderwerp</b>
-                                </ion-col>
-                                <ion-col>
-                                    Bachelor training
+                                <ion-col size="1">
+                                    <checkbox-component
+                                        class="checkbox"
+                                        :disabled="training?.trainer"
+                                    ></checkbox-component>
                                 </ion-col>
                             </ion-row>
                         </ion-grid>
@@ -44,9 +62,10 @@ import {
     IonCardContent,
     IonGrid,
     IonRow,
-    IonCol
+    IonCol,
 } from '@ionic/vue';
 import { Training } from '../models/Training';
+import CheckboxComponent from './CheckboxComponent.vue';
 
 @Component({
     components: {
@@ -57,22 +76,23 @@ import { Training } from '../models/Training';
         IonCardContent,
         IonGrid,
         IonRow,
-        IonCol
+        IonCol,
+        CheckboxComponent
     }
 })
 class TrainingItemComponent extends Vue {
     @Prop() training?: Training;
 
     get weekday(): string {
-        return this.training?.date.toLocaleDateString('nl-BE', { weekday: 'long' }) || '';
+        return this.training?.startTime.toLocaleDateString('nl-BE', { weekday: 'long' }) || '';
     }
 
     get day(): string {
-        return this.training?.date.toLocaleDateString('nl-BE', { day: 'numeric' }) || '';
+        return this.training?.startTime.toLocaleDateString('nl-BE', { day: 'numeric' }) || '';
     }
 
     get month(): string {
-        return this.training?.date.toLocaleDateString('nl-BE', { month: 'long' }) || '';
+        return this.training?.startTime.toLocaleDateString('nl-BE', { month: 'long' }) || '';
     }
 }
 
@@ -84,8 +104,16 @@ ion-card ion-grid {
     padding: 0;
 }
 
+ion-card .date.unavailable {
+    background-color: #0b971b;
+}
+
+ion-card-content {
+    padding: 5px;
+}
+
 ion-card .date {
-    background-color: #0059ff;
+    background-color: #b90909;
     color: white;
     font-size: 1.5em;
     text-align: center;
@@ -104,5 +132,10 @@ ion-card .date {
 .date .month {
     display: block;
     font-size: 0.8em;
+}
+
+ion-col .checkbox {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 </style>

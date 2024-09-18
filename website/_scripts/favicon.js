@@ -1,16 +1,16 @@
 /* Based on: https://github.com/atomrc/eleventy-favicon/blob/master/.eleventy.js */
-const sharp = require("sharp");
-const toIco = require("to-ico");
-const fs = require("fs").promises;
+import sharp from "sharp";
+import toIco from "to-ico";
+import { promises as fs } from "fs";
 
 // Caches all the file generations that were made.
 // It keeps track of the mtime of the source file so the cache can be invalidated if the source changes
 let cache = {};
 
-function generateIcoFavicon({ width, height, density }, sourcePath) {
+async function generateIcoFavicon({ width, height, density }, sourcePath) {
   const faviconDimensions = [32, 64];
   // Create buffer for each size
-  return Promise.all(
+  const buffers = await Promise.all(
     faviconDimensions.map((dimension) =>
       sharp(sourcePath, {
         density: (dimension / Math.max(width, height)) * density,
@@ -18,7 +18,8 @@ function generateIcoFavicon({ width, height, density }, sourcePath) {
         .resize(dimension, dimension)
         .toBuffer()
     )
-  ).then((buffers) => toIco(buffers));
+  );
+  return toIco(buffers);
 }
 
 function generatePngFavicon({ density, width, height }, sourcePath) {
@@ -44,7 +45,8 @@ const faviconTypes = [
 const defaultOptions = {
   destination: "./_site",
 };
-module.exports = function (config, options = defaultOptions) {
+
+export default function (config, options = defaultOptions) {
   const destination = options.destination || defaultOptions.destination;
   config.addAsyncShortcode("favicon", async function (faviconFile) {
     const { mtimeMs } = await fs.stat(faviconFile);
@@ -72,4 +74,4 @@ ${svgEntry}
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     `;
   });
-};
+}

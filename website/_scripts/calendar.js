@@ -1,8 +1,8 @@
-const ics = require('node-ical');
-const axios = require("axios");
-const fs = require('fs');
+import ics from 'node-ical';
+import axios from 'axios';
+import fs from 'fs';
 
-async function fetchEvents(el) {
+export async function fetchEvents(el) {
     return new Promise((resolve, reject) => {
         console.log(`Building calendar with time zone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`);
         axios.get(process.env.CALENDAR).then(response => {
@@ -14,7 +14,6 @@ async function fetchEvents(el) {
             return ics.parseICS(data);
         }).then(response => {
             console.log(`Found ${Object.values(response).length} events.`);
-            // fs.writeFileSync('_site/calendar_raw.json', JSON.stringify(response, null, 2), 'utf-8');
             const events = Object.values(response).filter(entry => entry.type === 'VEVENT');
             let id = 1;
             const data = events.map((event, idx) => {
@@ -27,13 +26,12 @@ async function fetchEvents(el) {
                     const event_pid = id;
                     const output = [{
                         id,
-                        start_date: formatDate(event.rrule.options.dtstart),
-                        end_date: event.rrule.options.until ? formatDate(event.rrule.options.until) : new Date(9999, 1, 1),
+                        start_date: formatDate(event.rrule.options.dtstart, "UTC"),
+                        end_date: event.rrule.options.until ? formatDate(event.rrule.options.until, "UTC") : new Date(9999, 1, 1),
                         text: event.summary,
                         details: `${event.description ? event.description + "\n" : ""}${event.location ?? ""}`,
-                        rec_type: `week_1___`,
-                        event_length: (event.end.getTime() - event.start.getTime()) / 1000,
-                        event_pid: 0
+                        rrule: event.rrule.toString(),
+                        duration: (event.end.getTime() - event.start.getTime()) / 1000,
                     }];
                     if (event.exdate) {
                         output.push(...Object.values(event.exdate).map(exdate => {
@@ -44,9 +42,9 @@ async function fetchEvents(el) {
                                 end_date: formatDate(new Date(exdate.getTime() + (event.end.getTime() - event.start.getTime()))),
                                 text: event.summary,
                                 details: `${event.description ? event.description + "\n" : ""}${event.location ?? ""}`,
-                                rec_type: `none`,
-                                event_length: exdate.getTime() / 1000,
-                                event_pid
+                                deleted: true,
+                                recurring_event_id: event_pid,
+                                original_start: formatDate(exdate),
                             };
                         }));
                     }
@@ -59,8 +57,9 @@ async function fetchEvents(el) {
                                 end_date: formatDate(recurrence.end),
                                 text: recurrence.summary,
                                 details: `${recurrence.description ? recurrence.description + "\n" : ""}${recurrence.location ?? ""}`,
-                                event_length: recurrence.start.getTime() / 1000,
-                                event_pid
+                                duration: (recurrence.end.getTime() - recurrence.start.getTime()) / 1000,
+                                recurring_event_id: event_pid,
+                                original_start: formatDate(recurrence.start),
                             };
                         }));
                     }
@@ -72,19 +71,32 @@ async function fetchEvents(el) {
                         end_date: formatDate(event.end),
                         text: event.summary,
                         details: `${event.description ? event.description + "\n" : ""}${event.location ?? ""}`,
-                        event_length: (event.end.getTime() - event.start.getTime()) / 1000,
-                        event_pid: 0
+                        duration: (event.end.getTime() - event.start.getTime()) / 1000,
                     }];
                 }
             }).reduce((a, b) => a.concat(b));
-            fs.writeFileSync('_site/calendar.json', JSON.stringify(data), 'utf-8');
+            fs.writeFileSync('_site/calendar.json', JSON.stringify(data, null, 2), 'utf-8');
             resolve();
         }).catch(reject);
     });
 }
 
-function formatDate(date) {
-    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
+function formatDate(date, timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone) {
+    const options = {
+        timeZone,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+    const formatter = new Intl.DateTimeFormat('nl-BE', options);
+    const parts = formatter.formatToParts(date);
+    const dateTime = parts.reduce((acc, part) => {
+        acc[part.type] = part.value;
+        return acc;
+    }, {});
+    return `${dateTime.year}-${dateTime.month}-${dateTime.day} ${dateTime.hour}:${dateTime.minute}:${dateTime.second}`;
 }
-
-module.exports = fetchEvents;

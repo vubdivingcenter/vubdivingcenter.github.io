@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "yarn workspaces run build && npm run build:copy",
-    "build:copy": "shx cp -R ./webapp/dist/* ./website/_site/user",
+    "build:copy": "shx cp -R ./webapp/dist/assets/* ./website/_site/user/assets",
     "serve": "npm run build:copy && yarn workspaces run serve"
   },
   "author": "",
