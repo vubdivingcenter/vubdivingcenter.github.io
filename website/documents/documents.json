@@ -31,6 +31,11 @@
         "description": "De uitleenprocedure van (duik)materiaal.",
         "files": [
             {
+                "date": "2024-09-18",
+                "version": 2,
+                "url": "/docs/materiaal/"
+            },
+            {
                 "date": "2024-01-11",
                 "version": 1,
                 "url": "/downloads/uitleenprocedure_materiaal_2024.pdf"

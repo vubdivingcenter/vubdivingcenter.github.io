@@ -28,13 +28,12 @@ verantwoordelijke van de eerstvolgende training kan je uitzonderlijk voor langer
 uitlenen. Uiteraard moet deze verwittiging op tijd gebeuren.
 
 ## Flessen
-Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek. Vullen dient op eigen kosten te gebeuren. De enige uitzondering op deze regel zijn instructeurs die een opleidingsduik maken en vullen in een erkende duikwinkel waar het VDC een vulkaart heeft. Alsook vrijwilligers die de flessen gaan vullen voor de zwembadtrainingen mogen dit op kosten van het VDC doen in een erkende duikwinkel.
+Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek. Vullen dient op eigen kosten te gebeuren. De enige uitzondering op deze regel zijn instructeurs die een opleidingsduik maken en vullen in een erkende duikwinkel waar het VDC een vulkaart heeft.
 
 > <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt er een boete van 5 euro aangerekend die elke week met 5 euro verhoogt.
 
 Om te gaan duiken neem je bij voorkeur lege (<60 bar, rood etiket) of halflege flessen (<100 bar, oranje
-etiket) mee en zorg je ervoor dat je die volledig gevuld terugbrengt. Een fles die door omstandigheden
-nog minstens 150 bar bevat, mag je terugbrengen naar het zwembad.
+etiket) mee en zorg je ervoor dat je die volledig gevuld terugbrengt.
 
 Controleer een uitgeleende fles op de aanwezigheid van een DIN-stuk. Indien je het niet nodig hebt, draai
 je het best op voorhand uit en steek je het in de bak waar eveneens de etiketjes steken, zo raken er geen
