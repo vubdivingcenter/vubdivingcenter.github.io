@@ -1,4 +1,4 @@
-import{S as t}from"./index.js";/*!
+import{V as t}from"./index.js";/*!
  * (C) Ionic http://ionicframework.com - MIT License
  */const r=()=>{if(t!==void 0)return t.Capacitor};/*!
  * (C) Ionic http://ionicframework.com - MIT License

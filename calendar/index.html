@@ -164,7 +164,7 @@
   <div class="row">
     <div class="col-sm-12 typography">
       <script src="/scripts/vendor/dhtmlxscheduler.js"></script>
-<link rel="stylesheet" href="/css/vendor/dhtmlxscheduler_material.css" type="text/css">
+<link rel="stylesheet" href="/css/vendor/dhtmlxscheduler.css" type="text/css">
 
 <p>
 	Deze kalender bevat belangrijke evenementen voor het VDC zoals clubduiken, vakanties, duikweekends, vergaderingen en trainingen.
@@ -207,6 +207,7 @@
 		serialize: true, 
 		url: true,
 	});
+	scheduler.skin = "material";
 	scheduler.config.readonly = true;
 	scheduler.config.icons_select = [];
 	scheduler.config.responsive_lightbox = true;
@@ -224,6 +225,7 @@
 
 		data
 			.sort((a, b) => a.start_date > b.start_date ? 1 : -1)
+			.filter(event => event.end_date > currentDate)
 			.forEach(event => {
 				const start = event.start_date;
 				const end = event.end_date;
