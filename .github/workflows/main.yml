@@ -44,6 +44,10 @@ jobs:
         run: |
           yarn workspace @vubdivingcenter/website clean
           yarn workspace @vubdivingcenter/website build
+      - name: Build webapp
+        run: |
+          yarn workspace @vubdivingcenter/webapp build
+          cp -r ./webapp/dist/assets ./website/_site/user/assets
 
   deploy_github:
     needs:
