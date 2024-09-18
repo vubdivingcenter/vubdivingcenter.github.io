@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      // All authenticated users can see basic user information
+      allow read: if request.auth != null;
+      // Allow create only when the user that is writing is the user itself
+      allow create: if request.auth != null 
+        && request.auth.uid == userId 
+        && request.resource.data.keys().hasOnly(['firstName', 'lastName', 'invite']);
+    }
+    // Invitations
+    match /invites/{inviteId} {
+      // Allow creation when it contains a uid and when the uid matches the user
+      allow create: if request.resource.data.keys().hasOnly(['uid', 'name']) 
+        && request.resource.data.uid == request.auth.uid
+        && 'role' in request.auth.token.claims;
+      // Allow reading by everyone with the inviteId
+      allow read;
+    }
+    match /events/{eventId} {
+      // Allow reading by everyone who is authenticated
+      allow read: if request.auth != null; 
+      // Allow writing only when authenticated and verified
+      allow create: if request.auth != null 
+        && request.auth.token.email_verified == true
+        && 'role' in request.auth.token.claims;
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['uid'])
+        && 'role' in request.auth.token.claims;
+    }
+  }
+}

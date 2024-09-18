@@ -2,14 +2,18 @@
   <ion-page>
     <ion-content :fullscreen="true">
       <div id="container">
-        <TrainingItemComponent :training="training"></TrainingItemComponent>
+        <TrainingItemComponent 
+          :key="event"
+          :training="event" 
+          v-for="event in events">
+        </TrainingItemComponent>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, toNative } from 'vue-facing-decorator';
+import { Component, Vue, toNative } from 'vue-facing-decorator';
 import { 
     IonPage,
     IonContent,
@@ -24,19 +28,11 @@ import { Training } from '../models/Training';
       TrainingItemComponent
     }
 })
-class HomePage extends Vue {
-  training: Training = {
-      date: new Date(),
-      trainer: {
-          email: '',
-          firstName: 'Bram',
-          lastName: 'Pellens'
-      },
-      subject: 'Bachelor training'
-  };
+class CalendarPage extends Vue {
+  events: Training[] = [];
 }
 
-export default toNative(HomePage)
+export default toNative(CalendarPage)
 </script>
 
 <style scoped>
