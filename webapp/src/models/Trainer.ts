@@ -1,5 +1,5 @@
 export interface Trainer {
-    email: string;
+    uid?: string;
     firstName: string;
     lastName: string;
 }

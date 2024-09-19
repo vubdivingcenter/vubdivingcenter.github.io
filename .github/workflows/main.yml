@@ -19,8 +19,6 @@ jobs:
         uses: szenius/set-timezone@v1.0
         with:
           timezoneLinux: "Europe/Brussels"
-      - name: List files for debugging
-        run: ls -R ./webapp/src/stores
       - name: Load dependency cache
         uses: actions/cache@v2
         with:

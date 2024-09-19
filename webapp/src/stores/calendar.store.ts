@@ -7,8 +7,8 @@ import { scheduler } from 'dhtmlx-scheduler';
 const db = getFirestore(firebaseApp);
 const calendarRef = collection(db, 'calendar');
 
-const CALENDAR_JSON = "https://www.vubdivingcenter.be/calendar.json";
-// const CALENDAR_JSON = "http://localhost:8081/calendar.json";
+// const CALENDAR_JSON = "https://www.vubdivingcenter.be/calendar.json";
+const CALENDAR_JSON = "http://localhost:8081/calendar.json";
 
 export const useCalendarStore = defineStore('calendar', {
     state: () => ({
@@ -66,7 +66,6 @@ export const useCalendarStore = defineStore('calendar', {
                             trainer: trainerName ? { 
                                 firstName: trainerName,
                                 lastName: "(VIA KALENDER)",
-                                email: "",
                             } : undefined,
                         });
                     });

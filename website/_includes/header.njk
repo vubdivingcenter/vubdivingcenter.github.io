@@ -1,4 +1,4 @@
-<header{% if header_large %} class="large"{% endif %}>
+<header{% if header_large %} class="large"{% elif header_small %} class="small"{% endif %}>
   <div class="header-image">
     <picture>
       {% if background and 'https://lh3.googleusercontent.com' in background %}

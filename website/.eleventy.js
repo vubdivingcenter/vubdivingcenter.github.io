@@ -36,9 +36,9 @@ export default function (el) {
   el.addPassthroughCopy("CNAME");
   el.addPassthroughCopy("scripts");
   el.addPassthroughCopy({
-    "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.css": "./css/vendor/dhtmlxscheduler.css",
-    "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js": "./scripts/vendor/dhtmlxscheduler.js",
-    "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js.map": "./scripts/vendor/dhtmlxscheduler.js.map"
+    "../node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.css": "./css/vendor/dhtmlxscheduler.css",
+    "../node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js": "./scripts/vendor/dhtmlxscheduler.js",
+    "../node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js.map": "./scripts/vendor/dhtmlxscheduler.js.map"
   });
 
   el.setDataDeepMerge(true);

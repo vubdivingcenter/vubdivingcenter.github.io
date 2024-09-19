@@ -7,7 +7,7 @@
                         date: true,
                         unavailable: training?.trainer
                     }"
-                    size="2"
+                    size="1"
                 >
                     <span class="weekday">{{ weekday }}</span>
                     <span class="day">{{ day }}</span>
@@ -17,10 +17,10 @@
                     <ion-card-content>
                         <ion-grid>
                             <ion-row>
-                                <ion-col>
+                                <ion-col size="11">
                                     <ion-grid>
                                         <ion-row>
-                                            <ion-col size="2">
+                                            <ion-col size="3">
                                                 <b>Lesgever</b>
                                             </ion-col>
                                             <ion-col>
@@ -28,7 +28,7 @@
                                             </ion-col>
                                         </ion-row>
                                         <ion-row>
-                                            <ion-col size="2">
+                                            <ion-col size="3">
                                                 <b>Onderwerp</b>
                                             </ion-col>
                                             <ion-col>
@@ -66,6 +66,7 @@ import {
 } from '@ionic/vue';
 import { Training } from '../models/Training';
 import CheckboxComponent from './CheckboxComponent.vue';
+import TrainingRegistrationModal from './TrainingRegistrationModal.vue';
 
 @Component({
     components: {
@@ -77,14 +78,15 @@ import CheckboxComponent from './CheckboxComponent.vue';
         IonGrid,
         IonRow,
         IonCol,
-        CheckboxComponent
+        CheckboxComponent,
+        TrainingRegistrationModal
     }
 })
 class TrainingItemComponent extends Vue {
     @Prop() training?: Training;
 
     get weekday(): string {
-        return this.training?.startTime.toLocaleDateString('nl-BE', { weekday: 'long' }) || '';
+        return this.training?.startTime.toLocaleDateString('nl-BE', { weekday: 'short' }) || '';
     }
 
     get day(): string {
@@ -92,7 +94,7 @@ class TrainingItemComponent extends Vue {
     }
 
     get month(): string {
-        return this.training?.startTime.toLocaleDateString('nl-BE', { month: 'long' }) || '';
+        return this.training?.startTime.toLocaleDateString('nl-BE', { month: 'short' }) || '';
     }
 }
 
@@ -120,6 +122,7 @@ ion-card .date {
     padding: 10px;
     justify-content: center;
     align-items: center;
+    min-width: 60px;
 }
 .date .weekday {
     display: block;

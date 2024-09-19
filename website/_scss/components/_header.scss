@@ -330,6 +330,34 @@ header {
     }
 }
 
+header.small {
+    height: calc($header_height - 80px);
+
+    @media (max-width: $on-small) {
+        height: calc($header_height_mobile - 80px);
+    }
+
+    .logo {
+        background-size: 100px 100px;
+        width: 110px;
+        height: 110px;
+
+        @media (max-width: $on-small) {
+            height: 90px;
+            width: 90px;
+            background-size: 80px 80px;
+        }
+    }
+
+    h1 {
+        bottom: 1em;
+    }
+
+    h2 {
+        bottom: 1em;
+    }
+}
+
 header.large {
     height: calc($header_height + 100px);
 
