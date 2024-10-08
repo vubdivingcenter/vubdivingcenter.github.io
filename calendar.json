@@ -3916,6 +3916,16 @@
   },
   {
     "id": 418,
+    "start_date": "2024-10-11 19:30:00",
+    "end_date": "2024-10-11 21:00:00",
+    "text": "Vrijdagtraining (Esther of Maxim)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 328,
+    "original_start": "2024-10-11 19:30:00"
+  },
+  {
+    "id": 419,
     "start_date": "2024-10-18 19:30:00",
     "end_date": "2024-10-18 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3925,7 +3935,7 @@
     "original_start": "2024-10-18 19:30:00"
   },
   {
-    "id": 419,
+    "id": 420,
     "start_date": "2024-10-25 19:30:00",
     "end_date": "2024-10-25 21:00:00",
     "text": "Vrijdagtraining (Bram)",
