@@ -12,17 +12,17 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/calendar',
-    name: 'Calendar',
+    name: 'calendar',
     component: CalendarPage
   },
   {
     path: '/login',
-    name: 'Login',
+    name: 'login',
     component: LoginPage
   },
   {
     path: '/register/:key',
-    name: 'Register',
+    name: 'register',
     component: RegisterPage
   }
 ]

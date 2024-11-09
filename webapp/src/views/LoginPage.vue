@@ -2,12 +2,13 @@
   <ion-page>
     <ion-content class="ion-padding">
       <ion-item>
-        <ion-label position="floating">E-mail</ion-label>
-        <ion-input v-model="email" type="email"></ion-input>
+        <ion-input 
+          label="E-mail" 
+          label-placement="stacked" 
+          v-model="email" type="email"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating">Wachtwoord</ion-label>
-        <ion-input v-model="password" type="password"></ion-input>
+        <ion-input label="Wachtwoord" label-placement="stacked" v-model="password" type="password"></ion-input>
       </ion-item>
       <ion-grid>
         <ion-row>

@@ -74,7 +74,7 @@ class RegisterPage extends Vue {
     password: string = '';
     password2: string = '';
 
-    error: string = '';
+    error: string | undefined;
     
     mounted() {
         // Get the invite key from the named param
@@ -150,7 +150,7 @@ export default toNative(RegisterPage)
     }
 
     .info {
-        font-size: 12px;
+        font-size: 20px;
         text-align: center;
     }
 

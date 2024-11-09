@@ -2395,7 +2395,7 @@
     de-indent "^1.0.2"
     he "^1.2.0"
 
-"@vue/devtools-api@^6.6.3":
+"@vue/devtools-api@^6.6.3", "@vue/devtools-api@^6.6.4":
   version "6.6.4"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz#cbe97fe0162b365edc1dba80e173f90492535343"
   integrity sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==
@@ -5586,12 +5586,12 @@ vue-facing-decorator@^3.0.4:
   resolved "https://registry.yarnpkg.com/vue-facing-decorator/-/vue-facing-decorator-3.0.4.tgz#e005a8371aa4e3b4241fc20e7d8e8706dda209f6"
   integrity sha512-Lk90PevJllB6qRRdLvLFjATZrv00nof1Ob6afavKL7Pc7V3eEin3vhdvEDRORdWKVvNoXhJbHejngWVuT0Pt0g==
 
-vue-router@^4.2.0:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.4.3.tgz#58a39dc804632bfb6d26f052aa8f6718bd130299"
-  integrity sha512-sv6wmNKx2j3aqJQDMxLFzs/u/mjA9Z5LCgy6BE0f7yFWMjrPLnS/sPNn8ARY/FXw6byV18EFutn5lTO6+UsV5A==
+vue-router@^4.4.5:
+  version "4.4.5"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.4.5.tgz#bdf535e4cf32414ebdea6b4b403593efdb541388"
+  integrity sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==
   dependencies:
-    "@vue/devtools-api" "^6.6.3"
+    "@vue/devtools-api" "^6.6.4"
 
 vue-tsc@^2.0.22:
   version "2.1.6"

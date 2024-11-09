@@ -21,18 +21,12 @@
                                     <ion-grid>
                                         <ion-row>
                                             <ion-col size="3">
-                                                <b>Lesgever</b>
+                                                <h2><b>Lesgever</b></h2>
                                             </ion-col>
                                             <ion-col>
-                                                {{ training?.trainer?.firstName }} {{ training?.trainer?.lastName }}
-                                            </ion-col>
-                                        </ion-row>
-                                        <ion-row>
-                                            <ion-col size="3">
-                                                <b>Onderwerp</b>
-                                            </ion-col>
-                                            <ion-col>
-                                                {{ training?.subject }}
+                                                <h2>
+                                                    {{ training?.trainer?.firstName }} {{ training?.trainer?.lastName }}
+                                                </h2>
                                             </ion-col>
                                         </ion-row>
                                     </ion-grid>
@@ -40,6 +34,7 @@
                                 <ion-col size="1">
                                     <checkbox-component
                                         class="checkbox"
+                                        v-model="checked"
                                         :disabled="training?.trainer"
                                     ></checkbox-component>
                                 </ion-col>
@@ -49,11 +44,15 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
+        <training-registration-modal
+            ref="modal"
+            :training="training"
+        ></training-registration-modal>
     </ion-card>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, toNative } from 'vue-facing-decorator';
+import { Component, Prop, Vue, toNative, Watch, Ref } from 'vue-facing-decorator';
 import { 
     IonCard, 
     IonCardHeader, 
@@ -84,6 +83,9 @@ import TrainingRegistrationModal from './TrainingRegistrationModal.vue';
 })
 class TrainingItemComponent extends Vue {
     @Prop() training?: Training;
+    checked: boolean = false;
+    @Ref("modal")
+    trainingRegistrationModal: any;
 
     get weekday(): string {
         return this.training?.startTime.toLocaleDateString('nl-BE', { weekday: 'short' }) || '';
@@ -95,6 +97,12 @@ class TrainingItemComponent extends Vue {
 
     get month(): string {
         return this.training?.startTime.toLocaleDateString('nl-BE', { month: 'short' }) || '';
+    }
+
+    @Watch('checked')
+    watch() {
+        this.trainingRegistrationModal.openModal();
+        console.log('checked', this.checked);
     }
 }
 

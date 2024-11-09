@@ -21,12 +21,11 @@
     </ion-modal>
 </template>
 
-<script>
-import { defineComponent, ref } from 'vue';
+<script lang="ts">
 import { IonModal, IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, IonContent, IonItem, IonLabel, IonCheckbox } from '@ionic/vue';
+import { Component, Prop, toNative, Vue } from 'vue-facing-decorator';
 
-export default defineComponent({
-    name: 'TrainingRegistrationModal',
+@Component({
     components: {
         IonModal,
         IonHeader,
@@ -38,36 +37,29 @@ export default defineComponent({
         IonItem,
         IonLabel,
         IonCheckbox
-    },
-    props: {
-        isOpen: {
-            type: Boolean,
-            required: true
-        }
-    },
-    setup() {
-        const dontWarnAgain = ref(false);
-
-        const closeModal = () => {
-            // Emit an event to close the modal
-            this.$emit('update:isOpen', false);
-        };
-
-        const confirmRegistration = () => {
-            // Handle the registration confirmation logic here
-            if (dontWarnAgain.value) {
-                // Save the preference to not warn again
-            }
-            closeModal();
-        };
-
-        return {
-            dontWarnAgain,
-            closeModal,
-            confirmRegistration
-        };
     }
-});
+})
+export class TrainingRegistrationModal extends Vue {
+    isOpen!: boolean;
+
+    openModal() {
+        // Emit an event to open the modal
+        this.isOpen = true;
+        this.$emit('update:isOpen', true);
+    }
+    
+    closeModal() {
+        // Emit an event to close the modal
+        this.isOpen = false;
+        this.$emit('update:isOpen', false);
+    }
+
+    confirmRegistration() {
+        this.closeModal();
+    }
+}
+
+export default toNative(TrainingRegistrationModal);
 </script>
 
 <style scoped>

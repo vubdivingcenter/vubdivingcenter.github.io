@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, toNative } from 'vue-facing-decorator';
+import { Component, Model, Prop, Vue, toNative } from 'vue-facing-decorator';
 
 @Component({
     components: {
@@ -19,7 +19,7 @@ import { Component, Prop, Vue, toNative } from 'vue-facing-decorator';
 class CheckboxComponent extends Vue {
     id: string = `checkbox_` + Math.random().toString(36).substring(7);
     @Prop() disabled: boolean = false;
-    checked: boolean = false;
+    @Model() checked!: boolean;
 }
 
 export default toNative(CheckboxComponent)
