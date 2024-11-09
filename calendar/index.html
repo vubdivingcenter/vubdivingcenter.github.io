@@ -171,9 +171,16 @@
 </p>
 
 
-<div class="btn-group" style="margin-bottom: 1.5em">
-	<a class="btn btn-grey" target="_blank" href="https://www.google.com/calendar/render?cid=webcal%3A%2F%2Fwww.vubdivingcenter.be%2Fcalendar.ics"><i class="fa fa-brands fa-google"></i> Google Calendar</a>
-	<a class="btn btn-grey" target="_blank" href="webcal://www.vubdivingcenter.be/calendar.ics"><i class="fa fa-solid fa-calendar"></i>Importeer</a>
+<div class="dropdown" style="margin-bottom: 1.5em">
+	<button class="btn btn-grey dropdown-toggle" type="button" id="calendarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<i class="fa fa-solid fa-calendar"></i> Importeer kalender
+	</button>
+	<div class="dropdown-menu" aria-labelledby="calendarDropdown">
+		<a class="dropdown-item" target="_blank" href="https://www.google.com/calendar/render?cid=webcal%3A%2F%2Fwww.vubdivingcenter.be%2Fcalendar.ics"><i class="fa fa-brands fa-google"></i> Google Calendar</a>
+		<a class="dropdown-item" target="_blank" href="https://outlook.live.com/owa/?path=/calendar/action/compose&rru=addsubscription&name=VDC%20Calendar&url=webcal%3A%2F%2Fwww.vubdivingcenter.be%2Fcalendar.ics"><i class="fa fa-brands fa-microsoft"></i> Outlook</a>
+		<a class="dropdown-item" target="_blank" href="https://outlook.office.com/owa/?path=/calendar/action/compose&rru=addsubscription&name=VDC%20Calendar&url=webcal%3A%2F%2Fwww.vubdivingcenter.be%2Fcalendar.ics"><i class="fa fa-brands fa-microsoft"></i> Office 365</a>
+		<a class="dropdown-item" target="_blank" href="webcal://www.vubdivingcenter.be/calendar.ics"><i class="fa fa-solid fa-calendar"></i> Importeer lokaal</a>
+	</div>
 </div>
 
 <div id="calendar" class="dhx_cal_container" style="width:100%; height:100vh;">
