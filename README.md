@@ -4,7 +4,7 @@
 <h1>VUB Diving Center Website</h1>
 
 ## Installatie
-1. Installeer NodeJS 20 of hoger
+1. Installeer NodeJS 22 of hoger
 2. Installeer yarn via `npm install -g yarn`
 3. `yarn install` om alle dependencies te installeren
 4. `npm run build` om de website te bouwen
@@ -46,6 +46,23 @@ images:
 ---
 Test
 ```
+
+### Social Media
+Het toevoegen van de "excerpt" metadata laat toe om een beschrijving toe te voegen die zichtbaar is bij het delen van de link op social media. De "image" optie laat toe om een social image toe te voegen. Een template kan gevonden worden in /images/social/summary-large.png, dit is alsook de default social image.
+
+```md
+---
+layout: post
+title: Kerstballentraining op 20 december
+tags: [activiteit]
+date: 2024-11-09
+image: /posts/2024/social_kerstballentraining2024.png
+excerpt: 'Op 20 december organiseren een speciale kerstballentraining in het VUB zwembad voor leden'
+---
+
+Ho ho ho beste plonzertjes,
+```
+
 
 ## Foto's
 Het VUB Diving Center heeft een gedeeld *Google Photos* album waar fotos op kunnen worden toegevoegd. Elke dag zal de website
