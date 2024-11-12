@@ -2,7 +2,7 @@
 layout: post
 title: Kerstballentraining op 20 december
 tags: [activiteit]
-date: 2024-11-09
+date: 2024-11-12
 image: /posts/2024/social_kerstballentraining2024.png
 excerpt: 'Op 20 december organiseren een speciale kerstballentraining in het VUB zwembad voor leden'
 ---
