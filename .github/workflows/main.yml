@@ -77,8 +77,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./website/_site
-          remote-dir: /web
+          local-dir: ./website/_site/
+          remote-dir: /web/
       - name: Status check
         uses: Sibz/github-status-action@v1
         with:
