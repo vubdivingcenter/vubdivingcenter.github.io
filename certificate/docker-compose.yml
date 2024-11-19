@@ -1,0 +1,8 @@
+services:
+  certbot:
+    image: certbot/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot/ -d yourdomain.com -d www.yourdomain.com
+    volumes:
+      - ./letsencrypt:/etc/letsencrypt
+      - ./certbot:/var/www/certbot
+  

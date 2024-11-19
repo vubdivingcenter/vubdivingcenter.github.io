@@ -50,6 +50,43 @@ jobs:
           yarn workspace @vubdivingcenter/webapp build
           cp -r ./webapp/dist/assets ./website/_site/user/assets
 
+  deploy_ftp:
+    needs:
+      - build
+    name: 'Deploy to FTP'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Load dependency cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('yarn.lock') }}
+      - name: Load site cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/_site
+            **/dist
+          key: ${{ runner.os }}-site-v1-${{ hashFiles('yarn.lock') }}-${{ github.run_number }}
+      - name: Deploy site to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./website/_site
+          remote-dir: /web
+      - name: Status check
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: FTP preview
+          state: success
+          target_url: https://vubdivingcenter.be/
+    
   deploy_github:
     needs:
       - build
@@ -82,4 +119,4 @@ jobs:
           authToken: ${{ secrets.GITHUB_TOKEN }}
           context: Github Pages preview
           state: success
-          target_url: https://vubdivingcenter.be/
+          target_url: https://www.vubdivingcenter.be/
