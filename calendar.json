@@ -3996,6 +3996,16 @@
   },
   {
     "id": 426,
+    "start_date": "2024-12-13 19:30:00",
+    "end_date": "2024-12-13 21:00:00",
+    "text": "Vrijdagtraining (Pascal)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 328,
+    "original_start": "2024-12-13 19:30:00"
+  },
+  {
+    "id": 427,
     "start_date": "2024-12-20 19:30:00",
     "end_date": "2024-12-20 21:00:00",
     "text": "Kerstballen training",
