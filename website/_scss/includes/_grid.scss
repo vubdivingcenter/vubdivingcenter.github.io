@@ -9,13 +9,13 @@
       padding: 30px 40px;
 
       @media (max-width: $on-small) {
-        padding: 30px 20px;
+        padding: 30px 10px;
       }
     }
   }
   .row {
     position: relative;
-    margin: 0 -10px;
+    margin: 0;
     padding: 0;
     list-style: none;
     font-size: 0;

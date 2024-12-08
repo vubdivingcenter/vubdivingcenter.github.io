@@ -15,5 +15,11 @@ De kerstman heeft tijdens zijn vakantie Atlantis ontdekt op de bodem van de zee.
 
 20 december is ook de laatste training van dit jaar. De eerste training van 2025 hervat op vrijdag 3 januari 2025.
 
+**Benodigheden**
+- Basismateriaal (palmen, bril, snorkel, lood)
+- Optioneel, kerstmuts voor achteraf
+
 Tot binnenkort!
 Raad van Bestuur
+
+![Image](/posts/2024/social_kerstballentraining2024.png)
