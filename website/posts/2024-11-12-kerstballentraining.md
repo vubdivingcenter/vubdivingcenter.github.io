@@ -3,7 +3,7 @@ layout: post
 title: Kerstballentraining op 20 december
 tags: [activiteit]
 date: 2024-11-12
-image: /posts/2024/social_kerstballentraining2024.png
+image: /posts/2024/social_kerstballentraining2024b.png
 excerpt: 'Op 20 december organiseren een speciale kerstballentraining in het VUB zwembad voor leden'
 ---
 
@@ -22,4 +22,4 @@ De kerstman heeft tijdens zijn vakantie Atlantis ontdekt op de bodem van de zee.
 Tot binnenkort!
 Raad van Bestuur
 
-![Image](/posts/2024/social_kerstballentraining2024.png)
+![Image](/posts/2024/social_kerstballentraining2024b.png)
