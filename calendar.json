@@ -3156,16 +3156,6 @@
   },
   {
     "id": 342,
-    "start_date": "2024-12-27 19:30:00",
-    "end_date": "2024-12-27 21:00:00",
-    "text": "Vrijdagtraining",
-    "details": "",
-    "deleted": true,
-    "recurring_event_id": 328,
-    "original_start": "2024-12-27 19:30:00"
-  },
-  {
-    "id": 343,
     "start_date": "2024-11-01 19:30:00",
     "end_date": "2024-11-01 21:00:00",
     "text": "Vrijdagtraining",
@@ -3173,6 +3163,16 @@
     "deleted": true,
     "recurring_event_id": 328,
     "original_start": "2024-11-01 19:30:00"
+  },
+  {
+    "id": 343,
+    "start_date": "2024-12-27 19:30:00",
+    "end_date": "2024-12-27 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 328,
+    "original_start": "2024-12-27 19:30:00"
   },
   {
     "id": 344,
