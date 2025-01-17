@@ -2,6 +2,7 @@
 layout: post
 title: Prettige Feestdagen van het VDC!
 date: 2022-12-23
+permalink: /posts/2022-12-23_feestdagen/index.html
 ---
 Vanavond gaat de laatste training van dit jaar door met onze jaarlijkse *Kerstballen training*, een moment waarom de nieuwe en gevorderde leden
 samen kunnen trainen. Onze eerstvolgende training zal plaatsvinden op **6 Januari 2023**

@@ -3,6 +3,7 @@ layout: post
 title: Inschrijving Juniweekend
 tags: [activiteit]
 date: 2024-05-08
+permalink: /posts/2024-05-08-juniweekend/index.html
 ---
 Beste VDC leden,
 

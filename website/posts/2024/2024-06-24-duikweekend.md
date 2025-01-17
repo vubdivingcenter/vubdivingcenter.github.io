@@ -5,6 +5,7 @@ tags: [activiteit]
 date: 2024-06-24
 images:
     - https://lh3.googleusercontent.com/pw/AP1GczMogvhbva8Ltmtufgqcp1VYZD_HYSVw_P03KOzeqXjoqcy8sUpYEUtxeA0GWDurYfpGUlrTkpCyD-yxJHOocUFPB7_-20YxyZfETDr3fnWtDiM5CE2kxvcn6Txo5g0xEKDK9Xr4dvrCiCKcdLa6RUwSmg
+permalink: /posts/2024-06-24-duikweekend/index.html
 ---
 Dit weekend ging naar goede gewoonte het juni duikweekend door in Zeeland (Renesse). Dit jaar was het thema 'Mexico', en daar hebben we goed gebruik van gemaakt
 om er een zonnig weekend van te maken met een heerlijke BBQ en veel mooie duiken.

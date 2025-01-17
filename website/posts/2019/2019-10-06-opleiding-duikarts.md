@@ -3,6 +3,7 @@ layout: post
 title: Opleiding duikarts
 date: 2019-10-06
 redirect_from: /2019-10-06-opleiding-duikarts   # VDC Site Update 2022
+permalink: /posts/2019-10-06-opleiding-duikarts/index.html
 ---
 
 Volgende week beginnen we niet alleen met onze eigen opleiding maar zal er ook een nieuwe cursus Internationaal Duikarts van start gaan.

@@ -5,6 +5,7 @@ tags: [activiteit]
 date: 2024-11-12
 image: /posts/2024/social_kerstballentraining2024b.png
 excerpt: 'Op 20 december organiseren een speciale kerstballentraining in het VUB zwembad voor leden'
+permalink: /posts/2024-11-12-kerstballentraining/index.html
 ---
 
 Ho ho ho beste plonzertjes,

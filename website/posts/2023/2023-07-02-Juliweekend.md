@@ -5,6 +5,7 @@ date: 2023-07-01
 images:
     - https://lh3.googleusercontent.com/pw/AJFCJaX3g13BjOrK9eO5f4-V9Po-hB-xk2NmJ_JofDJ9MvsNOwjM6d3We3p9l7JaIOhX3ST97rmpEBl3Tbzohk4C3M-dC2JGdMBaqh9fpt6Wl_p2IV7fDbSc3Pm4ibqSjhJBq6hM6gFyV7xWrVvZbArcay6LTQ
     - https://lh3.googleusercontent.com/pw/AJFCJaWeFILB2fKL5WKENLElqf7R6E-ZJh7ZW4Po8Z3V79eJlhA4heEqizUJAHaex5r7V95KTh6Vp-MbfqQ5S0aU-amRpcPpcY9KOhWf0HA6Gr8f-ojKxPCjF_FU-dFQE1-5CA2w4r9CPunrI9JleKr5A8hBpA
+permalink: /posts/2023-07-01-Juliweekend/index.html
 ---
 Dit weekend vond ons jaarlijks Juli weekend plaats in Renesse. Het beloofde een weekend te worden met een 'beetje' wind, maar de dive masters van dienst hebben ons telkens
 naar een goede duikstek gebracht. 

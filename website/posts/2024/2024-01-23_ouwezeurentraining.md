@@ -2,6 +2,7 @@
 layout: post
 title: Ouwezeuren- en zakkentraining op 2 februari
 date: 2024-01-23
+permalink: /posts/2024-01-23-ouwezeurentraining/index.html
 ---
 Beste VDC-ers en
 Beste voormalige leden van het VUB Diving Center (vanaf nu oud-leden)
