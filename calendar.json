@@ -4053,5 +4053,15 @@
     "duration": 5400,
     "recurring_event_id": 328,
     "original_start": "2025-01-31 19:30:00"
+  },
+  {
+    "id": 432,
+    "start_date": "2025-02-14 19:30:00",
+    "end_date": "2025-02-14 21:00:00",
+    "text": "Vrijdagtraining (GBRS)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 328,
+    "original_start": "2025-02-14 19:30:00"
   }
 ]
