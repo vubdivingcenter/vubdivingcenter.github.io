@@ -4063,5 +4063,15 @@
     "duration": 5400,
     "recurring_event_id": 328,
     "original_start": "2025-02-14 19:30:00"
+  },
+  {
+    "id": 433,
+    "start_date": "2025-06-13 19:30:00",
+    "end_date": "2025-06-13 21:00:00",
+    "text": "Vrijdagtraining (ouwe zakkentraining)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 328,
+    "original_start": "2025-06-13 19:30:00"
   }
 ]
