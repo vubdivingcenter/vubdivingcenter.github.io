@@ -20,13 +20,13 @@ jobs:
         with:
           timezoneLinux: "Europe/Brussels"
       - name: Load dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('yarn.lock') }}
       - name: Load site cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/_site
@@ -59,13 +59,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Load dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('yarn.lock') }}
       - name: Load site cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/_site
@@ -96,13 +96,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Load dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-dependencies-v1-${{ hashFiles('yarn.lock') }}
       - name: Load site cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             **/_site
