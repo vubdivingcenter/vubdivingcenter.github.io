@@ -4096,6 +4096,16 @@
   },
   {
     "id": 436,
+    "start_date": "2025-03-28 19:30:00",
+    "end_date": "2025-03-28 21:00:00",
+    "text": "Vrijdagtraining (Pascal)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 328,
+    "original_start": "2025-03-28 19:30:00"
+  },
+  {
+    "id": 437,
     "start_date": "2025-06-13 19:30:00",
     "end_date": "2025-06-13 21:00:00",
     "text": "Vrijdagtraining (ouwe zakkentraining)",
