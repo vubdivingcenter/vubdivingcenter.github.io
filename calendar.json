@@ -4113,5 +4113,21 @@
     "duration": 5400,
     "recurring_event_id": 328,
     "original_start": "2025-06-13 19:30:00"
+  },
+  {
+    "id": 438,
+    "start_date": "2025-09-05 00:00:00",
+    "end_date": "2025-09-08 00:00:00",
+    "text": "Septemberweekend",
+    "details": "",
+    "duration": 259200
+  },
+  {
+    "id": 439,
+    "start_date": "2025-06-27 00:00:00",
+    "end_date": "2025-06-30 00:00:00",
+    "text": "Juniweekend",
+    "details": "",
+    "duration": 259200
   }
 ]
