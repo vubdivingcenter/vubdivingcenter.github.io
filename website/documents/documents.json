@@ -67,7 +67,7 @@
             {
                 "date": "N.v.t.",
                 "version": 1,
-                "url": "https://gofile.me/6ZLTn/dWXXhfAvC"
+                "url": "https://gofile.me/6ZLTn/e93wONo0I"
             }
         ]
     },
@@ -79,7 +79,7 @@
             {
                 "date": "N.v.t.",
                 "version": 1,
-                "url": "https://gofile.me/6ZLTn/dxOJhVHPc"
+                "url": "https://gofile.me/6ZLTn/iQ2G4MgbB"
             }
         ]
     },
@@ -91,13 +91,59 @@
             {
                 "date": "N.v.t.",
                 "version": 1,
-                "url": "https://gofile.me/6ZLTn/gNkq0sHar"
+                "url": "https://gofile.me/6ZLTn/FYvA9IiEU"
             }
         ]
     },
     {
         "title": "Instructor Standaardisatie",
         "description": "Standaardisatie van de opleiding tot Instructor.",
+        "password": true,
+        "files": [
+            {
+                "date": "N.v.t.",
+                "version": 1,
+                "url": "https://gofile.me/6ZLTn/gvaA0RnPT"
+            }
+        ]
+    }, {
+        "title": "Initiate Proeven",
+        "description": "Proeven van de opleiding tot Initiate.",
+        "password": true,
+        "files": [
+            {
+                "date": "N.v.t.",
+                "version": 1,
+                "url": "https://gofile.me/6ZLTn/dWXXhfAvC"
+            }
+        ]
+    }, {
+        "title": "Graduate Proeven",
+        "description": "Proeven van de opleiding tot Graduate.",
+        "password": true,
+        "files": [
+            {
+                "date": "N.v.t.",
+                "version": 1,
+                "url": "https://gofile.me/6ZLTn/dxOJhVHPc"
+            }
+        ]
+    },
+    {
+        "title": "Bachelor Proeven",
+        "description": "Proeven van de opleiding tot Bachelor.",
+        "password": true,
+        "files": [
+            {
+                "date": "N.v.t.",
+                "version": 1,
+                "url": "https://gofile.me/6ZLTn/gNkq0sHar"
+            }
+        ]
+    },
+    {
+        "title": "Instructor Proeven",
+        "description": "Proeven van de opleiding tot Instructor.",
         "password": true,
         "files": [
             {
