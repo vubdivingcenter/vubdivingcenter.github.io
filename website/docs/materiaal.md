@@ -28,19 +28,16 @@ verantwoordelijke van de eerstvolgende training kan je uitzonderlijk voor langer
 uitlenen. Uiteraard moet deze verwittiging op tijd gebeuren.
 
 ## Flessen
-Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek. Vullen dient op eigen kosten te gebeuren. De enige uitzondering op deze regel zijn instructeurs die een opleidingsduik maken en vullen in een erkende duikwinkel waar het VDC een vulkaart heeft.
+Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek. Vullen dient op eigen kosten te gebeuren. De enige uitzondering op deze regel zijn instructeurs die een opleidingsduik maken en vullen in een erkende duikwinkel waar het VDC een vulkaart heeft. Ook vrijwilligers die op vraag van de RvB flessen vullen voor de zwembadtraining mogen dit bij een erkende duikwinkel gaan vullen. Erkende duikwinkels zijn op de hoogte van deze regel(s) en hebben een lijst van namen die mogen vullen.
 
 > <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt er een boete van 5 euro aangerekend die elke week met 5 euro verhoogt.
 
-Om te gaan duiken neem je bij voorkeur lege (<60 bar, rood etiket) of halflege flessen (<100 bar, oranje
-etiket) mee en zorg je ervoor dat je die volledig gevuld terugbrengt.
+Om te gaan duiken neem je bij voorkeur lege (<60 bar, rode dop) of halflege flessen (<100 bar, oranje
+dop) mee en zorg je ervoor dat je die volledig gevuld terugbrengt.
 
 Controleer een uitgeleende fles op de aanwezigheid van een DIN-stuk. Indien je het niet nodig hebt, draai
 je het best op voorhand uit en steek je het in de bak waar eveneens de etiketjes steken, zo raken er geen
 verloren. Heb je er een nodig en steekt er geen in, haal je er eentje uit diezelfde bak.
-
-De kosten van het uitlenen worden aan het einde van het duikseizoen afgerekend. Hier wordt ten gepaste
-tijde een mail over gestuurd. 
 
 ## Ontspanners, Jackets en Lood
 Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginners** die de 85 euro opleidingsgeld hebben betaald of die uitgezonderd zijn van het betalen van dit opleidingsgeld in hun 2de jaar omwille van laattijdig inschrijven in hun eerste jaar. Voor alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen. 
@@ -50,7 +47,10 @@ Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginne
 Het materiaal dient grondig gespoeld en droog binnengebracht te worden. Indien je twijfels hebt over hoe dit moet
 gebeuren, vraag dit dan aan de materiaalverantwoordelijke, een lesgever of instructeur.
 
-## Materiaal Zwembad
-Basismateriaal zoals palmen, snorkels, brillen mogen aan beginners worden uitgeleend tijdens de eerste drie weken van hun basisopleiding. Na drie weken verwacht men dat beginners hun eigen basis materiaal meenemen naar de training. In uitzonderlijke omstandigheden mag materiaal ontleend worden aan gevorderden als dit noodzakelijk is voor de training. Beginners krijgen steeds voorrang voor dit materiaal.
+De kosten van het uitlenen worden aan het einde van het duikseizoen afgerekend. Hier wordt ten gepaste
+tijde een mail over gestuurd. 
 
-Ander materiaal dat aanwezig in het zwembad, zoals spelletjes of hoepels mogen enkel gebruikt worden voor trainingen en mogen het zwembad niet verlaten.
+## Materiaal Zwembad
+Basismateriaal zoals palmen, snorkels, brillen mogen aan beginners worden uitgeleend tijdens de eerste drie weken van hun basisopleiding. Na drie weken verwacht men dat beginners hun eigen basis materiaal meenemen naar de training. In uitzonderlijke omstandigheden mag materiaal ontleend worden aan gevorderden als dit noodzakelijk is voor de training. Beginners krijgen steeds voorrang voor dit materiaal. Dit materiaal mag het zwembad niet verlaten.
+
+Ander materiaal dat aanwezig in het zwembad, zoals spelletjes of hoepels mogen enkel gebruikt worden voor trainingen en mogen alsook het zwembad niet verlaten.
