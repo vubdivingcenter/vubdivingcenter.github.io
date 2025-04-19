@@ -4122,6 +4122,36 @@
   },
   {
     "id": 439,
+    "start_date": "2025-04-18 19:30:00",
+    "end_date": "2025-04-18 21:00:00",
+    "text": "Vrijdagtraining (Bram)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 330,
+    "original_start": "2025-04-18 19:30:00"
+  },
+  {
+    "id": 440,
+    "start_date": "2025-04-25 19:30:00",
+    "end_date": "2025-04-25 21:00:00",
+    "text": "Vrijdagtraining (William)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 330,
+    "original_start": "2025-04-25 19:30:00"
+  },
+  {
+    "id": 441,
+    "start_date": "2025-05-30 19:30:00",
+    "end_date": "2025-05-30 21:00:00",
+    "text": "Vrijdagtraining (Esther?)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 330,
+    "original_start": "2025-05-30 19:30:00"
+  },
+  {
+    "id": 442,
     "start_date": "2025-06-13 19:30:00",
     "end_date": "2025-06-13 21:00:00",
     "text": "Vrijdagtraining (ouwe zakkentraining)",
@@ -4131,7 +4161,7 @@
     "original_start": "2025-06-13 19:30:00"
   },
   {
-    "id": 440,
+    "id": 443,
     "start_date": "2025-06-20 19:30:00",
     "end_date": "2025-06-20 21:00:00",
     "text": "Vrijdagtraining (Gastles: Problemen oplossen onder water)",
@@ -4139,5 +4169,13 @@
     "duration": 5400,
     "recurring_event_id": 330,
     "original_start": "2025-06-20 19:30:00"
+  },
+  {
+    "id": 444,
+    "start_date": "2025-05-10 00:00:00",
+    "end_date": "2025-05-11 00:00:00",
+    "text": "Theories",
+    "details": "",
+    "duration": 86400
   }
 ]
