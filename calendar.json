@@ -4180,16 +4180,6 @@
   },
   {
     "id": 445,
-    "start_date": "2025-06-13 19:30:00",
-    "end_date": "2025-06-13 21:00:00",
-    "text": "Vrijdagtraining (ouwe zakkentraining)",
-    "details": "",
-    "duration": 5400,
-    "recurring_event_id": 331,
-    "original_start": "2025-06-13 19:30:00"
-  },
-  {
-    "id": 446,
     "start_date": "2025-06-20 19:30:00",
     "end_date": "2025-06-20 21:00:00",
     "text": "Vrijdagtraining (Gastles: Problemen oplossen onder water)",
@@ -4197,5 +4187,15 @@
     "duration": 5400,
     "recurring_event_id": 331,
     "original_start": "2025-06-20 19:30:00"
+  },
+  {
+    "id": 446,
+    "start_date": "2025-06-13 19:30:00",
+    "end_date": "2025-06-13 21:00:00",
+    "text": "Vrijdagtraining (Bram)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 331,
+    "original_start": "2025-06-13 19:30:00"
   }
 ]
