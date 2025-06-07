@@ -3210,6 +3210,56 @@
   },
   {
     "id": 348,
+    "start_date": "2025-07-11 19:30:00",
+    "end_date": "2025-07-11 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 331,
+    "original_start": "2025-07-11 19:30:00"
+  },
+  {
+    "id": 349,
+    "start_date": "2025-07-25 19:30:00",
+    "end_date": "2025-07-25 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 331,
+    "original_start": "2025-07-25 19:30:00"
+  },
+  {
+    "id": 350,
+    "start_date": "2025-08-08 19:30:00",
+    "end_date": "2025-08-08 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 331,
+    "original_start": "2025-08-08 19:30:00"
+  },
+  {
+    "id": 351,
+    "start_date": "2025-08-15 19:30:00",
+    "end_date": "2025-08-15 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 331,
+    "original_start": "2025-08-15 19:30:00"
+  },
+  {
+    "id": 352,
+    "start_date": "2025-09-05 19:30:00",
+    "end_date": "2025-09-05 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 331,
+    "original_start": "2025-09-05 19:30:00"
+  },
+  {
+    "id": 353,
     "start_date": "2019-09-20 19:30:00",
     "end_date": "2019-09-20 21:00:00",
     "text": "Voorstelling vernieuwde opleiding - training",
@@ -3219,7 +3269,7 @@
     "original_start": "2019-09-20 19:30:00"
   },
   {
-    "id": 349,
+    "id": 354,
     "start_date": "2019-09-27 19:30:00",
     "end_date": "2019-09-27 21:00:00",
     "text": "Voorstelling vernieuwde opleiding - training",
@@ -3229,7 +3279,7 @@
     "original_start": "2019-09-27 19:30:00"
   },
   {
-    "id": 350,
+    "id": 355,
     "start_date": "2019-10-04 19:30:00",
     "end_date": "2019-10-04 21:00:00",
     "text": "Vrijdagtraining: ouwezakkentraining - Eva",
@@ -3239,7 +3289,7 @@
     "original_start": "2019-10-04 19:30:00"
   },
   {
-    "id": 351,
+    "id": 356,
     "start_date": "2019-10-11 19:30:00",
     "end_date": "2019-10-11 21:00:00",
     "text": "Ellen - Vrijdagtraining",
@@ -3249,7 +3299,7 @@
     "original_start": "2019-10-11 19:30:00"
   },
   {
-    "id": 352,
+    "id": 357,
     "start_date": "2019-10-18 19:30:00",
     "end_date": "2019-10-18 21:00:00",
     "text": "Bram - Vrijdagtraining",
@@ -3259,7 +3309,7 @@
     "original_start": "2019-10-18 19:30:00"
   },
   {
-    "id": 353,
+    "id": 358,
     "start_date": "2019-10-25 19:30:00",
     "end_date": "2019-10-25 21:00:00",
     "text": "Kristof - Vrijdagtraining",
@@ -3269,7 +3319,7 @@
     "original_start": "2019-10-25 19:30:00"
   },
   {
-    "id": 354,
+    "id": 359,
     "start_date": "2019-11-01 19:30:00",
     "end_date": "2019-11-01 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3279,7 +3329,7 @@
     "original_start": "2019-11-01 19:30:00"
   },
   {
-    "id": 355,
+    "id": 360,
     "start_date": "2019-12-27 19:30:00",
     "end_date": "2019-12-27 21:00:00",
     "text": "GEEN vrijdagtraining - zwembad gesloten",
@@ -3289,7 +3339,7 @@
     "original_start": "2019-12-27 19:30:00"
   },
   {
-    "id": 356,
+    "id": 361,
     "start_date": "2020-01-10 19:30:00",
     "end_date": "2020-01-10 21:00:00",
     "text": "Kerstboomballentraining en nieuwjaarsreceptie",
@@ -3299,7 +3349,7 @@
     "original_start": "2020-01-10 19:30:00"
   },
   {
-    "id": 357,
+    "id": 362,
     "start_date": "2020-01-17 19:30:00",
     "end_date": "2020-01-17 21:00:00",
     "text": "Ellen: Vrijdagtraining",
@@ -3309,7 +3359,7 @@
     "original_start": "2020-01-17 19:30:00"
   },
   {
-    "id": 358,
+    "id": 363,
     "start_date": "2020-01-24 19:30:00",
     "end_date": "2020-01-24 21:00:00",
     "text": "Constant: Vrijdagtraining",
@@ -3319,7 +3369,7 @@
     "original_start": "2020-01-24 19:30:00"
   },
   {
-    "id": 359,
+    "id": 364,
     "start_date": "2020-03-13 19:30:00",
     "end_date": "2020-03-13 21:00:00",
     "text": "Zwembad gesloten",
@@ -3329,7 +3379,7 @@
     "original_start": "2020-03-13 19:30:00"
   },
   {
-    "id": 360,
+    "id": 365,
     "start_date": "2020-03-20 19:30:00",
     "end_date": "2020-03-20 21:00:00",
     "text": "Zwembad gesloten",
@@ -3339,7 +3389,7 @@
     "original_start": "2020-03-20 19:30:00"
   },
   {
-    "id": 361,
+    "id": 366,
     "start_date": "2020-03-27 19:30:00",
     "end_date": "2020-03-27 21:00:00",
     "text": "Zwembad gesloten",
@@ -3349,7 +3399,7 @@
     "original_start": "2020-03-27 19:30:00"
   },
   {
-    "id": 362,
+    "id": 367,
     "start_date": "2020-04-03 19:30:00",
     "end_date": "2020-04-03 21:00:00",
     "text": "Zwembad gesloten",
@@ -3359,7 +3409,7 @@
     "original_start": "2020-04-03 19:30:00"
   },
   {
-    "id": 363,
+    "id": 368,
     "start_date": "2020-04-10 19:30:00",
     "end_date": "2020-04-10 21:00:00",
     "text": "Zwembad gesloten",
@@ -3369,7 +3419,7 @@
     "original_start": "2020-04-10 19:30:00"
   },
   {
-    "id": 364,
+    "id": 369,
     "start_date": "2020-04-17 19:30:00",
     "end_date": "2020-04-17 21:00:00",
     "text": "Zwembad gesloten",
@@ -3379,7 +3429,7 @@
     "original_start": "2020-04-17 19:30:00"
   },
   {
-    "id": 365,
+    "id": 370,
     "start_date": "2020-07-10 19:30:00",
     "end_date": "2020-07-10 21:00:00",
     "text": "Vrijdagtraining Ellen",
@@ -3389,7 +3439,7 @@
     "original_start": "2020-07-10 19:30:00"
   },
   {
-    "id": 366,
+    "id": 371,
     "start_date": "2020-07-17 19:30:00",
     "end_date": "2020-07-17 21:00:00",
     "text": "Vrijdagtraining Geert",
@@ -3399,7 +3449,7 @@
     "original_start": "2020-07-17 19:30:00"
   },
   {
-    "id": 367,
+    "id": 372,
     "start_date": "2020-08-07 19:30:00",
     "end_date": "2020-08-07 21:00:00",
     "text": "Ellen - Vrijdagtraining",
@@ -3409,7 +3459,7 @@
     "original_start": "2020-08-07 19:30:00"
   },
   {
-    "id": 368,
+    "id": 373,
     "start_date": "2020-08-14 19:30:00",
     "end_date": "2020-08-14 21:00:00",
     "text": "Bram - Vrijdagtraining",
@@ -3419,7 +3469,7 @@
     "original_start": "2020-08-14 19:30:00"
   },
   {
-    "id": 369,
+    "id": 374,
     "start_date": "2020-08-21 19:30:00",
     "end_date": "2020-08-21 21:00:00",
     "text": "Pascal - Vrijdagtraining",
@@ -3429,7 +3479,7 @@
     "original_start": "2020-08-21 19:30:00"
   },
   {
-    "id": 370,
+    "id": 375,
     "start_date": "2020-08-28 19:30:00",
     "end_date": "2020-08-28 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3439,7 +3489,7 @@
     "original_start": "2020-08-28 19:30:00"
   },
   {
-    "id": 371,
+    "id": 376,
     "start_date": "2020-09-11 19:30:00",
     "end_date": "2020-09-11 21:00:00",
     "text": "Maxim - Vrijdagtraining",
@@ -3449,7 +3499,7 @@
     "original_start": "2020-09-11 19:30:00"
   },
   {
-    "id": 372,
+    "id": 377,
     "start_date": "2020-10-30 19:30:00",
     "end_date": "2020-10-30 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3459,7 +3509,7 @@
     "original_start": "2020-10-30 19:30:00"
   },
   {
-    "id": 373,
+    "id": 378,
     "start_date": "2020-11-06 19:30:00",
     "end_date": "2020-11-06 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3469,7 +3519,7 @@
     "original_start": "2020-11-06 19:30:00"
   },
   {
-    "id": 374,
+    "id": 379,
     "start_date": "2020-11-13 19:30:00",
     "end_date": "2020-11-13 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3479,7 +3529,7 @@
     "original_start": "2020-11-13 19:30:00"
   },
   {
-    "id": 375,
+    "id": 380,
     "start_date": "2020-11-20 19:30:00",
     "end_date": "2020-11-20 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3489,7 +3539,7 @@
     "original_start": "2020-11-20 19:30:00"
   },
   {
-    "id": 376,
+    "id": 381,
     "start_date": "2020-11-27 19:30:00",
     "end_date": "2020-11-27 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3499,7 +3549,7 @@
     "original_start": "2020-11-27 19:30:00"
   },
   {
-    "id": 377,
+    "id": 382,
     "start_date": "2022-10-14 19:30:00",
     "end_date": "2022-10-14 21:00:00",
     "text": "Vrijdagtraining (Ramon)",
@@ -3509,7 +3559,7 @@
     "original_start": "2022-10-14 19:30:00"
   },
   {
-    "id": 378,
+    "id": 383,
     "start_date": "2022-10-21 19:30:00",
     "end_date": "2022-10-21 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3519,7 +3569,7 @@
     "original_start": "2022-10-21 19:30:00"
   },
   {
-    "id": 379,
+    "id": 384,
     "start_date": "2022-10-28 19:30:00",
     "end_date": "2022-10-28 21:00:00",
     "text": "Vrijdagtraining (Maxim B.)",
@@ -3529,7 +3579,7 @@
     "original_start": "2022-10-28 19:30:00"
   },
   {
-    "id": 380,
+    "id": 385,
     "start_date": "2022-11-04 19:30:00",
     "end_date": "2022-11-04 21:00:00",
     "text": "Vrijdagtraining (Ellen)",
@@ -3539,7 +3589,7 @@
     "original_start": "2022-11-04 19:30:00"
   },
   {
-    "id": 381,
+    "id": 386,
     "start_date": "2022-11-25 19:30:00",
     "end_date": "2022-11-25 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3549,7 +3599,7 @@
     "original_start": "2022-11-25 19:30:00"
   },
   {
-    "id": 382,
+    "id": 387,
     "start_date": "2022-12-02 19:30:00",
     "end_date": "2022-12-02 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3559,7 +3609,7 @@
     "original_start": "2022-12-02 19:30:00"
   },
   {
-    "id": 383,
+    "id": 388,
     "start_date": "2022-12-09 19:30:00",
     "end_date": "2022-12-09 21:00:00",
     "text": "Vrijdagtraining (Yoachim)",
@@ -3569,7 +3619,7 @@
     "original_start": "2022-12-09 19:30:00"
   },
   {
-    "id": 384,
+    "id": 389,
     "start_date": "2022-12-16 19:30:00",
     "end_date": "2022-12-16 21:00:00",
     "text": "Vrijdagtraining (Maxim VdW)",
@@ -3579,7 +3629,7 @@
     "original_start": "2022-12-16 19:30:00"
   },
   {
-    "id": 385,
+    "id": 390,
     "start_date": "2023-01-06 19:30:00",
     "end_date": "2023-01-06 21:00:00",
     "text": "Vrijdagtraining (Ramon)",
@@ -3589,7 +3639,7 @@
     "original_start": "2023-01-06 19:30:00"
   },
   {
-    "id": 386,
+    "id": 391,
     "start_date": "2023-01-13 19:30:00",
     "end_date": "2023-01-13 21:00:00",
     "text": "Vrijdagtraining (Paul)",
@@ -3599,7 +3649,7 @@
     "original_start": "2023-01-13 19:30:00"
   },
   {
-    "id": 387,
+    "id": 392,
     "start_date": "2023-01-20 19:30:00",
     "end_date": "2023-01-20 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -3609,7 +3659,7 @@
     "original_start": "2023-01-20 19:30:00"
   },
   {
-    "id": 388,
+    "id": 393,
     "start_date": "2023-01-27 19:30:00",
     "end_date": "2023-01-27 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3619,7 +3669,7 @@
     "original_start": "2023-01-27 19:30:00"
   },
   {
-    "id": 389,
+    "id": 394,
     "start_date": "2023-02-03 19:30:00",
     "end_date": "2023-02-03 21:00:00",
     "text": "Vrijdagtraining (Maxim VdW)",
@@ -3629,7 +3679,7 @@
     "original_start": "2023-02-03 19:30:00"
   },
   {
-    "id": 390,
+    "id": 395,
     "start_date": "2023-02-10 19:30:00",
     "end_date": "2023-02-10 21:00:00",
     "text": "Vrijdagtraining(Maxim B)",
@@ -3639,7 +3689,7 @@
     "original_start": "2023-02-10 19:30:00"
   },
   {
-    "id": 391,
+    "id": 396,
     "start_date": "2023-02-17 19:30:00",
     "end_date": "2023-02-17 21:00:00",
     "text": "Vrijdagtraining (Constant)",
@@ -3649,7 +3699,7 @@
     "original_start": "2023-02-17 19:30:00"
   },
   {
-    "id": 392,
+    "id": 397,
     "start_date": "2023-03-03 19:30:00",
     "end_date": "2023-03-03 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3659,7 +3709,7 @@
     "original_start": "2023-03-03 19:30:00"
   },
   {
-    "id": 393,
+    "id": 398,
     "start_date": "2023-03-10 19:30:00",
     "end_date": "2023-03-10 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3669,7 +3719,7 @@
     "original_start": "2023-03-10 19:30:00"
   },
   {
-    "id": 394,
+    "id": 399,
     "start_date": "2023-03-17 19:30:00",
     "end_date": "2023-03-17 21:00:00",
     "text": "Vrijdagtraining (Ellen)",
@@ -3679,7 +3729,7 @@
     "original_start": "2023-03-17 19:30:00"
   },
   {
-    "id": 395,
+    "id": 400,
     "start_date": "2023-03-24 19:30:00",
     "end_date": "2023-03-24 21:00:00",
     "text": "Vrijdagtraining (Joost)",
@@ -3689,7 +3739,7 @@
     "original_start": "2023-03-24 19:30:00"
   },
   {
-    "id": 396,
+    "id": 401,
     "start_date": "2023-03-31 19:30:00",
     "end_date": "2023-03-31 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3699,7 +3749,7 @@
     "original_start": "2023-03-31 19:30:00"
   },
   {
-    "id": 397,
+    "id": 402,
     "start_date": "2023-04-28 19:30:00",
     "end_date": "2023-04-28 21:00:00",
     "text": "Vrijdagtraining (Maxim)",
@@ -3709,7 +3759,7 @@
     "original_start": "2023-04-28 19:30:00"
   },
   {
-    "id": 398,
+    "id": 403,
     "start_date": "2023-07-14 19:30:00",
     "end_date": "2023-07-14 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3719,7 +3769,7 @@
     "original_start": "2023-07-14 19:30:00"
   },
   {
-    "id": 399,
+    "id": 404,
     "start_date": "2023-07-21 19:30:00",
     "end_date": "2023-07-21 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3729,7 +3779,7 @@
     "original_start": "2023-07-21 19:30:00"
   },
   {
-    "id": 400,
+    "id": 405,
     "start_date": "2023-07-28 19:30:00",
     "end_date": "2023-07-28 21:00:00",
     "text": "Geen vrijdagtraining",
@@ -3739,7 +3789,7 @@
     "original_start": "2023-07-28 19:30:00"
   },
   {
-    "id": 401,
+    "id": 406,
     "start_date": "2023-09-29 19:30:00",
     "end_date": "2023-09-29 21:00:00",
     "text": "Vrijdagtraining (Maxim B)",
@@ -3749,7 +3799,7 @@
     "original_start": "2023-09-29 19:30:00"
   },
   {
-    "id": 402,
+    "id": 407,
     "start_date": "2023-10-13 19:30:00",
     "end_date": "2023-10-13 21:00:00",
     "text": "Vrijdagtraining (Eerste training beginners)",
@@ -3759,7 +3809,7 @@
     "original_start": "2023-10-13 19:30:00"
   },
   {
-    "id": 403,
+    "id": 408,
     "start_date": "2023-10-27 19:30:00",
     "end_date": "2023-10-27 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -3769,7 +3819,7 @@
     "original_start": "2023-10-27 19:30:00"
   },
   {
-    "id": 404,
+    "id": 409,
     "start_date": "2023-11-03 19:30:00",
     "end_date": "2023-11-03 21:00:00",
     "text": "Vrijdagtraining (Kirsten)",
@@ -3779,7 +3829,7 @@
     "original_start": "2023-11-03 19:30:00"
   },
   {
-    "id": 405,
+    "id": 410,
     "start_date": "2023-11-10 19:30:00",
     "end_date": "2023-11-10 21:00:00",
     "text": "Vrijdagtraining (Externe lesgever)",
@@ -3789,7 +3839,7 @@
     "original_start": "2023-11-10 19:30:00"
   },
   {
-    "id": 406,
+    "id": 411,
     "start_date": "2023-11-24 19:30:00",
     "end_date": "2023-11-24 21:00:00",
     "text": "Vrijdagtraining (Esther)",
@@ -3799,7 +3849,7 @@
     "original_start": "2023-11-24 19:30:00"
   },
   {
-    "id": 407,
+    "id": 412,
     "start_date": "2023-12-01 19:30:00",
     "end_date": "2023-12-01 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -3809,7 +3859,7 @@
     "original_start": "2023-12-01 19:30:00"
   },
   {
-    "id": 408,
+    "id": 413,
     "start_date": "2024-02-02 19:30:00",
     "end_date": "2024-02-02 21:00:00",
     "text": "Ouwezeuren- en zakkentraining",
@@ -3819,7 +3869,7 @@
     "original_start": "2024-02-02 19:30:00"
   },
   {
-    "id": 409,
+    "id": 414,
     "start_date": "2024-03-15 19:30:00",
     "end_date": "2024-03-15 21:00:00",
     "text": "Vrijdagtraining (kyan)",
@@ -3829,7 +3879,7 @@
     "original_start": "2024-03-15 19:30:00"
   },
   {
-    "id": 410,
+    "id": 415,
     "start_date": "2024-03-22 19:30:00",
     "end_date": "2024-03-22 21:00:00",
     "text": "Vrijdagtraining (Esther)",
@@ -3839,7 +3889,7 @@
     "original_start": "2024-03-22 19:30:00"
   },
   {
-    "id": 411,
+    "id": 416,
     "start_date": "2024-03-29 19:30:00",
     "end_date": "2024-03-29 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3849,7 +3899,7 @@
     "original_start": "2024-03-29 19:30:00"
   },
   {
-    "id": 412,
+    "id": 417,
     "start_date": "2024-04-12 19:30:00",
     "end_date": "2024-04-12 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3859,7 +3909,7 @@
     "original_start": "2024-04-12 19:30:00"
   },
   {
-    "id": 413,
+    "id": 418,
     "start_date": "2024-04-19 19:30:00",
     "end_date": "2024-04-19 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3869,7 +3919,7 @@
     "original_start": "2024-04-19 19:30:00"
   },
   {
-    "id": 414,
+    "id": 419,
     "start_date": "2024-04-26 19:30:00",
     "end_date": "2024-04-26 21:00:00",
     "text": "Vrijdagtraining (Esther)",
@@ -3879,7 +3929,7 @@
     "original_start": "2024-04-26 19:30:00"
   },
   {
-    "id": 415,
+    "id": 420,
     "start_date": "2024-05-03 19:30:00",
     "end_date": "2024-05-03 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3889,7 +3939,7 @@
     "original_start": "2024-05-03 19:30:00"
   },
   {
-    "id": 416,
+    "id": 421,
     "start_date": "2024-05-17 19:30:00",
     "end_date": "2024-05-17 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3899,7 +3949,7 @@
     "original_start": "2024-05-17 19:30:00"
   },
   {
-    "id": 417,
+    "id": 422,
     "start_date": "2024-06-07 19:30:00",
     "end_date": "2024-06-07 21:00:00",
     "text": "Vrijdagtraining (Esther)",
@@ -3909,7 +3959,7 @@
     "original_start": "2024-06-07 19:30:00"
   },
   {
-    "id": 418,
+    "id": 423,
     "start_date": "2024-06-14 19:30:00",
     "end_date": "2024-06-14 21:00:00",
     "text": "Vrijdagtraining (Eva)",
@@ -3919,7 +3969,7 @@
     "original_start": "2024-06-14 19:30:00"
   },
   {
-    "id": 419,
+    "id": 424,
     "start_date": "2024-07-12 19:30:00",
     "end_date": "2024-07-12 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3929,7 +3979,7 @@
     "original_start": "2024-07-12 19:30:00"
   },
   {
-    "id": 420,
+    "id": 425,
     "start_date": "2024-07-26 19:30:00",
     "end_date": "2024-07-26 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3939,7 +3989,7 @@
     "original_start": "2024-07-26 19:30:00"
   },
   {
-    "id": 421,
+    "id": 426,
     "start_date": "2024-09-20 19:30:00",
     "end_date": "2024-09-20 21:00:00",
     "text": "Vrijdagtraining (Eva)",
@@ -3949,7 +3999,7 @@
     "original_start": "2024-09-20 19:30:00"
   },
   {
-    "id": 422,
+    "id": 427,
     "start_date": "2024-09-27 19:30:00",
     "end_date": "2024-09-27 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3959,7 +4009,7 @@
     "original_start": "2024-09-27 19:30:00"
   },
   {
-    "id": 423,
+    "id": 428,
     "start_date": "2024-10-04 19:30:00",
     "end_date": "2024-10-04 21:00:00",
     "text": "Vrijdagtraining (Ramon)",
@@ -3969,7 +4019,7 @@
     "original_start": "2024-10-04 19:30:00"
   },
   {
-    "id": 424,
+    "id": 429,
     "start_date": "2024-10-11 19:30:00",
     "end_date": "2024-10-11 21:00:00",
     "text": "Vrijdagtraining (Esther of Maxim)",
@@ -3979,7 +4029,7 @@
     "original_start": "2024-10-11 19:30:00"
   },
   {
-    "id": 425,
+    "id": 430,
     "start_date": "2024-10-18 19:30:00",
     "end_date": "2024-10-18 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3989,7 +4039,7 @@
     "original_start": "2024-10-18 19:30:00"
   },
   {
-    "id": 426,
+    "id": 431,
     "start_date": "2024-10-25 19:30:00",
     "end_date": "2024-10-25 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -3999,7 +4049,7 @@
     "original_start": "2024-10-25 19:30:00"
   },
   {
-    "id": 427,
+    "id": 432,
     "start_date": "2024-11-15 19:30:00",
     "end_date": "2024-11-15 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -4009,7 +4059,7 @@
     "original_start": "2024-11-15 19:30:00"
   },
   {
-    "id": 428,
+    "id": 433,
     "start_date": "2024-11-22 19:30:00",
     "end_date": "2024-11-22 21:00:00",
     "text": "Vrijdagtraining (Paul)",
@@ -4019,7 +4069,7 @@
     "original_start": "2024-11-22 19:30:00"
   },
   {
-    "id": 429,
+    "id": 434,
     "start_date": "2024-11-29 19:30:00",
     "end_date": "2024-11-29 21:00:00",
     "text": "Vrijdagtraining (Maxim VdW)",
@@ -4029,7 +4079,7 @@
     "original_start": "2024-11-29 19:30:00"
   },
   {
-    "id": 430,
+    "id": 435,
     "start_date": "2024-12-13 19:30:00",
     "end_date": "2024-12-13 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -4039,7 +4089,7 @@
     "original_start": "2024-12-13 19:30:00"
   },
   {
-    "id": 431,
+    "id": 436,
     "start_date": "2024-12-20 19:30:00",
     "end_date": "2024-12-20 21:00:00",
     "text": "Kerstballen training",
@@ -4049,7 +4099,7 @@
     "original_start": "2024-12-20 19:30:00"
   },
   {
-    "id": 432,
+    "id": 437,
     "start_date": "2025-01-10 19:30:00",
     "end_date": "2025-01-10 21:00:00",
     "text": "Vrijdagtraining (Ramon)",
@@ -4059,7 +4109,7 @@
     "original_start": "2025-01-10 19:30:00"
   },
   {
-    "id": 433,
+    "id": 438,
     "start_date": "2025-01-17 19:30:00",
     "end_date": "2025-01-17 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -4069,7 +4119,7 @@
     "original_start": "2025-01-17 19:30:00"
   },
   {
-    "id": 434,
+    "id": 439,
     "start_date": "2025-01-24 19:30:00",
     "end_date": "2025-01-24 21:00:00",
     "text": "Ouwzakkentraining en Spaghetti",
@@ -4079,7 +4129,7 @@
     "original_start": "2025-01-24 19:30:00"
   },
   {
-    "id": 435,
+    "id": 440,
     "start_date": "2025-01-31 19:30:00",
     "end_date": "2025-01-31 21:00:00",
     "text": "Vrijdagtraining (Ramon)",
@@ -4089,7 +4139,7 @@
     "original_start": "2025-01-31 19:30:00"
   },
   {
-    "id": 436,
+    "id": 441,
     "start_date": "2025-02-14 19:30:00",
     "end_date": "2025-02-14 21:00:00",
     "text": "Vrijdagtraining (GBRS)",
@@ -4099,7 +4149,7 @@
     "original_start": "2025-02-14 19:30:00"
   },
   {
-    "id": 437,
+    "id": 442,
     "start_date": "2025-02-21 19:30:00",
     "end_date": "2025-02-21 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -4109,7 +4159,7 @@
     "original_start": "2025-02-21 19:30:00"
   },
   {
-    "id": 438,
+    "id": 443,
     "start_date": "2025-02-28 19:30:00",
     "end_date": "2025-02-28 21:00:00",
     "text": "Vrijdagtraining (Maxim)",
@@ -4119,7 +4169,7 @@
     "original_start": "2025-02-28 19:30:00"
   },
   {
-    "id": 439,
+    "id": 444,
     "start_date": "2025-03-14 19:30:00",
     "end_date": "2025-03-14 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -4129,7 +4179,7 @@
     "original_start": "2025-03-14 19:30:00"
   },
   {
-    "id": 440,
+    "id": 445,
     "start_date": "2025-03-28 19:30:00",
     "end_date": "2025-03-28 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -4139,7 +4189,7 @@
     "original_start": "2025-03-28 19:30:00"
   },
   {
-    "id": 441,
+    "id": 446,
     "start_date": "2025-04-18 19:30:00",
     "end_date": "2025-04-18 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -4149,7 +4199,7 @@
     "original_start": "2025-04-18 19:30:00"
   },
   {
-    "id": 442,
+    "id": 447,
     "start_date": "2025-04-25 19:30:00",
     "end_date": "2025-04-25 21:00:00",
     "text": "Vrijdagtraining (William)",
@@ -4159,7 +4209,7 @@
     "original_start": "2025-04-25 19:30:00"
   },
   {
-    "id": 443,
+    "id": 448,
     "start_date": "2025-05-23 19:30:00",
     "end_date": "2025-05-23 21:00:00",
     "text": "Vrijdagtraining (Esther)",
@@ -4169,7 +4219,7 @@
     "original_start": "2025-05-23 19:30:00"
   },
   {
-    "id": 444,
+    "id": 449,
     "start_date": "2025-05-30 19:30:00",
     "end_date": "2025-05-30 21:00:00",
     "text": "Vrijdagtraining (Pascal)",
@@ -4179,17 +4229,7 @@
     "original_start": "2025-05-30 19:30:00"
   },
   {
-    "id": 445,
-    "start_date": "2025-06-20 19:30:00",
-    "end_date": "2025-06-20 21:00:00",
-    "text": "Vrijdagtraining (Gastles: Problemen oplossen onder water)",
-    "details": "",
-    "duration": 5400,
-    "recurring_event_id": 331,
-    "original_start": "2025-06-20 19:30:00"
-  },
-  {
-    "id": 446,
+    "id": 450,
     "start_date": "2025-06-13 19:30:00",
     "end_date": "2025-06-13 21:00:00",
     "text": "Vrijdagtraining (Bram)",
@@ -4197,5 +4237,15 @@
     "duration": 5400,
     "recurring_event_id": 331,
     "original_start": "2025-06-13 19:30:00"
+  },
+  {
+    "id": 451,
+    "start_date": "2025-06-20 19:30:00",
+    "end_date": "2025-06-20 21:00:00",
+    "text": "Vrijdagtraining (Gastles: Problemen oplossen onder water)",
+    "details": "",
+    "duration": 5400,
+    "recurring_event_id": 331,
+    "original_start": "2025-06-20 19:30:00"
   }
 ]
