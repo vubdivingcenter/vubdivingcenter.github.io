@@ -3200,26 +3200,16 @@
   },
   {
     "id": 347,
-    "start_date": "2025-07-11 19:30:00",
-    "end_date": "2025-07-11 21:00:00",
+    "start_date": "2025-06-27 19:30:00",
+    "end_date": "2025-06-27 21:00:00",
     "text": "Vrijdagtraining",
     "details": "",
     "deleted": true,
     "recurring_event_id": 331,
-    "original_start": "2025-07-11 19:30:00"
+    "original_start": "2025-06-27 19:30:00"
   },
   {
     "id": 348,
-    "start_date": "2025-07-25 19:30:00",
-    "end_date": "2025-07-25 21:00:00",
-    "text": "Vrijdagtraining",
-    "details": "",
-    "deleted": true,
-    "recurring_event_id": 331,
-    "original_start": "2025-07-25 19:30:00"
-  },
-  {
-    "id": 349,
     "start_date": "2025-08-08 19:30:00",
     "end_date": "2025-08-08 21:00:00",
     "text": "Vrijdagtraining",
@@ -3227,6 +3217,16 @@
     "deleted": true,
     "recurring_event_id": 331,
     "original_start": "2025-08-08 19:30:00"
+  },
+  {
+    "id": 349,
+    "start_date": "2025-09-05 19:30:00",
+    "end_date": "2025-09-05 21:00:00",
+    "text": "Vrijdagtraining",
+    "details": "",
+    "deleted": true,
+    "recurring_event_id": 331,
+    "original_start": "2025-09-05 19:30:00"
   },
   {
     "id": 350,
@@ -3240,23 +3240,23 @@
   },
   {
     "id": 351,
-    "start_date": "2025-09-05 19:30:00",
-    "end_date": "2025-09-05 21:00:00",
+    "start_date": "2025-07-11 19:30:00",
+    "end_date": "2025-07-11 21:00:00",
     "text": "Vrijdagtraining",
     "details": "",
     "deleted": true,
     "recurring_event_id": 331,
-    "original_start": "2025-09-05 19:30:00"
+    "original_start": "2025-07-11 19:30:00"
   },
   {
     "id": 352,
-    "start_date": "2025-06-27 19:30:00",
-    "end_date": "2025-06-27 21:00:00",
+    "start_date": "2025-07-25 19:30:00",
+    "end_date": "2025-07-25 21:00:00",
     "text": "Vrijdagtraining",
     "details": "",
     "deleted": true,
     "recurring_event_id": 331,
-    "original_start": "2025-06-27 19:30:00"
+    "original_start": "2025-07-25 19:30:00"
   },
   {
     "id": 353,
