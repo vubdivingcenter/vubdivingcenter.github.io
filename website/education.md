@@ -41,7 +41,7 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-Het lidgeld bedraagt **140 euro** per jaar **+ 85 euro** voor de opleiding van *initiate* (laatst aangepast op 09/2024). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De 85 euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw 85 euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen. 
+Het lidgeld bedraagt **165 euro** per jaar **+ 85 euro** voor de opleiding van *initiate* (laatst aangepast op 09/2025). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De 85 euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw 85 euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen. 
 
 #### Materiaal
 

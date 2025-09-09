@@ -40,7 +40,7 @@ Uit de **Statuten, Artikel 23**:
 
 #### De Raad van Bestuur
 
-Huidige bestuursleden:
+Huidige bestuursleden (laatste update 09/2024):
 - Kyan De Donder (Secretaris)
 - Maxim Buyck (Penningmeester)
 - Pascal Blockx (Materiaalmeester)

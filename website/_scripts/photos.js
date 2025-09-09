@@ -4,7 +4,13 @@ import _ from 'lodash';
 export async function fetchPhotos(el) {
     el.addCollection("photos_year", async () => {
         const urls = await GooglePhotosAlbum.fetchImageUrls(process.env.PHOTOS_ALBUM);
-        const photos = _.chain(urls)
+        console.log(`Fetched ${urls.length} photos from Google Photos album.`);
+        
+        // Filter by uid
+        // TODO: FIX VIDEOS
+        const filteredUrls = urls.filter(photo => photo.uid != "AF1QipMwWfBqAl2JbLbSopbhz5uCOjB71Qc3kQPG5MYw");
+
+        const photos = _.chain(filteredUrls)
             .sort((a, b) => a.imageUpdateDate - b.imageUpdateDate)
             .map(photo => {
                 return {

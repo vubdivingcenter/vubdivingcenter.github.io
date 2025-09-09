@@ -21,8 +21,13 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
             <figure id="figure-{{ photo.uid }}" class="gallery-item">
                 <a href="#lightbox-{{ photo.uid }}">       
                     <picture>
-                        {# <source media="(min-width:1280px)" srcset="{{ photo.url }}=w800"> #}
-                        <img alt="{{ photo.uid }}" referrerpolicy="no-referrer" src="{{ photo.url }}" class="gallery-img">
+                        <img 
+                            alt="{{ photo.uid }}" 
+                            referrerpolicy="no-referrer" 
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
+                            data-src="{{ photo.url }}" 
+                            class="gallery-img lazy"
+                        >
                     </picture>  
                 </a>
             </figure>
@@ -39,6 +44,33 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
 {% endfor %}
 
 <script>
+    // Lazy load gallery images using Intersection Observer
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+        if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        let img = entry.target;
+                        img.src = img.getAttribute("data-src");
+                        img.classList.remove("lazy");
+                        lazyImageObserver.unobserve(img);
+                    }
+                });
+            });
+            lazyImages.forEach(function(img) {
+                lazyImageObserver.observe(img);
+            });
+        } else {
+            // Fallback for older browsers: load all images
+            lazyImages.forEach(function(img) {
+                img.src = img.getAttribute("data-src");
+                img.classList.remove("lazy");
+            });
+        }
+    });
+
+    // Lazy load for lightbox images (unchanged)
     window.onload = lazyFetch;
     window.addEventListener('popstate', function() {
         lazyFetch();
