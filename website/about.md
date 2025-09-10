@@ -40,11 +40,11 @@ Uit de **Statuten, Artikel 23**:
 
 #### De Raad van Bestuur
 
-Huidige bestuursleden (laatste update 09/2024):
-- Kyan De Donder (Secretaris)
-- Maxim Buyck (Penningmeester)
+Huidige bestuursleden (laatste update 09/2025):
+- Maxim Van de Wynckel (Secretaris)
+- *Open positie* (Penningmeester)
 - Pascal Blockx (Materiaalmeester)
-- *Comite van Instructeurs* (Verantwoordelijke basisopleiding)
+- Eva Smits (Verantwoordelijke basisopleiding)
 - Bram Pellens (Verantwoordelijke gevorderde opleiding)
 - Constant Katalagarianakis (Verantwoordelijke basistraining)
 - *Open positie* (Verantwoordelijke gevorderde training)
