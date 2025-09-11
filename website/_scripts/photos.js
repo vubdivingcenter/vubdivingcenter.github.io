@@ -3,6 +3,10 @@ import _ from 'lodash';
 
 export async function fetchPhotos(el) {
     el.addCollection("photos_year", async () => {
+        if (!process.env.PHOTOS_ALBUM) {
+            console.warn("No Google Photos album ID provided.");
+            return [];
+        }
         const urls = await GooglePhotosAlbum.fetchImageUrls(process.env.PHOTOS_ALBUM);
         console.log(`Fetched ${urls.length} photos from Google Photos album.`);
         

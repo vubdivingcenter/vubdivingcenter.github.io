@@ -4,6 +4,10 @@ import fs from 'fs';
 
 export async function fetchEvents(el) {
     return new Promise((resolve, reject) => {
+        if (!process.env.CALENDAR) {
+            console.warn("No calendar URL provided.");
+            return resolve();
+        }
         console.log(`Building calendar with time zone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`);
         axios.get(process.env.CALENDAR).then(response => {
             const data = response.data;
