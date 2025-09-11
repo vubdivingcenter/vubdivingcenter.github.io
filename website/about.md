@@ -21,7 +21,7 @@ Vanaf 8 december 1991 spreken we van het “VUB Diving Center”.
 Vanaf dan is het een volledig onafhankelijk duikcentrum, want op die dag vindt de eerste algemene vergadering plaats, met de verkiezing van het bestuur, de goedkeuring van een intern reglement, een eigen verzekeringspolis, kortom alles om van een volwaardige vereniging te spreken.
 
 Administratief hebben we sindsdien niet stilgezeten.
-Van een goed idee zijn we een feitelijke vereniging geworden en sinds 2006 een volwaardige VZW, met een Raad van Bestuur, Comité van Instructeurs en een Algemene Vergadering, maar omdat democratisch overleg het beste is voor een duikcentrum dat niet onder een federatie valt, hebben we al lang geleden gekozen om geen voorzitter te hebben.
+Van een goed idee zijn we een feitelijke vereniging geworden en [sinds 4 oktober 2015](https://kbopub.economie.fgov.be/kbopub/toonondernemingps.html?ondernemingsnummer=876441421) een volwaardige VZW, met een Raad van Bestuur, Comité van Instructeurs en een Algemene Vergadering, maar omdat democratisch overleg het beste is voor een duikcentrum dat niet onder een federatie valt, hebben we al lang geleden gekozen om geen voorzitter te hebben.
 Want zoals het “Vrije” in Vrije Universiteit Brussel Diving Center geeft dat ook aan onze duikclub een meerwaarde.
 
 Een voorsprong op de grote federaties. Wij kunnen snel inspelen op veranderingen op medisch of technisch vlak.
