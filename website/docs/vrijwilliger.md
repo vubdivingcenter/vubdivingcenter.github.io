@@ -12,6 +12,7 @@ background: https://lh3.googleusercontent.com/pw/AP1GczO6uS4_RKg4rdySxPMiHRV7uxr
 **Of het nu de persoon is die jou begroet bij je eerste kennismaking met de club, de monitor die jou elke week training komt geven, de lesgever bij de gevorderden, de instructeur die mee het water in duikt om jou je eerste buitenduiken te laten doen, of het bestuur van de club – allemaal zijn het vrijwilligers.**
 
 ## Wat kan ik doen?
+Wow, tof! Vrijwilligers moedigen wij zeker aan. Hieronder staan enkele mogelijkheden waar je kan helpen, maar we staan zeker open voor andere bijdragen!
 
 ### Bestuursfuncties
 
@@ -19,7 +20,7 @@ Zoals vermeld in onze [statuten](/downloads/statuten_03102011.pdf) staat de raad
 
 **Huidige open functies (09/2025)**: Penningmeester, Verantwoordelijke voor de gevorderde training
 
-### Activiteit
+### Activiteiten
 
 Wil je een activiteit organiseren in de club? Graag! Stuur een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be). Zij kunnen vervolgens meer informatie verschaffen en plannen indien nodig een bespreking van deze activiteit in bij een volgende algemene vergadering.
 
@@ -27,6 +28,10 @@ Wil je een activiteit organiseren in de club? Graag! Stuur een mail naar [info@v
 
 Zoals vermeld in ons [huishoudelijk reglement](/downloads/huishoudelijk_reglement_25012025.pdf) staan lessen onder het toezicht van het Comité van Instructeurs, die samen de basis- en gevorderde opleiding (en daaraansluitend de trainingen) overzien. Ben je lid en wil je vrijwilliger worden om les te geven aan beginners, dan moedigen we je aan om de verantwoordelijke van de basisopleiding (instructeur en bestuurslid) te contacteren voor meer informatie. Na een eventuele opleiding als monitor kan hij/zij bepalen hoe je mee kan helpen met de opleiding.
 
+### Clubduiken
+
+Clubduiken worden door leden van de club georganiseerd. Elk jaar stuurt de secretaris een aanvraag naar gekende vrijwilligers die in het verleden duiken hebben georganiseerd. Ben je lid van de club en heb je al wat duikervaring? Stuur dan een mailtje naar [vdc_instructeurs@googlegroups.com](mailto:vdc_instructeurs@googlegroups.com). Zij kunnen je meer informatie geven over de organisatie van een clubduik en kunnen hier ook feedback op geven. Zo sta jij misschien binnenkort mee in de mailinglijst om mee clubduiken te organiseren!
+
 ### Website
 
-Wist je dat de website waar je nu op surft open staat voor iedereen? Heb je ervaring met HTML/CSS en schrikt de naam GitHub je niet af, dan kan je [hier](http://github.com/vubdivingcenter/vubdivingcenter.github.io) meewerken aan de site. Toch nog verdere vragen? Stuur gerust een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be).
+Wist je dat de website waar je nu op surft openstaat voor iedereen? Heb je ervaring met HTML/CSS en schrikt de naam GitHub je niet af, dan kan je [hier](http://github.com/vubdivingcenter/vubdivingcenter.github.io) meewerken aan de site. Toch nog verdere vragen? Stuur gerust een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be).
