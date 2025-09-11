@@ -16,7 +16,7 @@ Wow, tof! Vrijwilligers moedigen wij zeker aan. Hieronder staan enkele mogelijkh
 
 ### Bestuursfuncties
 
-Zoals vermeld in onze [statuten](/downloads/statuten_03102011.pdf) staat de raad van bestuur in voor het bestuur en de vertegenwoordiging van de vereniging. Het bestuur wordt tijdens een algemene vergadering aangesteld. Wil je je vrijwillig kandidaat stellen, dan kan je dit laten weten door een mail te sturen naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be). Tijdens de eerstvolgende AV zal bij een open functie gestemd worden over je kandidatuur. Indien de functie niet open is, gebeurt een stemming bij een overgangsjaar.
+Zoals vermeld in onze [statuten](/downloads/statuten_03102011.pdf) staat de raad van bestuur in voor het bestuur en de vertegenwoordiging van de vereniging. Het bestuur wordt tijdens een algemene vergadering aangesteld. Wil je je vrijwillig kandidaat stellen, dan kan je dit laten weten door een mail te sturen naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be) waarop je kandidatuur voorgesteld zal worden op de algemene vergadering.
 
 **Huidige open functies (09/2025)**: Penningmeester, Verantwoordelijke voor de gevorderde training
 
