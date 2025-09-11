@@ -28,6 +28,8 @@ Wil je een activiteit organiseren in de club? Graag! Stuur een mail naar [info@v
 
 Zoals vermeld in ons [huishoudelijk reglement](/downloads/huishoudelijk_reglement_25012025.pdf) staan lessen onder het toezicht van het Comité van Instructeurs, die samen de basis- en gevorderde opleiding (en daaraansluitend de trainingen) overzien. Ben je lid en wil je vrijwilliger worden om les te geven aan beginners, dan moedigen we je aan om de verantwoordelijke van de basisopleiding (instructeur en bestuurslid) te contacteren voor meer informatie. Na een eventuele opleiding als monitor kan hij/zij bepalen hoe je mee kan helpen met de opleiding.
 
+Heb je momenteel een bachelor brevet en wil je nog een stap verder gaan? Bekijk dan de proeven voor [opleiding tot instructeur](/documents) en laat het Comité van Instructeurs ([vdc_instructeurs@googlegroups.com](mailto:vdc_instructeurs@googlegroups.com)) weten dat je eventueel interesse hebt om de opleiding te starten. Zij zullen je verder informeren over de verwachtingen en de opleiding zelf.
+
 ### Clubduiken
 
 Clubduiken worden door leden van de club georganiseerd. Elk jaar stuurt de secretaris een aanvraag naar gekende vrijwilligers die in het verleden duiken hebben georganiseerd. Ben je lid van de club en heb je al wat duikervaring? Stuur dan een mailtje naar [vdc_instructeurs@googlegroups.com](mailto:vdc_instructeurs@googlegroups.com). Zij kunnen je meer informatie geven over de organisatie van een clubduik en kunnen hier ook feedback op geven. Zo sta jij misschien binnenkort mee in de mailinglijst om mee clubduiken te organiseren!
