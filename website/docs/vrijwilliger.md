@@ -26,3 +26,7 @@ Wil je een activiteit organiseren in de club? Graag! Stuur een mail naar [info@v
 ### Lesgeven
 
 Zoals vermeld in ons [huishoudelijk reglement](/downloads/huishoudelijk_reglement_25012025.pdf) staan lessen onder het toezicht van het Comité van Instructeurs, die samen de basis- en gevorderde opleiding (en daaraansluitend de trainingen) overzien. Ben je lid en wil je vrijwilliger worden om les te geven aan beginners, dan moedigen we je aan om de verantwoordelijke van de basisopleiding (instructeur en bestuurslid) te contacteren voor meer informatie. Na een eventuele opleiding als monitor kan hij/zij bepalen hoe je mee kan helpen met de opleiding.
+
+### Website
+
+Wist je dat de website waar je nu op surft open staat voor iedereen? Heb je ervaring met HTML/CSS en schrikt de naam GitHub je niet af, dan kan je [hier](http://github.com/vubdivingcenter/vubdivingcenter.github.io) meewerken aan de site. Toch nog verdere vragen? Stuur gerust een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be).
