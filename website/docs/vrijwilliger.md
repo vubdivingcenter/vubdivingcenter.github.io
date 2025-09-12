@@ -3,13 +3,16 @@ layout: main
 title: Vrijwilliger bij het VDC
 subtitle: Draag je vinnetje bij tot de club!
 background: https://lh3.googleusercontent.com/pw/AP1GczO6uS4_RKg4rdySxPMiHRV7uxrpndwQNngbHIsLuyEHB4o_N84Unog1hK3Y6iRzoi_UAoqgdREemaG-Rc2JYRN2dmCntM56mx9cJx0du0lDDXFiJ7OpnVyYltGS5jjMajQzBKHlxC-YTHSM7GPFi82bug
-# eleventyNavigation:
-#     key: Materiaal
-#     parent: Leden
-#     order: 10
+eleventyNavigation:
+    key: Vrijwilligers
+    parent: Leden
+    order: 15
 ---
 
 **Of het nu de persoon is die jou begroet bij je eerste kennismaking met de club, de monitor die jou elke week training komt geven, de lesgever bij de gevorderden, de instructeur die mee het water in duikt om jou je eerste buitenduiken te laten doen, of het bestuur van de club – allemaal zijn het vrijwilligers.**
+
+## Wie zijn ze?
+Jouw lesgever, het bestuur, instructeurs en iedereen die iets doet of organiseert voor de club zijn vrijwilligers. Bedank ze af en toe eens, dat appreciëren ze ten zeerste :)
 
 ## Wat kan ik doen?
 Wow, tof! Vrijwilligers moedigen wij zeker aan. Hieronder staan enkele mogelijkheden waar je kan helpen, maar we staan zeker open voor andere bijdragen!
