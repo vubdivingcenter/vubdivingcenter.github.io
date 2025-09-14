@@ -46,5 +46,6 @@ jobs:
                 GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
                 GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
                 GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+                REGISTRATION_CODE: ${{ secrets.REGISTRATION_CODE }}
             run: |
                 node _scripts/inschrijvingen.js
