@@ -11,17 +11,26 @@ body {
     margin: 0;
     padding: 0;
 }
+.header-address-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
 .header {
     font-size: 11pt;
     font-family: Verdana, sans-serif;
     color: #555555;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
 }
 .address {
     font-size: 11pt;
     font-family: Verdana, sans-serif;
     color: #555555;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
+    /* Remove margin-bottom so it aligns with logo */
 }
 hr {
     border: none;
@@ -37,6 +46,13 @@ hr {
     text-align: center;
     font-size: 8pt;
     font-family: Arial, sans-serif;
+}
+.bottom-align-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 /* Print as A4 page */
 @media print {
@@ -65,14 +81,16 @@ hr {
 <body lang="NL-BE">
 
 <div>
-    <div class="header">
-        <img width="88" height="90" src="logo.svg" alt="VDC logo" style="vertical-align:middle; margin-right:12px;">
-        <b>V.U.B. DIVING CENTER</b>
-    </div>
-    <div class="address">
-        vereniging zonder winstoogmerk<br>
-        Triomflaan 40, 1160 Brussel<br>
-        Ondernemingsnummer: 876.441.421
+    <div class="header-address-flex">
+        <div class="header">
+            <img width="88" height="90" src="data:image/gif;base64, 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" alt="VDC logo" style="vertical-align:middle; margin-right:12px;">
+        </div>
+        <div class="address">
+            <b>V.U.B. DIVING CENTER</b><br>
+            vereniging zonder winstoogmerk<br>
+            Triomflaan 40, 1160 Brussel<br>
+            Ondernemingsnummer: 876.441.421
+        </div>
     </div>
     <hr>
     <p>
@@ -94,7 +112,14 @@ hr {
         Bij specifieke gezondheidsproblemen zoals bv. astma, suikerziekte, duizeligheid, … kan je arts je best doorverwijzen naar een specialist alvorens je goed te keuren.
     </p>
 
-    <div style="text-align:center;">
+    <div class="bottom-align-container">
+        <!--
+        <div style="width:100%;text-align:center;margin-bottom:1em;">
+            <span style="font-size:14px;vertical-align:middle;">✂</span>
+            <div style="border-top:1px dashed #555;width:90%;display:inline-block;vertical-align:middle;margin:0 0 0 8px;"></div>
+        </div>
+        -->
+        
         <table class="membership-table">
             <tr>
                 <td>
@@ -103,7 +128,7 @@ hr {
                     Membership and Insurance valid from 10/<%= start %> to 11/<%= einde %><br><br>
                     Dr. …………………………………………………………<br>
                     examined this member and declared him/her physically fit for diving.<br>
-                    Date …………/…………/………… Stamp/Signature<br><br>
+                    Date ………/………/……… &nbsp;&nbsp;&nbsp; Stamp/Signature<br><br>
                     Insurance: Arena policy n°: 1.111.231 &amp; 1.111.230<br>
                     Tel.: +32 2 512 03 04
                 </td>
