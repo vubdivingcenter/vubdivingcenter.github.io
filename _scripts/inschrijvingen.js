@@ -103,9 +103,17 @@ async function generateAndSendLidkaart(row, vdcData) {
     const firstName = row.get('Voornaam');
     const lastName = row.get('Achternaam');
     const email = row.get('E-mail');
+    const type = row.get('Optie');
     const firstNameSanitized = firstName.replace(/[^a-zA-Z0-9]/g, '');
     const lastNameSanitized = lastName.replace(/[^a-zA-Z0-9]/g, '');
     const fileName = `VDC_${lastNameSanitized}${firstNameSanitized}_${vdcData.lidjaar.start}-${vdcData.lidjaar.einde}`;
+
+    // Veiligheid, kijk nogmaals of type geen steunend lid is
+    if (type === 'Steunend lid') {
+        console.log(`Type is 'Steunend lid', geen lidkaart nodig voor ${firstName} ${lastName}, overslaan...`);
+        return;
+    }
+    
     console.log(`Generating lidkaart voor ${firstName} ${lastName} <${email}>`);
     const html = ejs.render(lidkaartTemplate, {
         row,

@@ -451,6 +451,14 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
   if (!valid) {
     e.preventDefault();
+    // Scroll to first error
+    const errorMessages = document.querySelectorAll('.error-message');
+    for (let i = 0; i < errorMessages.length; i++) {
+      if (errorMessages[i].textContent) {
+        errorMessages[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      }
+    }
     return;
   }
 
