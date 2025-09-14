@@ -1,0 +1,98 @@
+.form-compact {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.form-compact h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+.form-compact label {
+  display: block;
+  margin-bottom: 0.2em;
+  font-weight: 500;
+  margin-top: 0.3em;
+}
+.form-compact input, .form-compact select, .form-compact textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.form-compact .inline-group {
+  display: flex;
+  gap: 1em;
+}
+.form-compact .inline-group > div {
+  flex: 1;
+}
+.form-compact .radio-group, .form-compact .checkbox-group {
+  display: flex;
+  flex-direction: column; /* changed from row to column */
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.form-compact .checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center; /* changed from flex-start to center */
+  gap: 0.5em;
+  justify-content: flex-start; /* ensure left alignment */
+  text-align: left; /* ensure text is left-aligned */
+}
+.form-compact .checkbox-group label input[type="checkbox"] {
+  width: 18px;
+  min-width: 18px;
+  max-width: 18px;
+  flex: 0 0 18px;
+  height: 18px;
+  margin: 0;
+}
+.form-compact button {
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  width: 100%;
+}
+.form-compact button:hover {
+  background: #005fa3;
+}
+.form-compact .note {
+  background: #e6f2ff;
+  color: #005fa3;
+  padding: 0.5em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+}
+.form-compact .error {
+  border-color: #e00;
+  background: #fff6f6;
+}
+.form-compact .error-message {
+  color: #e00;
+  font-size: 0.95em;
+  margin-top: -0.8em;
+  margin-bottom: 0.8em;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .form-compact {
+    padding: 0.5rem;
+    box-shadow: none;
+  }
+}

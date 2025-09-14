@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><%= fileName %></title>
+<style>
+body {
+    font-family: Arial, Verdana, sans-serif;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    font-size: 11pt;
+    font-family: Verdana, sans-serif;
+    color: #555555;
+    margin-bottom: 0.5em;
+}
+.address {
+    font-size: 11pt;
+    font-family: Verdana, sans-serif;
+    color: #555555;
+    margin-bottom: 0.5em;
+}
+hr {
+    border: none;
+    border-bottom: 1px solid #555;
+    margin: 1em 0;
+}
+.membership-table {
+    margin: 2em auto;
+    border-collapse: collapse;
+}
+.membership-table td {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+}
+/* Print as A4 page */
+@media print {
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        /* Prevent page break inside main content */
+        page-break-inside: avoid;
+    }
+    /* Optional: avoid breaking tables */
+    table, tr, td {
+        page-break-inside: avoid;
+    }
+}
+</style>
+</head>
+<body lang="NL-BE">
+
+<div>
+    <div class="header">
+        <img width="88" height="90" src="logo.svg" alt="VDC logo" style="vertical-align:middle; margin-right:12px;">
+        <b>V.U.B. DIVING CENTER</b>
+    </div>
+    <div class="address">
+        vereniging zonder winstoogmerk<br>
+        Triomflaan 40, 1160 Brussel<br>
+        Ondernemingsnummer: 876.441.421
+    </div>
+    <hr>
+    <p>
+        Je hebt je dit academiejaar <%= start %>-<%= einde %> (opnieuw) ingeschreven bij het V.U.B. Diving Center VZW (kortweg VDC).
+    </p>
+    <p>
+        Onderaan deze brief vind je het jaarlijks lidmaatschapsvignet, tegelijkertijd ook het bewijs van verzekering. Om geldig te zijn en voor je aan de activiteiten mag deelnemen, moet het worden ingevuld door een arts.
+    </p>
+    <p>
+        Duiken zonder medische keuring is namelijk <b>VERBODEN</b> bij het VDC!
+    </p>
+    <p>
+        Voor het deelnemen aan de zwembadactiviteiten in zwembaden tot 5m en het invullen van onderstaand vignet volstaat een volledig lichamelijk onderzoek incl. kno onderzoek en bloeddrukmeting.
+    </p>
+    <p>
+        Vanaf de leeftijd van 45 jaar is ook een inspanningsproef met EKG verplicht voor het deelnamen aan duikactiviteiten in open water. Dit onderzoek moet om de vijf jaar worden hernieuwd. Het resultaat van dit onderzoek laat je invullen en ondertekenen in je oranje certificatenboekje.
+    </p>
+    <p>
+        Bij specifieke gezondheidsproblemen zoals bv. astma, suikerziekte, duizeligheid, … kan je arts je best doorverwijzen naar een specialist alvorens je goed te keuren.
+    </p>
+
+    <div style="text-align:center;">
+        <table class="membership-table">
+            <tr>
+                <td>
+                    <b>Membership <%= voornaam %> <%= achternaam %></b><br>
+                    <b>V.U.B. Diving Center vzw</b><br>
+                    Membership and Insurance valid from 10/<%= start %> to 11/<%= einde %><br><br>
+                    Dr. …………………………………………………………<br>
+                    examined this member and declared him/her physically fit for diving.<br>
+                    Date …………/…………/………… Stamp/Signature<br><br>
+                    Insurance: Arena policy n°: 1.111.231 &amp; 1.111.230<br>
+                    Tel.: +32 2 512 03 04
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

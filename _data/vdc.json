@@ -1,0 +1,11 @@
+{
+    "lidjaar": {
+        "start": "TEST1",
+        "einde": "TEST2"
+    },
+    "lidgeld": {
+        "lid": 165,
+        "opleiding": 85,
+        "steunend": 25
+    }
+}

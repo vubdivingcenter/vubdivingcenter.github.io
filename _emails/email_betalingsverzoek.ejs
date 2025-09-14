@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Betalingsverzoek VDC</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #222; background: #fff;">
+  <p>Hallo <%= lastName %>, <%= firstName %></p>
+  <p>
+    Wij hebben jouw registratie correct ontvangen.<br>
+    Gelieve je betaling te doen op rekening van het VDC (<strong>BE25 7330 3034 6882</strong>) met volgende mededeling:<br>
+    <em>'Inschrijving <%= vdc.lidjaar.start %>-<%= vdc.lidjaar.einde %> <%= lastName %> <%= firstName %>'</em>.
+  </p>
+  <p>
+    Indien er zich problemen voordoen, neem dan zo snel mogelijk contact op met ons (<a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>).
+  </p>
+  <p>
+    Je hebt gekozen voor: <strong><%= type %></strong>
+  </p>
+  <p>
+    Merci!<br>
+    De Raad van Bestuur
+  </p>
+</body>
+</html>

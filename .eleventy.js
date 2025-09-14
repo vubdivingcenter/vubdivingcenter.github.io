@@ -27,6 +27,7 @@ import dotenv from 'dotenv';
 import _ from "lodash";
 
 const seoConfig = JSON.parse(fs.readFileSync('./_data/seo.json', 'utf8'));
+const vdcConfig = JSON.parse(fs.readFileSync('./_data/vdc.json', 'utf8'));
 
 dotenv.config();
 
@@ -60,6 +61,9 @@ export default function (el) {
     defaultLanguage: "nl", // Required, this site uses "en"
   });
 
+  // Make VDC data available globally
+  el.addGlobalData("vdc", vdcConfig);
+  
   /* Navigation */
   el.addPlugin(pluginNavigation);
 
