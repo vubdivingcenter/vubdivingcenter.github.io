@@ -1,0 +1,17 @@
+<div class="typography">
+  <div class="btn-group">
+    <a class="btn btn-orange" target="_blank" href="feed://www.vubdivingcenter.be/feed.xml"><i class="fa fa-solid fa-rss"></i> Abonneren</a>
+  </div>
+</div>
+<nav class="navigation">
+  {% for year, posts in collections.posts_year %}
+    <h3>{{ year }}</h3>
+    <ul>
+      {% for post in posts | reverse %}
+        <li {% if page.url == post.url %}class="selected"{% endif %}>
+          <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.date | readableDate }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</nav>

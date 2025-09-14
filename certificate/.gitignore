@@ -1,4 +1,0 @@
-certbot/
-letsencrypt/
-!certbot/.gitkeep
-!letsencrypt/.gitkeep

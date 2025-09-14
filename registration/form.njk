@@ -1,0 +1,547 @@
+---
+layout: main
+title: Inschrijving Lidjaar TEST-TEST
+background: https://lh3.googleusercontent.com/aNaGYxdnZv_epyqtzYRAYDMyFuSm8mR4Y5LXHbirsfbtsitfVbog5G0eICOxIdZkDvP7w7Sz3xsj5OClVrhFGDREH0zk7WAYiueDVYzAxcHdJ-pd6_JBvg22ZDjE53SCpRfSvbwOG6o
+eleventyNavigation:
+    key: Inschrijven
+    parent: Leden
+    order: 2
+---
+
+<style>
+.form-compact {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.form-compact h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+.form-compact label {
+  display: block;
+  margin-bottom: 0.2em;
+  font-weight: 500;
+  margin-top: 0.3em;
+}
+.form-compact input, .form-compact select, .form-compact textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+.form-compact .inline-group {
+  display: flex;
+  gap: 1em;
+}
+.form-compact .inline-group > div {
+  flex: 1;
+}
+.form-compact .radio-group, .form-compact .checkbox-group {
+  display: flex;
+  flex-direction: column; /* changed from row to column */
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.form-compact .checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center; /* changed from flex-start to center */
+  gap: 0.5em;
+  justify-content: flex-start; /* ensure left alignment */
+  text-align: left; /* ensure text is left-aligned */
+}
+.form-compact .checkbox-group label input[type="checkbox"] {
+  width: 18px;
+  min-width: 18px;
+  max-width: 18px;
+  flex: 0 0 18px;
+  height: 18px;
+  margin: 0;
+}
+.form-compact button {
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  width: 100%;
+}
+.form-compact button:hover {
+  background: #005fa3;
+}
+.form-compact .note {
+  background: #e6f2ff;
+  color: #005fa3;
+  padding: 0.5em;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+}
+.form-compact .error {
+  border-color: #e00;
+  background: #fff6f6;
+}
+.form-compact .error-message {
+  color: #e00;
+  font-size: 0.95em;
+  margin-top: -0.8em;
+  margin-bottom: 0.8em;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .form-compact {
+    padding: 0.5rem;
+    box-shadow: none;
+  }
+}
+</style>
+
+<form class="form-compact" id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfgGAVH5YLY3Yb04_BRkO91iel-BPh92PdbqFR9YcAdnS2mRg/formResponse" method="POST" target="_self" novalidate>
+  <div class="note">
+    <p>Gelieve dit formulier correct en zo volledig mogelijk in te vullen. Na het indienen zal u binnen de 24 uur een mail ontvangen met daarin de betalingsopdracht. Indien u niets ontvangt, gelieve contact op te nemen met <a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>.</p>
+
+    <p>Deze inschrijving is bindend onder de opschortende voorwaarde van betaling van het lidgeld op de VDC-rekening.</p>
+  </div>
+  <div class="inline-group">
+    <div>
+      <label for="voornaam">Voornaam *</label>
+      <input type="text" id="voornaam" name="entry.208542760" required>
+      <span class="error-message" id="error-voornaam"></span>
+    </div>
+    <div>
+      <label for="achternaam">Achternaam *</label>
+      <input type="text" id="achternaam" name="entry.1128761583" required>
+      <span class="error-message" id="error-achternaam"></span>
+    </div>
+  </div>
+  <label for="email">E-mail *</label>
+  <input type="email" id="email" name="entry.627198337" required>
+  <span class="error-message" id="error-email"></span>
+
+  <div class="inline-group">
+    <div>
+      <label for="straat">Straat *</label>
+      <input type="text" id="straat" name="entry.1065108439" required>
+      <span class="error-message" id="error-straat"></span>
+    </div>
+    <div>
+      <label for="nummer">Nummer *</label>
+      <input type="text" id="nummer" name="entry.805062376" required>
+      <span class="error-message" id="error-nummer"></span>
+    </div>
+  </div>
+  <div class="inline-group">
+    <div>
+      <label for="postcode">Postcode *</label>
+      <input type="text" id="postcode" name="entry.939756379" required pattern="\d{4}">
+      <span class="error-message" id="error-postcode"></span>
+    </div>
+    <div>
+      <label for="stad">Stad/gemeente *</label>
+      <input type="text" id="stad" name="entry.1773652999" required>
+      <span class="error-message" id="error-stad"></span>
+    </div>
+  </div>
+  <label for="land">Land *</label>
+  <select id="land" name="entry.1895869389" required>
+    <option value="" disabled selected>Kies land</option>
+    <option value="Afghanistan">Afghanistan</option>
+    <option value="Albanië">Albanië</option>
+    <option value="Algerije">Algerije</option>
+    <option value="Andorra">Andorra</option>
+    <option value="Angola">Angola</option>
+    <option value="Antigua en Barbuda">Antigua en Barbuda</option>
+    <option value="Argentinië">Argentinië</option>
+    <option value="Armenië">Armenië</option>
+    <option value="Australië">Australië</option>
+    <option value="Oostenrijk">Oostenrijk</option>
+    <option value="Azerbeidzjan">Azerbeidzjan</option>
+    <option value="Bahama's">Bahama's</option>
+    <option value="Bahrein">Bahrein</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Barbados">Barbados</option>
+    <option value="Belarus">Belarus</option>
+    <option value="België">België</option>
+    <option value="Belize">Belize</option>
+    <option value="Benin">Benin</option>
+    <option value="Bhutan">Bhutan</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Bosnië en Herzegovina">Bosnië en Herzegovina</option>
+    <option value="Botswana">Botswana</option>
+    <option value="Brazilië">Brazilië</option>
+    <option value="Brunei">Brunei</option>
+    <option value="Bulgarije">Bulgarije</option>
+    <option value="Burkina Faso">Burkina Faso</option>
+    <option value="Burundi">Burundi</option>
+    <option value="Cambodja">Cambodja</option>
+    <option value="Kameroen">Kameroen</option>
+    <option value="Canada">Canada</option>
+    <option value="Kaapverdië">Kaapverdië</option>
+    <option value="Centraal-Afrikaanse Republiek">Centraal-Afrikaanse Republiek</option>
+    <option value="Tsjaad">Tsjaad</option>
+    <option value="Chili">Chili</option>
+    <option value="China">China</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Comoren">Comoren</option>
+    <option value="Congo (Brazzaville)">Congo (Brazzaville)</option>
+    <option value="Congo (Kinshasa)">Congo (Kinshasa)</option>
+    <option value="Costa Rica">Costa Rica</option>
+    <option value="Kroatië">Kroatië</option>
+    <option value="Cuba">Cuba</option>
+    <option value="Cyprus">Cyprus</option>
+    <option value="Tsjechië">Tsjechië</option>
+    <option value="Denemarken">Denemarken</option>
+    <option value="Djibouti">Djibouti</option>
+    <option value="Dominica">Dominica</option>
+    <option value="Dominicaanse Republiek">Dominicaanse Republiek</option>
+    <option value="Oost-Timor">Oost-Timor</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="Egypte">Egypte</option>
+    <option value="El Salvador">El Salvador</option>
+    <option value="Equatoriaal-Guinea">Equatoriaal-Guinea</option>
+    <option value="Eritrea">Eritrea</option>
+    <option value="Estland">Estland</option>
+    <option value="Eswatini">Eswatini</option>
+    <option value="Ethiopië">Ethiopië</option>
+    <option value="Fiji">Fiji</option>
+    <option value="Finland">Finland</option>
+    <option value="Frankrijk">Frankrijk</option>
+    <option value="Gabon">Gabon</option>
+    <option value="Gambia">Gambia</option>
+    <option value="Georgië">Georgië</option>
+    <option value="Duitsland">Duitsland</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Griekenland">Griekenland</option>
+    <option value="Grenada">Grenada</option>
+    <option value="Guatemala">Guatemala</option>
+    <option value="Guinee">Guinee</option>
+    <option value="Guinee-Bissau">Guinee-Bissau</option>
+    <option value="Guyana">Guyana</option>
+    <option value="Haïti">Haïti</option>
+    <option value="Honduras">Honduras</option>
+    <option value="Hongarije">Hongarije</option>
+    <option value="IJsland">IJsland</option>
+    <option value="India">India</option>
+    <option value="Indonesië">Indonesië</option>
+    <option value="Iran">Iran</option>
+    <option value="Irak">Irak</option>
+    <option value="Ierland">Ierland</option>
+    <option value="Israël">Israël</option>
+    <option value="Italië">Italië</option>
+    <option value="Jamaica">Jamaica</option>
+    <option value="Japan">Japan</option>
+    <option value="Jordanië">Jordanië</option>
+    <option value="Kazachstan">Kazachstan</option>
+    <option value="Kenia">Kenia</option>
+    <option value="Kiribati">Kiribati</option>
+    <option value="Korea, Noord">Korea, Noord</option>
+    <option value="Korea, Zuid">Korea, Zuid</option>
+    <option value="Kosovo">Kosovo</option>
+    <option value="Koeweit">Koeweit</option>
+    <option value="Kirgizië">Kirgizië</option>
+    <option value="Laos">Laos</option>
+    <option value="Letland">Letland</option>
+    <option value="Libanon">Libanon</option>
+    <option value="Lesotho">Lesotho</option>
+    <option value="Liberia">Liberia</option>
+    <option value="Libië">Libië</option>
+    <option value="Liechtenstein">Liechtenstein</option>
+    <option value="Litouwen">Litouwen</option>
+    <option value="Luxemburg">Luxemburg</option>
+    <option value="Madagaskar">Madagaskar</option>
+    <option value="Malawi">Malawi</option>
+    <option value="Maleisië">Maleisië</option>
+    <option value="Maldiven">Maldiven</option>
+    <option value="Mali">Mali</option>
+    <option value="Malta">Malta</option>
+    <option value="Marshall-eilanden">Marshall-eilanden</option>
+    <option value="Mauritanië">Mauritanië</option>
+    <option value="Mauritius">Mauritius</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Micronesië">Micronesië</option>
+    <option value="Moldavië">Moldavië</option>
+    <option value="Monaco">Monaco</option>
+    <option value="Mongolië">Mongolië</option>
+    <option value="Montenegro">Montenegro</option>
+    <option value="Marokko">Marokko</option>
+    <option value="Mozambique">Mozambique</option>
+    <option value="Myanmar">Myanmar</option>
+    <option value="Namibië">Namibië</option>
+    <option value="Nauru">Nauru</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Nederland">Nederland</option>
+    <option value="Nieuw-Zeeland">Nieuw-Zeeland</option>
+    <option value="Nicaragua">Nicaragua</option>
+    <option value="Niger">Niger</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Noord-Macedonië">Noord-Macedonië</option>
+    <option value="Noorwegen">Noorwegen</option>
+    <option value="Oman">Oman</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Palau">Palau</option>
+    <option value="Palestina">Palestina</option>
+    <option value="Panama">Panama</option>
+    <option value="Papoea-Nieuw-Guinea">Papoea-Nieuw-Guinea</option>
+    <option value="Paraguay">Paraguay</option>
+    <option value="Peru">Peru</option>
+    <option value="Filipijnen">Filipijnen</option>
+    <option value="Polen">Polen</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Qatar">Qatar</option>
+    <option value="Roemenië">Roemenië</option>
+    <option value="Rusland">Rusland</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Saint Kitts en Nevis">Saint Kitts en Nevis</option>
+    <option value="Saint Lucia">Saint Lucia</option>
+    <option value="Saint Vincent en de Grenadines">Saint Vincent en de Grenadines</option>
+    <option value="Samoa">Samoa</option>
+    <option value="San Marino">San Marino</option>
+    <option value="Sao Tomé en Principe">Sao Tomé en Principe</option>
+    <option value="Saoedi-Arabië">Saoedi-Arabië</option>
+    <option value="Senegal">Senegal</option>
+    <option value="Servië">Servië</option>
+    <option value="Seychellen">Seychellen</option>
+    <option value="Sierra Leone">Sierra Leone</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Slovakije">Slovakije</option>
+    <option value="Slovenië">Slovenië</option>
+    <option value="Salomonseilanden">Salomonseilanden</option>
+    <option value="Somalië">Somalië</option>
+    <option value="Zuid-Afrika">Zuid-Afrika</option>
+    <option value="Zuid-Soedan">Zuid-Soedan</option>
+    <option value="Spanje">Spanje</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+    <option value="Soedan">Soedan</option>
+    <option value="Suriname">Suriname</option>
+    <option value="Zweden">Zweden</option>
+    <option value="Zwitserland">Zwitserland</option>
+    <option value="Syrië">Syrië</option>
+    <option value="Taiwan">Taiwan</option>
+    <option value="Tadzjikistan">Tadzjikistan</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Togo">Togo</option>
+    <option value="Tonga">Tonga</option>
+    <option value="Trinidad en Tobago">Trinidad en Tobago</option>
+    <option value="Tunesië">Tunesië</option>
+    <option value="Turkije">Turkije</option>
+    <option value="Turkmenistan">Turkmenistan</option>
+    <option value="Tuvalu">Tuvalu</option>
+    <option value="Oeganda">Oeganda</option>
+    <option value="Oekraïne">Oekraïne</option>
+    <option value="Verenigde Arabische Emiraten">Verenigde Arabische Emiraten</option>
+    <option value="Verenigd Koninkrijk">Verenigd Koninkrijk</option>
+    <option value="Verenigde Staten">Verenigde Staten</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Oezbekistan">Oezbekistan</option>
+    <option value="Vanuatu">Vanuatu</option>
+    <option value="Vaticaanstad">Vaticaanstad</option>
+    <option value="Venezuela">Venezuela</option>
+    <option value="Vietnam">Vietnam</option>
+    <option value="Jemen">Jemen</option>
+    <option value="Zambia">Zambia</option>
+    <option value="Zimbabwe">Zimbabwe</option>
+    <option value="Andere">Andere</option>
+  </select>
+  <span class="error-message" id="error-land"></span>
+
+  <label for="telefoon">Telefoon *</label>
+  <input type="text" id="telefoon" name="entry.888586845" required pattern="^(\+?\d{1,3}[- ]?)?\d{6,14}$">
+  <span class="error-message" id="error-telefoon"></span>
+
+  <div class="inline-group">
+    <div>
+      <label for="noodcontact">Naam Noodcontact</label>
+      <input type="text" id="noodcontact" name="entry.1636025292">
+    </div>
+    <div>
+      <label for="noodtelefoon">Telefoon Noodcontact</label>
+      <input type="text" id="noodtelefoon" name="entry.809453006">
+    </div>
+  </div>
+
+  <label for="geboortedatum">Geboortedatum *</label>
+  <input type="date" id="geboortedatum" name="entry.1297994775" required>
+  <span class="error-message" id="error-geboortedatum"></span>
+
+
+
+  <label>Geslacht *</label>
+  <select name="entry.484416903" id="geslacht" required>
+    <option value="" disabled selected>Kies geslacht</option>
+    <option value="Overige">Overige</option>
+    <option value="Man">Man</option>
+    <option value="Vrouw">Vrouw</option>
+  </select>
+  <span class="error-message" id="error-geslacht"></span>
+
+  <label for="handicap">Erkende handicap (vastgesteld voor 65 jaar) *</label>
+  <select id="handicap" name="entry.1125567279" required>
+    <option value="" disabled selected>Kiezen</option>
+    <option value="Nee">Nee</option>
+    <option value="Fysieke beperking">Fysieke beperking</option>
+    <option value="Auditieve beperking">Auditieve beperking</option>
+    <option value="Visuele beperking">Visuele beperking</option>
+    <option value="Overige">Overige</option>
+  </select>
+    <div class="note" style="margin-top:-0.5em;">
+        (*) We hebben deze informatie nodig voor onze jaarlijkse subsidieaanvraag (<a href="https://www.vgc.be/subsidies-en-dienstverlening/sport/werkingssubsidie-voor-sportverenigingen" target="_blank">meer info</a>). Bespreek eventuele aanpassingen of ondersteuning die je nodig hebt via je arts.
+    </div>
+  <span class="error-message" id="error-handicap"></span>
+
+  <label for="brevetten">Reeds behaalde brevetten/diploma's zoals EHBO, Duiker-Redder, Hoger-Redder, Arts, Verpleegkundige, Sportleraar, Sportwetenschappen, ...</label>
+  <textarea id="brevetten" name="entry.1486945958" rows="2"></textarea>
+
+  <label>Optie *</label>
+  <select name="entry.540922303" id="optie" required>
+    <option value="" disabled selected>Kies een optie</option>
+    <option value="Nieuw lid">Nieuw lid (165 euro) + opleiding (85 euro)</option>
+    <option value="Bestaand lid">Bestaand lid (165 euro)</option>
+    <option value="Steunend lid">Steunend lid (minimum 25 euro)</option>
+  </select>
+  <div class="note" style="margin-top:-0.5em;">
+    (*) Een steunend lid heeft geen verzekering voor buitenduiken. Deze mogen tweemaal per jaar deelnemen aan een ouwezakkentraining.
+  </div>
+  <span class="error-message" id="error-optie"></span>
+
+  <label>Verklaringen *</label>
+  <div class="checkbox-group">
+    <label>
+      <input type="checkbox" name="entry.1721077263" value="Ik verklaar hierbij dat ik een exemplaar van het reglement van het VDC heb kunnen opvragen, en dat ik de inhoud ervan volledig begrijp en uitdrukkelijk aanvaard." required>
+      <span>
+        Ik verklaar hierbij dat ik een exemplaar van het 
+        <a href="/documents/huishoudelijkreglement/" target="_blank">reglement van het VDC</a> 
+        heb kunnen opvragen, en dat ik de inhoud ervan volledig begrijp en uitdrukkelijk aanvaard.
+      </span>
+    </label>
+    <label>
+      <input type="checkbox" name="entry.1721077263" value="Ik heb het privacybeleid gelezen en ga hiermee akkoord." required>
+      <span>
+        Ik heb het 
+        <a href="/privacy-policy" target="_blank">privacybeleid</a> 
+        gelezen en ga hiermee akkoord.
+      </span>
+    </label>
+  </div>
+  <span class="error-message" id="error-verklaring"></span>
+  <button type="submit">Verzenden</button>
+</form>
+
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  let valid = true;
+
+  // Helper function
+  function setError(id, message) {
+    const input = document.getElementById(id);
+    if (input) input.classList.add('error');
+    document.getElementById('error-' + id).textContent = message;
+    valid = false;
+  }
+  function clearError(id) {
+    const input = document.getElementById(id);
+    if (input) input.classList.remove('error');
+    document.getElementById('error-' + id).textContent = '';
+  }
+
+  // Validate required text fields
+  ['voornaam','achternaam','straat','nummer','postcode','stad','telefoon','geboortedatum'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.value.trim()) {
+      setError(id, 'Dit veld is verplicht.');
+    } else {
+      clearError(id);
+    }
+  });
+
+  // Email validation
+  const email = document.getElementById('email');
+  if (!email.value.trim()) {
+    setError('email', 'E-mail is verplicht.');
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    setError('email', 'Ongeldig e-mailadres.');
+  } else {
+    clearError('email');
+  }
+
+  // Postcode validation (Belgium: 4 digits)
+  const postcode = document.getElementById('postcode');
+  if (postcode.value && !/^\d{4}$/.test(postcode.value)) {
+    setError('postcode', 'Postcode moet 4 cijfers zijn.');
+  }
+
+  // Telefoon validation (simple international format)
+  const telefoon = document.getElementById('telefoon');
+  if (telefoon.value && !/^(\+?\d{1,3}[- ]?)?\d{6,14}$/.test(telefoon.value)) {
+    setError('telefoon', 'Ongeldig telefoonnummer.');
+  }
+
+  // Land dropdown
+  const land = document.getElementById('land');
+  if (!land.value) {
+    setError('land', 'Selecteer een land.');
+  } else {
+    clearError('land');
+  }
+
+  // Handicap dropdown
+  const handicap = document.getElementById('handicap');
+  if (!handicap.value) {
+    setError('handicap', 'Selecteer een optie.');
+  } else {
+    clearError('handicap');
+  }
+
+  // Geslacht dropdown
+  const geslacht = document.getElementById('geslacht');
+  if (!geslacht.value) {
+    setError('geslacht', 'Selecteer geslacht.');
+  } else {
+    clearError('geslacht');
+  }
+
+  // Optie dropdown
+  const optie = document.getElementById('optie');
+  if (!optie.value) {
+    setError('optie', 'Selecteer een optie.');
+  } else {
+    clearError('optie');
+  }
+
+  // Geboortedatum: must be in the past
+  const geboortedatum = document.getElementById('geboortedatum');
+  if (geboortedatum.value) {
+    const today = new Date();
+    const dob = new Date(geboortedatum.value);
+    if (dob >= today) {
+      setError('geboortedatum', 'Geboortedatum moet in het verleden liggen.');
+    }
+  }
+
+  // Checkbox group (Verklaringen)
+  const verklaringen = document.querySelectorAll('input[name="entry.1721077263"]:checked');
+  if (verklaringen.length < 2) {
+    document.getElementById('error-verklaring').textContent = 'Beide verklaringen moeten aangevinkt zijn.';
+    valid = false;
+  } else {
+    document.getElementById('error-verklaring').textContent = '';
+  }
+
+  if (!valid) {
+    e.preventDefault();
+  }
+});
+</script>

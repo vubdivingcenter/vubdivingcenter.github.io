@@ -1,0 +1,11 @@
+---
+layout: main
+title: 'Tag Index'
+---
+<h2>Hier zijn we nog wat aan het werken! Geen zorgen, je kan alle nieuwsposts <a href="/posts">hier</a> terugvinden!</h2>
+<ol>
+{% set taglist = collections.tag %}
+{% for post in taglist | reverse %}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+{% endfor %}
+</ol>

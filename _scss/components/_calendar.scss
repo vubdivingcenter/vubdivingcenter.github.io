@@ -1,0 +1,58 @@
+.dhx_cal_event_clear {
+    white-space: pre-line !important;
+    height: auto !important;
+}
+
+@media (max-width: $on-small) {
+    #calendar {
+        display: none;
+    }
+}
+
+@media (min-width: $on-small) {
+    #calendar-mobile {
+        display: none;
+    }
+}
+
+#calendar-mobile {
+    .event-template {
+        display: none;
+    }
+
+    .event-block {
+        margin-bottom: 25px;
+    }
+
+    .event-date-block {
+        background-color: $primary_color;
+        background: linear-gradient(45deg, $primary_color, darken($primary_color, 10%));
+        color: white;
+        border-radius: 4px 4px 0 0;
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .event-title {
+        background-color: rgb(245, 245, 245);
+        padding-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .event-time {
+        font-size: 0.85em;
+        display: block;
+    }
+
+    .event-details {
+        background-color: rgb(245, 245, 245);
+        padding-left: 15px;
+        font-size: 1em;
+        min-height: 4px;
+        border-radius: 0 0 4px 4px;
+    }
+}

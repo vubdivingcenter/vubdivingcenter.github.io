@@ -44,12 +44,8 @@ jobs:
           PHOTOS_ALBUM: ${{ secrets.PHOTOS_ALBUM }}
           CALENDAR: ${{ secrets.CALENDAR }}
         run: |
-          yarn workspace @vubdivingcenter/website clean
-          yarn workspace @vubdivingcenter/website build
-      - name: Build webapp
-        run: |
-          yarn workspace @vubdivingcenter/webapp build
-          cp -r ./webapp/dist/assets ./website/_site/user/assets
+          yarn run clean
+          yarn run build
 
   deploy_ftp:
     needs:
@@ -78,7 +74,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./website/_site/
+          local-dir: ./_site/
           server-dir: /web/
       - name: Status check
         uses: Sibz/github-status-action@v1
@@ -113,7 +109,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/_site
+          publish_dir: ./_site
       - name: Status check
         uses: Sibz/github-status-action@v1
         with:

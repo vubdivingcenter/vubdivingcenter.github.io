@@ -1,0 +1,32 @@
+---
+layout: main
+title: Documenten
+background: https://lh3.googleusercontent.com/pw/ABLVV87hEKcZA1aKZTIJ5FJSanbASHlsUzzPkDdSD2XQqoD7FBbsaVSl6JF6ivXWo2kdrXRBdNOQiU7PN8B3teCITZGq0BU0tetHoz0Ioirm6bUKAftGa2oy
+eleventyNavigation:
+    key: Documenten
+    parent: Leden
+    order: 999
+---
+
+<table class="documents">
+    <thead>
+        <tr>
+            <th>Document</th>
+            <th class="optional">Beschrijving</th>
+            <th>Laatst gewijzigd</th>
+            <th><!-- Action --></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for document in collections.documents %}
+            {% set file = document.files[0] %}
+            <tr>
+                <td class="bold">{{ document.title }}</td>
+                <td class="optional">{{ document.description }}</td>
+                <td>{{ file.date }}</td>
+                <td><a href="{{ file.url }}" target="#blank">Download</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<span class="footnote">Sommige documenten vereisen een wachtwoord. Dit is enkel toegangkelijk voor leden en is terug te vinden in de <a href="https://groups.google.com/g/vdc_leden">vdc_leden</a> groep</span>
