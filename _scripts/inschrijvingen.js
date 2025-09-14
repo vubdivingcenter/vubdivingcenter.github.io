@@ -118,7 +118,9 @@ async function generateAndSendLidkaart(row, vdcData) {
     const outputPath = path.join(outputDir, `${fileName}.html`);
     fs.writeFileSync(outputPath, html, 'utf8');
     const pdfPath = path.join(outputDir, `${fileName}.pdf`);
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
     await page.pdf({ path: pdfPath, format: 'A4', printBackground: true });

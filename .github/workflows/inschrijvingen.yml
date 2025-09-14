@@ -47,6 +47,5 @@ jobs:
                 GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
                 GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
                 REGISTRATION_CODE: ${{ secrets.REGISTRATION_CODE }}
-                PUPPETEER_DISABLE_SANDBOX: true
             run: |
                 node _scripts/inschrijvingen.js
