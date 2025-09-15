@@ -1,11 +1,12 @@
 {
     "lidjaar": {
-        "start": "TEST1",
-        "einde": "TEST2"
+        "start": "2025",
+        "einde": "2026"
     },
     "lidgeld": {
         "lid": 165,
         "opleiding": 85,
-        "steunend": 25
+        "steunend": 25,
+        "date": "09/2025"
     }
 }

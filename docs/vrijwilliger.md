@@ -37,6 +37,10 @@ Heb je momenteel een bachelor brevet en wil je nog een stap verder gaan? Bekijk 
 
 Clubduiken worden door leden van de club georganiseerd. Elk jaar stuurt de secretaris een aanvraag naar gekende vrijwilligers die in het verleden duiken hebben georganiseerd. Ben je lid van de club en heb je al wat duikervaring? Stuur dan een mailtje naar [vdc_instructeurs@googlegroups.com](mailto:vdc_instructeurs@googlegroups.com). Zij kunnen je meer informatie geven over de organisatie van een clubduik en kunnen hier ook feedback op geven. Zo sta jij misschien binnenkort mee in de mailinglijst om mee clubduiken te organiseren!
 
+### Social media
+
+Als club proberen we zoveel mogelijk onze activiteiten te delen op social media. Heb je een leuke foto of video van een activiteit? Stuur deze dan door naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be) of rechtstreeks naar onze Facebookgroep. Ook dit kan een leuke manier zijn om bij te dragen aan de club!
+
 ### Website
 
 Wist je dat de website waar je nu op surft openstaat voor iedereen? Heb je ervaring met HTML/CSS en schrikt de naam GitHub je niet af, dan kan je [hier](http://github.com/vubdivingcenter/vubdivingcenter.github.io) meewerken aan de site. Toch nog verdere vragen? Stuur gerust een mail naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be).

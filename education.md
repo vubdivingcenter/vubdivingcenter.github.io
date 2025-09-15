@@ -25,7 +25,7 @@ Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student
 
 #### Opleiding 
 
-Gedurende vier maanden (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen die gegeven worden door vrijwilligers. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
+Gedurende enkele maanden tot een jaar (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen die gegeven worden door vrijwilligers. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
 
 Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate*, *bachelor*, en uiteindelijk *instructor* certificaat.
 
@@ -41,7 +41,11 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-Het lidgeld bedraagt **165 euro** per jaar **+ 85 euro** voor de opleiding van *initiate* (laatst aangepast op 09/2025). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De 85 euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw 85 euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra 85 euro te betalen. 
+Het lidgeld bedraagt **{{ vdc.lidgeld.lid }} euro** per jaar **+ {{ vdc.lidgeld.opleiding }} euro** voor de opleiding van *initiate* (laatst aangepast op {{ vdc.lidgeld.date }}). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De {{ vdc.lidgeld.opleiding }} euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw {{ vdc.lidgeld.opleiding }} euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra {{ vdc.lidgeld.opleiding }} euro te betalen. 
+
+#### Buitenduiken
+
+Zwembadtrainingen zijn de basis van de duikopleiding. Maar duiken doe je in open water. Na het behalen van je *initiate* brevet, kan je deelnemen aan de buitenduiken die we organiseren. Deze gaan meestal door in Nederland (Oosterschelde, Grevelingenmeer) of in België (vijvers, steengroeven, stuwmeren). Uiteraard mag je ook deelnemen aan buitenduiken in het buitenland of op vakantie.
 
 #### Materiaal
 

@@ -40,7 +40,7 @@ je het best op voorhand uit en steek je het in de bak waar eveneens de etiketjes
 verloren. Heb je er een nodig en steekt er geen in, haal je er eentje uit diezelfde bak.
 
 ## Ontspanners, Jackets en Lood
-Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginners** die de 85 euro opleidingsgeld hebben betaald of die uitgezonderd zijn van het betalen van dit opleidingsgeld in hun 2de jaar omwille van laattijdig inschrijven in hun eerste jaar. Voor alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen. 
+Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginners** die de {{ vdc.lidgeld.opleiding }} euro opleidingsgeld hebben betaald of die uitgezonderd zijn van het betalen van dit opleidingsgeld in hun 2de jaar omwille van laattijdig inschrijven in hun eerste jaar. Voor alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen. 
 
 > <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt een boete van 5 euro aangerekend. Deze boete stijgt per week met 5 euro. Eventuele boetes worden aan het einde van het duikseizoen afgerekend. Hier wordt ten gepaste tijde een mail over gestuurd. Het materiaal wordt niet uitgeleend voor duikreizen, uitgezonderd de duikweekends.
 
