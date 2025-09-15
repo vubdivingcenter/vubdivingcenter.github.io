@@ -4265,5 +4265,13 @@
     "duration": 5400,
     "recurring_event_id": 332,
     "original_start": "2025-12-19 19:30:00"
+  },
+  {
+    "id": 454,
+    "start_date": "2026-03-26 19:45:00",
+    "end_date": "2026-03-26 22:00:00",
+    "text": "Algemene vergadering",
+    "details": "",
+    "duration": 8100
   }
 ]
