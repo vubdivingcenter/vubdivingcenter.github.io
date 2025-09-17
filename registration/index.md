@@ -18,7 +18,8 @@ Is het je eerste keer dat je bij onze club wil inschrijven? Contacteer ons eerst
 Herinschrijven bij het VUB Diving Center begint bij het invullen van het online inschrijvingsformulier. Nieuwe leden dienen eerst contact
 op te nemen met <info@vubdivingcenter.be> alvorens zich in te schrijven.
 
-[Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){ .btn .btn-green target="_blank"}
+<!-- [Inschrijven](https://vdc-app.azurewebsites.net/Registration/Create){ .btn .btn-green target="_blank"} -->
+*Hou je mailbox in de gaten! De inschrijvingen voor 2025-2026 openen binnenkort!*
 
 ### Stap 2: Betaling
 
