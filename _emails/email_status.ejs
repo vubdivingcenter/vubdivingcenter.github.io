@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Statusupdate inschrijvingen</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #222; background: #fff;">
+    <p>
+        <b>Dit is een automatisch bericht met een overzicht van alle nieuwe inschrijvingen van <%= start %> tot <%= end %></b>
+    </p>
+    <p>
+        Er zijn <%= inschrijvingen.length %> nieuwe inschrijvingen, gelieve manueel de betalingen te controleren en de inschrijvingen te updaten:
+    </p>
+    <ul>
+        <% for (let inschrijving of inschrijvingen) { %>
+        <li>
+            <%= inschrijving.firstName %> <%= inschrijving.lastName %> - <%= inschrijving.type %>
+        </li>
+        <% } %>
+    </ul>
+</body>
+</html>

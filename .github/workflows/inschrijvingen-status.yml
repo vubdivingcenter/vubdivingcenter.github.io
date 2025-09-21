@@ -1,19 +1,15 @@
-name: Inschrijvingen verwerken
+name: Status Inschrijvingen
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 23 * * 0'
 
 jobs:
     inschrijvingen:
-        name: 'Verwerk Inschrijvingen'
+        name: 'Status Inschrijvingen'
         runs-on: ubuntu-latest
         steps:
-        -   uses: browser-actions/setup-chrome@v1
-            with:
-                chrome-version: 1198101
-                id: setup-chrome
         -   name: Check out repository
             uses: actions/checkout@v3
             with:
@@ -44,6 +40,5 @@ jobs:
                 GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
                 GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
                 GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
-                REGISTRATION_CODE: ${{ secrets.REGISTRATION_CODE }}
             run: |
-                node _scripts/inschrijvingen.js
+                node _scripts/inschrijvingen-status.js
