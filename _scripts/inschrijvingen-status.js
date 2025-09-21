@@ -98,7 +98,7 @@ for (const row of rows) {
 
 if (newMembers.length > 0) {
     sendEmail(
-        "info@vubdivingcenter.be",
+        "vdc_rvb@googlegroups.com",
         `Wekelijks overzicht inschrijvingen (${startWeek.toLocaleDateString('nl-BE')} - ${endWeek.toLocaleDateString('nl-BE')})`,
         "email_status",
         { start: startWeek.toLocaleDateString('nl-BE'), end: endWeek.toLocaleDateString('nl-BE'), inschrijvingen : newMembers },
