@@ -3,12 +3,15 @@ import { JWT } from 'google-auth-library';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
+import fetch from 'node-fetch';
+import FormData from 'form-data';
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
-import sgMail from '@sendgrid/mail';
+
+const DEBUG = false;
+const DEBUG_EMAIL = '';
 
 dotenv.config();
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const vdcDataPath = path.resolve(process.cwd(), '_data', 'vdc.json');
 const vdcData = JSON.parse(fs.readFileSync(vdcDataPath, 'utf8'));
@@ -33,7 +36,7 @@ function getBedrag(type, vdc) {
 }
 
 /**
- * Verzend een e-mail met SendGrid
+ * Verzend een e-mail met Mailgun via HTTP API
  * @param {*} to 
  * @param {*} subject 
  * @param {*} template 
@@ -41,33 +44,55 @@ function getBedrag(type, vdc) {
  * @param {*} attachments 
  * @returns 
  */
-function sendEmail(to, subject, template, templateData, attachments = []) {
-    return new Promise((resolve, reject) => {
-        const templatePath = path.resolve(process.cwd(), '_emails', `${template}.ejs`);
-        const templateContent = fs.readFileSync(templatePath, 'utf8');
-        const body = ejs.render(templateContent, templateData);
-        const msg = {
-            to,
-            from: process.env.SENDGRID_FROM_EMAIL,
-            subject,
-            html: body,
-            attachments: attachments.map(a => ({
-                content: fs.readFileSync(a.path).toString('base64'),
-                filename: a.filename,
-                type: a.type || 'application/pdf',
-                disposition: 'attachment'
-            }))
-        };
-        sgMail.send(msg)
-            .then(() => {
-                console.log(`Email sent to ${to} with subject "${subject}" and attachments: ${attachments.map(a => a.filename).join(', ')}`);
-                resolve();
-            })
-            .catch(error => {
-                console.error(`Failed to send email to ${to}:`, error);
-                reject(error);
-            });
+async function sendEmail(to, subject, template, templateData, attachments = []) {
+    if (DEBUG) {
+        console.log(`DEBUG: Email to ${to} changed to ${DEBUG_EMAIL}`);
+        to = DEBUG_EMAIL;
+    }
+    const templatePath = path.resolve(process.cwd(), '_emails', `${template}.ejs`);
+    const templateContent = fs.readFileSync(templatePath, 'utf8');
+    const body = ejs.render(templateContent, templateData);
+
+    // Prepare form data using FormData (like curl -F)
+    const formData = new FormData();
+    formData.append('from', process.env.MAILGUN_FROM_EMAIL);
+    formData.append('to', to);
+    formData.append('subject', subject);
+    formData.append('html', body);
+
+    // Add attachments if provided
+    for (const attachment of attachments) {
+        // attachment: { filename, path }
+        formData.append('attachment', fs.createReadStream(attachment.path), { filename: attachment.filename });
+    }
+
+    const response = await fetch(`https://api.eu.mailgun.net/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
+        method: 'POST',
+        headers: {
+            'Authorization': 'Basic ' + Buffer.from(`api:${process.env.MAILGUN_API_KEY}`).toString('base64'),
+            // Do not set Content-Type, let FormData handle it
+            ...formData.getHeaders()
+        },
+        body: formData
     });
+
+    if (!response.ok) {
+        // Get error text from response
+        const errorText = await response.text();
+        // Log the request
+        console.error('Mailgun API request failed:', {
+            errorText,
+            status: response.status,
+            statusText: response.statusText,
+            to,
+            from: process.env.MAILGUN_FROM_EMAIL,
+            subject,
+            attachments: attachments.map(a => a.filename)
+        });
+        throw new Error(errorText);
+    } else {
+        console.log(`Email sent to ${to} with subject "${subject}"`);
+    }
 }
 
 /**
@@ -90,7 +115,8 @@ async function sendBetalingsverzoek(row, vdcData) {
     );
     row.set('Betalingsverzoek verzonden', 'ja');
     if (type === 'Steunend lid') row.set('Lidkaart verzonden', 'ja');
-    await row.save();
+    if (!DEBUG)
+        await row.save();
     console.log(`Betalingsverzoek sent to ${firstName} ${lastName}`);
 }
 
@@ -141,7 +167,8 @@ async function generateAndSendLidkaart(row, vdcData) {
         [{ path: pdfPath, filename: `${fileName}.pdf`, type: 'application/pdf' }]
     );
     row.set('Lidkaart verzonden', 'ja');
-    await row.save();
+    if (!DEBUG)
+        await row.save();
     console.log(`Lidkaart voor ${firstName} ${lastName} opgeslagen als ${fileName}.html en ${fileName}.pdf`);
 }
 
@@ -162,11 +189,13 @@ async function processInschrijvingen() {
         if (securityCode !== process.env.REGISTRATION_CODE && betaald === 'ja') {
             console.warn(`Invalid security code for ${row.get('Voornaam')} ${row.get('Achternaam')}, skipping...`);
             row.set('Betaald', 'ONGELDIG');
-            await row.save();
+            if (!DEBUG)
+                await row.save();
         } else {
             console.log(`Valid security code for ${row.get('Voornaam')} ${row.get('Achternaam')}`);
             row.set('CODE', process.env.REGISTRATION_CODE);
-            await row.save();
+            if (!DEBUG)
+                await row.save();
         }
     }
 
