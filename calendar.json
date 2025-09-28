@@ -4353,5 +4353,21 @@
     "duration": 5400,
     "recurring_event_id": 333,
     "original_start": "2025-12-19 19:30:00"
+  },
+  {
+    "id": 463,
+    "start_date": "2025-11-14 21:00:00",
+    "end_date": "2025-11-14 21:45:00",
+    "text": "Stempelmoment Mutualiteit",
+    "details": "",
+    "duration": 2700
+  },
+  {
+    "id": 464,
+    "start_date": "2025-12-19 21:00:00",
+    "end_date": "2025-12-19 21:45:00",
+    "text": "Stempelmoment Mutualiteit",
+    "details": "",
+    "duration": 2700
   }
 ]
