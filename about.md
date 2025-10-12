@@ -6,7 +6,7 @@ background: https://lh3.googleusercontent.com/TWVj09M8ShA0mEzgLTFXnDzVVXu27SLZwQ
 redirect_from: /aboutus     # VDC Site Update 2022
 eleventyNavigation:
     key: Over ons
-    order: 3
+    order: 30
 ---
 
 ### Historiek

@@ -1,0 +1,129 @@
+---
+layout: main
+title: Inschrijving Initiatie
+background: https://lh3.googleusercontent.com/aNaGYxdnZv_epyqtzYRAYDMyFuSm8mR4Y5LXHbirsfbtsitfVbog5G0eICOxIdZkDvP7w7Sz3xsj5OClVrhFGDREH0zk7WAYiueDVYzAxcHdJ-pd6_JBvg22ZDjE53SCpRfSvbwOG6o
+---
+
+<h2 class="subtitle">Initiatieles 17 oktober 2025 19u30</h2>
+
+<form class="form-compact" id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfXOarMR5EPL1KMyIfLojockf8NWitf1OQmeQ6PgjU10RTtWg/formResponse" method="POST" target="_self" novalidate>
+  <div class="note warn">
+    NOTA: Dit formulier is enkel voor de initiatieles van 17 oktober 2025. De kostprijs van de initiatieles is €15 (ter plekke te betalen). Na inschrijving ontvang je een mail van de verantwoordelijke van de basis opleiding. Indien je na betaling lid wordt van de club, wordt dit bedrag in mindering gebracht op het lidgeld.
+  </div>
+
+  <div class="inline-group">
+    <div>
+      <label for="voornaam">Voornaam *</label>
+      <input type="text" id="voornaam" name="entry.208542760" required>
+      <span class="error-message" id="error-voornaam"></span>
+    </div>
+    <div>
+      <label for="achternaam">Achternaam *</label>
+      <input type="text" id="achternaam" name="entry.1128761583" required>
+      <span class="error-message" id="error-achternaam"></span>
+    </div>
+  </div>
+  <label for="email">E-mail *</label>
+  <input type="email" id="email" name="entry.627198337" required>
+  <span class="error-message" id="error-email"></span>
+
+  <label for="telefoon">Telefoon *</label>
+  <input type="text" id="telefoon" name="entry.888586845" required pattern="^(\+?\d{1,3}[- ]?)?\d{6,14}$">
+  <span class="error-message" id="error-telefoon"></span>
+
+  <label for="brevetten">Reeds behaalde brevetten/diploma's zoals EHBO, Duiker-Redder, Hoger-Redder, Arts, Verpleegkundige, Sportleraar, Sportwetenschappen, ...</label>
+  <textarea id="brevetten" name="entry.1486945958" rows="2"></textarea>
+  <span class="error-message" id="error-verklaring"></span>
+  <button type="submit">Verzenden</button>
+</form>
+
+<div id="form-success" style="display:none;">
+  <h2>Bedankt voor uw initiatie inschrijving voor 17 oktober!</h2>
+  <p>Uw formulier werd succesvol verzonden. Gelieve op de dag van de initiatie 15 euro mee te brengen (of ter plekke te betalen via QR).</p>
+  <p>Indien u geen antwoord ontvangt, gelieve contact op te nemen via <a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>.</p>
+</div>
+<div id="form-error" style="display:none;">
+  <h2>Er is een fout opgetreden</h2>
+  <p>Uw formulier kon niet worden verzonden. Probeer het later opnieuw of neem contact op via <a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>.</p>
+</div>
+
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  let valid = true;
+
+  // Helper function
+  function setError(id, message) {
+    const input = document.getElementById(id);
+    if (input) input.classList.add('error');
+    document.getElementById('error-' + id).textContent = message;
+    valid = false;
+  }
+  function clearError(id) {
+    const input = document.getElementById(id);
+    if (input) input.classList.remove('error');
+    document.getElementById('error-' + id).textContent = '';
+  }
+
+  // Validate required text fields
+  ['voornaam','achternaam','telefoon'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && !el.value.trim()) {
+      setError(id, 'Dit veld is verplicht.');
+    } else {
+      clearError(id);
+    }
+  });
+
+  // Email validation
+  const email = document.getElementById('email');
+  if (!email.value.trim()) {
+    setError('email', 'E-mail is verplicht.');
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    setError('email', 'Ongeldig e-mailadres.');
+  } else {
+    clearError('email');
+  }
+
+  // Telefoon validation (simple international format)
+  const telefoon = document.getElementById('telefoon');
+  if (telefoon.value && !/^(\+?\d{1,3}[- ]?)?\d{6,14}$/.test(telefoon.value)) {
+    setError('telefoon', 'Ongeldig telefoonnummer.');
+  }
+
+  if (!valid) {
+    e.preventDefault();
+    // Scroll to first error
+    const errorMessages = document.querySelectorAll('.error-message');
+    for (let i = 0; i < errorMessages.length; i++) {
+      if (errorMessages[i].textContent) {
+        errorMessages[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        break;
+      }
+    }
+    return;
+  }
+
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+
+  // Hide previous messages
+  document.getElementById('form-success').style.display = 'none';
+  document.getElementById('form-error').style.display = 'none';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors' // Google Forms does not support CORS, so we can't read the response
+  })
+  .then(() => {
+    form.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  })
+  .catch(() => {
+    form.style.display = 'none';
+    document.getElementById('form-error').style.display = 'block';
+  });
+});
+</script>

@@ -5,7 +5,7 @@ subtitle: Leren duiken? Dat kan!
 background: https://lh3.googleusercontent.com/vhJaAyeWCqiTWYAKEnoBBMCCnDQNNXQq_JKeR6dvAH6K4DpNd2uFkWGXPdbSTfnYOohQjD2swoqN7RhuAMe6b-mlwUhh22DBEpPB7kwHuqih2yMoEf9ptvqYGn5tjXI7CqESbsiKkyQ
 eleventyNavigation:
     key: Duikopleiding
-    order: 1
+    order: 10
 ---
 
 ### Wat is duiken?

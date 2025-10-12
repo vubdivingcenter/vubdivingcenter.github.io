@@ -5,7 +5,7 @@ background: https://lh3.googleusercontent.com/aNaGYxdnZv_epyqtzYRAYDMyFuSm8mR4Y5
 eleventyNavigation:
     key: Inschrijven
     parent: Leden
-    order: 2
+    order: 20
 ---
 
 <div class="alert warn">

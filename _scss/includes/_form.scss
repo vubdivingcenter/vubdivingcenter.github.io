@@ -77,7 +77,14 @@
   border-radius: 6px;
   margin-bottom: 1em;
   font-size: 0.95em;
+
+  .note.warn & {
+    background: #fff4e5;
+    color: #a35400;
+    border: 1px solid #ffd580;
+  }
 }
+
 .form-compact .error {
   border-color: #e00;
   background: #fff6f6;

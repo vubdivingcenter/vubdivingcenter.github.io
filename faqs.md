@@ -6,6 +6,6 @@ eleventyExcludeFromCollections: true
 eleventyNavigation:
     key: FAQ's
     parent: Leden
-    order: 3
+    order: 30
 ---
 
