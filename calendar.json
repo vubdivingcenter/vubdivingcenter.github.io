@@ -4379,5 +4379,21 @@
     "duration": 5400,
     "recurring_event_id": 335,
     "original_start": "2025-12-19 19:30:00"
+  },
+  {
+    "id": 466,
+    "start_date": "2026-07-03 00:00:00",
+    "end_date": "2026-07-06 00:00:00",
+    "text": "Juliweekend",
+    "details": "",
+    "duration": 259200
+  },
+  {
+    "id": 467,
+    "start_date": "2026-09-04 00:00:00",
+    "end_date": "2026-09-07 00:00:00",
+    "text": "Septemberweekend",
+    "details": "",
+    "duration": 259200
   }
 ]
