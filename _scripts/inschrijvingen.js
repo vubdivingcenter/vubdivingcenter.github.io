@@ -7,6 +7,7 @@ import fetch from 'node-fetch';
 import FormData from 'form-data';
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
+import { Dropbox } from 'dropbox';
 
 const DEBUG = false;
 const DEBUG_EMAIL = '';
@@ -49,6 +50,11 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
         console.log(`DEBUG: Email to ${to} changed to ${DEBUG_EMAIL}`);
         to = DEBUG_EMAIL;
     }
+    if (DEBUG_EMAIL === '') {
+        console.log('DEBUG_EMAIL is empty, skipping email send.');
+        return;
+    }
+
     const templatePath = path.resolve(process.cwd(), '_emails', `${template}.ejs`);
     const templateContent = fs.readFileSync(templatePath, 'utf8');
     const body = ejs.render(templateContent, templateData);
@@ -159,6 +165,10 @@ async function generateAndSendLidkaart(row, vdcData) {
     await page.setContent(html, { waitUntil: 'networkidle0' });
     await page.pdf({ path: pdfPath, format: 'A4', printBackground: true });
     await browser.close();
+    console.log(`Lidkaart voor ${firstName} ${lastName} opgeslagen als ${fileName}.html en ${fileName}.pdf`);
+    // Bewaar PDF op dropbox
+    await saveLidkaartToDropbox(pdfPath);
+    // Verstuur email met bijlage
     await sendEmail(
         email,
         `Uw VDC Lidkaart voor ${vdcData.lidjaar.start}-${vdcData.lidjaar.einde}`,
@@ -169,7 +179,34 @@ async function generateAndSendLidkaart(row, vdcData) {
     row.set('Lidkaart verzonden', 'ja');
     if (!DEBUG)
         await row.save();
-    console.log(`Lidkaart voor ${firstName} ${lastName} opgeslagen als ${fileName}.html en ${fileName}.pdf`);
+}
+
+async function saveLidkaartToDropbox(pdfPath) {
+    const DROPBOX_ACCESS_TOKEN = process.env.DROPBOX_ACCESS_TOKEN;
+    if (!DROPBOX_ACCESS_TOKEN) {
+        console.warn('No Dropbox access token provided, skipping Dropbox upload.');
+        return;
+    }
+    const dbx = new Dropbox({ accessToken: DROPBOX_ACCESS_TOKEN, fetch });
+    const fileName = path.basename(pdfPath);
+
+    // Dynamically get the membership year from vdcData
+    const vdcDataPath = path.resolve(process.cwd(), '_data', 'vdc.json');
+    const vdcData = JSON.parse(fs.readFileSync(vdcDataPath, 'utf8'));
+    const yearFolder = `${vdcData.lidjaar.start}-${vdcData.lidjaar.einde}`;
+    const dropboxPath = `/VDC/Leden/${yearFolder}/${fileName}`;
+
+    const fileContents = fs.readFileSync(pdfPath);
+    try {
+        const response = await dbx.filesUpload({
+            path: dropboxPath,
+            contents: fileContents,
+            mode: { '.tag': 'overwrite' }
+        });
+        console.log(`Lidkaart uploaded to Dropbox: ${dropboxPath}`);
+    } catch (err) {
+        console.error('Error uploading to Dropbox:', err);
+    }
 }
 
 async function processInschrijvingen() {
