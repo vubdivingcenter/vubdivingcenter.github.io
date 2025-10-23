@@ -49,12 +49,11 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
     if (DEBUG) {
         console.log(`DEBUG: Email to ${to} changed to ${DEBUG_EMAIL}`);
         to = DEBUG_EMAIL;
+        if (DEBUG_EMAIL === '') {
+            console.log('DEBUG_EMAIL is empty, skipping email send.');
+            return;
+        }
     }
-    if (DEBUG_EMAIL === '') {
-        console.log('DEBUG_EMAIL is empty, skipping email send.');
-        return;
-    }
-
     const templatePath = path.resolve(process.cwd(), '_emails', `${template}.ejs`);
     const templateContent = fs.readFileSync(templatePath, 'utf8');
     const body = ejs.render(templateContent, templateData);
