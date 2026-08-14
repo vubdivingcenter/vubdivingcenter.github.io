@@ -63,6 +63,7 @@ export default function (el) {
 
   // Make VDC data available globally
   el.addGlobalData("vdc", vdcConfig);
+  el.addGlobalData("currentYear", () => new Date().getFullYear());
   
   /* Navigation */
   el.addPlugin(pluginNavigation);

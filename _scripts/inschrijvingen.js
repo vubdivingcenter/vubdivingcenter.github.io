@@ -12,6 +12,13 @@ import { Dropbox } from 'dropbox';
 const DEBUG = false;
 const DEBUG_EMAIL = '';
 
+class MailgunError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = 'MailgunError';
+    }
+}
+
 dotenv.config();
 
 const vdcDataPath = path.resolve(process.cwd(), '_data', 'vdc.json');
@@ -71,15 +78,20 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
         formData.append('attachment', fs.createReadStream(attachment.path), { filename: attachment.filename });
     }
 
-    const response = await fetch(`https://api.eu.mailgun.net/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Basic ' + Buffer.from(`api:${process.env.MAILGUN_API_KEY}`).toString('base64'),
-            // Do not set Content-Type, let FormData handle it
-            ...formData.getHeaders()
-        },
-        body: formData
-    });
+    let response;
+    try {
+        response = await fetch(`https://api.eu.mailgun.net/v3/${process.env.MAILGUN_DOMAIN}/messages`, {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Basic ' + Buffer.from(`api:${process.env.MAILGUN_API_KEY}`).toString('base64'),
+                // Do not set Content-Type, let FormData handle it
+                ...formData.getHeaders()
+            },
+            body: formData
+        });
+    } catch (err) {
+        throw new MailgunError(`Network error contacting Mailgun for "${subject}" to ${to}: ${err.message}`);
+    }
 
     if (!response.ok) {
         // Get error text from response
@@ -94,7 +106,7 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
             subject,
             attachments: attachments.map(a => a.filename)
         });
-        throw new Error(errorText);
+        throw new MailgunError(`Mailgun API request failed (${response.status}): ${errorText}`);
     } else {
         console.log(`Email sent to ${to} with subject "${subject}"`);
     }
@@ -236,6 +248,7 @@ async function processInschrijvingen() {
     }
 
     rows = rows.filter(row => row.get('Lidkaart verzonden') !== 'ja');
+    const mailErrors = [];
     for (const row of rows) {
         try {
             if (row.get('Betalingsverzoek verzonden') !== 'ja') {
@@ -246,11 +259,25 @@ async function processInschrijvingen() {
         } catch (err) {
             const firstName = row.get('Voornaam');
             const lastName = row.get('Achternaam');
+            const email = row.get('E-mail');
+            if (err instanceof MailgunError) {
+                mailErrors.push(`${firstName} ${lastName} <${email}>: ${err.message}`);
+            }
             console.error(`Error processing ${firstName} ${lastName}:`, err);
         }
     }
+
+    if (mailErrors.length > 0) {
+        throw new Error(`Failing workflow: ${mailErrors.length} e-mail(s) konden niet worden verzonden via Mailgun.\n${mailErrors.map(error => ` - ${error}`).join('\n')}`);
+    }
 }
 
-processInschrijvingen().catch(err => {
-    console.error('Fatal error:', err);
-});
+processInschrijvingen()
+    .then(() => {
+        console.log('Alle inschrijvingen verwerkt.');
+        process.exit(0);
+    })
+    .catch(err => {
+        console.error('Fatal error:', err);
+        process.exit(1);
+    });

@@ -4,14 +4,13 @@
   </div>
 </div>
 <nav class="navigation">
-  {% for year, posts in collections.posts_year %}
-    <h3>{{ year }}</h3>
-    <ul>
-      {% for post in posts | reverse %}
-        <li {% if page.url == post.url %}class="selected"{% endif %}>
-          <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.data.date | readableDate }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
+  <h3>Recente berichten</h3>
+  <ul>
+    {% for post in collections.posts | reverse | head(5) %}
+      <li {% if page.url == post.url %}class="selected"{% endif %}>
+        <a href="{{ post.url }}" {% if page.url == post.url %}class="current"{% endif %}>{{ post.date | readableDate }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <p><a href="/posts/">Alle berichten &raquo;</a></p>
 </nav>

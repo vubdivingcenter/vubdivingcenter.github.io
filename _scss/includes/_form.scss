@@ -102,4 +102,8 @@
     padding: 0.5rem;
     box-shadow: none;
   }
+
+  .form-compact .inline-group {
+    flex-direction: column;
+  }
 }

@@ -128,5 +128,6 @@ if (newMembers.length > 0) {
         []
     ).catch(err => {
         console.error('Failed to send status email:', err);
+        process.exit(1);
     });
 }
