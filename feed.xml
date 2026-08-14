@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="nl-be">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://www.vubdivingcenter.be/">
   <title>VUB Diving Center</title>
   <subtitle>Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center</subtitle>
   <link href="https://www.vubdivingcenter.be/feed.xml" rel="self"/>
