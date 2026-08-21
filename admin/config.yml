@@ -1,0 +1,92 @@
+backend:
+  name: github
+  repo: vubdivingcenter/vubdivingcenter.github.io
+  branch: master
+
+site_url: https://www.vubdivingcenter.be
+display_url: https://www.vubdivingcenter.be
+logo_url: https://www.vubdivingcenter.be/images/logo.svg
+base_url: /admin/
+locale: nl
+
+collections:
+  - name: "pages"
+    label: "Pagina's"
+    label_singular: "Pagina"
+    folder: "."
+    glob: "*.md"
+    exclude:
+      - "404.md"
+    create: false
+    sort:
+      field: "title"
+      ascending: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Ondertitel", name: "subtitle", widget: "string", required: false }
+      - { label: "Achtergrondfoto (URL)", name: "background", widget: "string", required: false, hint: "Link naar een foto, bij voorkeur van het gedeelde Google Photos-album." }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  - name: "docs"
+    label: "Ledeninfo-pagina's"
+    label_singular: "Ledeninfo-pagina"
+    folder: "docs"
+    glob: "*.md"
+    exclude:
+      - "cms-handboek.md"
+    create: false
+    sort:
+      field: "title"
+      ascending: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Ondertitel", name: "subtitle", widget: "string", required: false }
+      - { label: "Achtergrondfoto (URL)", name: "background", widget: "string", required: false, hint: "Link naar een foto, bij voorkeur van het gedeelde Google Photos-album." }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Nieuwsberichten"
+    label_singular: "Nieuwsbericht"
+    folder: "posts"
+    path: "{{ year }}/{{ month }}/{{ day }}.md"
+    create: true
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm", time_required: false }
+      - label: "Categorie"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        default: "activiteit"
+        options:
+          - { label: "Activiteit", value: "activiteit" }
+          - { label: "Opleiding", value: "opleiding" }
+      - label: "Foto's (URL's)"
+        name: "images"
+        widget: "list"
+        required: false
+        field:
+          { label: "Foto-URL", name: "url", widget: "string" }
+      - { label: "Samenvatting (social media)", name: "excerpt", widget: "string", required: false }
+      - { label: "Social media afbeelding (URL)", name: "image", widget: "string", required: false }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
+
+  - name: "documents"
+    label: "Documenten (downloads)"
+    label_singular: "Document"
+    folder: "documents/documents.json"
+    create: false
+    fields:
+      - label: "Documenten"
+        name: ""
+        widget: "list"
+        fields:
+          - { label: "Naam", name: "title", widget: "string" }
+          - { label: "Omschrijving", name: "description", widget: "text", required: false }
+          - label: "Bestanden"
+            name: "files"
+            widget: "list"
+            fields:
+              - { label: "Datum (yyyy-mm-dd)", name: "date", widget: "string" }
+              - { label: "Versie", name: "version", widget: "number" }
+              - { label: "URL", name: "url", widget: "string" }
