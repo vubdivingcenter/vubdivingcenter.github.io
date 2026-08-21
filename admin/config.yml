@@ -2,6 +2,8 @@ backend:
   name: github
   repo: vubdivingcenter/vubdivingcenter.github.io
   branch: master
+  base_url: https://www.vubdivingcenter.be
+  auth_endpoint: /admin/client.html
 
 site_url: https://www.vubdivingcenter.be
 display_url: https://www.vubdivingcenter.be
