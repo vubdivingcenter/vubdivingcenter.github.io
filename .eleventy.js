@@ -36,7 +36,7 @@ export default function (el) {
   el.addPassthroughCopy("fonts");
   el.addPassthroughCopy("CNAME");
   el.addPassthroughCopy("scripts");
-  el.addPassthroughCopy("admin");
+  el.addPassthroughCopy("admin/config.yml");
   el.addPassthroughCopy({
     "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.css": "./css/vendor/dhtmlxscheduler.css",
     "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js": "./scripts/vendor/dhtmlxscheduler.js",

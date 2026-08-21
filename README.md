@@ -127,13 +127,53 @@ Niet-technische redacteurs kunnen de website bewerken via [Decap CMS](https://de
 op de website en blijft verborgen. Redacteurs hebben een GitHub-account met *write*-toegang tot dit repository nodig.
 Een handleiding voor redacteurs staat op [https://www.vubdivingcenter.be/docs/cms-handboek/](https://www.vubdivingcenter.be/docs/cms-handboek/) (eveneens niet gelinkt).
 
+### Hoe de login werkt
+Decap CMS kan de GitHub-OAuth token-uitwisseling niet zelf in de browser doen (CORS). Daarom
+dient een kleine **Google Apps Script**-webapp als tussenpersoon (zie
+[decap-cms-google-apps-script](https://github.com/nuzulul/decap-cms-google-apps-script)).
+De *client secret* wordt uitsluitend in die Apps Script opgeslagen, nooit in dit repository of in de browser.
+
+De login-volgordening:
+1. De redacteur klikt op *Log in with GitHub* op `/admin/`.
+2. De popup laadt `https://www.vubdivingcenter.be/admin/client.html` (PKCE-middleware, deel van deze site).
+3. Die page doorverwijst via de Apps Script naar GitHub; na inloggen bevestigt de redacteur met
+   twee klikken (*Continue with Github*, *Confirm Github Authorization*).
+4. De Apps Script ruilt de code in tegen een token en stuurt het terug naar de CMS.
+
 ### Eénmalige setup
-1. Maak een *GitHub OAuth App* aan (Settings → Developer settings → OAuth Apps):
-   - *Authorization callback URL*: `https://www.vubdivingcenter.be/admin/`
-2. Deel de *Client ID* en *Client Secret* met de redacteurs. Deze worden bij de eerste login in de CMS gevraagd en worden lokaal in de browser opgeslagen (niet in het repository).
+
+#### 1. GitHub OAuth App
+Settings → Developer settings → OAuth Apps → New OAuth App:
+- *Application name*: bv. `VDC CMS`
+- *Authorization callback URL*: het web app-URL uit stap 2 hieronder
+  (bv. `https://script.google.com/macros/s/.../exec`) — exact kopiëren.
+
+#### 2. Google Apps Script webapp
+1. Ga naar <https://script.google.com> → *Nieuw project*.
+2. Vervang de inhoud van `Code.gs` met de inhoud van [`docs/gas-oauth/Code.gs`](docs/gas-oauth/Code.gs) uit dit repository.
+3. Voeg een HTML-bestand toe genaamd `config.html` (Insert → HTML file) met de inhoud van
+   [`docs/gas-oauth/config.html`](docs/gas-oauth/config.html), waar je de placeholders vervangt door de
+   echte *Client ID* en *Client Secret* van de GitHub OAuth App.
+4. *Deploy* → *New deployment* → type *Web app*:
+   - *Execute as*: **Me**
+   - *Who has access*: **Anyone**
+5. Kopieer het *web app URL* (`https://script.google.com/macros/s/.../exec`).
+
+> **Belangrijk:** vul dit bestand met het echte secret uitsluitend in het Apps Script-project.
+> Commit een `config.html` met het echte secret nooit naar dit repository.
+
+#### 3. Koppelen
+1. Zet in de GitHub OAuth App de *Authorization callback URL* op het web app-URL uit stap 2.5.
+2. Zet in [`admin/client.html`](admin/client.html) de variabele `apps_script_url` op hetzelfde web app-URL en commit.
+   De CI deployt de website automatisch.
+
+> Worden `Code.gs` of `config.html` later aangepast in het Apps Script-project, dan moet je bij
+> *Deploy → Manage deployments → Edit* de versie op *New version* zetten en herdeployen.
 
 ### Configuratie
-- `admin.html` (permalink `/admin/`) en `admin/config.yml` bevatten de CMS-configuratie.
+- `admin.html` (permalink `/admin/`) en `admin/config.yml` bevatten de CMS-configuratie
+  (`base_url` + `auth_endpoint` wijzen naar `admin/client.html`).
+- `admin/client.html` is de PKCE-middleware; hij bevat alleen de (publieke) *Client ID*.
 - In `admin/config.yml` kan je bepalen welke bestanden redacteurs mogen bewerken (collecties: pagina's, ledeninfo-pagina's, nieuwsberichten, downloads).
 - Wijzigingen worden rechtstreeks naar `master` gecommit; de bestaande CI bouwt en deployt de website automatisch.
 
