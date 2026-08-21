@@ -7,7 +7,6 @@ import fetch from 'node-fetch';
 import FormData from 'form-data';
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
-import { Dropbox } from 'dropbox';
 
 const DEBUG = false;
 const DEBUG_EMAIL = '';
@@ -177,8 +176,8 @@ async function generateAndSendLidkaart(row, vdcData) {
     await page.pdf({ path: pdfPath, format: 'A4', printBackground: true });
     await browser.close();
     console.log(`Lidkaart voor ${firstName} ${lastName} opgeslagen als ${fileName}.html en ${fileName}.pdf`);
-    // Bewaar PDF op dropbox
-    await saveLidkaartToDropbox(pdfPath);
+    // Bewaar PDF op Google Drive
+    await saveLidkaartToDrive(pdfPath, vdcData);
     // Verstuur email met bijlage
     await sendEmail(
         email,
@@ -192,31 +191,91 @@ async function generateAndSendLidkaart(row, vdcData) {
         await row.save();
 }
 
-async function saveLidkaartToDropbox(pdfPath) {
-    const DROPBOX_ACCESS_TOKEN = process.env.DROPBOX_ACCESS_TOKEN;
-    if (!DROPBOX_ACCESS_TOKEN) {
-        console.warn('No Dropbox access token provided, skipping Dropbox upload.');
+function getDriveAuth() {
+    return new JWT({
+        email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+        key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+        scopes: ['https://www.googleapis.com/auth/drive.file'],
+    });
+}
+
+async function driveRequest(auth, url, options = {}) {
+    const headers = await auth.getRequestHeaders();
+    const response = await fetch(url, {
+        ...options,
+        headers: {
+            ...options.headers,
+            ...headers
+        }
+    });
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Google Drive API request failed (${response.status}): ${errorText}`);
+    }
+    return response;
+}
+
+async function findOrCreateDriveFolder(auth, name, parentFolderId) {
+    const query = encodeURIComponent(`name='${name}' and mimeType='application/vnd.google-apps.folder' and '${parentFolderId}' in parents and trashed=false`);
+    const response = await driveRequest(auth, `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)`);
+    const { files } = await response.json();
+    if (files && files.length > 0) {
+        return files[0].id;
+    }
+    const createResponse = await driveRequest(auth, 'https://www.googleapis.com/drive/v3/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            name,
+            mimeType: 'application/vnd.google-apps.folder',
+            parents: [parentFolderId]
+        })
+    });
+    const folder = await createResponse.json();
+    console.log(`Google Drive folder "${name}" aangemaakt (id: ${folder.id})`);
+    return folder.id;
+}
+
+async function deleteExistingDriveFile(auth, name, folderId) {
+    const query = encodeURIComponent(`name='${name}' and '${folderId}' in parents and trashed=false`);
+    const response = await driveRequest(auth, `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)`);
+    const { files } = await response.json();
+    for (const file of files || []) {
+        await driveRequest(auth, `https://www.googleapis.com/drive/v3/files/${file.id}`, { method: 'DELETE' });
+        console.log(`Bestaand bestand "${file.name}" (id: ${file.id}) verwijderd voor overschrijven`);
+    }
+}
+
+async function saveLidkaartToDrive(pdfPath, vdcData) {
+    const baseFolderId = process.env.GOOGLE_DRIVE_VDC_FOLDER_ID;
+    if (!baseFolderId) {
+        console.warn('No Google Drive folder ID provided, skipping Google Drive upload.');
         return;
     }
-    const dbx = new Dropbox({ accessToken: DROPBOX_ACCESS_TOKEN, fetch });
+    const auth = getDriveAuth();
     const fileName = path.basename(pdfPath);
-
-    // Dynamically get the membership year from vdcData
-    const vdcDataPath = path.resolve(process.cwd(), '_data', 'vdc.json');
-    const vdcData = JSON.parse(fs.readFileSync(vdcDataPath, 'utf8'));
     const yearFolder = `${vdcData.lidjaar.start}-${vdcData.lidjaar.einde}`;
-    const dropboxPath = `/VDC/Leden/${yearFolder}/${fileName}`;
 
-    const fileContents = fs.readFileSync(pdfPath);
     try {
-        const response = await dbx.filesUpload({
-            path: dropboxPath,
-            contents: fileContents,
-            mode: { '.tag': 'overwrite' }
+        const yearFolderId = await findOrCreateDriveFolder(auth, yearFolder, baseFolderId);
+        await deleteExistingDriveFile(auth, fileName, yearFolderId);
+        const fileContents = fs.readFileSync(pdfPath);
+        const boundary = `----vdbcboundary${Date.now()}`;
+        const metadata = JSON.stringify({ name: fileName, parents: [yearFolderId] });
+        const body = Buffer.concat([
+            Buffer.from(`--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${metadata}\r\n`),
+            Buffer.from(`--${boundary}\r\nContent-Type: application/pdf\r\n\r\n`),
+            fileContents,
+            Buffer.from(`\r\n--${boundary}--\r\n`)
+        ]);
+        await driveRequest(auth, 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+            method: 'POST',
+            headers: { 'Content-Type': `multipart/related; boundary=${boundary}` },
+            body
         });
-        console.log(`Lidkaart uploaded to Dropbox: ${dropboxPath}`);
+        console.log(`Lidkaart uploaded to Google Drive: ${yearFolder}/${fileName}`);
     } catch (err) {
-        console.error('Error uploading to Dropbox:', err);
+        console.error('Error uploading to Google Drive:', err);
     }
 }
 

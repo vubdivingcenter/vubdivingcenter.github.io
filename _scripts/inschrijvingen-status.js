@@ -77,7 +77,31 @@ const startWeek = (() => {
     return monday;
 })();
 const endWeek = new Date(startWeek);
-endWeek.setDate(startWeek.getDate() + 6); // Set to Sunday (end of week)
+endWeek.setDate(startWeek.getDate() + 7); // Set to Monday of the following week (exclusive end)
+const endWeekDisplay = new Date(startWeek);
+endWeekDisplay.setDate(startWeek.getDate() + 6); // Sunday, for display only
+
+// Parseert de Timestamp kolom: kan een Date object, epoch of een Belgische
+// datumstring (d/M/yyyy [H:mm[:ss]]) zijn. new Date("4/5/2026") zou 4/5
+// (maart-stijl MM/DD) interpreteren, dus die interpreteren we zelf.
+function parseInschrijfDatum(value) {
+    if (value == null || value === '') return null;
+    if (value instanceof Date) return isNaN(value) ? null : value;
+    if (typeof value === 'number') return new Date(value);
+    const s = String(value).trim();
+    if (/^\d{4}-\d{2}-\d{2}/.test(s)) {
+        const iso = new Date(s);
+        return isNaN(iso) ? null : iso;
+    }
+    const m = s.match(/^(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{2,4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
+    if (m) {
+        const [, d, mo, y, h, mi, sec] = m;
+        const year = y.length === 2 ? 2000 + Number(y) : Number(y);
+        return new Date(year, mo - 1, d, Number(h || 0), Number(mi || 0), Number(sec || 0));
+    }
+    const fallback = new Date(s);
+    return isNaN(fallback) ? null : fallback;
+}
 
 // Loop through all inschrijvingen
 const serviceAccountAuth = new JWT({
@@ -91,8 +115,8 @@ const sheet = doc.sheetsByIndex[0];
 let rows = await sheet.getRows();
 let totaalAantal = rows.length;
 rows = rows.filter(row => {
-    const inschrijfDatum = new Date(row.get('Timestamp'));
-    return inschrijfDatum >= startWeek && inschrijfDatum < endWeek;
+    const inschrijfDatum = parseInschrijfDatum(row.get('Timestamp'));
+    return inschrijfDatum !== null && inschrijfDatum >= startWeek && inschrijfDatum < endWeek;
 });
 
 let aantalBetaald = 0;
@@ -102,7 +126,7 @@ for (const row of rows) {
     const lastName = row.get('Achternaam');
     const email = row.get('E-mail');
     const type = row.get('Optie');
-    const inschrijfDatum = new Date(row.get('Timestamp'));
+    const inschrijfDatum = parseInschrijfDatum(row.get('Timestamp'));
     const betaald = row.get('Betaald');
     if (betaald && betaald.toLowerCase() === 'ja') {
         aantalBetaald++;
@@ -116,18 +140,24 @@ for (const row of rows) {
     });
 }
 
+console.log(`Totaal aantal inschrijvingen: ${totaalAantal}, nieuwe inschrijvingen deze week: ${newMembers.length}`);
+
 if (newMembers.length > 0) {
-    sendEmail(
-        "vdc_rvb@googlegroups.com",
-        `Wekelijks overzicht inschrijvingen (${startWeek.toLocaleDateString('nl-BE')} - ${endWeek.toLocaleDateString('nl-BE')})`,
-        "email_status",
-        { start: startWeek.toLocaleDateString('nl-BE'), end: endWeek.toLocaleDateString('nl-BE'), inschrijvingen : newMembers, count: {
-            betaald: aantalBetaald,
-            totaal: totaalAantal
-        } },
-        []
-    ).catch(err => {
+    try {
+        await sendEmail(
+            "vdc_rvb@googlegroups.com",
+            `Wekelijks overzicht inschrijvingen (${startWeek.toLocaleDateString('nl-BE')} - ${endWeekDisplay.toLocaleDateString('nl-BE')})`,
+            "email_status",
+            { start: startWeek.toLocaleDateString('nl-BE'), end: endWeekDisplay.toLocaleDateString('nl-BE'), inschrijvingen: newMembers, count: {
+                betaald: aantalBetaald,
+                totaal: totaalAantal
+            } },
+            []
+        );
+    } catch (err) {
         console.error('Failed to send status email:', err);
         process.exit(1);
-    });
+    }
+} else {
+    console.log('Geen nieuwe inschrijvingen deze week, er wordt geen e-mail verstuurd.');
 }
