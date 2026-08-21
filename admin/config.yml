@@ -8,6 +8,8 @@ display_url: https://www.vubdivingcenter.be
 logo_url: https://www.vubdivingcenter.be/images/logo.svg
 base_url: /admin/
 locale: nl
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "pages"
