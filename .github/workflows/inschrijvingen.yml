@@ -46,6 +46,9 @@ jobs:
                 GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
                 GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
                 GOOGLE_DRIVE_VDC_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_VDC_FOLDER_ID }}
+                DRIVE_REFRESH_TOKEN: ${{ secrets.DRIVE_REFRESH_TOKEN }}
+                OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
+                OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
                 REGISTRATION_CODE: ${{ secrets.REGISTRATION_CODE }}
             run: |
                 node _scripts/inschrijvingen.js

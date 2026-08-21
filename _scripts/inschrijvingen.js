@@ -1,5 +1,5 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
-import { JWT } from 'google-auth-library';
+import { JWT, OAuth2Client } from 'google-auth-library';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
@@ -7,9 +7,10 @@ import fetch from 'node-fetch';
 import FormData from 'form-data';
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
+import { fileURLToPath } from 'url';
 
-const DEBUG = false;
-const DEBUG_EMAIL = '';
+const DEBUG = process.env.DEBUG === 'true';
+const DEBUG_EMAIL = process.env.DEBUG_EMAIL || '';
 
 class MailgunError extends Error {
     constructor(message) {
@@ -141,7 +142,7 @@ async function sendBetalingsverzoek(row, vdcData) {
  * @param {*} row 
  * @param {*} vdcData 
  */
-async function generateAndSendLidkaart(row, vdcData) {
+export async function generateAndSendLidkaart(row, vdcData) {
     const firstName = row.get('Voornaam');
     const lastName = row.get('Achternaam');
     const email = row.get('E-mail');
@@ -192,6 +193,15 @@ async function generateAndSendLidkaart(row, vdcData) {
 }
 
 function getDriveAuth() {
+    if (process.env.DRIVE_REFRESH_TOKEN) {
+        const client = new OAuth2Client({
+            clientId: process.env.OAUTH_CLIENT_ID,
+            clientSecret: process.env.OAUTH_CLIENT_SECRET,
+            scopes: ['https://www.googleapis.com/auth/drive'],
+        });
+        client.setCredentials({ refresh_token: process.env.DRIVE_REFRESH_TOKEN });
+        return client;
+    }
     return new JWT({
         email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
         key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
@@ -202,12 +212,13 @@ function getDriveAuth() {
 async function driveRequest(auth, url, options = {}) {
     let lastError;
     for (let attempt = 1; attempt <= 3; attempt++) {
+        await auth.getAccessToken();
         const headers = await auth.getRequestHeaders();
         const response = await fetch(url, {
             ...options,
             headers: {
                 ...options.headers,
-                ...headers
+                'Authorization': headers.get('authorization')
             }
         });
         if (response.ok) {
@@ -227,7 +238,7 @@ async function driveRequest(auth, url, options = {}) {
 
 async function findOrCreateDriveFolder(auth, name, parentFolderId) {
     const query = encodeURIComponent(`name='${name}' and mimeType='application/vnd.google-apps.folder' and '${parentFolderId}' in parents and trashed=false`);
-    const response = await driveRequest(auth, `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)`);
+    const response = await driveRequest(auth, `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)&supportsAllDrives=true&includeItemsFromAllDrives=true`);
     const { files } = await response.json();
     if (files && files.length > 0) {
         return files[0].id;
@@ -248,7 +259,7 @@ async function findOrCreateDriveFolder(auth, name, parentFolderId) {
 
 async function deleteExistingDriveFile(auth, name, folderId) {
     const query = encodeURIComponent(`name='${name}' and '${folderId}' in parents and trashed=false`);
-    const response = await driveRequest(auth, `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)`);
+    const response = await driveRequest(auth, `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)&supportsAllDrives=true&includeItemsFromAllDrives=true`);
     const { files } = await response.json();
     for (const file of files || []) {
         await driveRequest(auth, `https://www.googleapis.com/drive/v3/files/${file.id}`, { method: 'DELETE' });
@@ -289,7 +300,7 @@ async function saveLidkaartToDrive(pdfPath, vdcData) {
     }
 }
 
-async function processInschrijvingen() {
+export async function getSheetRows() {
     const serviceAccountAuth = new JWT({
         email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
         key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
@@ -298,7 +309,11 @@ async function processInschrijvingen() {
     const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID, serviceAccountAuth);
     await doc.loadInfo();
     const sheet = doc.sheetsByIndex[0];
-    let rows = await sheet.getRows();
+    return sheet.getRows();
+}
+
+async function processInschrijvingen() {
+    let rows = await getSheetRows();
     // Validate the secret code if 'paid' is set to true
     for (const row of rows) {
         const securityCode = row.get('CODE');
@@ -341,12 +356,16 @@ async function processInschrijvingen() {
     }
 }
 
-processInschrijvingen()
-    .then(() => {
-        console.log('Alle inschrijvingen verwerkt.');
-        process.exit(0);
-    })
-    .catch(err => {
-        console.error('Fatal error:', err);
-        process.exit(1);
-    });
+export { vdcData };
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+    processInschrijvingen()
+        .then(() => {
+            console.log('Alle inschrijvingen verwerkt.');
+            process.exit(0);
+        })
+        .catch(err => {
+            console.error('Fatal error:', err);
+            process.exit(1);
+        });
+}
