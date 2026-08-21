@@ -195,24 +195,34 @@ function getDriveAuth() {
     return new JWT({
         email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
         key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
-        scopes: ['https://www.googleapis.com/auth/drive.file'],
+        scopes: ['https://www.googleapis.com/auth/drive'],
     });
 }
 
 async function driveRequest(auth, url, options = {}) {
-    const headers = await auth.getRequestHeaders();
-    const response = await fetch(url, {
-        ...options,
-        headers: {
-            ...options.headers,
-            ...headers
+    let lastError;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        const headers = await auth.getRequestHeaders();
+        const response = await fetch(url, {
+            ...options,
+            headers: {
+                ...options.headers,
+                ...headers
+            }
+        });
+        if (response.ok) {
+            return response;
         }
-    });
-    if (!response.ok) {
         const errorText = await response.text();
-        throw new Error(`Google Drive API request failed (${response.status}): ${errorText}`);
+        lastError = new Error(`Google Drive API request failed (${response.status}): ${errorText}`);
+        if (response.status === 403 || response.status === 429 || response.status >= 500) {
+            console.warn(`Google Drive API request failed (${response.status}), retrying (${attempt}/3)...`);
+            await new Promise(resolve => setTimeout(resolve, attempt * 2000));
+            continue;
+        }
+        throw lastError;
     }
-    return response;
+    throw lastError;
 }
 
 async function findOrCreateDriveFolder(auth, name, parentFolderId) {
