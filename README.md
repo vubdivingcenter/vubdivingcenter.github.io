@@ -121,6 +121,22 @@ Documenten kan men toevoegen of aanpassen in het bestand "/documents/documents.j
 ]
 ```
 
+## Redactiesysteem (Decap CMS)
+Niet-technische redacteurs kunnen de website bewerken via [Decap CMS](https://decapcms.org), bereikbaar op
+[https://www.vubdivingcenter.be/admin/](https://www.vubdivingcenter.be/admin/). Deze pagina is bewust niet gelinkt
+op de website en blijft verborgen. Redacteurs hebben een GitHub-account met *write*-toegang tot dit repository nodig.
+Een handleiding voor redacteurs staat op [https://www.vubdivingcenter.be/docs/cms-handboek/](https://www.vubdivingcenter.be/docs/cms-handboek/) (eveneens niet gelinkt).
+
+### Eénmalige setup
+1. Maak een *GitHub OAuth App* aan (Settings → Developer settings → OAuth Apps):
+   - *Authorization callback URL*: `https://www.vubdivingcenter.be/admin/`
+2. Deel de *Client ID* en *Client Secret* met de redacteurs. Deze worden bij de eerste login in de CMS gevraagd en worden lokaal in de browser opgeslagen (niet in het repository).
+
+### Configuratie
+- `admin.html` (permalink `/admin/`) en `admin/config.yml` bevatten de CMS-configuratie.
+- In `admin/config.yml` kan je bepalen welke bestanden redacteurs mogen bewerken (collecties: pagina's, ledeninfo-pagina's, nieuwsberichten, downloads).
+- Wijzigingen worden rechtstreeks naar `master` gecommit; de bestaande CI bouwt en deployt de website automatisch.
+
 ## Gesubsidiëerd door:
 <a href="https://www.sportinbrussel.be/" target="_blank">
     <img src="images/misc/logo_sportinbrussel.svg" alt="vgc logo" style="width: 400px">

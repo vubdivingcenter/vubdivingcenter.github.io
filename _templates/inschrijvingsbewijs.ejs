@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title><%= fileName %></title>
+<style>
+body {
+    font-family: Arial, Verdana, sans-serif;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+.header-address-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+.header {
+    font-size: 11pt;
+    font-family: Verdana, sans-serif;
+    color: #555555;
+    margin-bottom: 0;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+.address {
+    font-size: 11pt;
+    font-family: Verdana, sans-serif;
+    color: #555555;
+    margin-bottom: 0;
+}
+hr {
+    border: none;
+    border-bottom: 1px solid #555;
+    margin: 1em 0;
+}
+table.bewijs-table {
+    border-collapse: collapse;
+    margin: 1em 0 3em 0;
+}
+table.bewijs-table td {
+    padding: 0.5em;
+    font-size: 11pt;
+    vertical-align: top;
+}
+table.bewijs-table td.label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+.signature-area {
+    margin-top: 4em;
+}
+.signature-line {
+    margin-top: 6em;
+    border-top: 1px solid #555;
+    width: 200px;
+}
+/* Print as A4 page */
+@media print {
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        page-break-inside: avoid;
+    }
+    table, tr, td {
+        page-break-inside: avoid;
+    }
+}
+</style>
+</head>
+<body lang="NL-BE">
+
+<div>
+    <div class="header-address-flex">
+        <div class="header">
+            <img width="88" height="90" src="data:image/gif;base64, <%= logo %>">
+        </div>
+        <div class="address">
+            <b>V.U.B. DIVING CENTER</b><br>
+            vereniging zonder winstoogmerk<br>
+            Triomflaan 40, 1160 Brussel<br>
+            Ondernemingsnummer: 876.441.421
+        </div>
+    </div>
+    <hr>
+    <h2 style="text-align:center;">Inschrijvingsbewijs clubevenement</h2>
+    <p>
+        Dit bewijst dat
+    </p>
+    <p style="font-size:14pt;">
+        <b><%= naam || '…………………………………………………………' %></b>
+    </p>
+    <p>
+        zich heeft ingeschreven voor het volgende clubevenement van het V.U.B. Diving Center VZW (kortweg VDC):
+    </p>
+    <table class="bewijs-table">
+        <tr>
+            <td class="label">Evenement:</td>
+            <td><b><%= evenement %></b></td>
+        </tr>
+        <tr>
+            <td class="label">Datum:</td>
+            <td><%= datum %></td>
+        </tr>
+        <tr>
+            <td class="label">Prijs:</td>
+            <td><%= prijsFormatted %> EUR</td>
+        </tr>
+        <tr>
+            <td class="label">Betaald op:</td>
+            <td><%= betalingsdatum %></td>
+        </tr>
+    </table>
+
+    <p>
+        Het bovenstaande bedrag is op <%= betalingsdatum %> betaald. De betaling volstaat voor de deelname aan het evenement.
+    </p>
+
+    <div class="signature-area">
+        <p><%= plaats %>, <%= betalingsdatum %></p>
+        <p>Het V.U.B. Diving Center VZW,<br>
+        De secretaris,</p>
+        <div class="signature-line"></div>
+    </div>
+</div>
+</body>
+</html>

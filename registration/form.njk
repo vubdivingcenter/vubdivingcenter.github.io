@@ -10,6 +10,12 @@ eleventyNavigation:
 
 <h2 class="subtitle">Lidjaar {{ vdc.lidjaar.start }} - {{ vdc.lidjaar.einde }}</h2>
 
+{%- if not vdc.inschrijvingenOpen -%}
+<div class="alert warn">
+  <h2><i class="fa-solid fa-ban"></i> Inschrijvingen gesloten</h2>
+  <p>Inschrijvingen voor {{ vdc.lidjaar.start }}-{{ vdc.lidjaar.einde }} zijn momenteel niet meer mogelijk.</p>
+</div>
+{%- else -%}
 <form class="form-compact" id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfgGAVH5YLY3Yb04_BRkO91iel-BPh92PdbqFR9YcAdnS2mRg/formResponse" method="POST" target="_self" novalidate>
   <div class="note">
     <p>Gelieve dit formulier correct en zo volledig mogelijk in te vullen. Na het indienen zal u binnen de 24 uur een mail ontvangen met daarin de betalingsopdracht. Indien u niets ontvangt, gelieve contact op te nemen met <a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>.</p>
@@ -480,9 +486,10 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     form.style.display = 'none';
     document.getElementById('form-success').style.display = 'block';
   })
-  .catch(() => {
+   .catch(() => {
     form.style.display = 'none';
     document.getElementById('form-error').style.display = 'block';
   });
 });
 </script>
+{%- endif -%}

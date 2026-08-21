@@ -1,4 +1,5 @@
 {
+    "inschrijvingenOpen": true,
     "lidjaar": {
         "start": "2025",
         "einde": "2026"
@@ -8,5 +9,9 @@
         "opleiding": 85,
         "steunend": 25,
         "date": "09/2025"
+    },
+    "initiatieles": {
+        "datum": "2025-10-17",
+        "uur": "19u30"
     }
 }

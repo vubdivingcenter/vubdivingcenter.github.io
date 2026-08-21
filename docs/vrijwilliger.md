@@ -14,6 +14,8 @@ eleventyNavigation:
 ## Wie zijn ze?
 Jouw lesgever, het bestuur, instructeurs en iedereen die iets doet of organiseert voor de club zijn vrijwilligers. Bedank ze af en toe eens, dat appreciëren ze ten zeerste :)
 
+Onze vrijwilligersgroep is divers: verschillende leeftijden en achtergronden. Iedereen kan op zijn of haar eigen manier bijdragen aan een open en toegankelijke club.
+
 ## Wat kan ik doen?
 Wow, tof! Vrijwilligers moedigen wij zeker aan. Hieronder staan enkele mogelijkheden waar je kan helpen, maar we staan zeker open voor andere bijdragen!
 
@@ -21,7 +23,7 @@ Wow, tof! Vrijwilligers moedigen wij zeker aan. Hieronder staan enkele mogelijkh
 
 Zoals vermeld in onze [statuten](/downloads/statuten_03102011.pdf) staat de raad van bestuur in voor het bestuur en de vertegenwoordiging van de vereniging. Het bestuur wordt tijdens een algemene vergadering aangesteld. Wil je je vrijwillig kandidaat stellen, dan kan je dit laten weten door een mail te sturen naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be) waarop je kandidatuur voorgesteld zal worden op de algemene vergadering.
 
-**Huidige open functies (09/2025)**: Penningmeester, Verantwoordelijke voor de gevorderde training
+**Huidige open functies (03/2026)**: Penningmeester, Verantwoordelijke voor de gevorderde training
 
 ### Activiteiten
 
@@ -39,7 +41,7 @@ Clubduiken worden door leden van de club georganiseerd. Elk jaar stuurt de secre
 
 ### Social media
 
-Als club proberen we zoveel mogelijk onze activiteiten te delen op social media. Heb je een leuke foto of video van een activiteit? Stuur deze dan door naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be) of rechtstreeks naar onze Facebookgroep. Ook dit kan een leuke manier zijn om bij te dragen aan de club!
+Als club proberen we zoveel mogelijk onze activiteiten te delen op social media. Heb je een leuke foto of video van een activiteit? Stuur deze dan door naar [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be) of rechtstreeks naar onze Facebookgroep. Ook dit kan een leuke manier zijn om bij te dragen aan de club! Ben jij een 'social-media-genie'? Stel dan gerust voor om mee te helpen met het beheer van de sociale media kanalen, zo zorgen we dat we een breed publiek kunnen aanspreken!
 
 ### Website
 

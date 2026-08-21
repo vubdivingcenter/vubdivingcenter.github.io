@@ -36,6 +36,7 @@ export default function (el) {
   el.addPassthroughCopy("fonts");
   el.addPassthroughCopy("CNAME");
   el.addPassthroughCopy("scripts");
+  el.addPassthroughCopy("admin");
   el.addPassthroughCopy({
     "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.css": "./css/vendor/dhtmlxscheduler.css",
     "./node_modules/dhtmlx-scheduler/codebase/dhtmlxscheduler.js": "./scripts/vendor/dhtmlxscheduler.js",
@@ -49,6 +50,7 @@ export default function (el) {
   el.addPlugin(pluginSitemap, {
     sitemap: {
       hostname: 'https://www.vubdivingcenter.be',
+      excludePaths: ['/admin/', '/admin/index.html'],
     },
   });
   el.addPlugin(pluginFavicon);
@@ -134,7 +136,8 @@ export default function (el) {
   el.addPlugin(fetchEvents);
 
   el.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc', locale: 'nl' }).toFormat("cccc, dd LLL yyyy");
+    const dt = dateObj instanceof Date ? DateTime.fromJSDate(dateObj, { zone: 'utc' }) : DateTime.fromISO(String(dateObj), { zone: 'utc' });
+    return dt.setZone('utc').setLocale('nl').toFormat("cccc, dd LLL yyyy");
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
