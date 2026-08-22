@@ -15,7 +15,8 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
 </p>
 
 {% for year, photos in collections.photos_year %}
-    <h2>{{ year }}</h2>
+    <section class="year">
+    <h2 class="year-title">{{ year }}</h2>
     <div class="gallery">
         {%- for photo in photos | reverse -%}   
             <figure id="figure-{{ photo.uid }}" class="gallery-item">
@@ -56,6 +57,7 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
     </div>
         {%- endif %}
     {% endfor %}
+    </section>
 {% endfor %}
 
 <script>

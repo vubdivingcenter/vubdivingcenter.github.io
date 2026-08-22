@@ -18,6 +18,20 @@
     }
 }
 
+.year-title {
+    position: sticky;
+    top: 85px;
+    z-index: 100;
+    background-color: #fff;
+    margin: 0;
+    padding: 0.4em 0 0.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    @media (max-width: $on-small) {
+        top: 70px;
+    }
+}
+
 .gallery-item {
     margin: 0;
     padding: 0;
