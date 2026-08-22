@@ -150,9 +150,9 @@ Settings → Developer settings → OAuth Apps → New OAuth App:
 
 #### 2. Google Apps Script webapp
 1. Ga naar <https://script.google.com> → *Nieuw project*.
-2. Vervang de inhoud van `Code.gs` met de inhoud van [`docs/gas-oauth/Code.gs`](docs/gas-oauth/Code.gs) uit dit repository.
+2. Vervang de inhoud van `Code.gs` met de inhoud van [`_docs/gas-oauth/Code.gs`](_docs/gas-oauth/Code.gs) uit dit repository.
 3. Voeg een HTML-bestand toe genaamd `config.html` (Insert → HTML file) met de inhoud van
-   [`docs/gas-oauth/config.html`](docs/gas-oauth/config.html), waar je de placeholders vervangt door de
+   [`_docs/gas-oauth/config.html`](_docs/gas-oauth/config.html), waar je de placeholders vervangt door de
    echte *Client ID* en *Client Secret* van de GitHub OAuth App.
 4. *Deploy* → *New deployment* → type *Web app*:
    - *Execute as*: **Me**
