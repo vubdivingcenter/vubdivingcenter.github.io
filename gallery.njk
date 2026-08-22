@@ -19,27 +19,42 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
     <div class="gallery">
         {%- for photo in photos | reverse -%}   
             <figure id="figure-{{ photo.uid }}" class="gallery-item">
-                <a href="#lightbox-{{ photo.uid }}">       
+                <a href="#lightbox-{{ photo.uid }}">
                     <picture>
-                        <img 
-                            alt="{{ photo.uid }}" 
-                            referrerpolicy="no-referrer" 
-                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
-                            data-src="{{ photo.url }}" 
+                        <img
+                            alt="{{ photo.uid }}"
+                            referrerpolicy="no-referrer"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                            data-src="{{ photo.url }}"
                             class="gallery-img lazy"
                         >
-                    </picture>  
+                    </picture>
+                    {%- if photo.type == 'video' %}
+                    <span class="video-badge" role="img" aria-label="Video"></span>
+                    {%- endif %}
                 </a>
             </figure>
         {%- endfor -%}
     </div>
     {% for photo in photos %}
+        {%- if photo.type == 'video' %}
+    <div class="lightbox" id="lightbox-{{ photo.uid }}">
+        <div class="imgcontent videocontent">
+            {%- if photo.videoUrl %}
+            <video class="gallery-video" controls preload="none" referrerpolicy="no-referrer" poster="{{ photo.url }}" src="{{ photo.videoUrl }}"></video>
+            {%- endif %}
+            <a class="video-fallback" href="{{ photo.itemUrl }}" target="_blank" rel="noopener">Bekijk in Google Photos</a>
+            <a class="close" href="#figure-{{ photo.uid }}"></a>
+        </div>
+    </div>
+        {%- else %}
     <div class="lightbox" id="lightbox-{{ photo.uid }}">
         <div class="imgcontent">
             <img alt="{{ photo.uid }}" referrerpolicy="no-referrer" src="#" data-src="{{ photo.url }}=w{{ photo.width }}-h{{ photo.height }}"/>
             <a class="close" href="#figure-{{ photo.uid }}"></a>
         </div>
     </div>
+        {%- endif %}
     {% endfor %}
 {% endfor %}
 
@@ -79,7 +94,9 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
     function lazyFetch() {
         if (window.location.hash.indexOf("lightbox") !== -1) {
             const img = document.querySelector(`${window.location.hash} img`);
-            img.src = img.getAttribute("data-src");
+            if (img) {
+                img.src = img.getAttribute("data-src");
+            }
         }
     }
 </script>
