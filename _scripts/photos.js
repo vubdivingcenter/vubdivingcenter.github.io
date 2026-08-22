@@ -6,19 +6,42 @@ const USER_AGENT = {
     'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'
 };
 
+async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Fetches a URL as text with a few retries. Returns null on final failure.
+ */
 async function fetchText(url, tries = 4) {
-    let lastError;
     for (let i = 0; i < tries; i++) {
         try {
-            const res = await fetch(url, { headers: USER_AGENT });
+            const res = await fetch(url, { headers: USER_AGENT, redirect: 'follow' });
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             return await res.text();
         } catch (error) {
-            lastError = error;
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            await sleep(1000);
         }
     }
-    throw lastError;
+    return null;
+}
+
+/**
+ * Fetches the shared album once, following redirects so short share links
+ * (e.g. photos.app.goo.gl/...) resolve to the canonical photos.google.com URL
+ * that carries the full album id and access key. Returns { canonicalUrl, html }.
+ */
+async function resolveAlbum(albumUrl, tries = 4) {
+    for (let i = 0; i < tries; i++) {
+        try {
+            const res = await fetch(albumUrl, { headers: USER_AGENT, redirect: 'follow' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return { canonicalUrl: res.url, html: await res.text() };
+        } catch (error) {
+            await sleep(1000);
+        }
+    }
+    return { canonicalUrl: albumUrl, html: null };
 }
 
 /**
@@ -47,13 +70,14 @@ function itemUrl(albumUrl, uid) {
  * for a video and provides no type flag. In the raw album data, video items carry a
  * `76647426` metadata block that photos do not have, which we use to detect them.
  */
-async function detectVideoUids(albumUrl) {
-    const html = await fetchText(albumUrl);
+function parseVideoUids(html) {
+    const videoUids = new Set();
+    if (!html) return videoUids;
     const re = /(?<=AF_initDataCallback\()(?=.*data)(\{[\s\S]*?)(\);<\/script>)/g;
     const match = [...html.matchAll(re)].reduce((a, b) => (a.length > b[1].length ? a : b[1]), '');
+    if (!match) return videoUids;
     const data = json5.parse(match);
     const items = data?.data?.[1];
-    const videoUids = new Set();
     if (Array.isArray(items)) {
         for (const item of items) {
             if (!Array.isArray(item) || typeof item[0] !== 'string') continue;
@@ -73,14 +97,10 @@ async function detectVideoUids(albumUrl) {
  * should always keep the stable item page URL as a fallback.
  */
 async function getVideoStreamUrl(albumUrl, uid) {
-    try {
-        const html = await fetchText(itemUrl(albumUrl, uid));
-        const match = html.match(/https:\/\/video-downloads\.googleusercontent\.com\/[A-Za-z0-9_\-]+/);
-        return match ? match[0] : undefined;
-    } catch (error) {
-        console.warn(`Could not resolve video stream for ${uid}: ${error.message}`);
-        return undefined;
-    }
+    const html = await fetchText(itemUrl(albumUrl, uid));
+    if (!html) return undefined;
+    const match = html.match(/https:\/\/video-downloads\.googleusercontent\.com\/[A-Za-z0-9_\-]+/);
+    return match ? match[0] : undefined;
 }
 
 export async function fetchPhotos(el) {
@@ -93,15 +113,13 @@ export async function fetchPhotos(el) {
         const urls = await GooglePhotosAlbum.fetchImageUrls(albumUrl);
         console.log(`Fetched ${urls.length} photos from Google Photos album.`);
 
-        // Detect which items are videos so we can render a player instead of a still image.
-        let videoUids = new Set();
-        try {
-            videoUids = await detectVideoUids(albumUrl);
-            if (videoUids.size > 0) {
-                console.log(`Detected ${videoUids.size} video(s) in album.`);
-            }
-        } catch (error) {
-            console.warn(`Video detection failed: ${error.message}`);
+        // Resolve the album to its canonical URL (follows redirects for short share
+        // links) and detect which items are videos. Item/stream URLs are built from
+        // the canonical URL so they always carry the full album id and access key.
+        const { canonicalUrl, html } = await resolveAlbum(albumUrl);
+        const videoUids = parseVideoUids(html);
+        if (videoUids.size > 0) {
+            console.log(`Detected ${videoUids.size} video(s) in album.`);
         }
 
         // Filter by uid
@@ -110,11 +128,11 @@ export async function fetchPhotos(el) {
 
         const photos = await Promise.all(filteredUrls.map(async photo => {
             const type = videoUids.has(photo.uid) ? 'video' : 'photo';
-            const videoUrl = type === 'video' ? await getVideoStreamUrl(albumUrl, photo.uid) : undefined;
+            const videoUrl = type === 'video' ? await getVideoStreamUrl(canonicalUrl, photo.uid) : undefined;
             return {
                 aspect: photo.width / photo.height,
                 type,
-                itemUrl: itemUrl(albumUrl, photo.uid),
+                itemUrl: itemUrl(canonicalUrl, photo.uid),
                 videoUrl,
                 ...photo
             };
