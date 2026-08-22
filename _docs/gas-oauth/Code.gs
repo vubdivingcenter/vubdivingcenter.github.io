@@ -11,10 +11,15 @@ let pkce_client_endpoint = PropertiesService.getScriptProperties().getProperty('
 
 const cache = CacheService.getScriptCache()
 
+// Use the /a/~/ form of the web app URL. Plain /macros/s/ URLs get rewritten to
+// /macros/u/N/s/ by Google for browsers signed into multiple Google accounts, which
+// 404s ("The file can't be opened right now"). The /a/~/ form bypasses that rewrite.
+let web_app_url = ScriptApp.getService().getUrl().replace('://script.google.com/', '://script.google.com/a/~/')
+
 let auth_config = {
     client_id: github_client_id,
     client_secret : github_client_secret,
-    redirect_uri: ScriptApp.getService().getUrl(),
+    redirect_uri: web_app_url,
     authorization_endpoint: "https://github.com/login/oauth/authorize",
     token_endpoint: "https://github.com/login/oauth/access_token"
 }

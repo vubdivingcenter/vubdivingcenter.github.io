@@ -142,29 +142,42 @@ De login-volgordening:
 
 ### Eénmalige setup
 
+#### 0. Het `/a/~`-web app-URL
+Google herschrijft gewone web app-URLs (`script.google.com/macros/s/...`) naar `script.google.com/macros/u/N/s/...`
+als de browser met meerdere Google-accounts is ingelogd; die URL geeft een 404
+("Kan het bestand momenteel niet openen"). Daarom wordt overal de `/a/~`-variant gebruikt, die die herschrijving
+omzeilt. Van het web app-URL dat Google toont
+(`https://script.google.com/macros/s/.../exec`) maak je:
+
+```
+https://script.google.com/a/~/macros/s/.../exec
+```
+
+(dus `/a/~` invoegen na `script.google.com`). Dit is het URL dat hieronder overal bedoeld wordt.
+
 #### 1. GitHub OAuth App
 Settings → Developer settings → OAuth Apps → New OAuth App:
 - *Application name*: bv. `VDC CMS`
-- *Authorization callback URL*: het web app-URL uit stap 2 hieronder
-  (bv. `https://script.google.com/macros/s/.../exec`) — exact kopiëren.
+- *Authorization callback URL*: het `/a/~`-web app-URL uit stap 2 hieronder — exact kopiëren.
 
 #### 2. Google Apps Script webapp
 1. Ga naar <https://script.google.com> → *Nieuw project*.
 2. Vervang de inhoud van `Code.gs` met de inhoud van [`_docs/gas-oauth/Code.gs`](_docs/gas-oauth/Code.gs) uit dit repository.
+   (Die code gebruikt zelf al het `/a/~`-URL voor de `redirect_uri` naar GitHub.)
 3. Voeg een HTML-bestand toe genaamd `config.html` (Insert → HTML file) met de inhoud van
    [`_docs/gas-oauth/config.html`](_docs/gas-oauth/config.html), waar je de placeholders vervangt door de
    echte *Client ID* en *Client Secret* van de GitHub OAuth App.
 4. *Deploy* → *New deployment* → type *Web app*:
    - *Execute as*: **Me**
    - *Who has access*: **Anyone**
-5. Kopieer het *web app URL* (`https://script.google.com/macros/s/.../exec`).
+5. Kopieer het *web app URL* en zet het om naar de `/a/~`-variant (stap 0).
 
 > **Belangrijk:** vul dit bestand met het echte secret uitsluitend in het Apps Script-project.
 > Commit een `config.html` met het echte secret nooit naar dit repository.
 
 #### 3. Koppelen
-1. Zet in de GitHub OAuth App de *Authorization callback URL* op het web app-URL uit stap 2.5.
-2. Zet in [`admin/client.html`](admin/client.html) de variabele `apps_script_url` op hetzelfde web app-URL en commit.
+1. Zet in de GitHub OAuth App de *Authorization callback URL* op het `/a/~`-web app-URL uit stap 2.5.
+2. Zet in [`admin/client.html`](admin/client.html) de variabele `apps_script_url` op hetzelfde `/a/~`-web app-URL en commit.
    De CI deployt de website automatisch.
 
 > Worden `Code.gs` of `config.html` later aangepast in het Apps Script-project, dan moet je bij
