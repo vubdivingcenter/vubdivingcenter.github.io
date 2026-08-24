@@ -32,7 +32,16 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
     @media (max-width: $on-small) {
-        top: 70px;
+        // The mobile header is 70px but the logo badge overhangs it to y=90px,
+        // so pin below that instead of the header edge.
+        top: 90px;
+    }
+
+    @media (max-width: calc($on-small / 2)) {
+        // Full-bleed to the viewport edge, matching the gallery images (which use
+        // the same -20px margins at this breakpoint).
+        margin-left: -20px;
+        margin-right: -20px;
     }
 }
 
