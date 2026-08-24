@@ -18,9 +18,13 @@
     }
 }
 
-.year-title {
+// Scoped under .typography to out-specificity `.typography h2 { position: relative }`,
+// which otherwise overrides the sticky position and turns `top` into a relative offset.
+.typography .year-title {
     position: sticky;
     top: 85px;
+    left: 0;
+    right: 0;
     z-index: 100;
     background-color: #fff;
     margin: 0;

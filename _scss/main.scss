@@ -47,7 +47,10 @@ div.page-wrapper {
 }
 
 .main {
-  overflow-x: auto;
+  // Must stay `visible`: any non-visible overflow value turns .main into a scroll
+  // container, which breaks `position: sticky` for the gallery year headings
+  // (they would pin to .main instead of the viewport). Wide content is 100% width.
+  overflow: visible;
 }
 
 .content {
