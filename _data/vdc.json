@@ -1,5 +1,5 @@
 {
-    "inschrijvingenOpen": true,
+    "inschrijvingenOpen": false,
     "lidjaar": {
         "start": "2025",
         "einde": "2026"
@@ -11,7 +11,7 @@
         "date": "09/2025"
     },
     "initiatieles": {
-        "datum": "2025-10-17",
+        "datum": "Te bepalen",
         "uur": "19u30"
     }
 }

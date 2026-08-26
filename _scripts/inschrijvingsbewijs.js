@@ -59,30 +59,37 @@ function parseDatum(date) {
 
 function usage() {
     console.log(`Gebruik:
-node _scripts/inschrijvingsbewijs.js --date <datum> --price <prijs> --event <naam> --place <plaats> --paid-date <betalingsdatum> [--name <naam>]
+node _scripts/inschrijvingsbewijs.js --date <datum> --price <prijs> --event <naam> --paid-date <betalingsdatum> [--name <naam>] [--date-text <datumtekst>] [--event-place <plaats>] [--place <plaats>]
 
 Opties:
-  --date       Datum van het evenement (bijv. 2026-08-21 of 21/08/2026)
-  --price      Prijs van het evenement in euro (bijv. 45)
-  --event      Naam van het evenement (bijv. Cluiplein 2026)
-  --place      Plaats voor de handtekening van de secretaris (bijv. Brussel)
-  --paid-date  Datum van betaling (bijv. 2026-08-21 of 21/08/2026)
-  --name       (optioneel) Naam van de ingeschreven lid
+  --date         Datum van het evenement (bijv. 2026-08-21 of 21/08/2026)
+  --date-text    (optioneel) Vrije datumweergave, override voor --date (bijv. 4-6 september 2026)
+  --price        Prijs van het evenement in euro (bijv. 45)
+  --event        Naam van het evenement (bijv. Cluiplein 2026)
+  --event-place  (optioneel) Plaats van het evenement (bijv. Renesse, Nederland)
+  --place        (optioneel) Plaats voor de ondertekening, standaard Oudergem, Brussel
+  --paid-date    Datum van betaling (bijv. 2026-08-21 of 21/08/2026)
+  --name         (optioneel) Naam van de ingeschreven lid
 `);
 }
 
 async function generateInschrijvingsbewijs(args) {
     const { date, price, event, place, name } = args;
     const paidDate = args['paid-date'];
-    if (!date || !price || !event || !place || !paidDate) {
+    const dateText = args['date-text'];
+    const eventPlace = args['event-place'];
+    if ((!date && !dateText) || !price || !event || !paidDate) {
         usage();
         process.exit(1);
     }
 
-    const datum = parseDatum(date);
+    let datum = dateText;
     if (!datum) {
-        console.error(`Ongeldige datum: ${date}`);
-        process.exit(1);
+        datum = parseDatum(date);
+        if (!datum) {
+            console.error(`Ongeldige datum: ${date}`);
+            process.exit(1);
+        }
     }
     const betalingsdatum = parseDatum(paidDate);
     if (!betalingsdatum) {
@@ -98,19 +105,23 @@ async function generateInschrijvingsbewijs(args) {
     }
 
     const sanitizedEvent = event.replace(/[^a-zA-Z0-9]/g, '');
-    const fileName = `VDC_Inschrijvingsbewijs_${sanitizedEvent}_${datum.replaceAll('/', '-')}`;
+    const sanitizedDatum = dateText ? datum.replace(/[^a-zA-Z0-9]+/g, '_') : datum.replaceAll('/', '-');
+    const fileName = `VDC_Inschrijvingsbewijs_${sanitizedEvent}_${sanitizedDatum}`;
 
     const prijsFormatted = prijs.toLocaleString('nl-BE');
     console.log(`Genereren inschrijvingsbewijs voor "${event}" op ${datum} (${prijsFormatted} EUR)...`);
+    const tekeningsdatum = DateTime.now().toFormat('dd/MM/yyyy');
     const html = ejs.render(template, {
         fileName,
         logo: getLogo(),
         naam: name,
         evenement: event,
         datum,
+        plaatsEvenement: eventPlace,
         prijsFormatted,
         betalingsdatum,
-        plaats: place,
+        plaats: place || 'Oudergem, Brussel',
+        tekeningsdatum,
     });
     const outputPath = path.join(outputDir, `${fileName}.html`);
     fs.writeFileSync(outputPath, html, 'utf8');

@@ -121,6 +121,48 @@ Documenten kan men toevoegen of aanpassen in het bestand "/documents/documents.j
 ]
 ```
 
+## Inschrijvingsbewijs
+Een inschrijvingsbewijs voor een clubevenement wordt gegenereerd met het script `_scripts/inschrijvingsbewijs.js`.
+Het script rendert de template `_templates/inschrijvingsbewijs.ejs` en schrijft het resultaat als HTML en PDF
+naar de directory `_output`.
+
+```bash
+node _scripts/inschrijvingsbewijs.js --date <datum> --price <prijs> --event <naam> --paid-date <betalingsdatum> [--name <naam>] [--date-text <datumtekst>] [--event-place <plaats>] [--place <plaats>]
+```
+
+| Optie | Verplicht | Omschrijving |
+|---|---|---|
+| `--date` | ja* | Datum van het evenement (bijv. `2026-08-21` of `21/08/2026`) |
+| `--price` | ja | Prijs van het evenement in euro (bijv. `45` of `45,50`) |
+| `--event` | ja | Naam van het evenement (bijv. `Duikweekend September`) |
+| `--paid-date` | ja | Datum van betaling (bijv. `2026-08-14` of `14/08/2026`) |
+| `--name` | nee | Naam van de ingeschreven lid |
+| `--date-text` | nee | Vrije datumweergave, override voor `--date` (bijv. `4-6 september 2026`) |
+| `--event-place` | nee | Plaats van het evenement (bijv. `Renesse, Nederland`) |
+| `--place` | nee | Plaats voor de ondertekening, standaard `Oudergem, Brussel` |
+
+\* `--date` is niet verplicht als `--date-text` wordt gebruikt.
+
+### Voorbeeld
+
+```bash
+node _scripts/inschrijvingsbewijs.js \
+    --name "Maxim Van de Wynckel" \
+    --event "Duikweekend September" \
+    --date-text "4-6 september 2026" \
+    --event-place "Renesse, Nederland" \
+    --price 185 \
+    --paid-date 2026-08-14
+```
+
+Dit genereert in `_output` de bestanden `VDC_Inschrijvingsbewijs_DuikweekendSeptember_4_6_september_2026.html`
+en `VDC_Inschrijvingsbewijs_DuikweekendSeptember_4_6_september_2026.pdf`, met onder andere:
+
+- de naam van de ingeschreven lid
+- het evenement, de datum en de plaats (Rennesse, Nederland)
+- het bedrag (185 EUR) en de betalingsdatum (14/08/2026) op rekeningnummer BE25 7330 3034 6882
+- de ondertekening door het Raad van Bestuur te Oudergem, Brussel met de datum van generatie
+
 ## Redactiesysteem (Decap CMS)
 Niet-technische redacteurs kunnen de website bewerken via [Decap CMS](https://decapcms.org), bereikbaar op
 [https://www.vubdivingcenter.be/admin/](https://www.vubdivingcenter.be/admin/). Deze pagina is bewust niet gelinkt

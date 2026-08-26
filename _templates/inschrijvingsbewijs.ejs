@@ -96,7 +96,10 @@ table.bewijs-table td.label {
     <hr>
     <h2 style="text-align:center;">Inschrijvingsbewijs clubevenement</h2>
     <p>
-        Dit bewijst dat
+        Het V.U.B. Diving Center VZW (VDC) is een duikvereniging die de sporttak duiken uitvoert. De club organiseert voor haar leden onder andere clubtrainingen, duikweekends en andere clubevenementen, zowel in het zwembad als in open water. Sommige clubevenementen zitten niet mee inbegrepen in het lidgeld. Dit document bewijst de betaling en inschrijving voor een clubevenement binnen de duiksport en is geen bewijs van verzekering of medische keuring.
+    </p>
+    <p>
+        Dit document bewijst dat
     </p>
     <p style="font-size:14pt;">
         <b><%= naam || '…………………………………………………………' %></b>
@@ -113,6 +116,12 @@ table.bewijs-table td.label {
             <td class="label">Datum:</td>
             <td><%= datum %></td>
         </tr>
+        <% if (plaatsEvenement) { %>
+        <tr>
+            <td class="label">Plaats:</td>
+            <td><%= plaatsEvenement %></td>
+        </tr>
+        <% } %>
         <tr>
             <td class="label">Prijs:</td>
             <td><%= prijsFormatted %> EUR</td>
@@ -124,14 +133,13 @@ table.bewijs-table td.label {
     </table>
 
     <p>
-        Het bovenstaande bedrag is op <%= betalingsdatum %> betaald. De betaling volstaat voor de deelname aan het evenement.
+        Het bovenstaande bedrag is op <%= betalingsdatum %> betaald op rekeningnummer BE25 7330 3034 6882. De betaling volstaat voor de deelname aan het evenement.
     </p>
 
     <div class="signature-area">
-        <p><%= plaats %>, <%= betalingsdatum %></p>
+        <p><%= plaats %>, <%= tekeningsdatum %></p>
         <p>Het V.U.B. Diving Center VZW,<br>
-        De secretaris,</p>
-        <div class="signature-line"></div>
+        Raad van Bestuur</p>
     </div>
 </div>
 </body>
