@@ -170,6 +170,7 @@ export default function (el) {
   });
 
   el.setBrowserSyncConfig({
+    hostname: '0.0.0.0',
     callbacks: {
       ready: function (_, browserSync) {
         const content_404 = fs.readFileSync('_site/404.html');

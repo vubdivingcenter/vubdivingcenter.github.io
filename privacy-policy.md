@@ -4,7 +4,7 @@ title: Privacybeleid
 eleventyExcludeFromCollections: false
 ---
 
-### Algemeen
+## Algemeen
 
 VUB Diving Center vzw hecht veel waarde aan de bescherming van jouw persoonsgegevens (en dat jouw privacy wordt gerespecteerd).
 
@@ -27,7 +27,7 @@ Triomflaan 40
 
 **Raad van Bestuur:** [info@vubdivingcenter.be](mailto:info@vubdivingcenter.be)  
 
-### Waarom verwerken wij welke persoonsgegevens?
+## Waarom verwerken wij welke persoonsgegevens?
 
 Jouw persoonsgegevens worden door VUB Diving Center vzw verwerkt ten behoeve van de volgende doeleinden (telkens met vermelding van de rechtsgronden), waaronder:
 
@@ -44,7 +44,7 @@ Jouw persoonsgegevens worden door VUB Diving Center vzw verwerkt ten behoeve van
     *   Het beheren van de clubwebsite (gerechtvaardigd belang)
 *   Het bekomen van subsidiëring door de overheid (wettelijke verplichting / gerechtvaardigd belang)
 
-### Welke gegevens verwerken we?
+## Welke gegevens verwerken we?
 
 Voor de bovenstaande doelstellingen kunnen wij de volgende persoonsgegevens van jou vragen, verwerken en bewaren:
 
@@ -57,7 +57,7 @@ Voor de bovenstaande doelstellingen kunnen wij de volgende persoonsgegevens van 
 
 We verzamelen enkel persoonsgegevens die jij zelf aan ons meedeelt op verschillende manieren (o.a. inschrijvingsformulieren, invul- en contactformulieren op onze website, persoonlijk/telefonisch/e-mail contact, ...).
 
-### Verstrekking aan derden – verwerkers
+## Verstrekking aan derden – verwerkers
 
 De gegevens die jij aan ons geeft, kunnen wij aan derde partijen verstrekken indien dit noodzakelijk is voor de uitvoering van de hierboven beschreven doeleinden.
 
@@ -72,13 +72,13 @@ Wij geven geen persoonsgegevens door aan andere verwerkers (externe dienstverlen
 
 Verder zullen wij de door jou verstrekte gegevens niet aan derden doorgeven, tenzij dit wettelijk verplicht en toegestaan is, of wij hier een gerechtvaardigd belang voor hebben.
 
-### Bewaartermijn
+## Bewaartermijn
 
 VUB Diving Center vzw bewaart persoonsgegevens niet langer dan noodzakelijk voor het realiseren van het doel waarvoor deze zijn verstrekt, met inachtname van de termijn die noodzakelijk is om aan de wettelijke vereisten te voldoen (o.a. op gebied van boekhouding).
 
 Uitzonderingen hierop zijn e-mail gegevens dewelke we blijven bewaren in ons systeem om de mailinglijsten te beheren, alsook informatie betreffende uitgegeven certificaten.
 
-### Beveiliging van gegevens
+## Beveiliging van gegevens
 
 Wij hebben passende technische en organisatorische maatregelen genomen om jouw persoonsgegevens te beveiligen en de vertrouwelijkheid ervan te waarborgen. Waaronder maatregelen die de gegevens beschermen tegen inbreuken, verlies en onrechtmatige verwerking. Zo hebben we bijvoorbeeld de volgende maatregelen genomen:
 
@@ -87,7 +87,7 @@ Wij hebben passende technische en organisatorische maatregelen genomen om jouw p
 *   We zorgen voor transparante encryptie van persoonsgegevens als daar aanleiding toe is;
 *   Wij maken back-ups van de persoonsgegevens om deze te kunnen herstellen bij fysieke of technische incidenten.
 
-### Jouw rechten omtrent jouw gegevens
+## Jouw rechten omtrent jouw gegevens
 
 Je hebt recht op inzage en kopie van de persoonsgegevens die op jou betrekking hebben. Je hebt recht op correctie en aanvulling wanneer jouw gegevens onjuist of onvolledig zijn.
 
@@ -101,13 +101,13 @@ Je kunt de persoonsgegevens die je ons hebt verstrekt en die wij geautomatiseerd
 
 Voor de verwerking van persoonsgegevens die wij op basis van jouw toestemming hebben verkregen, kan je jouw toestemming om het even wanneer intrekken. De verwerking van deze gegevens vóór de intrekking van de toestemming blijft geldig.
 
-### Klachten
+## Klachten
 
 Mocht je een klacht hebben over de verwerking van jouw persoonsgegevens of over de uitoefening van jouw rechten dan vragen wij je hierover direct contact met ons op te nemen.
 
 Je hebt altijd het recht een klacht in te dienen bij de Gegevensbeschermingsautoriteit ( Privacy Commissie), dit is de toezichthoudende autoriteit op het gebied van privacy bescherming, of om een procedure in rechte aan te spannen.
 
-### Wijziging privacy statement
+## Wijziging privacy statement
 
 VUB Diving Center vzw kan zijn privacy statement wijzigen. Van deze wijziging zullen we een aankondiging doen op onze website en via de mailinglijst.
 

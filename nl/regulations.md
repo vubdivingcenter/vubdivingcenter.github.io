@@ -10,7 +10,7 @@ eleventyNavigation:
 
 Deze pagina is ook beschikbaar in het <a href="/en/regulations">Engels</a>.
 
-### Uittreksel uit het reglement: Open water duiken
+## Uittreksel uit het reglement: Open water duiken
 
 1. In open water wordt er gedoken in groepjes van minimum twee personen. Volgende personen mogen deelnemen aan duiken
 in open water:\

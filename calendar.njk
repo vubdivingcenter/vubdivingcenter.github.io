@@ -21,7 +21,7 @@ eleventyNavigation:
 	<button class="btn btn-grey dropdown-toggle" type="button" id="calendarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="fa fa-solid fa-calendar"></i> Importeer kalender
 	</button>
-	<div class="dropdown-menu" aria-labelledby="calendarDropdown">
+	<div class="dropdown-menu">
 		<a class="dropdown-item" target="_blank" href="https://www.google.com/calendar/render?cid={{ calendar | urlencode }}"><i class="fa fa-brands fa-google"></i> Google Calendar</a>
 		<a class="dropdown-item" target="_blank" href="https://outlook.live.com/owa/?path=/calendar/action/compose&rru=addsubscription&name=VDC%20Calendar&url={{ calendar | urlencode }}"><i class="fa fa-brands fa-microsoft"></i> Outlook</a>
 		<a class="dropdown-item" target="_blank" href="https://outlook.office.com/owa/?path=/calendar/action/compose&rru=addsubscription&name=VDC%20Calendar&url={{ calendar | urlencode }}"><i class="fa fa-brands fa-microsoft"></i> Office 365</a>

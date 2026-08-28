@@ -14,12 +14,12 @@
       {% include "header.njk" %}
       {% include "sidebar.njk" %}
 
-      <section class="content" id="content">
+      <div class="content" id="content">
         {% if subtitle and not header_large %}
         <h2 class="subtitle">{{ subtitle }}</h2>
         {% endif %}
         {{ content | safe }}
-      </section>
+      </div>
 
       {% include "footer.njk" %}
     </div>

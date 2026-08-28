@@ -42,7 +42,7 @@ Gelieve het <a href="/privacy-policy" target="_blank">privacybeleid</a> te raadp
     <div class="lightbox" id="lightbox-{{ photo.uid }}">
         <div class="imgcontent videocontent">
             {%- if photo.videoUrl %}
-            <video class="gallery-video" controls preload="none" referrerpolicy="no-referrer" poster="{{ photo.url }}" src="{{ photo.videoUrl }}"></video>
+            <video class="gallery-video" controls preload="none" poster="{{ photo.url }}" src="{{ photo.videoUrl }}"></video>
             {%- endif %}
             <a class="video-fallback" href="{{ photo.itemUrl }}" target="_blank" rel="noopener">Bekijk in Google Photos</a>
             <a class="close" href="#figure-{{ photo.uid }}"></a>

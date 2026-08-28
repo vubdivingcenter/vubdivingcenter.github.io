@@ -3,6 +3,10 @@ import path from 'path';
 import { DateTime } from 'luxon';
 import ejs from 'ejs';
 import puppeteer from 'puppeteer';
+import dotenv from 'dotenv';
+import { signPdf } from './pdf-sign.js';
+
+dotenv.config();
 
 const templatePath = path.resolve(process.cwd(), '_templates', 'inschrijvingsbewijs.ejs');
 const template = fs.readFileSync(templatePath, 'utf8');
@@ -70,6 +74,16 @@ Opties:
   --place        (optioneel) Plaats voor de ondertekening, standaard Oudergem, Brussel
   --paid-date    Datum van betaling (bijv. 2026-08-21 of 21/08/2026)
   --name         (optioneel) Naam van de ingeschreven lid
+  --cert         (optioneel) Pad naar het PEM-signeer-certificaat,
+                   anders de omgevingvariabele VDC_SIGNING_CERT,
+                   anders _scripts/certs/vdc-signing.crt
+  --key          (optioneel) Pad naar de PEM-private key,
+                   anders de omgevingvariabele VDC_SIGNING_KEY,
+                   anders _scripts/certs/vdc-signing.key
+  --sign         (optioneel) PDF digitaal ondertekenen met een PAdES-handtekening
+
+De PDF wordt standaard niet ondertekend en wordt opgeslagen als
+VDC_Inschrijvingsbewijs_<datum van vandaag>_<naam>.pdf in _output.
 `);
 }
 
@@ -104,9 +118,9 @@ async function generateInschrijvingsbewijs(args) {
         process.exit(1);
     }
 
-    const sanitizedEvent = event.replace(/[^a-zA-Z0-9]/g, '');
-    const sanitizedDatum = dateText ? datum.replace(/[^a-zA-Z0-9]+/g, '_') : datum.replaceAll('/', '-');
-    const fileName = `VDC_Inschrijvingsbewijs_${sanitizedEvent}_${sanitizedDatum}`;
+    const vandaag = DateTime.now().toFormat('yyyy-MM-dd');
+    const naamBestandsnaam = (name || 'naamloos').replace(/[^a-zA-Z0-9]+/g, '_');
+    const fileName = `VDC_Inschrijvingsbewijs_${vandaag}_${naamBestandsnaam}`;
 
     const prijsFormatted = prijs.toLocaleString('nl-BE');
     console.log(`Genereren inschrijvingsbewijs voor "${event}" op ${datum} (${prijsFormatted} EUR)...`);
@@ -134,6 +148,29 @@ async function generateInschrijvingsbewijs(args) {
     await page.setContent(html, { waitUntil: 'networkidle0' });
     await page.pdf({ path: pdfPath, format: 'A4', printBackground: true });
     await browser.close();
+
+    if (args.sign) {
+        const certPath = path.resolve(process.cwd(),
+            args.cert || process.env.VDC_SIGNING_CERT || '_scripts/certs/vdc-signing.crt');
+        const keyPath = path.resolve(process.cwd(),
+            args.key || process.env.VDC_SIGNING_KEY || '_scripts/certs/vdc-signing.key');
+        if (!fs.existsSync(certPath) || !fs.existsSync(keyPath)) {
+            throw new Error(
+                `Signeer-certificaat of key niet gevonden (${certPath}, ${keyPath}). ` +
+                'Zie de README voor de opstelling van het signeer-certificaat.'
+            );
+        }
+        const ongetekend = fs.readFileSync(pdfPath);
+        const ondertekend = await signPdf(ongetekend, {
+            certPem: fs.readFileSync(certPath, 'utf8'),
+            keyPem: fs.readFileSync(keyPath, 'utf8'),
+            location: place || 'Oudergem, Brussel',
+            reason: `Inschrijvingsbewijs ${event}`,
+        });
+        fs.writeFileSync(pdfPath, ondertekend);
+        console.log('PDF digitaal ondertekend (PAdES, adbe.pkcs7.detached).');
+    }
+
     console.log(`Inschrijvingsbewijs opgeslagen als ${fileName}.html en ${fileName}.pdf`);
 }
 

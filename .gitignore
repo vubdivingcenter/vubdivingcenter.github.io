@@ -4,3 +4,6 @@ _site
 tmp*/
 .cache/
 _output
+# Digitale handtekening: de private key mag nooit naar het repository
+# (het publieke certificaat wél: dat wordt openbaar beschikbaar gesteld)
+_scripts/certs/*.key

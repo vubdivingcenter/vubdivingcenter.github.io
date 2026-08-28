@@ -4,7 +4,7 @@
   </div>
 </div>
 <nav class="navigation">
-  <h3>Recente berichten</h3>
+  <h2 class="menu-title">Recente berichten</h2>
   <ul>
     {% for post in collections.posts | reverse | head(5) %}
       <li {% if page.url == post.url %}class="selected"{% endif %}>

@@ -124,10 +124,14 @@ Documenten kan men toevoegen of aanpassen in het bestand "/documents/documents.j
 ## Inschrijvingsbewijs
 Een inschrijvingsbewijs voor een clubevenement wordt gegenereerd met het script `_scripts/inschrijvingsbewijs.js`.
 Het script rendert de template `_templates/inschrijvingsbewijs.ejs` en schrijft het resultaat als HTML en PDF
-naar de directory `_output`.
+naar de directory `_output`. De PDF wordt standaard niet ondertekend; met de optie `--sign` krijgt de PDF
+een PAdES-digitale handtekening zodat de ondertekening cryptografisch geverifieerd kan worden.
+
+De bestandsnaam is `VDC_Inschrijvingsbewijs_<datum van vandaag>_<naam>` (bijv.
+`VDC_Inschrijvingsbewijs_2026-08-28_Maxim_Van_de_Wynckel.pdf`). Zonder `--name` wordt `naamloos` gebruikt.
 
 ```bash
-node _scripts/inschrijvingsbewijs.js --date <datum> --price <prijs> --event <naam> --paid-date <betalingsdatum> [--name <naam>] [--date-text <datumtekst>] [--event-place <plaats>] [--place <plaats>]
+node _scripts/inschrijvingsbewijs.js --date <datum> --price <prijs> --event <naam> --paid-date <betalingsdatum> [--name <naam>] [--date-text <datumtekst>] [--event-place <plaats>] [--place <plaats>] [--sign] [--cert <pad>] [--key <pad>]
 ```
 
 | Optie | Verplicht | Omschrijving |
@@ -140,6 +144,9 @@ node _scripts/inschrijvingsbewijs.js --date <datum> --price <prijs> --event <naa
 | `--date-text` | nee | Vrije datumweergave, override voor `--date` (bijv. `4-6 september 2026`) |
 | `--event-place` | nee | Plaats van het evenement (bijv. `Renesse, Nederland`) |
 | `--place` | nee | Plaats voor de ondertekening, standaard `Oudergem, Brussel` |
+| `--sign` | nee | PDF digitaal ondertekenen met een PAdES-handtekening (standaard uit) |
+| `--cert` | nee | Pad naar het PEM-signeer-certificaat, standaard `_scripts/certs/vdc-signing.crt` |
+| `--key` | nee | Pad naar de PEM-private key, standaard `_scripts/certs/vdc-signing.key` |
 
 \* `--date` is niet verplicht als `--date-text` wordt gebruikt.
 
@@ -150,18 +157,50 @@ node _scripts/inschrijvingsbewijs.js \
     --name "Maxim Van de Wynckel" \
     --event "Duikweekend September" \
     --date-text "4-6 september 2026" \
-    --event-place "Renesse, Nederland" \
+    --event-place "Rennesse, Nederland" \
     --price 185 \
     --paid-date 2026-08-14
 ```
 
-Dit genereert in `_output` de bestanden `VDC_Inschrijvingsbewijs_DuikweekendSeptember_4_6_september_2026.html`
-en `VDC_Inschrijvingsbewijs_DuikweekendSeptember_4_6_september_2026.pdf`, met onder andere:
+Dit genereert in `_output` de bestanden `VDC_Inschrijvingsbewijs_2026-08-28_Maxim_Van_de_Wynckel.html`
+en `VDC_Inschrijvingsbewijs_2026-08-28_Maxim_Van_de_Wynckel.pdf` (de datum hangt af van de dag van generatie),
+met onder andere:
 
 - de naam van de ingeschreven lid
 - het evenement, de datum en de plaats (Rennesse, Nederland)
 - het bedrag (185 EUR) en de betalingsdatum (14/08/2026) op rekeningnummer BE25 7330 3034 6882
 - de ondertekening door het Raad van Bestuur te Oudergem, Brussel met de datum van generatie
+
+Met `--sign` krijgt de PDF bovendien een digitale PAdES-handtekening die de ondertekening en de
+ongewijzigdheid van het document garandeert.
+
+### Signeer-certificaat
+Bij `--sign` ondertekent het script met het certificaat uit de omgevingvariabelen `VDC_SIGNING_CERT` /
+`VDC_SIGNING_KEY` (of `_scripts/certs/vdc-signing.{crt,key}` als die niet zijn ingesteld). De private key
+staat in `.gitignore`; het publieke certificaat wordt openbaar beschikbaar gesteld via de Documenten-pagina.
+Genereer een zelf-ondertekend certificaat voor gebruik (10 jaar geldig):
+
+```bash
+mkdir -p _scripts/certs && openssl req -x509 -newkey rsa:2048 -sha256 -days 3650 -nodes \
+    -keyout _scripts/certs/vdc-signing.key -out _scripts/certs/vdc-signing.crt \
+    -subj "/C=BE/ST=Brussels/L=Brussel/O=V.U.B. Diving Center VZW/CN=V.U.B. Diving Center VZW - Inschrijvingsbewijzen" \
+    -addext "keyUsage=digitalSignature" -addext "extendedKeyUsage=1.3.6.1.5.5.7.3.3"
+```
+
+Voor productief gebruik is een certificaat van een erkende certificaatautomaat (bijv. via een Belgische CA)
+aan te raden; een zelf-ondertekend certificaat garandeert wel de ongewijzigdheid, maar de identiteit van de
+ondertekenaar moet dan afzonderlijk worden bevestigd.
+
+### Verificatie van de handtekening
+De handtekening van een gegenereerde PDF wordt geverifieerd met:
+
+```bash
+node _scripts/verifieer-inschrijvingsbewijs.js _output/VDC_Inschrijvingsbewijs_2026-08-28_Maxim_Van_de_Wynckel.pdf
+```
+
+Het script controleert (1) of het document niet gewijzigd is sinds het ondertekend werd (SHA-256 over het
+gesigneerde byte-bereik) en (2) of de RSA-signatuur geldig is ten opzichte van het meegeleverde certificaat.
+Exit code `0` = handtekening geldig, `1` = ongeldig of fout.
 
 ## Redactiesysteem (Decap CMS)
 Niet-technische redacteurs kunnen de website bewerken via [Decap CMS](https://decapcms.org), bereikbaar op

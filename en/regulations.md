@@ -6,7 +6,7 @@ background: https://lh3.googleusercontent.com/xM7z9iisvl1IZZEYB9l4P5EGcZpzRqTXWJ
 
 This page is also available in <a href="/nl/regulations">Dutch</a>.
 
-### Excerpt of the regulations: Open water dives
+## Excerpt of the regulations: Open water dives
 
 1. Open water dives are performed in groups of minimum 2 people. Are allowed to participate in open water dives:\
     a. Divers having successfully completed the theoretical exam and swimming pool tests of the *Initiate Diver* certificate, accompanied by a VDC instructor.\

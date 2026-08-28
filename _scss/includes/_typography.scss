@@ -40,6 +40,16 @@ body p {
     margin: 1em 0 0.5em 0;
 }
 
+.typography h2.post-title {
+    left: -3px;
+    font-size: 3em;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.typography h2.menu-title {
+    font-size: 1.5em;
+}
+
 .typography h3 {
     position: relative;
     left: -2px;
@@ -105,6 +115,10 @@ p.abstract {
     .typography h2 {
         font-size: 32px;
     }
+
+    .typography h2.post-title {
+        font-size: 35px;
+    }
     
     .typography h3 {
         font-size: 28px;
@@ -118,6 +132,10 @@ p.abstract {
     
     .typography h2 {
         font-size: 23px;
+    }
+
+    .typography h2.post-title {
+        font-size: 27px;
     }
     
     .typography h3 {
