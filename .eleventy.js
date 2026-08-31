@@ -149,6 +149,7 @@ export default function (el) {
           cover: `../${dir}/cover.png`,
           downloads: (item.data.downloads || []).map((download) => ({
             label: download.label,
+            icon: String(download.file).endsWith("-zw.pdf") ? "fa-circle-half-stroke" : "fa-file-pdf",
             url: `../${dir}/${download.file}`,
           })),
         };

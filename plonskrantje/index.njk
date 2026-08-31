@@ -15,7 +15,6 @@ eleventyNavigation:
     nieuws uit de opleiding, advies over materiaal, noodnummers, puzzels en meer.
 </p>
 
-{% for item in collections.plonskrantje %}<p>DBG {{ item.page.inputPath }} | {{ item.page.url }} | {{ item.data.titel }}</p>{% endfor %}
 <div class="plonskrantje-grid">
     {% for editie in edities %}
     <article class="plonskrantje-editie">
@@ -33,7 +32,7 @@ eleventyNavigation:
         {% if editie.downloads | length %}
         <p class="plonskrantje-downloads">
             {% for download in editie.downloads %}
-            <a href="{{ download.url }}" target="_blank" rel="noopener">{{ download.label }}</a>
+            <a href="{{ download.url }}" target="_blank" rel="noopener"><i class="fa-solid {{ download.icon }}"></i> {{ download.label }}</a>
             {% endfor %}
         </p>
         {% else %}
