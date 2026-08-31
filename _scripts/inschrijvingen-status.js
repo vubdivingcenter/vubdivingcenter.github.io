@@ -65,29 +65,33 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
     }
 }
 
-const startWeek = (() => {
-    const now = new Date();
-    const day = now.getDay();
-    // getDay(): 0 (Sunday) - 6 (Saturday)
-    // Monday is 1, so calculate difference
-    const diff = (day === 0 ? -6 : 1) - day;
-    const monday = new Date(now);
-    monday.setHours(0, 0, 0, 0);
-    monday.setDate(now.getDate() + diff);
-    return monday;
+// Het rapport betreft de week die net is afgerond (maandag t/m zondag).
+// De job draait op zondagavond (UTC), wat lokaal al maandag kan zijn,
+// dus ankeren we op de meest recente zondag: vandaag als het zondag is,
+// anders de zondag van de voorafgaande week.
+const now = (() => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    return d;
 })();
-const endWeek = new Date(startWeek);
-endWeek.setDate(startWeek.getDate() + 7); // Set to Monday of the following week (exclusive end)
-const endWeekDisplay = new Date(startWeek);
-endWeekDisplay.setDate(startWeek.getDate() + 6); // Sunday, for display only
+const endWeekDisplay = new Date(now);
+if (now.getDay() !== 0) {
+    endWeekDisplay.setDate(now.getDate() - now.getDay()); // meest recente zondag
+}
+const startWeek = new Date(endWeekDisplay);
+startWeek.setDate(endWeekDisplay.getDate() - 6); // maandag
+const endWeek = new Date(endWeekDisplay);
+endWeek.setDate(endWeekDisplay.getDate() + 1); // maandag erop, exclusief einde
 
-// Parseert de Timestamp kolom: kan een Date object, epoch of een Belgische
-// datumstring (d/M/yyyy [H:mm[:ss]]) zijn. new Date("4/5/2026") zou 4/5
-// (maart-stijl MM/DD) interpreteren, dus die interpreteren we zelf.
+// Parseert de Timestamp kolom: kan een Date object, een Google/Excel
+// serial (aantal dagen sinds 30/12/1899) of een datumstring zijn.
+// Google Sheets levert de formattedValue op in de locale van het
+// spreadsheet, hier M/D/YYYY [H:mm[:ss]] (bv "1/9/2026 16:13:50" = 9
+// januari 2026), dus de maand komt EERST.
 function parseInschrijfDatum(value) {
     if (value == null || value === '') return null;
     if (value instanceof Date) return isNaN(value) ? null : value;
-    if (typeof value === 'number') return new Date(value);
+    if (typeof value === 'number') return new Date((value - 25569) * 86400000);
     const s = String(value).trim();
     if (/^\d{4}-\d{2}-\d{2}/.test(s)) {
         const iso = new Date(s);
@@ -95,9 +99,10 @@ function parseInschrijfDatum(value) {
     }
     const m = s.match(/^(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{2,4})(?:\s+(\d{1,2}):(\d{2})(?::(\d{2}))?)?$/);
     if (m) {
-        const [, d, mo, y, h, mi, sec] = m;
+        const [, mo, d, y, h, mi, sec] = m;
         const year = y.length === 2 ? 2000 + Number(y) : Number(y);
-        return new Date(year, mo - 1, d, Number(h || 0), Number(mi || 0), Number(sec || 0));
+        const date = new Date(year, mo - 1, d, Number(h || 0), Number(mi || 0), Number(sec || 0));
+        return isNaN(date) ? null : date;
     }
     const fallback = new Date(s);
     return isNaN(fallback) ? null : fallback;
@@ -140,7 +145,7 @@ for (const row of rows) {
     });
 }
 
-console.log(`Totaal aantal inschrijvingen: ${totaalAantal}, nieuwe inschrijvingen deze week: ${newMembers.length}`);
+console.log(`Totaal aantal inschrijvingen: ${totaalAantal}, nieuwe inschrijvingen vorige week: ${newMembers.length}`);
 
 if (newMembers.length > 0) {
     try {
@@ -159,5 +164,5 @@ if (newMembers.length > 0) {
         process.exit(1);
     }
 } else {
-    console.log('Geen nieuwe inschrijvingen deze week, er wordt geen e-mail verstuurd.');
+        console.log('Geen nieuwe inschrijvingen vorige week, er wordt geen e-mail verstuurd.');
 }

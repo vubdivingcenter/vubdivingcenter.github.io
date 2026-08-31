@@ -29,3 +29,12 @@ div.alert.warn{
     background-color: khaki;
     border: solid 1px rgb(226, 213, 93);
 }
+
+div.alert.closed{
+    background-color: #eef1f5;
+    border: solid 1px #d3dae3;
+    font-weight: normal;
+    font-size: 1em;
+    padding: 14px 16px;
+    margin: 10px 0;
+}

@@ -1,0 +1,48 @@
+---
+layout: main
+title: Plonskrantje
+subtitle: Het clubblad van het VUB Diving Center
+eleventyNavigation:
+    key: Plonskrantje
+    parent: Leden
+    order: 50
+---
+{% set edities = collections.plonskrantje | plonskrantjeEdities %}
+
+<p class="note">
+    Het Plonskrantje is het clubblad van het VUB Diving Center. Het kwam voor het eerst uit in 2010, het laatste nummer verscheen in 2013.
+    Met de editie van september 2026 start het Plonskrantje opnieuw. Elke editie bevat nieuws uit de club: verslagen van duikweekends en activiteiten,
+    nieuws uit de opleiding, advies over materiaal, noodnummers, puzzels en meer.
+</p>
+
+{% for item in collections.plonskrantje %}<p>DBG {{ item.page.inputPath }} | {{ item.page.url }} | {{ item.data.titel }}</p>{% endfor %}
+<div class="plonskrantje-grid">
+    {% for editie in edities %}
+    <article class="plonskrantje-editie">
+        {% if editie.downloads | length %}
+        <a class="plonskrantje-cover" href="{{ editie.downloads[0].url }}" target="_blank" rel="noopener">
+            <img alt="Cover {{ editie.titel }}" src="{{ editie.cover }}">
+        </a>
+        {% else %}
+        <div class="plonskrantje-cover">
+            <img alt="Cover {{ editie.titel }}" src="{{ editie.cover }}">
+        </div>
+        {% endif %}
+        <h2>{{ editie.titel }}</h2>
+        <p>{{ editie.beschrijving }}</p>
+        {% if editie.downloads | length %}
+        <p class="plonskrantje-downloads">
+            {% for download in editie.downloads %}
+            <a href="{{ download.url }}" target="_blank" rel="noopener">{{ download.label }}</a>
+            {% endfor %}
+        </p>
+        {% else %}
+        <p class="plonskrantje-archief">Op aanvraag in het archief</p>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+
+<span class="footnote">
+    Oudere edities zijn niet online beschikbaar, maar wel <a href="mailto:info@vubdivingcenter.be">op aanvraag in het archief</a>.
+</span>

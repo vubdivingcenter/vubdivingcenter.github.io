@@ -21,6 +21,7 @@ import { EleventyI18nPlugin } from "@11ty/eleventy";
 
 import { DateTime } from "luxon";
 import fs from 'fs';
+import path from 'path';
 import nunjucks from "nunjucks";
 import markdown from 'nunjucks-markdown';
 import dotenv from 'dotenv';
@@ -131,6 +132,27 @@ export default function (el) {
   el.addCollection("documents", () => {
     const data = fs.readFileSync('./documents/documents.json', 'utf8');
     return JSON.parse(data);
+  });
+  el.addFilter("plonskrantjeEdities", (items) => {
+    const editie = (item) => {
+      const match = item.page.inputPath.match(/plonskrantje\/(\d{4})\/(\d{2})/);
+      return match ? match[1] + match[2] : "000000";
+    };
+    return items
+      .filter((item) => item.page.inputPath.endsWith("/editie.md"))
+      .sort((a, b) => editie(b).localeCompare(editie(a)))
+      .map((item) => {
+        const dir = path.dirname(item.page.inputPath);
+        return {
+          titel: item.data.titel,
+          beschrijving: item.data.beschrijving,
+          cover: `../${dir}/cover.png`,
+          downloads: (item.data.downloads || []).map((download) => ({
+            label: download.label,
+            url: `../${dir}/${download.file}`,
+          })),
+        };
+      });
   });
   el.addPlugin(fetchPhotos);
   el.addPlugin(fetchEvents);
