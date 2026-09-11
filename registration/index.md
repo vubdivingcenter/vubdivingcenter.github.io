@@ -21,7 +21,7 @@ op te nemen met <info@vubdivingcenter.be> alvorens zich in te schrijven.
 {% if vdc.inschrijvingenOpen %}
 [Inschrijven](/registration/form/){ .btn .btn-green target="_blank"}
 {% else %}
-<div class="alert closed">Inschrijvingen voor {{ vdc.lidjaar.start }}-{{ vdc.lidjaar.einde }} zijn momenteel niet meer mogelijk.</div>
+<div class="alert closed">Inschrijvingen voor {{ vdc.lidjaar.start }}-{{ vdc.lidjaar.einde }} zijn nog niet mogelijk.</div>
 {% endif %}
 
 ### Stap 2: Betaling
