@@ -15,8 +15,24 @@
     Indien er zich problemen voordoen, neem dan zo snel mogelijk contact op met ons (<a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>).
   </p>
   <p>
-    Je hebt gekozen voor: <strong><%= type %></strong>
+    Je hebt gekozen voor: <strong><%= type %></strong><br>
+    De kosten in detail:
   </p>
+  <ul>
+    <% for (const k of kosten.pos) { %>
+      <li><%= k.label %>: &euro;<%= k.bedrag %></li>
+    <% } %>
+    <% for (const k of kosten.neg) { %>
+      <li><%= k.label %>: -&euro;<%= k.bedrag %></li>
+    <% } %>
+    <li><strong>Totaal: &euro;<%= kosten.total %></strong></li>
+  </ul>
+  <% if (kosten.pos.some(k => k.label === 'Waarborg')) { %>
+  <p>
+    De waarborg van &euro;<%= vdc.lidgeld.waarborg %> is een borg voor je plaats in het zwembad en het vrijmaken van vrijwilligers.
+    Volg je de opleiding en ben je minimaal 80% aanwezig op de trainingen, dan krijg je deze waarborg aan het eind van het jaar terug.
+  </p>
+  <% } %>
   <p>
     Met vriendelijke groeten,<br>
     De Raad van Bestuur<br>

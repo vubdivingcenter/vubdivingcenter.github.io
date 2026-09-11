@@ -29,18 +29,34 @@ const outputDir = path.resolve(process.cwd(), '_output');
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
 /**
- * Bereken het bedrag op basis van het type lidmaatschap
+ * Bereken de kostendetails op basis van het type lidmaatschap
  * @param {*} type 
  * @param {*} vdc 
  * @returns 
  */
-function getBedrag(type, vdc) {
+function getKosten(type, vdc) {
+    const pos = [];
+    const neg = [];
     switch (type) {
-        case 'Nieuw lid': return vdc.lidgeld.lid + vdc.lidgeld.opleiding;
-        case 'Bestaand lid': return vdc.lidgeld.lid;
-        case 'Steunend lid': return vdc.lidgeld.steunend;
-        default: return 0;
+        case 'Standaard lidmaatschap + opleiding':
+        case 'Standaard lidmaatschap + opleiding - initiatie':
+            pos.push({ label: 'Lidgeld', bedrag: vdc.lidgeld.lid });
+            pos.push({ label: 'Opleidingsgeld', bedrag: vdc.lidgeld.opleiding });
+            pos.push({ label: 'Waarborg', bedrag: vdc.lidgeld.waarborg });
+            if (type === 'Standaard lidmaatschap + opleiding - initiatie')
+                neg.push({ label: 'Initiatieles (in mindering)', bedrag: vdc.initiatieles.prijs });
+            break;
+        case 'Standaard lidmaatschap':
+            pos.push({ label: 'Lidgeld', bedrag: vdc.lidgeld.lid });
+            break;
+        case 'Steunend lidmaatschap':
+            pos.push({ label: 'Steunend lidgeld (minimum)', bedrag: vdc.lidgeld.steunend });
+            break;
+        default:
+            break;
     }
+    const total = pos.reduce((som, k) => som + k.bedrag, 0) - neg.reduce((som, k) => som + k.bedrag, 0);
+    return { pos, neg, total };
 }
 
 /**
@@ -69,6 +85,7 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
     const formData = new FormData();
     formData.append('from', process.env.MAILGUN_FROM_EMAIL);
     formData.append('to', to);
+    formData.append('cc', 'info@vubdivingcenter.be');
     formData.append('subject', subject);
     formData.append('html', body);
 
@@ -127,11 +144,11 @@ async function sendBetalingsverzoek(row, vdcData) {
         email,
         `Welkom bij het VUB Diving Center (${vdcData.lidjaar.start}-${vdcData.lidjaar.einde})`,
         "email_betalingsverzoek",
-        { firstName, lastName, vdc: vdcData, type: `${type} (${getBedrag(type, vdcData)} euro)` },
+        { firstName, lastName, vdc: vdcData, type, kosten: getKosten(type, vdcData) },
         []
     );
     row.set('Betalingsverzoek verzonden', 'ja');
-    if (type === 'Steunend lid') row.set('Lidkaart verzonden', 'ja');
+    if (type === 'Steunend lidmaatschap') row.set('Lidkaart verzonden', 'ja');
     if (!DEBUG)
         await row.save();
     console.log(`Betalingsverzoek sent to ${firstName} ${lastName}`);
@@ -152,8 +169,8 @@ export async function generateAndSendLidkaart(row, vdcData) {
     const fileName = `VDC_${lastNameSanitized}${firstNameSanitized}_${vdcData.lidjaar.start}-${vdcData.lidjaar.einde}`;
 
     // Veiligheid, kijk nogmaals of type geen steunend lid is
-    if (type === 'Steunend lid') {
-        console.log(`Type is 'Steunend lid', geen lidkaart nodig voor ${firstName} ${lastName}, overslaan...`);
+    if (type === 'Steunend lidmaatschap') {
+        console.log(`Type is 'Steunend lidmaatschap', geen lidkaart nodig voor ${firstName} ${lastName}, overslaan...`);
         return;
     }
     

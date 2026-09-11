@@ -160,6 +160,7 @@ export default function (el) {
 
   el.addFilter("readableDate", dateObj => {
     const dt = dateObj instanceof Date ? DateTime.fromJSDate(dateObj, { zone: 'utc' }) : DateTime.fromISO(String(dateObj), { zone: 'utc' });
+    if (!dt.isValid) return String(dateObj);
     return dt.setZone('utc').setLocale('nl').toFormat("cccc, dd LLL yyyy");
   });
 
@@ -209,6 +210,7 @@ export default function (el) {
   });
   
   el.setServerOptions({
+    host: "0.0.0.0",
     headers: {
       "access-control-allow-origin": "*",
       "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",

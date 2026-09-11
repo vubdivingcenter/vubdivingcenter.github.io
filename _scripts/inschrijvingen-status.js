@@ -27,6 +27,7 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
     const formData = new FormData();
     formData.append('from', process.env.MAILGUN_FROM_EMAIL);
     formData.append('to', to);
+    formData.append('cc', 'info@vubdivingcenter.be');
     formData.append('subject', subject);
     formData.append('html', body);
 

@@ -22,6 +22,7 @@ Het zijn de **eerste overschrijvingen** die we binnenkrijgen die toegang krijgen
 
 - Lidgeld: **€{{ vdc.lidgeld.lid }}** per jaar
 - Opleidingsgeld basisopleiding: **€{{ vdc.lidgeld.opleiding }}**
+- Waarborg: **€{{ vdc.lidgeld.waarborg }}** (als borg voor je plaats in het zwembad en het vrijmaken van vrijwilligers; terugbetaald aan het eind van het jaar bij minimaal 80% aanwezigheid op de trainingen)
 
 ## Wat houdt mijn lidmaatschap in?
 
@@ -48,7 +49,7 @@ In dit bedrag zit onder andere:
 De duikopleiding omvat een theoretisch onderdeel ‘Elementaire kennis van de duiktheorie’. Aanwezigheid is niet verplicht, maar wordt sterk aangeraden.<br>
 **Niet slagen op het theoretisch examen sluit automatisch het duiken in open water uit!**
 
-De cursus zal doorgaan op **21 maart 2026**:
+De cursus zal doorgaan op **{{ vdc.theoriecursus.datum | readableDate }}**:
 
 <table class="custom-table">
     <thead>
@@ -72,7 +73,6 @@ Het examen zal doorgaan begin april. De juiste data en lokalen worden later meeg
 
 - Voor open water duiken is een medische keuring verplicht (volledig lichamelijk onderzoek incl. KNO en bloeddrukmeting door de huisarts).
 - Eerste keuring binnen 1 maand na inschrijving, jaarlijks te herhalen.
-- Vanaf 45 jaar: inspanningsproef met EKG (om de 5 jaar te herhalen).
 - Bij specifieke gezondheidsproblemen (astma, suikerziekte, duizeligheid) raadpleeg een specialist.
 - **Duiken zonder medische keuring is verboden bij het VDC.**
 

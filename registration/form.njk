@@ -313,12 +313,16 @@ eleventyNavigation:
   <label>Optie *</label>
   <select name="entry.540922303" id="optie" required>
     <option value="" disabled selected>Kies een optie</option>
-    <option value="Nieuw lid">Nieuw lid (165 euro) + opleiding (85 euro)</option>
-    <option value="Bestaand lid">Bestaand lid (165 euro)</option>
-    <option value="Steunend lid">Steunend lid (minimum 25 euro)</option>
+    <option value="Standaard lidmaatschap + opleiding">Standaard lidmaatschap + opleiding (nieuw lid): {{ vdc.lidgeld.lid + vdc.lidgeld.opleiding + vdc.lidgeld.waarborg }} euro</option>
+    <option value="Standaard lidmaatschap + opleiding - initiatie">Standaard lidmaatschap + opleiding - initiatie (initiatieles in mindering): {{ vdc.lidgeld.lid + vdc.lidgeld.opleiding + vdc.lidgeld.waarborg - vdc.initiatieles.prijs }} euro</option>
+    <option value="Standaard lidmaatschap">Standaard lidmaatschap: {{ vdc.lidgeld.lid }} euro</option>
+    <option value="Steunend lidmaatschap">Steunend lidmaatschap: minimum {{ vdc.lidgeld.steunend }} euro</option>
   </select>
   <div class="note" style="margin-top:-0.5em;">
-    (*) Een steunend lid heeft geen verzekering voor buitenduiken. Deze mogen tweemaal per jaar deelnemen aan een ouwezakkentraining.
+    (*) Bij de opleidingsopties zit een waarborg van {{ vdc.lidgeld.waarborg }} euro inbegrepen (als borg voor je plaats in het zwembad en het vrijmaken van vrijwilligers). Volg je de opleiding en ben je minimaal 80% aanwezig op de trainingen, dan krijg je deze waarborg aan het eind van het jaar terug.
+  </div>
+  <div class="note" style="margin-top:-0.5em;">
+    (*) Een steunend lidmaatschap heeft geen verzekering voor buitenduiken. Deze mogen tweemaal per jaar deelnemen aan een ouwezakkentraining.
   </div>
   <span class="error-message" id="error-optie"></span>
 

@@ -1,17 +1,22 @@
 {
     "inschrijvingenOpen": false,
     "lidjaar": {
-        "start": "2025",
-        "einde": "2026"
+        "start": "2026",
+        "einde": "2027"
     },
     "lidgeld": {
         "lid": 165,
         "opleiding": 85,
+        "waarborg": 60,
         "steunend": 25,
-        "date": "09/2025"
+        "date": "09/2026"
+    },
+    "theoriecursus": {
+        "datum": "Te bepalen"
     },
     "initiatieles": {
         "datum": "Te bepalen",
-        "uur": "19u30"
+        "uur": "19u30",
+        "prijs": 15
     }
 }

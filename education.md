@@ -41,7 +41,9 @@ We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-Het lidgeld bedraagt **{{ vdc.lidgeld.lid }} euro** per jaar **+ {{ vdc.lidgeld.opleiding }} euro** voor de opleiding van *initiate* (laatst aangepast op {{ vdc.lidgeld.date }}). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De {{ vdc.lidgeld.opleiding }} euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw {{ vdc.lidgeld.opleiding }} euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra {{ vdc.lidgeld.opleiding }} euro te betalen. 
+Het lidgeld bedraagt **{{ vdc.lidgeld.lid }} euro** per jaar **+ {{ vdc.lidgeld.opleiding }} euro** voor de opleiding van *initiate* (laatst aangepast op {{ vdc.lidgeld.date }}). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De {{ vdc.lidgeld.opleiding }} euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw {{ vdc.lidgeld.opleiding }} euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra {{ vdc.lidgeld.opleiding }} euro te betalen.
+
+Daarnaast betaal je bij inschrijving een waarborg van **{{ vdc.lidgeld.waarborg }} euro** als borg voor het reserveren van je plaats in het zwembad en het vrijmaken van vrijwilligers. Deze waarborg krijg je terug aan het eind van het jaar als je minimaal 80% aanwezig was op de trainingen.
 
 #### Buitenduiken
 
