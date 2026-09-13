@@ -113,18 +113,21 @@
     </label>
 
     <div class="trigger">
-          <a class="page-link " href="/education/">Duikopleiding</a>
-        
-          <a class="page-link " href="/initiatie/">Initiatieles</a>
+          <div class="dropdown page-link ">
+            <a class="dropbtn" href="/education/">Duikopleiding
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content"><a class="dropdown-link " href="/initiatie/">Basisopleiding</a></div>
+          </div>
         
           <a class="page-link " href="/activity/">Groepsactiviteit</a>
         
           <a class="page-link " href="/about/">Over ons</a>
         
           <div class="dropdown page-link ">
-            <button class="dropbtn">Leden
+            <a class="dropbtn" href="/leden/">Leden
               <i class="fa fa-caret-down"></i>
-            </button>
+            </a>
             <div class="dropdown-content"><a class="dropdown-link " href="/posts/">Nieuws</a><a class="dropdown-link " href="/docs/vrijwilliger/">Vrijwilligers</a><a class="dropdown-link " href="/registration/">Inschrijven</a><a class="dropdown-link " href="/calendar/">Kalender</a><a class="dropdown-link " href="/gallery/">Foto&#39;s</a><a class="dropdown-link " href="/plonskrantje/">Plonskrantje</a><a class="dropdown-link " href="/nl/regulations/">Reglement</a><a class="dropdown-link " href="/documents/">Documenten</a></div>
           </div>
         
@@ -138,12 +141,11 @@
       <aside id="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <ul>
-        <li>
+        <li class="nested ">
             <a href="/education/">Duikopleiding</a>
-        </li>
-    
-        <li>
-            <a href="/initiatie/">Initiatieles</a>
+            <ul><li>
+                    <a href="/initiatie/">Basisopleiding</a>
+                </li></ul>
         </li>
     
         <li>
@@ -154,8 +156,8 @@
             <a href="/about/">Over ons</a>
         </li>
     
-        <li class="nested">
-            Leden
+        <li class="nested ">
+            <a href="/leden/">Leden</a>
             <ul><li>
                     <a href="/posts/">Nieuws</a>
                 </li><li>
