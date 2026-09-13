@@ -63,15 +63,20 @@ function getKosten(type, vdc) {
  * Verzend een e-mail met Mailgun via HTTP API
  * @param {*} to 
  * @param {*} subject 
- * @param {*} template 
- * @param {*} templateData 
- * @param {*} attachments 
- * @returns 
+ * @param {*} template
+ * @param {*} templateData
+ * @param {*} attachments
+ * @param {*} cc
+ * @returns
  */
-async function sendEmail(to, subject, template, templateData, attachments = []) {
+async function sendEmail(to, subject, template, templateData, attachments = [], cc = 'info@vubdivingcenter.be') {
     if (DEBUG) {
         console.log(`DEBUG: Email to ${to} changed to ${DEBUG_EMAIL}`);
         to = DEBUG_EMAIL;
+        if (cc) {
+            console.log(`DEBUG: CC ${cc} changed to ${DEBUG_EMAIL}`);
+            cc = DEBUG_EMAIL;
+        }
         if (DEBUG_EMAIL === '') {
             console.log('DEBUG_EMAIL is empty, skipping email send.');
             return;
@@ -85,7 +90,9 @@ async function sendEmail(to, subject, template, templateData, attachments = []) 
     const formData = new FormData();
     formData.append('from', process.env.MAILGUN_FROM_EMAIL);
     formData.append('to', to);
-    formData.append('cc', 'info@vubdivingcenter.be');
+    if (cc) {
+        formData.append('cc', cc);
+    }
     formData.append('subject', subject);
     formData.append('html', body);
 
@@ -152,6 +159,44 @@ async function sendBetalingsverzoek(row, vdcData) {
     if (!DEBUG)
         await row.save();
     console.log(`Betalingsverzoek sent to ${firstName} ${lastName}`);
+}
+
+/**
+ * Verstuur een bevestiging voor een initiatie-inschrijving, plus een
+ * informatiemail naar info@vubdivingcenter.be met de inschrijvingsgegevens
+ * @param {*} row
+ * @param {*} vdcData
+ */
+async function sendInitiatieBevestiging(row, vdcData) {
+    const firstName = row.get('Voornaam');
+    const lastName = row.get('Achternaam');
+    const email = row.get('E-mail');
+    const telefoon = row.get('Telefoon');
+    const brevetten = row.get('Reeds behaalde brevetten');
+    const ervaring = row.get('voorgaande duik- of snorkelervaring');
+    console.log(`Sending initiatie bevestiging to ${firstName} ${lastName} <${email}>`);
+    // Geen CC: er gaat apart een informatiemail naar info@vubdivingcenter.be
+    await sendEmail(
+        email,
+        `Bevestiging inschrijving initiatieles`,
+        "email_initiatie",
+        { firstName, lastName, vdc: vdcData },
+        [],
+        null
+    );
+    console.log(`Sending initiatie inschrijving info naar info@vubdivingcenter.be voor ${firstName} ${lastName}`);
+    await sendEmail(
+        'info@vubdivingcenter.be',
+        `Nieuwe initiatieles inschrijving: ${firstName} ${lastName}`,
+        "email_initiatie_inschrijving",
+        { firstName, lastName, email, telefoon, brevetten, ervaring, vdc: vdcData },
+        [],
+        null
+    );
+    row.set('Bevestiging verzonden', 'ja');
+    if (!DEBUG)
+        await row.save();
+    console.log(`Initiatie bevestiging sent to ${firstName} ${lastName}`);
 }
 
 /**
@@ -329,6 +374,49 @@ export async function getSheetRows() {
     return sheet.getRows();
 }
 
+export async function getInitiatieRows() {
+    const serviceAccountAuth = new JWT({
+        email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+        key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+        scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    });
+    const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID_INITATIE, serviceAccountAuth);
+    await doc.loadInfo();
+    const sheet = doc.sheetsByIndex[0];
+    return sheet.getRows();
+}
+
+async function processInitiatieInschrijvingen(mailErrors) {
+    if (!process.env.GOOGLE_SPREADSHEET_ID_INITATIE) {
+        console.warn('GOOGLE_SPREADSHEET_ID_INITATIE is not set, skipping initiatie inschrijvingen.');
+        return;
+    }
+    let rows;
+    try {
+        rows = await getInitiatieRows();
+    } catch (err) {
+        console.error('Error loading initiatie sheet:', err);
+        return;
+    }
+    for (const row of rows) {
+        const firstName = row.get('Voornaam');
+        const lastName = row.get('Achternaam');
+        const email = row.get('E-mail');
+        if (row.get('Bevestiging verzonden') === 'ja') {
+            console.log(`Bevestiging al verzonden voor ${firstName} ${lastName}, overslaan...`);
+            continue;
+        }
+        try {
+            await sendInitiatieBevestiging(row, vdcData);
+        } catch (err) {
+            if (err instanceof MailgunError) {
+                mailErrors.push(`${firstName} ${lastName} <${email}>: ${err.message}`);
+            }
+            console.error(`Error processing initiatie inschrijving ${firstName} ${lastName}:`, err);
+        }
+    }
+}
+
 async function processInschrijvingen() {
     let rows = await getSheetRows();
     // Validate the secret code if 'paid' is set to true
@@ -367,6 +455,8 @@ async function processInschrijvingen() {
             console.error(`Error processing ${firstName} ${lastName}:`, err);
         }
     }
+
+    await processInitiatieInschrijvingen(mailErrors);
 
     if (mailErrors.length > 0) {
         throw new Error(`Failing workflow: ${mailErrors.length} e-mail(s) konden niet worden verzonden via Mailgun.\n${mailErrors.map(error => ` - ${error}`).join('\n')}`);

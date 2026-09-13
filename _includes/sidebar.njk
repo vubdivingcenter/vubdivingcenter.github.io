@@ -3,14 +3,14 @@
     <ul>
     {%- for nav in collections.all | eleventyNavigation -%}
     {% if nav.children.length > 0 %}
-        {% set active = false %}
+        {% set active = nav.url == page.url %}
         {%- for link in nav.children -%}
         {% if link.url == page.url %}
             {% set active = true %}
         {% endif %}
         {%- endfor -%}
-        <li class="nested">
-            {{ nav.key }}
+        <li class="nested {% if nav.url == page.url %}active{% endif %}">
+            <a href="{{ nav.url }}">{{ nav.key }}</a>
             <ul {% if active %}class="active"{% endif %}>
                 {%- for link in nav.children -%}
                 <li {% if link.url == page.url %}class="active"{% endif %}>

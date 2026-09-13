@@ -28,19 +28,20 @@ verantwoordelijke van de eerstvolgende training kan je uitzonderlijk voor langer
 uitlenen. Uiteraard moet deze verwittiging op tijd gebeuren.
 
 ## Flessen
-Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek. Vullen dient op eigen kosten te gebeuren. De enige uitzondering op deze regel zijn instructeurs die een opleidingsduik maken en vullen in een erkende duikwinkel waar het VDC een vulkaart heeft. Ook vrijwilligers die op vraag van de RvB flessen vullen voor de zwembadtraining mogen dit bij een erkende duikwinkel gaan vullen. Erkende duikwinkels zijn op de hoogte van deze regel(s) en hebben een lijst van namen die mogen vullen.
+Het uitlenen van flessen is volledig gratis voor alle leden, maar moet wel ingeschreven worden in het uitleenboek.
 
 > <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt er een boete van 5 euro aangerekend die elke week met 5 euro verhoogt.
 
-Om te gaan duiken neem je bij voorkeur lege (<60 bar, rode dop) of halflege flessen (<100 bar, oranje
-dop) mee en zorg je ervoor dat je die volledig gevuld terugbrengt.
+Je neemt steeds een lege (<60 bar, rode dop) of halflege fles (<100 bar, oranje dop) mee en brengt die volledig gevuld terug.
+
+De vulling voor je eigen duiken betaal je steeds zelf. De vulling om je flessen terug vol te brengen kan gratis gevuld worden bij duikwinkels waar het VDC een rekening heeft, maar dit enkel als deze vulling voor het zwembad is. Neem bij het vullen steeds je lidkaart mee. Heb je die nog niet, dan dien je je oranje boekje mee te nemen.
 
 Controleer een uitgeleende fles op de aanwezigheid van een DIN-stuk. Indien je het niet nodig hebt, draai
 je het best op voorhand uit en steek je het in de bak waar eveneens de etiketjes steken, zo raken er geen
 verloren. Heb je er een nodig en steekt er geen in, haal je er eentje uit diezelfde bak.
 
 ## Ontspanners, Jackets en Lood
-Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten voor beginners** die de {{ vdc.lidgeld.opleiding }} euro opleidingsgeld hebben betaald of die uitgezonderd zijn van het betalen van dit opleidingsgeld in hun 2de jaar omwille van laattijdig inschrijven in hun eerste jaar. Voor alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen. 
+Het uitlenen van ontspanners, jackets en lood is **enkel toegelaten tijdens de opleidingsperiode** en dan ook **enkel voor je eerste 10 duiken**. Voor alle **andere leden** is het **niet toegestaan** om materiaal te ontlenen.
 
 > <i class="fa-solid fa-triangle-exclamation"></i> Bij onverwittigd laattijdig terugbrengen van materiaal wordt een boete van 5 euro aangerekend. Deze boete stijgt per week met 5 euro. Eventuele boetes worden aan het einde van het duikseizoen afgerekend. Hier wordt ten gepaste tijde een mail over gestuurd. Het materiaal wordt niet uitgeleend voor duikreizen, uitgezonderd de duikweekends.
 

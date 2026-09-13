@@ -10,7 +10,7 @@ eleventyNavigation:
 
 ### Wat is duiken?
 ![Zwembadtraining](https://lh3.googleusercontent.com/NkSF9vjsDMnRq_k8QUZpaHnGZf6OcNKTsy7_Gwe0iAZEmFPmo5f9ox3Vja3RZOQdRKsp_DBnZI2wWBeFjkoQLI7uMdMzzd69caVfRUcjU6jsxBusy-I0JYaRaJpoeLcZYI7Hc9aon8o){ .inline .right referrerpolicy="no-referrer" }
-Als je ooit gesnorkeld hebt dan heb je waarschijnlijk ver onder je de prachtige koralen gezien. Maar lijkt het bij de documentaires niet allemaal zoveel dichter bij? Als duiker kom je immers korter bij alles wat er leeft en beweegt. Uiteraard heb je als duiker ook respect voor de omgeving, je wil immers ook in de toekomst al het prachtigs kunnen bewonderen.
+Als je ooit gesnorkeld hebt dan heb je waarschijnlijk ver onder je de prachtige koralen gezien. Maar lijkt het bij de documentaires niet allemaal zoveel dichterbij? Als duiker kom je immers korter bij alles wat er leeft en beweegt. Uiteraard heb je als duiker ook respect voor de omgeving, je wil immers ook in de toekomst al het prachtigs kunnen bewonderen.
 
 Die koralen zijn in onze wateren spijtig genoeg ver weg. De meeste duiken die we doen zijn in Nederland (de Oosterschelde en het Grevelingenmeer) en in België (vijvers, stuwmeren en steengroeven). Maar ook al lijken de duikplaatsen boven water niet zo interessant, onder water zijn ze het zeker wel.
 
@@ -21,11 +21,11 @@ Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een mid
 
 ### Wat heeft het VUB Diving Center te bieden?
 
-Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen. De opleiding en trainingen worden uitsluitend in het Nederlands gegeven. Na deze opleiding kan je terecht bij onze club voor wekelijkse trainingen, clubduiken en weekends of andere evenementen.
+Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen. De opleiding en trainingen worden uitsluitend in het Nederlands gegeven. Na deze opleiding kan je terecht bij onze club voor wekelijkse trainingen, clubduiken en duikweekends of andere evenementen.
 
-#### Opleiding 
+#### Opleiding
 
-Gedurende enkele maanden tot een jaar (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen die gegeven worden door vrijwilligers. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur.
+Gedurende enkele maanden tot een jaar (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen die gegeven worden door vrijwilligers. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur. Meer details over de basisopleiding vind je op de pagina [Basisopleiding](/initiatie/).
 
 Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate*, *bachelor*, en uiteindelijk *instructor* certificaat.
 
@@ -33,17 +33,15 @@ Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate
 
 De lessen gaan door in het zwembad van de Vrije Universiteit Brussel, campus Etterbeek.
 
-Pleinlaan 2  
-1050 Elsene  
+Pleinlaan 2
+1050 Elsene
 België
 
 We trainen elke vrijdag van 19u45 tot 21u00.
 
 #### Kostprijs
 
-Het lidgeld bedraagt **{{ vdc.lidgeld.lid }} euro** per jaar **+ {{ vdc.lidgeld.opleiding }} euro** voor de opleiding van *initiate* (laatst aangepast op {{ vdc.lidgeld.date }}). Dit bedrag omvat je opleiding, examens, verzekering en toegang tot het zwembad. De {{ vdc.lidgeld.opleiding }} euro opleidingsgeld blijft geldig voor 12 maanden. Als je na deze 12 maanden de opleiding van initiate nog niet hebt afgerond dien je opnieuw {{ vdc.lidgeld.opleiding }} euro te betalen bij de eerstvolgende inschrijving. Wanneer je het examen van initiate succesvol hebt afgerond kan je het jaar nadien opnieuw inschrijven zonder deze extra {{ vdc.lidgeld.opleiding }} euro te betalen.
-
-Daarnaast betaal je bij inschrijving een waarborg van **{{ vdc.lidgeld.waarborg }} euro** als borg voor het reserveren van je plaats in het zwembad en het vrijmaken van vrijwilligers. Deze waarborg krijg je terug aan het eind van het jaar als je minimaal 80% aanwezig was op de trainingen.
+Het standaard lidgeld bedraagt **{{ vdc.lidgeld.lid }} euro** per jaar. **De voorwaarden en kostprijs van de basisopleiding vind je op de pagina [Basisopleiding](/initiatie/).**
 
 #### Buitenduiken
 
@@ -51,9 +49,8 @@ Zwembadtrainingen zijn de basis van de duikopleiding. Maar duiken doe je in open
 
 #### Materiaal
 
-Voor de zwembadtrainingen heb je een *duikbril*, *palmen*, *lood* en een *snorkel* nodig. Moest je dit nog niet hebben kan je
-dit de eerste drie weken gratis ontlenen van de club. Voor buitenduiken ga je meer materiaal nodig hebben zoals buitenpalmen, een duikpak, ontspanner, jacket en fles. Meer informatie over het duikmateriaal en de mogelijkheden om dit materiaal gedeeltelijk te ontlenen krijg je tijdens de opleiding.
+Voor de zwembadtrainingen heb je een *duikbril*, *palmen*, *lood* en een *snorkel* nodig. In het zwembad van de VUB is aansluitende badkleding vereist. Moest je dit nog niet hebben kan je dit de eerste drie weken gratis ontlenen van de club. Voor buitenduiken ga je meer materiaal nodig hebben zoals buitenpalmen, een duikpak, ontspanner, jacket en fles. Meer informatie over het duikmateriaal en de [uitleenprocedure](/docs/materiaal/) krijg je tijdens de opleiding.
 
 ### Interesse of meer info nodig?
 
-Stuur een mailtje naar <info@vubdivingcenter.be>. Nieuwe leden worden verwacht om eerst contact met ons op te nemen alvorens ze kunnen starten aan de opleiding.
+**Heb je misschien al een duikopleiding gevolgd en ben je op zoek naar een Nederlandstalige duikclub in Brussel**, stuur een mailtje naar <info@vubdivingcenter.be>. Nieuwe leden worden verwacht om eerst contact met ons op te nemen alvorens ze kunnen starten aan de opleiding. De volledige inschrijvingsprocedure vind je op de pagina [(Her)inschrijven](/registration/).

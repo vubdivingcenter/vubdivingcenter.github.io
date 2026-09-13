@@ -15,7 +15,10 @@ const client = new OAuth2Client(clientId, clientSecret, 'http://localhost');
 const authUrl = client.generateAuthUrl({
     access_type: 'offline',
     prompt: 'consent',
-    scope: ['https://www.googleapis.com/auth/drive'],
+    scope: [
+        'https://www.googleapis.com/auth/drive',
+        'https://www.googleapis.com/auth/forms.body',
+    ],
 });
 
 console.log('Stap 1: Open de onderstaande URL in je browser en log in met het Google-account dat eigenaar is van de Drive-map:\n');
@@ -45,6 +48,21 @@ if (folderId) {
         console.log(`\nValidatie geslaagd: toegang tot map "${(await res.json()).name}".`);
     } else {
         console.warn(`\nLet op: map ${folderId} niet toegankelijk met dit account (${res.status}).`);
+    }
+}
+
+// Valideer toegang tot de Google Forms API
+// (de Google Forms API moet ingeschakeld zijn in het GCP-project van de OAuth client:
+// https://console.developers.google.com/apis/api/forms.googleapis.com/overview)
+{
+    const res = await fetch('https://forms.googleapis.com/v1/forms?pageSize=1', { headers });
+    if (res.ok) {
+        console.log('\nValidatie geslaagd: Google Forms API is toegankelijk.');
+    } else {
+        const errorText = await res.text();
+        console.warn(`\nLet op: Google Forms API niet toegankelijk (${res.status}).`);
+        console.warn('Schakel de Google Forms API in via https://console.developers.google.com/apis/api/forms.googleapis.com/overview en gebruik een account dat eigenaar is van de formulieren.');
+        console.warn(errorText.slice(0, 300));
     }
 }
 

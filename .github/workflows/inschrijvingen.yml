@@ -45,6 +45,7 @@ jobs:
                 GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
                 GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
                 GOOGLE_SPREADSHEET_ID: ${{ secrets.GOOGLE_SPREADSHEET_ID }}
+                GOOGLE_SPREADSHEET_ID_INITATIE: ${{ secrets.GOOGLE_SPREADSHEET_ID_INITATIE }}
                 GOOGLE_DRIVE_VDC_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_VDC_FOLDER_ID }}
                 DRIVE_REFRESH_TOKEN: ${{ secrets.DRIVE_REFRESH_TOKEN }}
                 OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}

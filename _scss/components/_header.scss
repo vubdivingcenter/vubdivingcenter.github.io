@@ -108,10 +108,16 @@ header {
                 outline: none;
                 background-color: transparent;
                 text-transform: uppercase;
+                color: white;
 
                 i {
                     padding-left: 5px;
                 }
+            }
+
+            &:hover .dropbtn,
+            &.active .dropbtn {
+                color: black;
             }
 
             .dropdown-content {

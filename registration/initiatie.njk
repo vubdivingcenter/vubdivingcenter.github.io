@@ -1,14 +1,14 @@
 ---
 layout: main
 title: Inschrijving Initiatie
-background: https://lh3.googleusercontent.com/aNaGYxdnZv_epyqtzYRAYDMyFuSm8mR4Y5LXHbirsfbtsitfVbog5G0eICOxIdZkDvP7w7Sz3xsj5OClVrhFGDREH0zk7WAYiueDVYzAxcHdJ-pd6_JBvg22ZDjE53SCpRfSvbwOG6o
+background: https://lh3.googleusercontent.com/pw/AP1GczOtSdbGEaWPA5U8HWb0XmJbMSKSqWj87YGrSfPWbKIN0yU5iWu-b8pAcL32zpRp5rx_NY73XgA2WJxkq-aTb6wGLA3WrXIBh4CKn4sG0Vpxc8Q-K-aY
 ---
 
 <h2 class="subtitle">Initiatieles {{ vdc.initiatieles.datum | readableDate }} om {{ vdc.initiatieles.uur }}</h2>
 
 <form class="form-compact" id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfXOarMR5EPL1KMyIfLojockf8NWitf1OQmeQ6PgjU10RTtWg/formResponse" method="POST" target="_self" novalidate>
   <div class="note warn">
-    NOTA: Dit formulier is enkel voor de initiatieles van {{ vdc.initiatieles.datum | readableDate }}. De kostprijs van de initiatieles is €{{ vdc.initiatieles.prijs }} (ter plekke te betalen). Na inschrijving ontvang je een mail van de verantwoordelijke van de basis opleiding. Indien je na betaling lid wordt van de club, wordt dit bedrag in mindering gebracht op het lidgeld.
+    NOTA: Dit formulier is enkel voor de initiatieles van {{ vdc.initiatieles.datum | readableDate }}. De kostprijs van de initiatieles is €{{ vdc.initiatieles.prijs }} (ter plekke te betalen). Na inschrijving ontvang je een mail van de verantwoordelijke van de basisopleiding. Indien je na betaling lid wordt van de club, wordt dit bedrag in mindering gebracht op het lidgeld.
   </div>
 
   <div class="inline-group">
@@ -30,6 +30,13 @@ background: https://lh3.googleusercontent.com/aNaGYxdnZv_epyqtzYRAYDMyFuSm8mR4Y5
   <label for="telefoon">Telefoon *</label>
   <input type="text" id="telefoon" name="entry.888586845" required pattern="^(\+?\d{1,3}[- ]?)?\d{6,14}$">
   <span class="error-message" id="error-telefoon"></span>
+
+  <div class="checkbox-group">
+    <label>
+      <input type="checkbox" id="ervaring" name="entry.669315368" value="ja">
+      <span>Voorgaande duik- of snorkelervaring</span>
+    </label>
+  </div>
 
   <label for="brevetten">Reeds behaalde brevetten/diploma's zoals EHBO, Duiker-Redder, Hoger-Redder, Arts, Verpleegkundige, Sportleraar, Sportwetenschappen, ...</label>
   <textarea id="brevetten" name="entry.1486945958" rows="2"></textarea>

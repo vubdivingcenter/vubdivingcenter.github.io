@@ -35,16 +35,16 @@
     <div class="trigger">
       {%- for nav in collections.all | eleventyNavigation -%}
         {% if nav.children.length > 0 %}
-          {% set active = false %}
+          {% set active = nav.url == page.url %}
           {%- for link in nav.children -%}
             {% if link.url == page.url %}
               {% set active = true %}
             {% endif %}
           {%- endfor -%}
           <div class="dropdown page-link {% if active %}active{% endif %}">
-            <button class="dropbtn">{{ nav.key }}
+            <a class="dropbtn" href="{{ nav.url }}">{{ nav.key }}
               <i class="fa fa-caret-down"></i>
-            </button>
+            </a>
             <div class="dropdown-content">
               {%- for link in nav.children -%}
                 <a class="dropdown-link {% if link.url == page.url %}active{% endif %}" href="{{ link.url }}">{{ link.key }}</a>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Nieuwe inschrijving initiatieles VDC</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #222; background: #fff;">
+  <p>Er is een nieuwe inschrijving binnengekomen voor de initiatieles op <%= vdc.initiatieles.datum %> om <%= vdc.initiatieles.uur %> in het VUB-zwembad.</p>
+  <table style="border-collapse: collapse; margin: 1em 0;">
+    <tr>
+      <td style="padding: 4px 12px 4px 0; font-weight: bold;">Naam</td>
+      <td style="padding: 4px 0;"><%= firstName %> <%= lastName %></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px 12px 4px 0; font-weight: bold;">E-mail</td>
+      <td style="padding: 4px 0;"><a href="mailto:<%= email %>"><%= email %></a></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px 12px 4px 0; font-weight: bold;">Telefoon</td>
+      <td style="padding: 4px 0;"><%= telefoon || '-' %></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px 12px 4px 0; font-weight: bold;">Reeds behaalde brevetten</td>
+      <td style="padding: 4px 0;"><%= brevetten || '-' %></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px 12px 4px 0; font-weight: bold;">Voorgaande duik- of snorkelervaring</td>
+      <td style="padding: 4px 0;"><%= ervaring ? 'Ja' : 'Nee' %></td>
+    </tr>
+  </table>
+  <p>
+    Een bevestigingsmail is verstuurd naar <%= firstName %> <%= lastName %> (<a href="mailto:<%= email %>"><%= email %></a>).
+  </p>
+  <p>
+    Met vriendelijke groeten,<br>
+    VUB Diving Center vzw
+  </p>
+</body>
+</html>

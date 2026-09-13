@@ -1,12 +1,14 @@
 ---
 layout: main
-title: Initiatieles
-subtitle: Een duikinitiatie? Dat kan!
+title: Basisopleiding
+subtitle: Basisopleiding tot Initiate Diver en Graduate Diver
 background: https://lh3.googleusercontent.com/zxpKHj35m_mfTWvR0xwObzPIbAd19QBoBGpIhhVxAMRaMbgiQ0_T1cjDqo7d48b30OPNeFFVn_oGcoda0bCQHAkfEERBYAP1NxEsqknU29Ku64aKV9uUs1l7SEV4_r68HzIZSwohNSo
 eleventyNavigation:
-    key: Initiatieles
-    order: 11
+    key: Basisopleiding
+    parent: Duikopleiding
+    order: 101
 ---
+
 **Eerstvolgende initiatieles:** {{ vdc.initiatieles.datum | readableDate }} om {{ vdc.initiatieles.uur }} in het VUB-zwembad.
 
 <p class="text-center">
@@ -17,12 +19,16 @@ eleventyNavigation:
 
 ## Hoe word ik lid?
 
-Dit academiejaar laten we **20 deelnemers** toe tot de beginnerstraining, omdat het zwembad te klein is om met meer in het water oefeningen te doen.
-Het zijn de **eerste overschrijvingen** die we binnenkrijgen die toegang krijgen tot de trainingen.
+We laten een beperkt aantal deelnemers toe tot de beginnerstraining, omdat het zwembad te klein is om met meer in het water oefeningen te doen. Het zijn de **eerste overschrijvingen** die we binnenkrijgen die toegang krijgen tot de trainingen. De volledige procedure (contact, formulier, betaling, medische keuring) vind je op de pagina [(Her)inschrijven](/registration/).
 
-- Lidgeld: **€{{ vdc.lidgeld.lid }}** per jaar
-- Opleidingsgeld basisopleiding: **€{{ vdc.lidgeld.opleiding }}**
-- Waarborg: **€{{ vdc.lidgeld.waarborg }}** (als borg voor je plaats in het zwembad en het vrijmaken van vrijwilligers; terugbetaald aan het eind van het jaar bij minimaal 80% aanwezigheid op de trainingen)
+## Wat kost het?
+
+- **Lidgeld: €165 per jaar**
+  Alle leden die gebruik willen maken van het zwembad, het duikmateriaal en de verzekering betalen lidgeld.
+- **Opleidingsgeld basisopleiding: €85**
+  Alle leden die de opleiding tot Initiate Diver volgen, betalen bovenop het lidgeld ook opleidingsgeld.
+- <span style="color: red;"><strong>Waarborg €60</strong></span>
+  Om beginners te motiveren om naar de trainingen te komen, betalen ze een waarborg. Wanneer je meer dan 20% van de trainingen afwezig zou zijn, zonder je op tijd te verontschuldigen, dan ben je deze waarborg kwijt. Maar het doel is dat je deze waarborg aan het einde van het werkjaar integraal teruggestort krijgt.
 
 ## Wat houdt mijn lidmaatschap in?
 
@@ -30,60 +36,42 @@ In dit bedrag zit onder andere:
 
 - Duikverzekering en verzekering voor alle clubactiviteiten
 - Inkom van het zwembad
-- Theorie- en praktijklessen
-- Examens
-- Gebruik van duikflessen
-- Brevet en duikboekjes
+- Wekelijkse trainingen in kleine lesgroepen
+- Theorieles en -examen
+- Zwembadexamen
+- Gebruik van duikflessen en materiaal in het zwembad
+- Lidboekje en logboekje(s)
 
 ## Hoe verloopt de opleiding?
+![Zwembadtraining](https://lh3.googleusercontent.com/pw/AP1GczOGluhh8ZJrG5fLkryTYkU9LXPrq8QJ2hhVqmEw0aP4HLsAUQv-MnbAaMqAhE_0vaN5K3Mz6iJDi4enXBYt1p2vZ2H1_S_UOSXuU2nKkgvIs-VtDM2H=w600){ .inline .right referrerpolicy="no-referrer" }
 
 ### Praktisch: zwembadtrainingen
 
-- Zwembadtrainingen in het VUB-zwembad op **vrijdagen van 20u-21u**
-- Indeling in groepjes van max. 4 personen, elk met een monitor
-- Groepsindeling enkel wijzigbaar na overleg met Constant Katalagarianakis
+- Zwembadtrainingen in het VUB-zwembad op vrijdagen van 20u-21u
+- Indeling in groepjes, elk met een monitor
 - 15 min voor aanvang aanwezig zijn
 
 ### Theoretisch deel
 
-De duikopleiding omvat een theoretisch onderdeel ‘Elementaire kennis van de duiktheorie’. Aanwezigheid is niet verplicht, maar wordt sterk aangeraden.<br>
+De basisduikopleiding omvat een theoretisch onderdeel ‘Elementaire kennis van de duiktheorie’. Aanwezigheid in de theorieles is niet verplicht, maar wordt sterk aangeraden.
+De les wordt georganiseerd op een zaterdag, ideaal in de periode tussen de lesvrije week na het eerste semester en de Paasvakantie.
+Het theorie-examen vindt enkele weken daarna plaats op een vrijdag voor de training.
+De juiste data en lokalen worden later meegedeeld.
 **Niet slagen op het theoretisch examen sluit automatisch het duiken in open water uit!**
 
-De cursus zal doorgaan op **{{ vdc.theoriecursus.datum | readableDate }}**:
+### Medische keuring
 
-<table class="custom-table">
-    <thead>
-    <tr>
-        <th>Tijd</th>
-        <th>Onderwerp</th>
-        <th>Lesgever</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr><td>09u00 – 10u30</td><td>Fysica van het duiken</td><td>Bruno van Bogaert</td></tr>
-    <tr><td>10u45 – 12u45</td><td>Medische Aspecten</td><td>dr. Jouke de Regt</td></tr>
-    <tr><td>13u15 – 14u00</td><td>Materiaal</td><td>Bram Pellens</td></tr>
-    <tr><td>14u15 – 16u30</td><td>Duiktabellen</td><td>Bram Pellens</td></tr>
-    </tbody>
-</table>
-
-Het examen zal doorgaan begin april. De juiste data en lokalen worden later meegedeeld.
-
-## Medische keuring
-
-- Voor open water duiken is een medische keuring verplicht (volledig lichamelijk onderzoek incl. KNO en bloeddrukmeting door de huisarts).
+- Een medische keuring is verplicht (dit is een volledig lichamelijk onderzoek incl. KNO en bloeddrukmeting door de huisarts).
 - Eerste keuring binnen 1 maand na inschrijving, jaarlijks te herhalen.
-- Bij specifieke gezondheidsproblemen (astma, suikerziekte, duizeligheid) raadpleeg een specialist.
-- **Duiken zonder medische keuring is verboden bij het VDC.**
+- Bij specifieke gezondheidsproblemen (astma, suikerziekte, duizeligheid), raadpleeg een specialist.
+- Duiken zonder medische keuring is verboden bij het VDC.
 
-## Materiaal: wat heb ik nodig om te starten?
+### Materiaal: wat heb ik nodig om te starten?
 
-- Zwembadvinnen, duikbril, snorkel, loodgordel en badkleding (geen zwemshort)
-- Duikflessen en vullingen worden gratis ter beschikking gesteld
-- Overleg met je monitor voor aanschaf van materiaal
-- Promoties bij duikwinkels voor nieuwelingen (vraag bij opleidingsverantwoordelijke)
-- Voor eerste buitenduiken kan je clubmateriaal huren (flessen, ontspanners, trimvesten)
-- Op termijn moet je zelf materiaal aanschaffen of huren bij een duikwinkel
+- Zwembadvinnen, duikbril, snorkel, loodgordel en badkleding (geen loszittende zwemshort)
+- Voor je eerste buitenduiken kan je [clubmateriaal lenen](/docs/materiaal/) (ontspanners, trimvesten, extra lood); op termijn moet je zelf dit materiaal aanschaffen of huren bij een duikwinkel
+- Duikflessen en vullingen worden gratis ter beschikking gesteld voor het zwembad
+- Duikflessen kan je ook na je basisopleiding nog ontlenen van de club
 
 ## Hoe blijf ik op de hoogte?
 
@@ -93,20 +81,11 @@ Het examen zal doorgaan begin april. De juiste data en lokalen worden later meeg
 
 ## Wat doen we nog naast de trainingen?
 
-- Na de zwembadtrainingen: samen iets drinken in het Complex (“den après plongée”)
-- Clubduiken, duikweekends en andere sociale activiteiten
+- Na de zwembadtrainingen: samen iets drinken in [‘t Complex](https://www.vub.be/nl/contact/organisatie/t-complex) (“den après plongée”)
+- Clubduiken, duikweekends en andere sociale activiteiten (zie de [kalender](/calendar/))
 
 ## Ons brevettensysteem en filosofie
 
-Iedereen krijgt bij ons een degelijke opleiding, zodat je goed voorbereid bent om in de moeilijkste wateren te duiken, voor plezier of wetenschappelijk onderzoek.<br>
-We behoren niet tot een grote duikfederatie, waardoor we een kwalitatieve opleiding kunnen aanbieden voor minder geld. Al onze medewerkers zijn vrijwilligers.<br>
-Onze certificaten worden makkelijk erkend door grote federaties.
+Iedereen krijgt bij ons een degelijke opleiding, zodat je goed voorbereid bent om in de moeilijkste wateren te duiken, voor plezier of wetenschappelijk onderzoek. We behoren niet tot een grote duikfederatie én omdat alle lesgevers en medewerkers dit als vrijwilliger doen, kunnen we een kwalitatieve opleiding aanbieden voor minder geld. We streven ernaar dat je na enkele maanden minstens het initiatie certificaat behaalt. Dit is sterk afhankelijk van je regelmatige aanwezigheid op de zwembadtrainingen.
 
-- **Initiatie certificaat**: kennismaking met duiken in het zwembad, incl. theorie-examen en 3 duiken in open water
-- **Graduate certificaat**: zwembadexamen en 10 duiken in open water
-- **Bachelor certificaat**: klaar om andere duikers mee buiten te nemen
-- **Dive instructor certificaat**: begeleiden van nieuwe duikers, examineren en lesgeven
-
-We streven ernaar dat je tegen het begin van het duikseizoen minstens het initiatie certificaat behaalt, afhankelijk van je regelmatige aanwezigheid op de zwembadtrainingen.
-
-Meer info over de certificaten en het huishoudelijk reglement vind je op deze website.
+*Meer info vind je in de [duikopleiding](/education/), het [uittreksel uit het reglement over open water duiken](/nl/regulations/) en de meest recente versie van het [huishoudelijk reglement](/documents/huishoudelijkreglement/).*

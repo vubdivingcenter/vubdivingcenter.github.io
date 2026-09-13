@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Bevestiging inschrijving initiatieles VDC</title>
+</head>
+<body style="font-family: Arial, sans-serif; color: #222; background: #fff;">
+  <p>Beste <%= firstName %> <%= lastName %>,</p>
+  <p>
+    Bedankt voor je inschrijving voor de initiatieles op <%= vdc.initiatieles.datum %> om <%= vdc.initiatieles.uur %> in het VUB-zwembad.
+  </p>
+  <p>
+    Je inschrijving werd correct ontvangen. De verantwoordelijke van de basisopleiding neemt binnenkort contact met je op.
+  </p>
+  <p>
+    Gelieve op de dag van de initiatie &euro;<%= vdc.initiatieles.prijs %> mee te brengen (of ter plekke te betalen via QR).
+  </p>
+  <p>
+    Indien er zich problemen voordoen, neem dan zo snel mogelijk contact op met ons (<a href="mailto:info@vubdivingcenter.be">info@vubdivingcenter.be</a>).
+  </p>
+  <p>
+    Met vriendelijke groeten,<br>
+    De Raad van Bestuur<br>
+    VUB Diving Center vzw<br>
+    Triomflaan 40<br>
+    1160 Oudergem<br>
+    België
+  </p>
+</body>
+</html>
