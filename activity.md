@@ -1,11 +1,11 @@
 ---
 layout: main
-title: Groepsactiviteit
+title: Teambuilding
 subtitle: Een duikinitiatie in groep? Dat kan!
 background: https://lh3.googleusercontent.com/zxpKHj35m_mfTWvR0xwObzPIbAd19QBoBGpIhhVxAMRaMbgiQ0_T1cjDqo7d48b30OPNeFFVn_oGcoda0bCQHAkfEERBYAP1NxEsqknU29Ku64aKV9uUs1l7SEV4_r68HzIZSwohNSo
 eleventyNavigation:
-    key: Groepsactiviteit
-    order: 20
+    key: Teambuilding
+    order: 45
 ---
 
 Ben je op zoek naar een leuke teambuilding activiteit met jouw bedrijf of vereniging? Of wil je gewoon eens een unieke ervaring beleven met een groepje vrienden? Dan is dit jouw kans!

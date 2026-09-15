@@ -14,7 +14,7 @@ Het VUB Diving Center (VDC) is een hechte gemeenschap van duikers: van beginnend
 
 In je lidgeld zit onder andere:
 
-- Duikverzekering en verzekering voor alle clubactiviteiten
+- (Duik)verzekering
 - Inkom van het VUB-zwembad
 - Wekelijkse trainingen in kleine groepjes
 - Gebruik van duikflessen en materiaal in het zwembad
@@ -46,5 +46,5 @@ Nieuwe leden worden verwacht om eerst contact met ons op te nemen alvorens ze ku
 
 - Lees wat het VDC te bieden heeft op de pagina [Duikopleiding](/education/).
 - Ontdek de [basisopleiding](/initiatie/) tot Initiate en Graduate Diver.
-- Raadpleeg het [reglement](/nl/regulations/) en de [clubdocumenten](/documents/).
+- Raadpleeg de [clubdocumenten](/documents/).
 - Wil je je vinnetje bijdragen tot de club? Word [vrijwilliger](/docs/vrijwilliger/).

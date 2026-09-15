@@ -34,7 +34,7 @@ We laten een beperkt aantal deelnemers toe tot de beginnerstraining, omdat het z
 
 In dit bedrag zit onder andere:
 
-- Duikverzekering en verzekering voor alle clubactiviteiten
+- (Duik)verzekering
 - Inkom van het zwembad
 - Wekelijkse trainingen in kleine lesgroepen
 - Theorieles en -examen
@@ -88,4 +88,4 @@ De juiste data en lokalen worden later meegedeeld.
 
 Iedereen krijgt bij ons een degelijke opleiding, zodat je goed voorbereid bent om in de moeilijkste wateren te duiken, voor plezier of wetenschappelijk onderzoek. We behoren niet tot een grote duikfederatie én omdat alle lesgevers en medewerkers dit als vrijwilliger doen, kunnen we een kwalitatieve opleiding aanbieden voor minder geld. We streven ernaar dat je na enkele maanden minstens het initiatie certificaat behaalt. Dit is sterk afhankelijk van je regelmatige aanwezigheid op de zwembadtrainingen.
 
-*Meer info vind je in de [duikopleiding](/education/), het [uittreksel uit het reglement over open water duiken](/nl/regulations/) en de meest recente versie van het [huishoudelijk reglement](/documents/huishoudelijkreglement/).*
+*Meer info vind je in de [duikopleiding](/education/) en de meest recente versie van het [huishoudelijk reglement](/documents/huishoudelijkreglement/).*

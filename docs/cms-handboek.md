@@ -14,7 +14,7 @@ Op deze website kunnen redacteurs de inhoud aanpassen zonder programmataal te ke
 
 ## De verschillende onderdelen
 
-- **Pagina's**: de grote pagina's van de website (Over ons, Groepsactiviteit, Duikopleiding, FAQ's, …).
+- **Pagina's**: de grote pagina's van de website (Over ons, Teambuilding, Duikopleiding, FAQ's, …).
 - **Ledeninfo-pagina's**: de info-pagina's voor leden (Materiaal, Vrijwilligers, Kalender toevoegen, …).
 - **Nieuwsberichten**: de nieuwsartikels op de voorpagina.
 - **Documenten (downloads)**: de lijst met downloads (statuten, huishoudelijk reglement, …).
