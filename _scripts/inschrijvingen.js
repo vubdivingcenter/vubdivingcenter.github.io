@@ -152,7 +152,8 @@ async function sendBetalingsverzoek(row, vdcData) {
         `Welkom bij het VUB Diving Center (${vdcData.lidjaar.start}-${vdcData.lidjaar.einde})`,
         "email_betalingsverzoek",
         { firstName, lastName, vdc: vdcData, type, kosten: getKosten(type, vdcData) },
-        []
+        [],
+        null
     );
     row.set('Betalingsverzoek verzonden', 'ja');
     if (type === 'Steunend lidmaatschap') row.set('Lidkaart verzonden', 'ja');
@@ -173,7 +174,7 @@ async function sendInitiatieBevestiging(row, vdcData) {
     const email = row.get('E-mail');
     const telefoon = row.get('Telefoon');
     const brevetten = row.get('Reeds behaalde brevetten');
-    const ervaring = row.get('voorgaande duik- of snorkelervaring');
+    const ervaring = row.get('Duik of snorkel ervaring');
     console.log(`Sending initiatie bevestiging to ${firstName} ${lastName} <${email}>`);
     // Geen CC: er gaat apart een informatiemail naar info@vubdivingcenter.be
     await sendEmail(
