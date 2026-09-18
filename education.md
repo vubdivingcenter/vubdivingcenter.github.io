@@ -21,13 +21,15 @@ Bij het VUB Diving Center vzw is duiken geen competitiesport maar louter een mid
 
 ### Wat heeft het VUB Diving Center te bieden?
 
-Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen. De opleiding en trainingen worden uitsluitend in het Nederlands gegeven. Na deze opleiding kan je terecht bij onze club voor wekelijkse trainingen, clubduiken en duikweekends of andere evenementen.
+Het VUB Diving Center (VDC) biedt een duikopleiding aan waarop iedereen (student of niet-student) welkom is. We kiezen bewust voor die mix: door zowel studenten als niet-studenten toe te laten, blijft onze club en opleiding divers en toegankelijk voor alle leeftijden en achtergronden. We voorzien verschillende instapmomenten doorheen het jaar naargelang de beschikbare plaatsen. De opleiding en trainingen worden uitsluitend in het Nederlands gegeven. Na deze opleiding kan je terecht bij onze club voor wekelijkse trainingen, clubduiken en duikweekends of andere evenementen.
 
 #### Opleiding
 
 Gedurende enkele maanden tot een jaar (afhankelijk van jullie ervaring, voortgang en aanwezigheid) zullen jullie de basistechnieken van het duiken aangeleerd krijgen tijdens de zwembadtrainingen die gegeven worden door vrijwilligers. We organiseren zowel een theorie-cursus als een zwembadexamen voor het *initiate* certificaat. Hierna volgen enkele buitenduiken met een instructeur. Meer details over de basisopleiding vind je op de pagina [Basisopleiding](/initiatie/).
 
 Na deze opleiding kan je dan verder evolueren door het behalen van het *graduate*, *bachelor*, en uiteindelijk *instructor* certificaat.
+
+Wil je zelf graag lesgeven? Dan hoef je daar niet mee te wachten: leden die nog bezig zijn met hun basisopleiding (*initiate*) kunnen al een traject tot monitor starten. Zo help je mee aan de zwembadtrainingen terwijl je zelf nog aan je eigen brevet werkt. Meer info vind je op de pagina [Vrijwilligers](/docs/vrijwilliger/).
 
 #### Waar en wanneer
 

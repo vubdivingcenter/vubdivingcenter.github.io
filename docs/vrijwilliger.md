@@ -14,7 +14,7 @@ eleventyNavigation:
 ## Wie zijn ze?
 Jouw lesgever, het bestuur, instructeurs en iedereen die iets doet of organiseert voor de club zijn vrijwilligers. Bedank ze af en toe eens, dat appreciëren ze ten zeerste :)
 
-Onze vrijwilligersgroep is divers: verschillende leeftijden en achtergronden. Iedereen kan op zijn of haar eigen manier bijdragen aan een open en toegankelijke club.
+Onze vrijwilligersgroep is divers: verschillende leeftijden en achtergronden, zowel studenten als niet-studenten. Die diversiteit is een bewuste keuze: door iedereen toe te laten - ongeacht of je aan de VUB studeert of niet - houden we de club breed en toegankelijk. Iedereen kan op zijn of haar eigen manier bijdragen aan een open en toegankelijke club.
 
 ## Wat kan ik doen?
 Wow, tof! Vrijwilligers moedigen wij zeker aan. Hieronder staan enkele mogelijkheden waar je kan helpen, maar we staan zeker open voor andere bijdragen!
@@ -32,6 +32,8 @@ Wil je een activiteit organiseren in de club? Graag! Stuur een mail naar [info@v
 ### Lesgeven
 
 Zoals vermeld in ons [huishoudelijk reglement](/downloads/huishoudelijk_reglement_25012025.pdf) staan lessen onder het toezicht van het Comité van Instructeurs, die samen de basis- en gevorderde opleiding (en daaraansluitend de trainingen) overzien. Ben je lid en wil je vrijwilliger worden om les te geven aan beginners, dan moedigen we je aan om de verantwoordelijke van de basisopleiding (instructeur en bestuurslid) te contacteren voor meer informatie. Na een eventuele opleiding als monitor kan hij/zij bepalen hoe je mee kan helpen met de opleiding.
+
+Je hoeft hier trouwens niet mee te wachten tot je een hoger brevet hebt: ook leden die nog bezig zijn met hun basisopleiding (*initiate*) kunnen al starten met een traject tot monitor. Zo groei je stap voor stap mee in het lesgeven terwijl je zelf nog bijleert. Laat het gewoon weten aan de verantwoordelijke van de basisopleiding.
 
 Heb je momenteel een bachelor brevet en wil je nog een stap verder gaan? Bekijk dan de proeven voor [opleiding tot instructeur](/documents) en laat het Comité van Instructeurs ([vdc_instructeurs@googlegroups.com](mailto:vdc_instructeurs@googlegroups.com)) weten dat je eventueel interesse hebt om de opleiding te starten. Zij zullen je verder informeren over de verwachtingen en de opleiding zelf.
 
