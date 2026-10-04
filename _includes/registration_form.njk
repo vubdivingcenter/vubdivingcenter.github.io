@@ -308,6 +308,24 @@
   </div>
   <span class="error-message" id="error-optie"></span>
 
+  <div id="initiatie-groep" style="display:none;">
+    <label>Initiatieles *</label>
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox" id="initiatie-bevestiging">
+        <span>
+          Ik bevestig dat ik in het lidjaar {{ vdc.lidjaar.start }}-{{ vdc.lidjaar.einde }} heb deelgenomen aan een
+          <a href="/initiatie/" target="_blank">initiatieles</a>
+          en hiervoor {{ vdc.initiatieles.prijs }} euro heb betaald.
+        </span>
+      </label>
+    </div>
+    <div class="note" style="margin-top:-0.5em;">
+      (*) Deze optie kan enkel gekozen worden als je de initiatieles van dit lidjaar gevolgd en betaald hebt. Kies anders &ldquo;Standaard lidmaatschap + opleiding&rdquo;.
+    </div>
+    <span class="error-message" id="error-initiatie-bevestiging"></span>
+  </div>
+
   <label>Verklaringen *</label>
   <div class="checkbox-group">
     <label>
@@ -342,6 +360,26 @@
 </div>
 
 <script>
+// Toont de bevestiging van de initiatieles enkel bij de optie met initiatieles in mindering.
+// Deze checkbox heeft geen name-attribuut en wordt dus niet meegestuurd met het formulier.
+(function() {
+  const optie = document.getElementById('optie');
+  const groep = document.getElementById('initiatie-groep');
+  const bevestiging = document.getElementById('initiatie-bevestiging');
+
+  function toggleInitiatie() {
+    const zichtbaar = optie.value === 'Standaard lidmaatschap + opleiding - initiatie';
+    groep.style.display = zichtbaar ? '' : 'none';
+    if (!zichtbaar) {
+      bevestiging.checked = false;
+      document.getElementById('error-initiatie-bevestiging').textContent = '';
+    }
+  }
+
+  optie.addEventListener('change', toggleInitiatie);
+  toggleInitiatie();
+})();
+
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
   let valid = true;
 
@@ -420,6 +458,14 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     setError('optie', 'Selecteer een optie.');
   } else {
     clearError('optie');
+  }
+
+  // Bevestiging initiatieles (enkel bij de optie met initiatieles in mindering)
+  const initiatieBevestiging = document.getElementById('initiatie-bevestiging');
+  if (optie.value === 'Standaard lidmaatschap + opleiding - initiatie' && !initiatieBevestiging.checked) {
+    setError('initiatie-bevestiging', 'Bevestig dat je de initiatieles van dit lidjaar gevolgd en betaald hebt.');
+  } else {
+    clearError('initiatie-bevestiging');
   }
 
   // Geboortedatum: must be in the past

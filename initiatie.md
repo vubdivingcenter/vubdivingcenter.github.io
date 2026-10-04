@@ -9,6 +9,9 @@ eleventyNavigation:
     order: 101
 ---
 
+{% if initiatie.open %}
+<div data-initiatie-cutoff="{{ initiatie.cutoff }}">
+
 **Eerstvolgende initiatieles:** {{ vdc.initiatieles.datum | readableDate }} om {{ vdc.initiatieles.uur }} in het VUB-zwembad.
 
 <p class="text-center">
@@ -16,6 +19,10 @@ eleventyNavigation:
     Inschrijven voor initiatieles
   </a>
 </p>
+
+</div>
+<script src="/scripts/initiatie.js?version=20261004"></script>
+{% endif %}
 
 ## Hoe word ik lid?
 

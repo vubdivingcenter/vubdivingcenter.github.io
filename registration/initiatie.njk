@@ -4,7 +4,17 @@ title: Inschrijving Initiatie
 background: https://lh3.googleusercontent.com/pw/AP1GczOtSdbGEaWPA5U8HWb0XmJbMSKSqWj87YGrSfPWbKIN0yU5iWu-b8pAcL32zpRp5rx_NY73XgA2WJxkq-aTb6wGLA3WrXIBh4CKn4sG0Vpxc8Q-K-aY
 ---
 
+{% if not initiatie.open %}
+<h2 class="subtitle">Er is momenteel geen initiatieles gepland</h2>
+
+<p>De inschrijvingen voor de initiatieles zijn afgesloten. Je wordt doorgestuurd naar de <a href="/initiatie/">basisopleiding</a>, waar de eerstvolgende initiatieles aangekondigd wordt.</p>
+
+<script>window.location.replace('/initiatie/');</script>
+{% else %}
 <h2 class="subtitle">Initiatieles {{ vdc.initiatieles.datum | readableDate }} om {{ vdc.initiatieles.uur }}</h2>
+
+<span hidden data-initiatie-cutoff="{{ initiatie.cutoff }}" data-initiatie-redirect="/initiatie/"></span>
+<script src="/scripts/initiatie.js?version=20261004"></script>
 
 <form class="form-compact" id="registrationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfXOarMR5EPL1KMyIfLojockf8NWitf1OQmeQ6PgjU10RTtWg/formResponse" method="POST" target="_self" novalidate>
   <div class="note warn">
@@ -130,3 +140,4 @@ document.getElementById('registrationForm').addEventListener('submit', function(
   });
 });
 </script>
+{% endif %}
