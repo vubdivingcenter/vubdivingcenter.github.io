@@ -42,6 +42,17 @@
         ]
     },
     {
+        "title": "Initiatieformulier",
+        "description": "Inschrijvingsformulier voor de initiaties.",
+        "files": [
+            {
+                "date": "2026-09-09",
+                "version": 1,
+                "url": "/downloads/2026-09-09_inschrijvingsformulier_initiatie.pdf"
+            }
+        ]
+    },
+    {
         "title": "Uitleenprocedure Materiaal",
         "description": "De uitleenprocedure van (duik)materiaal.",
         "files": [
