@@ -112,6 +112,19 @@ function normalize(item) {
   };
 }
 
+function parseMaterialSet(graph) {
+  const termSet = graph.find(
+    (item) => item && item["@type"] === "DefinedTermSet" && Array.isArray(item.hasDefinedTerm)
+  );
+  if (!termSet) return [];
+  return termSet.hasDefinedTerm
+    .map((term) => ({
+      key: String(term.termCode || term.identifier || slugify(term.name || "")),
+      label: String(term.name || term.termCode || "")
+    }))
+    .filter((material) => material.key && material.label);
+}
+
 export default function () {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
   const graph = Array.isArray(data["@graph"]) ? data["@graph"] : [];
@@ -132,6 +145,7 @@ export default function () {
   return {
     all: exercises,
     groups,
-    count: exercises.length
+    count: exercises.length,
+    materials: parseMaterialSet(graph)
   };
 }

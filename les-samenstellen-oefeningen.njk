@@ -19,6 +19,16 @@ eleventyExcludeFromCollections: true
   </p>
 
   <div class="lesson-builder-grid">
+    <section class="lesson-builder-panel">
+      <div class="lesson-builder-panel-head">
+        <h3>Beschikbaar clubmateriaal</h3>
+        <span class="lesson-builder-count">{{ oefeningen.materials.length }} materialen</span>
+      </div>
+      <p class="lesson-builder-hint">Dit materiaal is beschikbaar tijdens de vrijdagtrainingen.</p>
+      <ul class="lesson-builder-material-list">
+        {% for material in oefeningen.materials %}<li>{{ material.label }}</li>{% endfor %}
+      </ul>
+    </section>
     {% for group in oefeningen.groups %}
     <section class="lesson-builder-panel">
       <div class="lesson-builder-panel-head">

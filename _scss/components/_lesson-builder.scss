@@ -82,6 +82,12 @@
   accent-color: #35558e;
 }
 
+/* Normalize sets search inputs to content-box, which makes them wider than
+ * the other fields. Keep every control inside its grid/flex column. */
+.lesson-builder-field input[type="search"] {
+  box-sizing: border-box;
+}
+
 /* Material dropdown -------------------------------------------------------- */
 
 .lesson-builder-material-dropdown {
@@ -707,6 +713,24 @@
 
 .exercise-catalogue .lesson-builder-card h4 {
   padding-right: 0;
+}
+
+.lesson-builder-material-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-builder-material-list li {
+  border: 1px solid #dfe5f1;
+  border-radius: 999px;
+  background: #f8faff;
+  color: #1f3b6d;
+  font-size: 0.88rem;
+  padding: 0.15rem 0.55rem;
 }
 
 .exercise-catalogue .lesson-builder-card:target {

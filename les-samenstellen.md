@@ -10,7 +10,7 @@ eleventyNavigation:
 
 Met deze tool stel je een vrijdagtraining van **exact één uur (20:00–21:00)** samen op basis van de oefenfiches uit **vdc-oefeningen**, aangevuld met extra trainingsideeën. Je kan zelf oefeningen toevoegen, de volgorde en duur aanpassen, of een volledig voorstel laten genereren.
 
-Beschikbaar materiaal dat in de planner wordt meegenomen: jacket, fles, binnenontspanner, buitenontspanner, backpacks (uithouding), loodgordels, geplastificeerde figuren, mini-torpedo's, onderwaterfrisbee, hoepels, buisjes met steentjes, knikkers en dobbelstenen.
+<p id="builder-material-summary" class="lesson-builder-hint">Beschikbaar materiaal wordt geladen uit de oefendata.</p>
 
 <div class="lesson-builder" data-lesson-builder>
   <div class="lesson-builder-controls">
@@ -46,19 +46,6 @@ Beschikbaar materiaal dat in de planner wordt meegenomen: jacket, fles, binnenon
             <button type="button" data-material-all>Alles</button>
             <button type="button" data-material-none>Geen</button>
           </div>
-          <label><input type="checkbox" data-material-key="jacket" checked> Jacket</label>
-          <label><input type="checkbox" data-material-key="fles" checked> Fles</label>
-          <label><input type="checkbox" data-material-key="binnenontspanner" checked> Binnenontspanner</label>
-          <label><input type="checkbox" data-material-key="buitenontspanner" checked> Buitenontspanner</label>
-          <label><input type="checkbox" data-material-key="backpack" checked> Backpack</label>
-          <label><input type="checkbox" data-material-key="loodgordel" checked> Loodgordels</label>
-          <label><input type="checkbox" data-material-key="figuurkaarten" checked> Geplastificeerde figuren</label>
-          <label><input type="checkbox" data-material-key="torpedo" checked> Mini-torpedo</label>
-          <label><input type="checkbox" data-material-key="frisbee" checked> Onderwaterfrisbee</label>
-          <label><input type="checkbox" data-material-key="hoepel" checked> Hoepels</label>
-          <label><input type="checkbox" data-material-key="buisjes_steentjes" checked> Buisjes met steentjes</label>
-          <label><input type="checkbox" data-material-key="knikkers" checked> Knikkers</label>
-          <label><input type="checkbox" data-material-key="dobbelstenen" checked> Dobbelstenen</label>
         </div>
       </div>
     </div>
@@ -144,4 +131,4 @@ Beschikbaar materiaal dat in de planner wordt meegenomen: jacket, fles, binnenon
   </div>
 </div>
 
-<script src="/scripts/les-samenstellen.js?version=2026111201"></script>
+<script src="/scripts/les-samenstellen.js?version={{ assetVersion }}"></script>
