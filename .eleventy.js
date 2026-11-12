@@ -67,6 +67,12 @@ export default function (el) {
   // Make VDC data available globally
   el.addGlobalData("vdc", vdcConfig);
   el.addGlobalData("currentYear", () => new Date().getFullYear());
+  // Cache-busting version for generated assets. In CI this is the commit SHA;
+  // locally it is a timestamp so a fresh build never reuses a cached stylesheet.
+  el.addGlobalData(
+    "assetVersion",
+    process.env.GITHUB_SHA ? process.env.GITHUB_SHA.slice(0, 12) : String(Date.now())
+  );
   
   /* Navigation */
   el.addPlugin(pluginNavigation);
