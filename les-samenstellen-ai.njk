@@ -1,0 +1,122 @@
+---
+layout: main
+title: AI gebruiken voor je lesplan
+subtitle: Van thema naar een volledig uur
+permalink: /les-samenstellen/ai/index.html
+eleventyExcludeFromCollections: true
+---
+
+<div class="lesson-builder lesson-builder-ai-page">
+  <p>
+    Je kan ChatGPT, Claude, Gemini of een andere AI een volledig voorstel laten maken voor de vrijdagtraining.
+    De AI krijgt de oefeningen als inspiratie, maar moet zich aan vaste regels houden: <strong>exact 60 minuten,
+    van 20:00 tot 21:00</strong>, met een opwarming, hoofdoefeningen en een afsluiter.
+  </p>
+
+  <h2>Werkwijze</h2>
+  <ol>
+    <li>Open de <a href="/les-samenstellen/">lesplanner</a> en stel je niveau, aantal kandidaten, materiaal en thema in.</li>
+    <li>Klik op <strong>Kopieer AI-opdracht</strong>. De korte opdracht verwijst naar de online instructies en de oefeningen-URL's, en vult jouw filters automatisch aan.</li>
+    <li>Plak de opdracht in ChatGPT, Claude of een andere AI. Je krijgt een gewoon leesbaar lesvoorstel terug, in gewone taal.</li>
+    <li>Gebruik het voorstel als inspiratie en duid de gekozen oefeningen aan in de planner. Zo blijft de tijdsbewaking van 20:00–21:00 actief.</li>
+    <li>Controleer de totale duur en pas de volgorde of duur aan waar nodig.</li>
+  </ol>
+
+  <h2>Vaste AI-opdracht</h2>
+  <p>
+    Gebruik deze korte opdracht als je liever buiten de planner werkt. Vul de filters onderaan zelf aan.
+    De volledige regels staan in de <a href="/les-samenstellen/ai/lesplan-instructies.md">online instructies</a>.
+  </p>
+
+  <div class="lesson-builder-ai-actions">
+    <button type="button" class="btn btn-secondary" data-copy-target="ai-static-prompt">
+      <i class="fa-solid fa-copy" aria-hidden="true"></i> Kopieer opdracht
+    </button>
+    <a class="btn btn-primary" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a>
+    <a class="btn btn-grey" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude</a>
+  </div>
+  <p id="ai-copy-status" class="lesson-builder-status" role="status" aria-live="polite"></p>
+
+  <pre id="ai-static-prompt" class="lesson-builder-ai-prompt">Je bent een ervaren duikinstructeur bij VUB Diving Center.
+
+Lees eerst de volledige lesplan-instructies:
+https://www.vubdivingcenter.be/les-samenstellen/ai/lesplan-instructies.md
+
+Gebruik als bron:
+- Volledig oefeningenbestand: https://www.vubdivingcenter.be/scripts/data/vdc-oefeningen.jsonld
+- Leesbare oefeningenlijst: https://www.vubdivingcenter.be/les-samenstellen/oefeningen/
+
+MIJN FILTERS
+- Niveau: [bv. Gevorderd]
+- Aantal kandidaten: [bv. 8]
+- Beschikbaar materiaal: [bv. alle materiaal]
+- Thema/focus: [bv. apnea en buddyveiligheid]
+
+OPDRACHT
+Maak een lesvoorstel van exact 60 minuten: 20:00 tot 21:00. Gebruik bij voorkeur bestaande oefeningen uit de lijst als inspiratie. Je mag ook een eigen oefening voorstellen.
+
+Verwacht antwoord: een leesbaar lesvoorstel in het Nederlands met een korte inleiding, een tabel (Tijd | Oefening | Duur | Materiaal | Uitleg), een totaalregel van 60 minuten en 1-2 reserve-oefeningen. Geen codeblokken of technische bestandsformaten.
+Kan je de bronlinks niet openen? Gebruik dan je eigen duikervaring.</pre>
+
+  <h2>Voorbeeld van een lesvoorstel</h2>
+  <p>Zo ziet het antwoord van de AI eruit. Je hoeft dit niet over te typen; je neemt de oefeningen over in de planner.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Tijd</th>
+        <th>Oefening</th>
+        <th>Duur</th>
+        <th>Materiaal</th>
+        <th>Uitleg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20:00–20:10</td>
+        <td>Opwarming palmen en basismateriaal</td>
+        <td>10 min</td>
+        <td>Basismateriaal</td>
+        <td>Rustig tempo, techniek en ademhaling.</td>
+      </tr>
+      <tr>
+        <td>20:10–20:30</td>
+        <td>Parcours: flessen openen en sluiten</td>
+        <td>20 min</td>
+        <td>3-4 flessen</td>
+        <td>Per fles 1-2 ademhalingen, daarna sluiten.</td>
+      </tr>
+      <tr>
+        <td>20:30–20:45</td>
+        <td>Apnea-achtje met buddycheck</td>
+        <td>15 min</td>
+        <td>Fles, snorkel</td>
+        <td>Buddy volgt visueel en geeft OK-teken.</td>
+      </tr>
+      <tr>
+        <td>20:45–21:00</td>
+        <td>Afsluiter: rustige ademhaling en debrief</td>
+        <td>15 min</td>
+        <td>Geen extra</td>
+        <td>Herstel, feedback en materiaalcontrole.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Totaal: 60 minuten · einde 21:00.</strong></p>
+  <p><strong>Reserve:</strong> korte race of watertrappelen met lood, afhankelijk van de resterende energie.</p>
+
+  <h2>Goed om te weten</h2>
+  <ul>
+    <li>De planner is de tijdsbewaker: die toont of je selectie exact 20:00–21:00 duurt.</li>
+    <li>De AI-opdracht wordt altijd aangepast aan je huidige filters en thema.</li>
+    <li>Niet elke AI opent links automatisch. Zet browsen aan of plak de oefeningenlijst-URL in de chat. Zonder toegang tot de lijst kan de AI eigen oefeningen voorstellen.</li>
+    <li>Deel geen persoonsgegevens of medische informatie met een AI.</li>
+    <li>Controleer een AI-voorstel altijd zelf: veiligheid, niveau en beschikbaar materiaal blijven de verantwoordelijkheid van de instructeur.</li>
+  </ul>
+
+  <p>
+    <a href="/les-samenstellen/">Terug naar de lesplanner</a> ·
+    <a href="/les-samenstellen/oefeningen/">Bekijk alle oefeningen</a>
+  </p>
+</div>
+
+<script src="/scripts/les-samenstellen-ai.js?version=2026111201"></script>

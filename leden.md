@@ -46,5 +46,6 @@ Nieuwe leden worden verwacht om eerst contact met ons op te nemen alvorens ze ku
 
 - Lees wat het VDC te bieden heeft op de pagina [Duikopleiding](/education/).
 - Ontdek de [basisopleiding](/initiatie/) tot Initiate en Graduate Diver.
+- Stel je eigen vrijdagtraining samen via [Les samenstellen](/les-samenstellen/).
 - Raadpleeg de [clubdocumenten](/documents/).
 - Wil je je vinnetje bijdragen tot de club? Word [vrijwilliger](/docs/vrijwilliger/).

@@ -1,0 +1,66 @@
+---
+layout: main
+title: Oefeningen vrijdagtraining
+subtitle: Inspiratie voor je lesplan
+permalink: /les-samenstellen/oefeningen/index.html
+eleventyExcludeFromCollections: true
+---
+
+<div class="lesson-builder exercise-catalogue">
+  <p class="lesson-builder-hint">
+    Deze lijst wordt automatisch gegenereerd uit de oefenfiches. Gebruik ze als inspiratie in de
+    <a href="/les-samenstellen/">lesplanner</a>, of deel de link met een AI.
+    Er zijn <strong>{{ oefeningen.count }}</strong> oefeningen beschikbaar.
+  </p>
+  <p class="lesson-builder-hint">
+    Handige links:
+    <a href="/les-samenstellen/ai/">AI-instructies</a> ·
+    <a href="/scripts/data/vdc-oefeningen.jsonld">Volledig oefeningenbestand</a>
+  </p>
+
+  <div class="lesson-builder-grid">
+    {% for group in oefeningen.groups %}
+    <section class="lesson-builder-panel">
+      <div class="lesson-builder-panel-head">
+        <h3>{{ group.label }}</h3>
+        <span class="lesson-builder-count">{{ group.items.length }} oefeningen</span>
+      </div>
+      <div class="lesson-builder-list">
+        {% for exercise in group.items %}
+        <article class="lesson-builder-card" id="{{ exercise.slug }}">
+          <h4>{{ exercise.name }}</h4>
+          {% if exercise.description %}<p>{{ exercise.description }}</p>{% endif %}
+          <p class="lesson-builder-meta">
+            <span><strong>Duur:</strong> {{ exercise.durationMinutes }} min</span>
+            <span><strong>Niveau:</strong> {{ exercise.levelLabel }}</span>
+            {% if exercise.repetitions %}<span><strong>Herhaling:</strong> {{ exercise.repetitions }}</span>{% endif %}
+            <span><strong>Kandidaten:</strong> min {{ exercise.minCandidates }}{% if exercise.maxCandidates %}, max {{ exercise.maxCandidates }}{% endif %}</span>
+          </p>
+          {% if exercise.teaches.length > 0 %}
+          <p class="lesson-builder-meta">
+            <span><strong>Leerdoel:</strong> {{ exercise.teaches | join(", ") }}</span>
+          </p>
+          {% endif %}
+          {% if exercise.materials.length > 0 %}
+          <div class="lesson-builder-bom">
+            <strong>Materiaal</strong>
+            <ul>
+              {% for material in exercise.materials %}<li>{{ material }}</li>{% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+          {% if exercise.steps.length > 0 %}
+          <details class="lesson-builder-details">
+            <summary>Uitgevoerd stappenplan</summary>
+            <ol>
+              {% for step in exercise.steps %}<li>{{ step }}</li>{% endfor %}
+            </ol>
+          </details>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+  </div>
+</div>

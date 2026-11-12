@@ -1,0 +1,205 @@
+---
+permalink: /les-samenstellen/print/index.html
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesplanning afdruk</title>
+  <link href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 14px;
+      background: #fff;
+      color: #000;
+      font-family: 'ITC Avant Garde Gothic Std Book', Arial, sans-serif;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .no-print {
+      margin-bottom: 14px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .no-print button,
+    .no-print a {
+      border: 0;
+      background: #001f75;
+      color: #fff;
+      padding: 7px 12px;
+      cursor: pointer;
+      font: inherit;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .no-print button.secondary,
+    .no-print a.secondary {
+      background: #2e2e2e;
+    }
+    .no-print a.tertiary {
+      background: #eef3ff;
+      color: #001f75;
+    }
+    .print-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .print-header img { width: 54px; height: 54px; }
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    p.meta { margin: 3px 0 0; font-size: 11px; }
+    .print-summary {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      margin-bottom: 12px;
+      font-size: 11px;
+    }
+    .warning {
+      border: 2px solid #9c0000;
+      background: #fff5f5;
+      color: #7a1f1f;
+      padding: 7px 9px;
+      margin: 0 0 12px;
+      font-size: 11px;
+    }
+    h2 {
+      margin: 14px 0 6px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-bottom: 1px solid #000;
+      padding-bottom: 3px;
+    }
+    h2:first-of-type { margin-top: 6px; }
+    .print-item {
+      border: 1px solid #000;
+      padding: 7px 9px;
+      margin-bottom: 8px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .print-item-header {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      justify-content: space-between;
+    }
+    .print-item-title {
+      margin: 0;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .print-item-time {
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .print-item-meta {
+      margin: 3px 0 0;
+      font-size: 10px;
+      color: #222;
+    }
+    .print-item-description {
+      margin: 5px 0 0;
+      font-size: 10.5px;
+    }
+    .print-item-material {
+      margin: 5px 0 0;
+      font-size: 10px;
+    }
+    .print-item-material ul {
+      margin: 2px 0 0 16px;
+      padding: 0;
+    }
+    .print-item-steps {
+      margin: 5px 0 0 17px;
+      padding: 0;
+      font-size: 10px;
+    }
+    .print-item-steps li { margin-bottom: 1px; }
+    .print-reserve {
+      border: 1px dashed #000;
+      padding: 6px 8px;
+      margin-bottom: 6px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .print-reserve h3 {
+      margin: 0;
+      font-size: 11.5px;
+    }
+    .print-reserve p {
+      margin: 2px 0 0;
+      font-size: 10px;
+    }
+    .empty {
+      border: 1px solid #000;
+      padding: 10px;
+      font-size: 11px;
+    }
+    .small { font-size: 10px; color: #333; margin: 0 0 6px; }
+    .footer {
+      margin-top: 16px;
+      border-top: 1px solid #999;
+      padding-top: 5px;
+      font-size: 9px;
+      color: #555;
+    }
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { padding: 0; }
+      .print-item, .print-reserve { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="no-print">
+    <button type="button" id="print-button">Print / PDF</button>
+    <button class="secondary" type="button" id="back-button">Terug</button>
+    <a class="tertiary" href="/les-samenstellen/">Open planner</a>
+  </div>
+
+  <header class="print-header">
+    <img src="/images/logo.svg" alt="VDC logo">
+    <div>
+      <h1>VUB Diving Center - Vrijdagtraining</h1>
+      <p id="print-meta" class="meta"></p>
+    </div>
+  </header>
+
+  <div id="print-summary" class="print-summary"></div>
+  <p id="print-warning" class="warning" hidden></p>
+
+  <h2>Lesplanning 20:00–21:00</h2>
+  <div id="print-plan"></div>
+
+  <h2>Reserve-oefeningen</h2>
+  <p class="small">Deze oefeningen zijn niet ingepland. Gebruik ze als er tijd over is of als een oefening wegvalt.</p>
+  <div id="print-reserves"></div>
+
+  <p class="footer">VUB Diving Center vzw · vrijdagtraining gevorderden · 20:00–21:00</p>
+
+  <script src="/scripts/les-samenstellen-print.js?version=2026111201"></script>
+</body>
+</html>
