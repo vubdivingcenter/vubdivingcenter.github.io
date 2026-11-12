@@ -36,7 +36,7 @@ Als je de bronnen niet kan openen, gebruik je je eigen duikervaring en kennis va
 
 ## Materiaal
 
-Beschikbaar in de club: jacket, fles, binnenontspanner, buitenontspanner, backpacks (uithouding), loodgordels, geplastificeerde figuren, mini-torpedo's, onderwaterfrisbee, hoepels, buisjes met steentjes, knikkers en dobbelstenen.
+De beschikbare materialen staan in het oefeningenbestand en op de leesbare oefeningenlijst. Gebruik alleen materiaal dat daar vermeld staat.
 
 ## Verwacht antwoord
 

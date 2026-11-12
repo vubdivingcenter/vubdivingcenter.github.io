@@ -30,9 +30,7 @@
   var variationsInput = document.getElementById("builder-variations");
   var materialToggleButton = document.getElementById("builder-material-toggle");
   var materialsPanel = document.getElementById("builder-materials");
-  var materialCheckboxes = Array.prototype.slice.call(
-    document.querySelectorAll("#builder-materials input[type='checkbox'][data-material-key]")
-  );
+  var materialCheckboxes = [];
   var materialAllButton = document.querySelector("[data-material-all]");
   var materialNoneButton = document.querySelector("[data-material-none]");
   var generateButton = document.getElementById("builder-generate");
@@ -64,6 +62,7 @@
     buitenontspanner: "Buitenontspanner",
     backpack: "Backpack",
     loodgordel: "Loodgordel",
+    reddingsdummy: "Reddingsdummy",
     figuurkaarten: "Figuurkaarten",
     torpedo: "Mini-torpedo",
     frisbee: "Onderwaterfrisbee",
@@ -177,6 +176,7 @@
     if (value.indexOf("knikker") >= 0) keys.push("knikkers");
     if (value.indexOf("dobbel") >= 0) keys.push("dobbelstenen");
     if (value.indexOf("loodgordel") >= 0 || value.indexOf("loodzak") >= 0) keys.push("loodgordel");
+    if (value.indexOf("reddingsdummy") >= 0 || value.indexOf("dummy") >= 0) keys.push("reddingsdummy");
     if (value.indexOf("figuur") >= 0 || value.indexOf("geplastific") >= 0) keys.push("figuurkaarten");
     return keys;
   }
@@ -542,6 +542,62 @@
       if (materialCheckboxes[i].checked) selected.add(materialCheckboxes[i].dataset.materialKey);
     }
     return selected;
+  }
+
+  function extractMaterialSet(graph) {
+    if (!Array.isArray(graph)) return [];
+    var termSet = null;
+    for (var i = 0; i < graph.length; i++) {
+      if (graph[i] && graph[i]["@type"] === "DefinedTermSet" && Array.isArray(graph[i].hasDefinedTerm)) {
+        termSet = graph[i];
+        break;
+      }
+    }
+    if (!termSet) return [];
+
+    var materials = [];
+    for (var j = 0; j < termSet.hasDefinedTerm.length; j++) {
+      var term = termSet.hasDefinedTerm[j];
+      var key = term && (term.termCode || term.identifier || term.name);
+      var label = term && (term.name || term.termCode);
+      if (key && label) materials.push({ key: String(key), label: String(label) });
+    }
+    return materials;
+  }
+
+  function applyMaterialSet(materials) {
+    var entries = Array.isArray(materials) && materials.length > 0
+      ? materials
+      : Object.keys(MATERIAL_LABELS).map(function (key) { return { key: key, label: MATERIAL_LABELS[key] }; });
+    if (entries.length === 0 || !materialsPanel) return;
+
+    MATERIAL_LABELS = {};
+    for (var i = 0; i < entries.length; i++) MATERIAL_LABELS[entries[i].key] = entries[i].label;
+
+    var actions = materialsPanel.querySelector(".lesson-builder-material-actions");
+    materialsPanel.innerHTML = "";
+    if (actions) materialsPanel.appendChild(actions);
+
+    for (var j = 0; j < entries.length; j++) {
+      var label = document.createElement("label");
+      var input = document.createElement("input");
+      input.type = "checkbox";
+      input.dataset.materialKey = entries[j].key;
+      input.checked = true;
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(" " + entries[j].label));
+      materialsPanel.appendChild(label);
+    }
+    materialCheckboxes = Array.prototype.slice.call(
+      materialsPanel.querySelectorAll("input[type='checkbox'][data-material-key]")
+    );
+
+    var summary = document.getElementById("builder-material-summary");
+    if (summary) {
+      summary.textContent = "Beschikbaar materiaal: " + entries.map(function (entry) {
+        return entry.label;
+      }).join(", ") + ".";
+    }
   }
 
   function showsVariations() {
@@ -1540,8 +1596,9 @@
    * Init
    * ------------------------------------------------------------------------ */
 
-  function init(exercises) {
+  function init(exercises, materials) {
     state.all = createVariations(exercises);
+    applyMaterialSet(materials);
     state.dataLoaded = true;
     restoreFilters();
     bindEvents();
@@ -1569,7 +1626,7 @@
         .map(normalizeExercise)
         .filter(function (exercise) { return !!exercise; });
       if (exercises.length === 0) throw new Error("Geen oefeningen gevonden in het oefenbestand");
-      init(exercises);
+      init(exercises, extractMaterialSet(graph));
     })
     .catch(function (error) {
       setStatus("Fout bij laden van oefeningen: " + error.message);

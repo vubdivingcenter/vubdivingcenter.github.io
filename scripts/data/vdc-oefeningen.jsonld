@@ -18,11 +18,35 @@
         "name": "VUB Diving Center vzw",
         "url": "https://www.vubdivingcenter.be"
       },
+      "hasPart": { "@id": "vdc:dataset/materiaal" },
       "distribution": {
         "@type": "DataDownload",
         "encodingFormat": "application/ld+json",
         "contentUrl": "/scripts/data/vdc-oefeningen.jsonld"
       }
+    },
+    {
+      "@id": "vdc:dataset/materiaal",
+      "@type": "DefinedTermSet",
+      "name": "Beschikbaar clubmateriaal",
+      "description": "Materiaal dat beschikbaar is tijdens de vrijdagtrainingen van VUB Diving Center.",
+      "inLanguage": "nl-BE",
+      "hasDefinedTerm": [
+        { "@type": "DefinedTerm", "termCode": "jacket", "name": "Jacket" },
+        { "@type": "DefinedTerm", "termCode": "fles", "name": "Fles" },
+        { "@type": "DefinedTerm", "termCode": "binnenontspanner", "name": "Binnenontspanner" },
+        { "@type": "DefinedTerm", "termCode": "buitenontspanner", "name": "Buitenontspanner" },
+        { "@type": "DefinedTerm", "termCode": "backpack", "name": "Backpack" },
+        { "@type": "DefinedTerm", "termCode": "loodgordel", "name": "Loodgordel" },
+        { "@type": "DefinedTerm", "termCode": "reddingsdummy", "name": "Reddingsdummy" },
+        { "@type": "DefinedTerm", "termCode": "figuurkaarten", "name": "Figuurkaarten" },
+        { "@type": "DefinedTerm", "termCode": "torpedo", "name": "Mini-torpedo" },
+        { "@type": "DefinedTerm", "termCode": "frisbee", "name": "Onderwaterfrisbee" },
+        { "@type": "DefinedTerm", "termCode": "hoepel", "name": "Hoepel" },
+        { "@type": "DefinedTerm", "termCode": "buisjes_steentjes", "name": "Buisjes met steentjes" },
+        { "@type": "DefinedTerm", "termCode": "knikkers", "name": "Knikkers" },
+        { "@type": "DefinedTerm", "termCode": "dobbelstenen", "name": "Dobbelstenen" }
+      ]
     },
     {
       "@id": "vdc:exercise/end-summer/opwarming-basismateriaal",
