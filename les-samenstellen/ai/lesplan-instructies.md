@@ -12,8 +12,9 @@ Maak een veilig, progressief en uitvoerbaar lesvoorstel van **exact 60 minuten**
 
 Gebruik bij voorkeur de bestaande oefeningen als inspiratie. Elke oefening heeft een duur, een niveau, een minimum/maximum aantal kandidaten en een lijst met materiaal.
 
-- Volledig oefeningenbestand: https://www.vubdivingcenter.be/scripts/data/vdc-oefeningen.jsonld
+- Tekstversie van de oefeningen (aanbevolen): https://www.vubdivingcenter.be/les-samenstellen/ai/oefeningen.md
 - Leesbare oefeningenlijst: https://www.vubdivingcenter.be/les-samenstellen/oefeningen/
+- JSON-LD (optioneel, voor tools die dit ondersteunen): https://www.vubdivingcenter.be/scripts/data/vdc-oefeningen.jsonld
 
 Als je de bronnen niet kan openen, gebruik je je eigen duikervaring en kennis van het clubmateriaal.
 
