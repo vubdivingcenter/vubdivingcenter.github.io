@@ -48,6 +48,21 @@ Geef een leesbaar lesvoorstel met:
 4. 1 tot 2 reserve-oefeningen voor als er tijd over is of een oefening wegvalt.
 5. Optioneel: 2 tot 3 coachpunten voor de begeleider.
 
+## Voorbeeld
+
+Titel: Apnea en buddyveiligheid — 60 minuten
+
+| Tijd | Oefening | Duur | Materiaal | Uitleg |
+| --- | --- | --- | --- | --- |
+| 20:00–20:10 | Opwarming palmen en basismateriaal | 10 min | Basismateriaal | Rustig tempo, techniek en ademhaling. |
+| 20:10–20:30 | Parcours: flessen openen en sluiten | 20 min | 3-4 flessen | Per fles 1-2 ademhalingen, daarna sluiten. |
+| 20:30–20:45 | Apnea-achtje met buddycheck | 15 min | Fles, snorkel | Buddy volgt visueel en geeft OK-teken. |
+| 20:45–21:00 | Afsluiter: rustige ademhaling en debrief | 15 min | Geen extra | Herstel, feedback en materiaalcontrole. |
+
+**Totaal: 60 minuten · einde 21:00.**
+
+**Reserve:** korte race of watertrappelen met lood, afhankelijk van de resterende energie.
+
 ## Controlelijst voor je antwoord
 
 - [ ] De som van alle duurwaarden is exact 60 minuten.
