@@ -1,0 +1,29 @@
+# VUB Diving Center
+
+> Duikclub verbonden aan de Vrije Universiteit Brussel. De site bevat praktische informatie over lidmaatschap, opleidingen, trainingen, clubduiken en evenementen.
+
+## Les samenstellen (vrijdagtraining)
+
+De lesplanner stelt een vrijdagtraining van exact 60 minuten samen, van 20:00 tot 21:00.
+
+- [Lesplanner](https://www.vubdivingcenter.be/les-samenstellen/): oefeningen kiezen, voorstel genereren, AI-voorstel opvragen en printen.
+- [Volledige lesplan-instructies](https://www.vubdivingcenter.be/les-samenstellen/ai/lesplan-instructies.md): instructies voor een AI om een lesplan te maken.
+- [AI-instructies](https://www.vubdivingcenter.be/les-samenstellen/ai/): korte prompt en werkwijze om een lesplan met een AI te maken.
+- [Oefeningenlijst](https://www.vubdivingcenter.be/les-samenstellen/oefeningen/): alle oefeningen met duur, niveau, materiaal en stappenplan.
+- [JSON-LD dataset](https://www.vubdivingcenter.be/scripts/data/vdc-oefeningen.jsonld): machineleesbare oefendata.
+
+### Regels voor een lesplan
+
+- De training duurt exact 60 minuten: 20:00 tot 21:00.
+- De som van alle duurwaarden is exact 60.
+- Begin met een opwarming en sluit af met een cooldown of afsluiter.
+- Gebruik bij voorkeur bestaande oefeningen als inspiratie.
+- Respecteer niveau, aantal kandidaten en beschikbaar materiaal.
+- Gebruik geen dubbele oefeningen.
+
+## Overige pagina's
+
+- [Leden](https://www.vubdivingcenter.be/leden/)
+- [Duikopleiding](https://www.vubdivingcenter.be/education/)
+- [Kalender](https://www.vubdivingcenter.be/calendar/)
+- [Nieuws](https://www.vubdivingcenter.be/posts/)

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+  <!-- 
+    VUB Diving Center Website
+    Thema gemaakt door Maxim Van de Wynckel
+
+    Zin om mee te werken aan deze website? 
+    Check de github: https://github.com/vubdivingcenter/vubdivingcenter.github.io
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AI gebruiken voor je lesplan - VUB Diving Center</title>
+
+<meta name="description" content="Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center. Elke vrijdag duiktraining van 19u45 tot 21u in het zwembad van de Vrije Universiteit Brussel.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="VUB Diving Center">
+
+<link rel="canonical" href="https://www.vubdivingcenter.be/les-samenstellen/ai/">
+
+<meta property="og:title" content="AI gebruiken voor je lesplan - VUB Diving Center">
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://www.vubdivingcenter.be/les-samenstellen/ai/">
+<meta property="og:description" content="Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center. Elke vrijdag duiktraining van 19u45 tot 21u in het zwembad van de Vrije Universiteit Brussel.">
+<meta property="og:image" content="https://www.vubdivingcenter.be/images/social/summary-large.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:url" content="https://www.vubdivingcenter.be/les-samenstellen/ai/">
+<meta name="twitter:title" content="AI gebruiken voor je lesplan - VUB Diving Center">
+<meta name="twitter:description" content="Duikopleidingen en duikinitaties in Brussel bij het VUB Diving Center. Elke vrijdag duiktraining van 19u45 tot 21u in het zwembad van de Vrije Universiteit Brussel.">
+<meta name="twitter:image" content="https://www.vubdivingcenter.be/images/social/summary-large.png">
+
+
+    <meta property="og:locale" content="nl_BE">
+    <meta property="og:site_name" content="VUB Diving Center">
+    <meta name="keywords" content="vub, diving, duiken, vubdivingcenter, diepzeeduiken, scuba, vrije universiteit brussel, etterbeek, opleiding, duikintiatie, groepsactiviteit, teambuilding, brussel, training vrijdag">
+
+    <link href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css?version=202609">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link type="application/atom+xml" title="VUB Diving Center Nieuws" rel="alternate" href="https://www.vubdivingcenter.be/feed.xml">
+
+    
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <meta name="theme-color" content="#000d31">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "VUB Diving Center",
+        "url": "https://www.vubdivingcenter.be",
+        "logo": "https://www.vubdivingcenter.be/images/logo.svg",
+        "email": "info@vubdivingcenter.be",
+        "telephone": "+32 472 24 09 70",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "c/o Oudstudentenbond VUB (OSB), Triomflaan 40",
+            "postalCode": "1160",
+            "addressLocality": "Oudergem",
+            "addressCountry": "BE"
+        }
+    }
+    </script>
+    <meta name="facebook-domain-verification" content="2wt5keovgp3e771jynflf9c6tpldyo">
+
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2YKJ9QCSQK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2YKJ9QCSQK');
+    </script>
+</head>
+
+
+  <body>
+    <div class="page-wrapper">
+      <header>
+  <div class="header-image">
+    <picture>
+      
+        <img alt="AI gebruiken voor je lesplan Van thema naar een volledig uur" referrerpolicy="no-referrer" src="/images/background/default.jpg">
+      
+    </picture>
+    <div class="wave">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 60" xml:space="preserve" preserveAspectRatio="none">
+        <path style="fill:#FFFFFF" d="M-144.5,9.5c0,0,216.7,68,594.4,20.5s476.6,16.9,476.6,16.9l23,71.6l-1094-6.9"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <nav>
+    <a href="/" class="logo"></a>
+
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" onclick="openNav()">
+    <label for="nav-trigger">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+        </svg>
+      </span>
+    </label>
+
+    <div class="trigger">
+          <div class="dropdown page-link ">
+            <a class="dropbtn" href="/education/">Duikopleiding
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content"><a class="dropdown-link " href="/initiatie/">Basisopleiding</a></div>
+          </div>
+        
+          <a class="page-link " href="/about/">Over ons</a>
+        
+          <div class="dropdown page-link ">
+            <a class="dropbtn" href="/leden/">Leden
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content"><a class="dropdown-link " href="/posts/">Nieuws</a><a class="dropdown-link " href="/docs/vrijwilliger/">Vrijwilligers</a><a class="dropdown-link " href="/registration/">Inschrijven</a><a class="dropdown-link " href="/calendar/">Kalender</a><a class="dropdown-link " href="/gallery/">Foto&#39;s</a><a class="dropdown-link " href="/plonskrantje/">Plonskrantje</a><a class="dropdown-link " href="/documents/">Documenten</a><a class="dropdown-link " href="/les-samenstellen/">Les samenstellen</a></div>
+          </div>
+        
+          <a class="page-link " href="/activity/">Teambuilding</a>
+        
+          <a class="page-link " href="/contact/">Contact</a>
+        </div>
+
+    <h1>AI gebruiken voor je lesplan</h1>
+    
+  </nav>
+</header>
+      <aside id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+        <li class="nested ">
+            <a href="/education/">Duikopleiding</a>
+            <ul><li>
+                    <a href="/initiatie/">Basisopleiding</a>
+                </li></ul>
+        </li>
+    
+        <li>
+            <a href="/about/">Over ons</a>
+        </li>
+    
+        <li class="nested ">
+            <a href="/leden/">Leden</a>
+            <ul><li>
+                    <a href="/posts/">Nieuws</a>
+                </li><li>
+                    <a href="/docs/vrijwilliger/">Vrijwilligers</a>
+                </li><li>
+                    <a href="/registration/">Inschrijven</a>
+                </li><li>
+                    <a href="/calendar/">Kalender</a>
+                </li><li>
+                    <a href="/gallery/">Foto&#39;s</a>
+                </li><li>
+                    <a href="/plonskrantje/">Plonskrantje</a>
+                </li><li>
+                    <a href="/documents/">Documenten</a>
+                </li><li>
+                    <a href="/les-samenstellen/">Les samenstellen</a>
+                </li></ul>
+        </li>
+    
+        <li>
+            <a href="/activity/">Teambuilding</a>
+        </li>
+    
+        <li>
+            <a href="/contact/">Contact</a>
+        </li>
+    </ul>
+</aside>
+
+      <div class="content" id="content">
+        
+        <h2 class="subtitle">Van thema naar een volledig uur</h2>
+        
+        
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-12 typography">
+      
+<div class="lesson-builder lesson-builder-ai-page">
+  <p>
+    Je kan ChatGPT, Claude, Gemini of een andere AI een volledig voorstel laten maken voor de vrijdagtraining.
+    De AI krijgt de oefeningen als inspiratie, maar moet zich aan vaste regels houden: <strong>exact 60 minuten,
+    van 20:00 tot 21:00</strong>, met een opwarming, hoofdoefeningen en een afsluiter.
+  </p>
+
+  <h2>Werkwijze</h2>
+  <ol>
+    <li>Open de <a href="/les-samenstellen/">lesplanner</a> en stel je niveau, aantal kandidaten, materiaal en thema in.</li>
+    <li>Klik op <strong>Kopieer AI-opdracht</strong>. De korte opdracht verwijst naar de online instructies en de oefeningen-URL's, en vult jouw filters automatisch aan.</li>
+    <li>Plak de opdracht in ChatGPT, Claude of een andere AI. Je krijgt een gewoon leesbaar lesvoorstel terug, in gewone taal.</li>
+    <li>Gebruik het voorstel als inspiratie en duid de gekozen oefeningen aan in de planner. Zo blijft de tijdsbewaking van 20:00–21:00 actief.</li>
+    <li>Controleer de totale duur en pas de volgorde of duur aan waar nodig.</li>
+  </ol>
+
+  <h2>Vaste AI-opdracht</h2>
+  <p>
+    Gebruik deze korte opdracht als je liever buiten de planner werkt. Vul de filters onderaan zelf aan.
+    De volledige regels staan in de <a href="/les-samenstellen/ai/lesplan-instructies.md">online instructies</a>.
+  </p>
+
+  <div class="lesson-builder-ai-actions">
+    <button type="button" class="btn btn-secondary" data-copy-target="ai-static-prompt">
+      <i class="fa-solid fa-copy" aria-hidden="true"></i> Kopieer opdracht
+    </button>
+    <a class="btn btn-primary" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a>
+    <a class="btn btn-grey" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude</a>
+  </div>
+  <p id="ai-copy-status" class="lesson-builder-status" role="status" aria-live="polite"></p>
+
+  <pre id="ai-static-prompt" class="lesson-builder-ai-prompt">Je bent een ervaren duikinstructeur bij VUB Diving Center.
+
+Lees eerst de volledige lesplan-instructies:
+https://www.vubdivingcenter.be/les-samenstellen/ai/lesplan-instructies.md
+
+Gebruik als bron:
+- Volledig oefeningenbestand: https://www.vubdivingcenter.be/scripts/data/vdc-oefeningen.jsonld
+- Leesbare oefeningenlijst: https://www.vubdivingcenter.be/les-samenstellen/oefeningen/
+
+MIJN FILTERS
+- Niveau: [bv. Gevorderd]
+- Aantal kandidaten: [bv. 8]
+- Beschikbaar materiaal: [bv. alle materiaal]
+- Thema/focus: [bv. apnea en buddyveiligheid]
+
+OPDRACHT
+Maak een lesvoorstel van exact 60 minuten: 20:00 tot 21:00. Gebruik bij voorkeur bestaande oefeningen uit de lijst als inspiratie. Je mag ook een eigen oefening voorstellen.
+
+Verwacht antwoord: een leesbaar lesvoorstel in het Nederlands met een korte inleiding, een tabel (Tijd | Oefening | Duur | Materiaal | Uitleg), een totaalregel van 60 minuten en 1-2 reserve-oefeningen. Geen codeblokken of technische bestandsformaten.
+Kan je de bronlinks niet openen? Gebruik dan je eigen duikervaring.</pre>
+
+  <h2>Voorbeeld van een lesvoorstel</h2>
+  <p>Zo ziet het antwoord van de AI eruit. Je hoeft dit niet over te typen; je neemt de oefeningen over in de planner.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Tijd</th>
+        <th>Oefening</th>
+        <th>Duur</th>
+        <th>Materiaal</th>
+        <th>Uitleg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20:00–20:10</td>
+        <td>Opwarming palmen en basismateriaal</td>
+        <td>10 min</td>
+        <td>Basismateriaal</td>
+        <td>Rustig tempo, techniek en ademhaling.</td>
+      </tr>
+      <tr>
+        <td>20:10–20:30</td>
+        <td>Parcours: flessen openen en sluiten</td>
+        <td>20 min</td>
+        <td>3-4 flessen</td>
+        <td>Per fles 1-2 ademhalingen, daarna sluiten.</td>
+      </tr>
+      <tr>
+        <td>20:30–20:45</td>
+        <td>Apnea-achtje met buddycheck</td>
+        <td>15 min</td>
+        <td>Fles, snorkel</td>
+        <td>Buddy volgt visueel en geeft OK-teken.</td>
+      </tr>
+      <tr>
+        <td>20:45–21:00</td>
+        <td>Afsluiter: rustige ademhaling en debrief</td>
+        <td>15 min</td>
+        <td>Geen extra</td>
+        <td>Herstel, feedback en materiaalcontrole.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Totaal: 60 minuten · einde 21:00.</strong></p>
+  <p><strong>Reserve:</strong> korte race of watertrappelen met lood, afhankelijk van de resterende energie.</p>
+
+  <h2>Goed om te weten</h2>
+  <ul>
+    <li>De planner is de tijdsbewaker: die toont of je selectie exact 20:00–21:00 duurt.</li>
+    <li>De AI-opdracht wordt altijd aangepast aan je huidige filters en thema.</li>
+    <li>Niet elke AI opent links automatisch. Zet browsen aan of plak de oefeningenlijst-URL in de chat. Zonder toegang tot de lijst kan de AI eigen oefeningen voorstellen.</li>
+    <li>Deel geen persoonsgegevens of medische informatie met een AI.</li>
+    <li>Controleer een AI-voorstel altijd zelf: veiligheid, niveau en beschikbaar materiaal blijven de verantwoordelijkheid van de instructeur.</li>
+  </ul>
+
+  <p>
+    <a href="/les-samenstellen/">Terug naar de lesplanner</a> ·
+    <a href="/les-samenstellen/oefeningen/">Bekijk alle oefeningen</a>
+  </p>
+</div>
+
+<script src="/scripts/les-samenstellen-ai.js?version=2026111201"></script>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+    <div class="footer-image"></div>
+    <div class="container">
+        <div class="info">
+            <span class="copyright">&copy; VUB Diving Center 2026</span>
+            <div class="middle">
+                <a href="/privacy-policy">Privacybeleid</a>
+                <a href="/contact">Contact</a>
+                <a href="/sponsors">Sponsors</a>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/vubdivingcenter/">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Instagram pagina</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/vubdivingcenter">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-brands fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Facebook pagina</span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:info@vubdivingcenter.be">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">E-mail</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel:0032472240970" title="Phone">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Telefoon</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="/scripts/main.js?version=20230921"></script>
+</footer>
+
+    </div>
+  </body>
+</html>
