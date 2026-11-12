@@ -1246,7 +1246,7 @@
     if (topic) {
       lines.push("Maak een training met als thema: \"" + topic.replace(/"/g, "'") + "\". Pas de oefeningen en het voorbeeld aan op dit thema.");
     } else {
-      lines.push("Maak een gewone training. Pas deze opdracht aan naar jouw thema, bijvoorbeeld: \"Maak een training met als thema: kerst.\"");
+      lines.push("Maak een gewone training. Pas deze opdracht aan naar jouw thema, bijvoorbeeld: \"Maak een training met als thema: bevalling.\"");
     }
 
     return lines.join("\n");
