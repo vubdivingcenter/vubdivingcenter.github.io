@@ -1234,7 +1234,7 @@
       absoluteUrl("/les-samenstellen/ai/lesplan-instructies.md"),
       "",
       "Oefeningen:",
-      absoluteUrl(DATA_URL)
+      absoluteUrl("/les-samenstellen/ai/oefeningen.md")
     ];
 
     if (filters.length > 0) {

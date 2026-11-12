@@ -1,0 +1,42 @@
+---
+permalink: /les-samenstellen/ai/oefeningen.md
+eleventyExcludeFromCollections: true
+---
+# Oefeningen vrijdagtraining VUB Diving Center
+
+Deze lijst hoort bij de lesplaninstructies:
+https://www.vubdivingcenter.be/les-samenstellen/ai/lesplan-instructies.md
+
+Aantal oefeningen: {{ oefeningen.count }}
+
+## Beschikbaar materiaal
+{% for material in oefeningen.materials %}
+- {{ material.label }}
+{%- endfor %}
+
+## Oefeningen
+{% for group in oefeningen.groups %}
+### {{ group.label }}
+{% for exercise in group.items %}
+#### {{ exercise.name }}
+- Duur: {{ exercise.durationMinutes }} min
+- Niveau: {{ exercise.levelLabel }}
+- Kandidaten: min {{ exercise.minCandidates }}{% if exercise.maxCandidates %}, max {{ exercise.maxCandidates }}{% endif %}
+{%- if exercise.repetitions %}
+- Herhaling: {{ exercise.repetitions }}
+{%- endif %}
+{%- if exercise.materials.length > 0 %}
+- Materiaal: {{ exercise.materials | join(", ") }}
+{%- endif %}
+{%- if exercise.description %}
+- Uitleg: {{ exercise.description }}
+{%- endif %}
+{%- if exercise.steps.length > 0 %}
+- Stappen:
+{% for step in exercise.steps %}
+  {{ loop.index }}. {{ step }}
+{%- endfor %}
+{%- endif %}
+
+{% endfor %}
+{% endfor %}
