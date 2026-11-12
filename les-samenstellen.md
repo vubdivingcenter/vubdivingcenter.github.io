@@ -71,7 +71,7 @@ Met deze tool stel je een vrijdagtraining van **exact één uur (20:00–21:00)*
   <details id="builder-ai" class="lesson-builder-ai">
     <summary><i class="fa-solid fa-robot" aria-hidden="true"></i> AI gebruiken voor een lesvoorstel</summary>
     <div class="lesson-builder-ai-body">
-      <p>Laat ChatGPT, Claude of een andere AI een lesvoorstel maken op basis van jouw filters en thema. De korte AI-opdracht verwijst naar de <a href="/les-samenstellen/ai/lesplan-instructies.md">online instructies</a> en de oefeningen-URL's (het volledige oefeningenbestand en de leesbare lijst); de volledige catalogus wordt niet in de opdracht gekopieerd. Je krijgt een leesbaar voorstel terug dat je als inspiratie gebruikt of manueel in de planner overneemt.</p>
+      <p>Laat ChatGPT, Claude of een andere AI een lesvoorstel maken op basis van jouw filters en thema. De korte AI-opdracht verwijst naar de <a href="/les-samenstellen/ai/lesplan-instructies.md">online instructies</a> en het oefeningenbestand; de volledige catalogus wordt niet in de opdracht gekopieerd. Je krijgt een leesbaar voorstel terug dat je als inspiratie gebruikt of manueel in de planner overneemt.</p>
       <div class="lesson-builder-ai-actions">
         <button id="builder-ai-copy" class="btn btn-secondary" type="button">
           <i class="fa-solid fa-copy"></i> Kopieer AI-opdracht

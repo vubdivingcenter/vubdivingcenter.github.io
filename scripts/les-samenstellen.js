@@ -1210,43 +1210,46 @@
   }
 
   function buildAiPrompt() {
-    var topic = topicInput && topicInput.value.trim() ? topicInput.value.trim() : "vrije keuze (algemene training)";
+    var topic = topicInput && topicInput.value.trim();
+    var filters = [];
+    var candidates = readCandidates();
     var materials = getSelectedMaterials();
-    var materialText = materials.size === materialCheckboxes.length
-      ? "alle beschikbare clubmaterialen"
-      : (materials.size === 0 ? "geen extra materiaal" : Array.from(materials).map(function (key) {
-        return MATERIAL_LABELS[key] || key;
-      }).join(", "));
 
-    return [
+    if (levelInput && levelInput.value !== "all") {
+      filters.push("- Niveau: " + levelFilterLabel());
+    }
+    if (candidates !== 8) {
+      filters.push("- Aantal kandidaten: " + candidates);
+    }
+    if (materials.size !== materialCheckboxes.length) {
+      filters.push("- Materiaal: " + (materials.size === 0 ? "geen extra materiaal" : Array.from(materials).map(function (key) {
+        return MATERIAL_LABELS[key] || key;
+      }).join(", ")));
+    }
+
+    var lines = [
       "Je bent een ervaren duikinstructeur bij VUB Diving Center.",
       "",
-      "Lees eerst de volledige lesplan-instructies:",
+      "Lees eerst de instructies en het voorbeeld:",
       absoluteUrl("/les-samenstellen/ai/lesplan-instructies.md"),
       "",
-      "Gebruik als bron:",
-      "- Volledig oefeningenbestand: " + absoluteUrl(DATA_URL),
-      "- Leesbare oefeningenlijst: " + absoluteUrl("/les-samenstellen/oefeningen/"),
-      "",
-      "FILTERS",
-      "- Niveau: " + levelFilterLabel(),
-      "- Aantal kandidaten: " + readCandidates(),
-      "- Beschikbaar materiaal: " + materialText,
-      "- Thema/focus: " + topic,
-      "",
-      "Maak een lesvoorstel op basis van de filters. Gebruik bij voorkeur bestaande oefeningen uit de lijst.",
-      "",
-      "Gebruik dit voorbeeld als startpunt en pas het aan op het thema en de filters:",
-      "",
-      "Titel: [thema] — 60 minuten",
-      "Tijd | Oefening | Duur | Materiaal | Uitleg",
-      "20:00–20:10 | Opwarming met basismateriaal | 10 min | Basismateriaal | Rustig tempo en ademhaling.",
-      "20:10–20:30 | [thema-oefening 1] | 20 min | [materiaal] | [korte uitleg]",
-      "20:30–20:50 | [thema-oefening 2] | 20 min | [materiaal] | [korte uitleg]",
-      "20:50–21:00 | Afsluiter en debrief | 10 min | Geen extra | Feedback en materiaalcontrole.",
-      "Totaal: 60 minuten · einde 21:00",
-      "Reserve: [reserve-oefening]"
-    ].join("\n");
+      "Oefeningen:",
+      absoluteUrl(DATA_URL)
+    ];
+
+    if (filters.length > 0) {
+      lines.push("", "FILTERS");
+      lines = lines.concat(filters);
+    }
+
+    lines.push("", "OPDRACHT");
+    if (topic) {
+      lines.push("Maak een training met als thema: \"" + topic.replace(/"/g, "'") + "\". Pas de oefeningen en het voorbeeld aan op dit thema.");
+    } else {
+      lines.push("Maak een gewone training. Pas deze opdracht aan naar jouw thema, bijvoorbeeld: \"Maak een training met als thema: bevalling.\"");
+    }
+
+    return lines.join("\n");
   }
 
   function renderAiPrompt() {
